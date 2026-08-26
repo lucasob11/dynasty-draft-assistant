@@ -92,12 +92,6 @@
   .top5-card .meta{font-size:11px;color:var(--muted);margin-top:7px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
 
   /* recommendation engine badges */
-  .avail-badge{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:10px;display:inline-block;margin-top:8px;}
-  .avail-gone{background:rgba(255,107,107,.18);color:var(--danger);}
-  .avail-tossup{background:rgba(255,184,77,.18);color:var(--te);}
-  .avail-safe{background:rgba(62,232,181,.18);color:var(--accent2);}
-  .avail-now{background:rgba(91,140,255,.18);color:var(--accent);}
-  .avail-pending{background:var(--panel2);color:var(--muted);border:1px solid var(--border);}
   .stack-badge{font-size:10.5px;color:var(--danger);margin-top:6px;font-weight:600;}
   .reason-line{font-size:10.5px;color:var(--muted);margin-top:8px;font-style:italic;line-height:1.35;border-top:1px solid var(--border);padding-top:7px;}
   .handcuff-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;display:inline-block;margin-top:6px;background:rgba(192,132,252,.16);color:var(--qb);}
@@ -282,9 +276,14 @@ const SATURATION_STEP = 15;      // extra penalty per redundant player already o
 const SATURATION_CAP = 80;
 const SCARCITY_BONUS_TIGHT = 8;  // <=1 player left in this tier
 const SCARCITY_BONUS_LOW = 4;    // <=3 players left in this tier
-const URGENCY_BONUS = 8;         // player unlikely to survive to your next pick
-const PACE_MIN_SAMPLE = 6;       // picks needed before trusting positional pace
 const HANDCUFF_BONUS = {S: 10, A: 7, B: 4, C: 2, D: 0}; // reach-worthiness by tier, when you own the starter
+// NOTE: an "availability" (will-this-player-survive-to-my-next-pick) signal
+// used to live here — removed 2026-08-26, see git history ("Checkpoint
+// before removing the likely gone availability feature") to restore it.
+// It degenerated for small pick gaps: the clear best-available player at a
+// position has ~0 same-position rank-ahead by construction, which collapsed
+// the survival ratio to "likely gone" no matter how few picks were actually
+// happening before the next turn.
 
 let RANKINGS = [];          // full list from rankings.json, sorted by rank
 let rankLookup = new Map(); // normalizedName -> ranking object (best match kept)
@@ -657,64 +656,15 @@ function tierScarcityDelta(player, avail){
   return 0;
 }
 
-// How many same-position players ranked ahead of this one are still on the
-// board. avail is already rank-sorted, so this is just a same-position
-// count up to this player's position in the list.
-function positionRankAheadCount(player, avail){
-  let count = 0;
-  for(const p of avail){
-    if(p === player) break;
-    if(p.pos === player.pos) count++;
-  }
-  return count;
-}
-
-// Live pace, per position: actual players drafted at this position so far,
-// vs. how many "should" have been drafted by now if every pick strictly
-// followed your rankings' overall order. >1 means this position is running
-// hotter than your board would predict (e.g. your board is QB-heavy but
-// this draft is taking RBs fast) — self-calibrating, no external ADP needed.
-function positionPaceMultiplier(pos){
-  if(picks.length < PACE_MIN_SAMPLE) return 1;
-  const topN = RANKINGS.slice(0, picks.length);
-  const expected = topN.filter(p => p.pos === pos).length;
-  if(expected === 0) return 1;
-  const actual = picks.reduce((n, p) => n + (pickInfo(p).pos === pos ? 1 : 0), 0);
-  return actual / expected;
-}
-
-// Buckets "will this player still be here at my next turn" into a label,
-// using the live pace multiplier to adjust the raw rank-ahead cushion.
-function availabilityInfo(player, avail, paces, puts){
-  if(puts == null) return null;
-  if(puts === 0) return {label: "You're up now", cls: "now", probability: null};
-  if(picks.length < PACE_MIN_SAMPLE) return {label: "Gathering signal", cls: "pending", probability: null};
-
-  const rankAhead = positionRankAheadCount(player, avail);
-  const pace = Math.max(paces[player.pos] || 1, 0.15);
-  const cushion = rankAhead / pace;
-  const ratio = cushion / Math.max(puts, 1);
-  const probability = Math.max(0, Math.min(1, 1 - Math.exp(-0.5 * ratio)));
-
-  if(ratio <= 1) return {label: "Likely gone", cls: "gone", probability, ratio, rankAhead, puts};
-  if(ratio <= 1.5) return {label: "Toss-up", cls: "tossup", probability, ratio, rankAhead, puts};
-  return {label: "Likely available", cls: "safe", probability, ratio, rankAhead, puts};
-}
-
 // The actual recommendation engine: takes best-available, adjusts each
-// candidate's rank by need/scarcity/urgency, flags team stacks, and returns
-// the top n with human-readable reasons attached.
+// candidate's rank by need/scarcity, flags team stacks, and returns the
+// top n with human-readable reasons attached.
 function computeRecommendations(avail, n){
   const mine = mySlot != null ? picks.filter(p => p.draft_slot === mySlot).map(pickInfo) : [];
   const need = mySlot != null ? rosterNeedState(mine) : null;
   const myTeamCounts = new Map();
   for(const p of mine){ if(p.team) myTeamCounts.set(p.team, (myTeamCounts.get(p.team) || 0) + 1); }
   const myPlayerIds = new Set(mine.map(p => String(p.player_id)));
-
-  const paces = {};
-  for(const pos of POS_ORDER) paces[pos] = positionPaceMultiplier(pos);
-  const puts = picksUntilMyTurn();
-  const myNextPickNo = puts != null ? (picks.length + 1 + puts) : null;
 
   // Top 60 by raw rank, plus any available handcuff for a starter you own —
   // handcuffs are backups by nature, so they're routinely ranked well
@@ -738,19 +688,13 @@ function computeRecommendations(avail, n){
     if(needTag === "need") reasons.push(`Fills your open ${p.pos} slot`);
     if(needTag === "saturated") reasons.push(`You're deep at ${p.pos} already`);
 
-    // Scarcity/urgency answer "should I rush this pick?" — irrelevant, even
+    // Scarcity answers "should I rush this pick?" — irrelevant, even
     // counterproductive, for a position you're already saturated at. A
     // thinning QB tier isn't a reason to grab a 3rd QB.
     const saturated = needTag === "saturated";
 
     const scarcity = tierScarcityDelta(p, avail);
     if(scarcity < 0 && !saturated){ virtualRank += scarcity; reasons.push(`Tier ${p.tier} is thinning out`); }
-
-    const availability = availabilityInfo(p, avail, paces, puts);
-    if(availability && availability.cls === "gone" && !saturated){
-      virtualRank -= URGENCY_BONUS;
-      reasons.push(`Unlikely to be there at pick ${myNextPickNo}`);
-    }
 
     const stackCount = p.team ? (myTeamCounts.get(p.team) || 0) : 0;
     const teamStack = stackCount > 0 ? `Would be your ${stackCount + 1}${ordinalSuffix(stackCount + 1)} ${p.team} player` : null;
@@ -770,7 +714,7 @@ function computeRecommendations(avail, n){
 
     if(!reasons.length) reasons.push("Best player available");
 
-    return {player: p, virtualRank, reasons, availability, teamStack, handcuff};
+    return {player: p, virtualRank, reasons, teamStack, handcuff};
   });
 
   scored.sort((a, b) => a.virtualRank - b.virtualRank);
@@ -885,7 +829,7 @@ function posColRowHtml(p){
 // header to expand it to its next 2 remaining tiers as well.
 function renderDashboard(avail){
   const top5 = computeRecommendations(avail, 5);
-  $("#top5Row").innerHTML = top5.map(({player: p, reasons, availability, teamStack, handcuff}, i) => `
+  $("#top5Row").innerHTML = top5.map(({player: p, reasons, teamStack, handcuff}, i) => `
     <div class="top5-card ${i === 0 ? "first" : ""}">
       <div class="toprow">
         ${avatarImg(p.name, p.pos, 40)}
@@ -898,7 +842,6 @@ function renderDashboard(avail){
       </div>
       <div class="meta">Rank #${p.rank}${p.tier != null ? ` · Tier ${p.tier}` : ""}</div>
       <div class="meta">Bye ${p.bye || "—"} · Age ${p.age != null ? p.age : "—"}</div>
-      ${availability ? `<span class="avail-badge avail-${availability.cls}">${availability.label}</span>` : ""}
       ${handcuff ? `<span class="handcuff-badge">🔒 Tier ${handcuff.tier} handcuff for ${handcuff.starterName}</span>` : ""}
       ${teamStack ? `<div class="stack-badge">⚠ ${teamStack}</div>` : ""}
       <div class="reason-line">${reasons.slice(0, 2).join(" · ")}</div>
