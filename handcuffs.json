@@ -1,0 +1,32 @@
+[
+  {"name": "TreVeyon Henderson", "team": "NE", "tier": "S"},
+  {"name": "Kyle Monangai", "team": "CHI", "tier": "S"},
+  {"name": "Rico Dowdle", "team": "PIT", "tier": "S"},
+  {"name": "Blake Corum", "team": "LAR", "tier": "S"},
+
+  {"name": "RJ Harvey", "team": "DEN", "tier": "A"},
+  {"name": "Jordan Mason", "team": "MIN", "tier": "A"},
+  {"name": "Chris Rodriguez", "team": "JAX", "tier": "A"},
+  {"name": "Kenny Gainwell", "team": "TB", "tier": "A"},
+  {"name": "Woody Marks", "team": "HOU", "tier": "A"},
+  {"name": "Tyrone Tracy", "team": "NYG", "tier": "A"},
+  {"name": "Isiah Pacheco", "team": "DET", "tier": "A"},
+
+  {"name": "Tank Bigsby", "team": "PHI", "tier": "B"},
+  {"name": "Brian Robinson", "team": "ATL", "tier": "B"},
+  {"name": "Mike Washington", "team": "LV", "tier": "B"},
+  {"name": "Malik Davis", "team": "DAL", "tier": "B"},
+
+  {"name": "Jonathon Brooks", "team": "CAR", "tier": "C"},
+  {"name": "Tyjae Spears", "team": "TEN", "tier": "C"},
+  {"name": "Tyler Allgeier", "team": "ARI", "tier": "C"},
+  {"name": "Dylan Sampson", "team": "CLE", "tier": "C"},
+  {"name": "Ray Davis", "team": "BUF", "tier": "C"},
+  {"name": "Kaelon Black", "team": "SF", "tier": "C"},
+
+  {"name": "Keaton Mitchell", "team": "LAC", "tier": "D"},
+  {"name": "Emmett Johnson", "team": "KC", "tier": "D"},
+  {"name": "Braelon Allen", "team": "NYJ", "tier": "D"},
+  {"name": "Samaje Perine", "team": "CIN", "tier": "D"},
+  {"name": "MarShawn Lloyd", "team": "GB", "tier": "D"}
+]

@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Edit Rankings — Dynasty Draft Assistant</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131826; --panel2:#1a2032; --border:#262e42;
+    --text:#e8ebf2; --muted:#8b93a7; --accent:#5b8cff; --accent2:#3ee8b5;
+    --danger:#ff6b6b; --qb:#c084fc; --rb:#5be08a; --wr:#5b9cff; --te:#ffb84d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);}
+  header h1{font-size:17px;margin:0;font-weight:600;white-space:nowrap;}
+  header h1 span{color:var(--accent2);}
+  a.navlink{color:var(--text);text-decoration:none;font-size:13px;font-weight:600;background:var(--panel2);border:1px solid var(--border);padding:8px 14px;border-radius:6px;}
+  a.navlink:hover{opacity:.9;}
+  .toolbar{padding:12px 20px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--panel);}
+  input[type=text], input[type=search], input[type=number], select{
+    background:var(--panel2);border:1px solid var(--border);color:var(--text);
+    padding:7px 9px;border-radius:6px;font-size:13px;
+  }
+  #search{min-width:220px;}
+  button{
+    background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:6px;
+    font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;
+  }
+  button:hover{opacity:.9;}
+  button.secondary{background:var(--panel2);border:1px solid var(--border);color:var(--text);}
+  button.danger{background:rgba(255,107,107,.15);border:1px solid var(--danger);color:var(--danger);}
+  button:disabled{opacity:.35;cursor:default;}
+  .filters{display:flex;gap:6px;}
+  .filters button{padding:6px 10px;font-size:12px;background:var(--panel2);border:1px solid var(--border);color:var(--muted);}
+  .filters button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .spacer{flex:1;}
+  #saveState{font-size:12px;color:var(--muted);}
+  #saveState.saved{color:var(--accent2);}
+  main{padding:16px 20px;}
+  .tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--panel);}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px;}
+  th{position:sticky;top:0;background:var(--panel2);text-align:left;color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;padding:8px 6px;border-bottom:1px solid var(--border);z-index:1;}
+  td{padding:4px 6px;border-top:1px solid var(--border);}
+  tr.prow:hover td{background:rgba(255,255,255,.02);}
+  td input, td select{width:100%;background:transparent;border:1px solid transparent;padding:5px 6px;border-radius:5px;font-size:13px;color:var(--text);}
+  td input:hover, td select:hover{border-color:var(--border);}
+  td input:focus, td select:focus{outline:none;border-color:var(--accent);background:var(--panel2);}
+  .col-rank{width:60px;color:var(--muted);font-size:12px;white-space:nowrap;}
+  .col-bye input{width:44px;}
+  .col-age input{width:52px;}
+  .col-team input{width:52px;text-transform:uppercase;}
+  .col-pos select{width:70px;}
+  .col-del button{padding:4px 8px;font-size:11px;}
+  .pos-tag{font-size:10px;padding:1px 5px;border-radius:4px;font-weight:700;letter-spacing:.02em;}
+  .pos-QB{background:rgba(192,132,252,.18);color:var(--qb);}
+  .pos-RB{background:rgba(91,224,138,.18);color:var(--rb);}
+  .pos-WR{background:rgba(91,156,255,.18);color:var(--wr);}
+  .pos-TE{background:rgba(255,184,77,.18);color:var(--te);}
+  .footnote{color:var(--muted);font-size:12px;padding:10px 2px 30px;line-height:1.5;}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;}
+  #fileImport{display:none;}
+  .count{color:var(--muted);font-size:12px;white-space:nowrap;}
+
+  /* drag handle */
+  .drag-handle{cursor:grab;color:var(--muted);font-size:13px;padding:0 6px 0 2px;user-select:none;}
+  .drag-handle:active{cursor:grabbing;}
+  tr.dragging td{opacity:.35;}
+  tr.drop-before{box-shadow:inset 0 2px 0 0 var(--accent2);}
+  tr.drop-after{box-shadow:inset 0 -2px 0 0 var(--accent2);}
+
+  /* tier sections (position-filtered view only) */
+  tr.tier-hdr td{background:var(--panel2);padding:8px 10px;border-top:1px solid var(--border);}
+  .tier-hdr-inner{display:flex;align-items:center;gap:8px;}
+  .tier-hdr-inner .tlabel{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--text);}
+  .tier-hdr-inner .tcount{font-size:11px;color:var(--muted);}
+  .tier-hdr-inner .spacer{flex:1;}
+  .tier-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:2px 8px;font-size:11px;border-radius:5px;font-weight:600;}
+  .tier-btn:hover{color:var(--text);border-color:var(--accent);opacity:1;}
+  .tier-hdr.drop-into td{outline:2px dashed var(--accent2);outline-offset:-2px;}
+  tr.tier-hdr.unassigned td{background:transparent;border-top:1px dashed var(--border);}
+  tr.tier-hdr.unassigned .tlabel{color:var(--muted);}
+  tr.tier-end{height:10px;}
+  tr.tier-end td{padding:0;border-top:none;}
+  tr.tier-end .endzone{height:10px;border-radius:4px;}
+  tr.tier-end.drop-into .endzone{height:20px;background:rgba(62,232,181,.12);outline:2px dashed var(--accent2);outline-offset:-2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>✎ Edit <span>Rankings</span></h1>
+  <a class="navlink" href="index.html">← Back to Draft Assistant</a>
+  <div class="spacer"></div>
+  <div id="saveState">Loading…</div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="Search player…" />
+  <div class="filters" id="posFilters">
+    <button data-pos="ALL" class="active">ALL</button>
+    <button data-pos="QB">QB</button>
+    <button data-pos="RB">RB</button>
+    <button data-pos="WR">WR</button>
+    <button data-pos="TE">TE</button>
+  </div>
+  <span class="count" id="rowCount"></span>
+  <div class="spacer"></div>
+  <button id="addTierBtn" class="secondary" style="display:none;">+ Add Tier</button>
+  <button id="addBtn" class="secondary">+ Add Player</button>
+  <button id="exportBtn" class="secondary">Export JSON</button>
+  <button id="importBtn" class="secondary">Import JSON</button>
+  <input type="file" id="fileImport" accept="application/json" />
+  <button id="resetBtn" class="danger">Reset to Original</button>
+</div>
+
+<main>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-rank">Rank</th>
+          <th>Player</th>
+          <th class="col-pos">Pos</th>
+          <th class="col-team">Team</th>
+          <th class="col-bye">Bye</th>
+          <th class="col-age">Age</th>
+          <th class="col-del"></th>
+        </tr>
+      </thead>
+      <tbody id="rowsBody"></tbody>
+    </table>
+  </div>
+  <div class="footnote">
+    Drag the <span class="drag-handle" style="display:inline;">⠿</span> handle to reorder players. Edits save automatically to this
+    browser (<code>localStorage</code>) and immediately affect the recommendations on the
+    <a class="navlink" style="display:inline;padding:0;background:none;border:none;color:var(--accent);" href="index.html">Draft Assistant</a> page.
+    <b>Tiers are per-position</b> — filter to QB/RB/WR/TE to see and edit tier buckets; drag a player into a tier bucket to assign it,
+    or use <b>+ Add Tier</b> / the <b>×</b> on a tier header to add or remove tiers (removing one merges its players into the neighboring tier).
+    Edits live only in this browser; use <b>Export JSON</b> to save a copy as a file, or <b>Reset to Original</b> to discard edits.
+  </div>
+</main>
+
+<script src="rankings-store.js"></script>
+<script>
+const POS_ORDER = ["QB","RB","WR","TE"];
+let players = [];          // master array — array ORDER is rank order (rank is kept = index+1)
+let posFilter = "ALL";
+let searchTerm = "";
+let tierCounts = {};       // pos -> number of tier buckets currently defined (session-only)
+let draggedIdx = null;     // master-array index of the row currently being dragged
+
+const $ = (sel) => document.querySelector(sel);
+
+function setSaveState(text, saved){
+  const el = $("#saveState");
+  el.textContent = text;
+  el.className = saved ? "saved" : "";
+}
+
+function recomputeRanks(){
+  players.forEach((p, i) => { p.rank = i + 1; });
+}
+
+function persist(){
+  recomputeRanks();
+  RankingsStore.save(players);
+  setSaveState(`Saved ✓ ${new Date().toLocaleTimeString()}`, true);
+}
+
+function escapeAttr(s){
+  return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+}
+
+function fieldValue(field, raw){
+  if(field === "age"){
+    return raw === "" ? null : parseFloat(raw);
+  }
+  if(field === "team" || field === "bye"){
+    return raw.trim();
+  }
+  return raw;
+}
+
+function ensureTierCount(pos){
+  if(tierCounts[pos] == null){
+    const maxTier = Math.max(0, ...players.filter(p => p.pos === pos).map(p => p.tier || 0));
+    tierCounts[pos] = Math.max(1, maxTier);
+  }
+  return tierCounts[pos];
+}
+
+function rowHtml(p, idx){
+  return `
+    <tr class="prow" data-idx="${idx}">
+      <td class="col-rank"><span class="drag-handle" draggable="true">⠿</span>#${p.rank ?? "—"}</td>
+      <td><input type="text" data-field="name" value="${escapeAttr(p.name)}" /></td>
+      <td class="col-pos">
+        <select data-field="pos">
+          ${POS_ORDER.map(pos => `<option value="${pos}" ${p.pos === pos ? "selected" : ""}>${pos}</option>`).join("")}
+        </select>
+      </td>
+      <td class="col-team"><input type="text" data-field="team" value="${escapeAttr(p.team || "")}" maxlength="4" /></td>
+      <td class="col-bye"><input type="text" data-field="bye" value="${escapeAttr(p.bye || "")}" maxlength="3" /></td>
+      <td class="col-age"><input type="number" step="0.1" data-field="age" value="${p.age ?? ""}" /></td>
+      <td class="col-del"><button class="danger" data-del="${idx}">✕</button></td>
+    </tr>`;
+}
+
+function tierHeaderHtml(tier, count, isUnassigned){
+  const label = isUnassigned ? "Unassigned" : `Tier ${tier}`;
+  const controls = isUnassigned ? "" : `
+    <button class="tier-btn" data-insert-after="${tier}" title="Insert a new tier after this one">+ tier</button>
+    <button class="tier-btn" data-remove-tier="${tier}" title="Remove this tier">✕ tier</button>`;
+  return `
+    <tr class="tier-hdr ${isUnassigned ? "unassigned" : ""}" data-tier-target="${isUnassigned ? "" : tier}">
+      <td colspan="7">
+        <div class="tier-hdr-inner">
+          <span class="tlabel">${label}</span>
+          <span class="tcount">${count} player${count === 1 ? "" : "s"}</span>
+          <span class="spacer"></span>
+          ${controls}
+        </div>
+      </td>
+    </tr>`;
+}
+
+function tierEndZoneHtml(tier){
+  return `<tr class="tier-end" data-tier-end="${tier}"><td colspan="7"><div class="endzone"></div></td></tr>`;
+}
+
+function render(){
+  const withIdx = players.map((p, idx) => ({p, idx}));
+  const searched = searchTerm ? withIdx.filter(({p}) => p.name.toLowerCase().includes(searchTerm)) : withIdx;
+
+  $("#addTierBtn").style.display = posFilter === "ALL" ? "none" : "";
+  const tbody = $("#rowsBody");
+
+  if(posFilter === "ALL"){
+    const rows = searched.filter(({p}) => matchesPos(p));
+    $("#rowCount").textContent = `${rows.length} of ${players.length} players`;
+    tbody.innerHTML = rows.map(({p, idx}) => rowHtml(p, idx)).join("")
+      || `<tr><td colspan="7" style="padding:20px;color:var(--muted);text-align:center;">No players match.</td></tr>`;
+    attachDrag();
+    return;
+  }
+
+  // Position-filtered: group into tier buckets, plus an "Unassigned" bucket
+  // for players with no tier yet (new adds, or anything that never matched
+  // a tier during extraction).
+  const posRows = searched.filter(({p}) => p.pos === posFilter);
+  $("#rowCount").textContent = `${posRows.length} of ${players.filter(p => p.pos === posFilter).length} ${posFilter}s`;
+
+  const nTiers = ensureTierCount(posFilter);
+  const unassigned = posRows.filter(({p}) => !p.tier);
+  let html = "";
+  if(unassigned.length){
+    html += tierHeaderHtml(null, unassigned.length, true);
+    html += unassigned.map(({p, idx}) => rowHtml(p, idx)).join("");
+  }
+  for(let t = 1; t <= nTiers; t++){
+    const members = posRows.filter(({p}) => p.tier === t);
+    html += tierHeaderHtml(t, members.length, false);
+    html += members.map(({p, idx}) => rowHtml(p, idx)).join("");
+    html += tierEndZoneHtml(t);
+  }
+  tbody.innerHTML = html || `<tr><td colspan="7" style="padding:20px;color:var(--muted);text-align:center;">No players match.</td></tr>`;
+  attachDrag();
+}
+
+function matchesPos(p){
+  return posFilter === "ALL" || p.pos === posFilter;
+}
+
+// ---------- drag and drop ----------
+
+function attachDrag(){
+  document.querySelectorAll("#rowsBody .drag-handle").forEach(handle => {
+    handle.addEventListener("dragstart", (e) => {
+      const tr = handle.closest("tr");
+      draggedIdx = parseInt(tr.dataset.idx, 10);
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", String(draggedIdx));
+      e.dataTransfer.setDragImage(tr, 16, 16);
+      requestAnimationFrame(() => tr.classList.add("dragging"));
+    });
+    handle.addEventListener("dragend", () => {
+      document.querySelectorAll("tr.dragging").forEach(el => el.classList.remove("dragging"));
+      clearDropIndicators();
+      draggedIdx = null;
+    });
+  });
+
+  document.querySelectorAll("#rowsBody tr.prow").forEach(tr => {
+    tr.addEventListener("dragover", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      clearDropIndicators();
+      const rect = tr.getBoundingClientRect();
+      const before = (e.clientY - rect.top) < rect.height / 2;
+      tr.classList.add(before ? "drop-before" : "drop-after");
+    });
+    tr.addEventListener("drop", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      const rect = tr.getBoundingClientRect();
+      const before = (e.clientY - rect.top) < rect.height / 2;
+      const targetIdx = parseInt(tr.dataset.idx, 10);
+      const targetPlayer = players[targetIdx];
+      movePlayer(draggedIdx, targetPlayer, before ? "before" : "after");
+    });
+  });
+
+  document.querySelectorAll("#rowsBody tr.tier-hdr").forEach(tr => {
+    tr.addEventListener("dragover", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      clearDropIndicators();
+      tr.classList.add("drop-into");
+    });
+    tr.addEventListener("drop", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      const tierAttr = tr.dataset.tierTarget;
+      const tier = tierAttr === "" ? null : parseInt(tierAttr, 10);
+      dropIntoTierStart(draggedIdx, tier);
+    });
+  });
+
+  document.querySelectorAll("#rowsBody tr.tier-end").forEach(tr => {
+    tr.addEventListener("dragover", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      clearDropIndicators();
+      tr.classList.add("drop-into");
+    });
+    tr.addEventListener("drop", (e) => {
+      if(draggedIdx == null) return;
+      e.preventDefault();
+      const tier = parseInt(tr.dataset.tierEnd, 10);
+      dropIntoTierEnd(draggedIdx, tier);
+    });
+  });
+}
+
+function clearDropIndicators(){
+  document.querySelectorAll(".drop-before, .drop-after, .drop-into").forEach(el => {
+    el.classList.remove("drop-before", "drop-after", "drop-into");
+  });
+}
+
+function movePlayer(fromIdx, targetPlayer, where){
+  const dragged = players[fromIdx];
+  if(dragged === targetPlayer){ draggedIdx = null; return; }
+  players.splice(fromIdx, 1);
+  let targetIdx = players.indexOf(targetPlayer);
+  let insertAt = where === "before" ? targetIdx : targetIdx + 1;
+  players.splice(insertAt, 0, dragged);
+  if(posFilter !== "ALL" && dragged.pos === posFilter){
+    dragged.tier = targetPlayer.pos === posFilter ? targetPlayer.tier : dragged.tier;
+  }
+  draggedIdx = null;
+  persist();
+  render();
+}
+
+function dropIntoTierStart(fromIdx, tier){
+  const dragged = players[fromIdx];
+  players.splice(fromIdx, 1);
+  // Insert just before the first existing member of this tier (or, if
+  // empty, before the first member of the next non-empty tier/unassigned
+  // boundary), so it lands visually at the top of the bucket.
+  const membersOfTierOrLater = players
+    .map((p, i) => ({p, i}))
+    .filter(({p}) => p.pos === posFilter && (tier === null ? true : (p.tier || 0) >= tier));
+  let insertAt = membersOfTierOrLater.length ? membersOfTierOrLater[0].i : players.length;
+  players.splice(insertAt, 0, dragged);
+  dragged.tier = tier;
+  draggedIdx = null;
+  persist();
+  render();
+}
+
+function dropIntoTierEnd(fromIdx, tier){
+  const dragged = players[fromIdx];
+  players.splice(fromIdx, 1);
+  const membersAfter = players
+    .map((p, i) => ({p, i}))
+    .filter(({p}) => p.pos === posFilter && (p.tier || 0) > tier);
+  let insertAt = membersAfter.length ? membersAfter[0].i : players.length;
+  players.splice(insertAt, 0, dragged);
+  dragged.tier = tier;
+  draggedIdx = null;
+  persist();
+  render();
+}
+
+// ---------- tier management ----------
+
+$("#rowsBody").addEventListener("click", (e) => {
+  const delIdx = e.target.dataset.del;
+  if(delIdx !== undefined){
+    players.splice(parseInt(delIdx, 10), 1);
+    persist();
+    render();
+    return;
+  }
+  const insertAfter = e.target.dataset.insertAfter;
+  if(insertAfter !== undefined){
+    const n = parseInt(insertAfter, 10);
+    players.filter(p => p.pos === posFilter && (p.tier || 0) > n).forEach(p => { p.tier += 1; });
+    tierCounts[posFilter] = ensureTierCount(posFilter) + 1;
+    persist();
+    render();
+    return;
+  }
+  const removeTier = e.target.dataset.removeTier;
+  if(removeTier !== undefined){
+    const n = parseInt(removeTier, 10);
+    const total = ensureTierCount(posFilter);
+    if(total <= 1) return;
+    const affected = players.filter(p => p.pos === posFilter && p.tier === n);
+    if(affected.length && !confirm(`Tier ${n} has ${affected.length} player(s). Remove it and move them into the neighboring tier?`)) return;
+    // Merging tier 1 into "tier 2" and merging tier N (N>1) into "tier N-1"
+    // both reduce to the same move: park the removed tier's players at
+    // max(n-1, 1), then shift every tier above n down by one to close the gap.
+    affected.forEach(p => { p.tier = Math.max(n - 1, 1); });
+    players.filter(p => p.pos === posFilter && (p.tier || 0) > n).forEach(p => { p.tier -= 1; });
+    tierCounts[posFilter] = total - 1;
+    persist();
+    render();
+  }
+});
+
+$("#addTierBtn").addEventListener("click", () => {
+  if(posFilter === "ALL") return;
+  tierCounts[posFilter] = ensureTierCount(posFilter) + 1;
+  persist();
+  render();
+});
+
+// ---------- field edits ----------
+
+$("#rowsBody").addEventListener("change", (e) => {
+  const field = e.target.dataset.field;
+  if(!field) return;
+  const tr = e.target.closest("tr");
+  const idx = parseInt(tr.dataset.idx, 10);
+  const player = players[idx];
+  player[field] = fieldValue(field, e.target.value);
+  if(field === "pos"){
+    // A tier number only means something within its own position's scale.
+    player.tier = null;
+  }
+  persist();
+  render();
+});
+
+// ---------- toolbar ----------
+
+$("#addBtn").addEventListener("click", () => {
+  const pos = posFilter === "ALL" ? "QB" : posFilter;
+  players.unshift({rank: null, name: "New Player", pos, team: "", bye: "", age: null, tier: null});
+  searchTerm = "";
+  $("#search").value = "";
+  persist();
+  render();
+});
+
+$("#exportBtn").addEventListener("click", () => RankingsStore.exportJson(players));
+
+$("#importBtn").addEventListener("click", () => $("#fileImport").click());
+$("#fileImport").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  try{
+    const text = await file.text();
+    const parsed = JSON.parse(text);
+    if(!Array.isArray(parsed)) throw new Error("not an array");
+    if(!confirm(`Import ${parsed.length} players? This replaces your current rankings.`)) return;
+    players = parsed;
+    tierCounts = {};
+    persist();
+    render();
+  }catch(err){
+    alert("Couldn't read that file as a rankings JSON array.");
+  }
+  e.target.value = "";
+});
+
+$("#resetBtn").addEventListener("click", async () => {
+  if(!confirm("Discard all edits and reload the original rankings from rankings.json?")) return;
+  RankingsStore.reset();
+  players = await RankingsStore.loadBase();
+  tierCounts = {};
+  setSaveState("Reset to original rankings.json", true);
+  render();
+});
+
+$("#posFilters").addEventListener("click", (e) => {
+  if(e.target.tagName !== "BUTTON") return;
+  posFilter = e.target.dataset.pos;
+  document.querySelectorAll("#posFilters button").forEach(b => b.classList.toggle("active", b === e.target));
+  render();
+});
+
+$("#search").addEventListener("input", (e) => {
+  searchTerm = e.target.value.trim().toLowerCase();
+  render();
+});
+
+(async () => {
+  players = await RankingsStore.load();
+  players.sort((a, b) => (a.rank ?? 9999) - (b.rank ?? 9999));
+  setSaveState(RankingsStore.hasOverride() ? "Showing your saved edits" : "Showing original rankings.json", false);
+  render();
+})();
+</script>
+</body>
+</html>
