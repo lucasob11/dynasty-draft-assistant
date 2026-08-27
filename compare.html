@@ -130,7 +130,7 @@
   </div>
 </main>
 
-<script src="rankings-store.js"></script>
+<script src="rankings-store.js?v=2"></script>
 <script>
 const POS_ORDER = ["QB","RB","WR","TE"];
 const POS_COLOR = {QB:"#c084fc", RB:"#5be08a", WR:"#5b9cff", TE:"#ffb84d"};
@@ -160,22 +160,32 @@ function pairKey(a, b){
   return [a, b].sort().join("|");
 }
 
-// Seeds a position's pool from the current rankings (top 20 by rank), only
-// if it hasn't been started yet — re-running this never clobbers progress.
+// Seeds a position's pool from the current rankings (top 20 by rank) the
+// first time it's touched — that part never re-runs, so progress (rating/
+// comparisons/history) from an earlier session is never clobbered. Display
+// metadata (team/bye/expert data/2025 stats) is a different story: it's
+// re-synced from the current rankings on every call, even for a position
+// seeded in a past session, so a rankings.json rebuild (e.g. adding 2025
+// stats after someone already started comparing) actually reaches
+// in-progress state instead of silently missing it forever.
 function ensurePosition(pos, allPlayers){
-  if(compareState[pos]) return;
   const top20 = allPlayers.filter(p => p.pos === pos).sort((a, b) => a.rank - b.rank).slice(0, POOL_SIZE);
-  const ratings = {};
+  if(!compareState[pos]){
+    compareState[pos] = {ratings: {}, comparedPairs: [], history: [], skipped: {}};
+  }
+  const ratings = compareState[pos].ratings;
   top20.forEach((p, i) => {
-    // Seed from current rank so early comparisons refine an already-sane
-    // order instead of starting from a flat coin-flip prior.
-    ratings[p.name] = {
-      rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || "",
+    if(!ratings[p.name]){
+      // Seed from current rank so early comparisons refine an already-sane
+      // order instead of starting from a flat coin-flip prior.
+      ratings[p.name] = {rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0};
+    }
+    Object.assign(ratings[p.name], {
+      team: p.team || "", bye: p.bye || "",
       expertRanks: p.expertRanks || null, expertCount: p.expertCount || 0,
       games2025: p.games2025 ?? null, ppg2025: p.ppg2025 ?? null, posRank2025: p.posRank2025 ?? null,
-    };
+    });
   });
-  compareState[pos] = {ratings, comparedPairs: [], history: [], skipped: {}};
 }
 
 // Finds the next pair to show. Two passes: first honoring skip cooldowns
