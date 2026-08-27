@@ -51,7 +51,13 @@
   .pexperts{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
   .pexperts .favor-pct{font-size:26px;font-weight:800;line-height:1.1;}
   .pexperts .favor-lbl{font-size:11px;color:var(--muted);margin-top:2px;}
-  .pexperts .expert-range{font-size:11px;color:var(--muted);margin-top:8px;}
+  .pexperts-list{margin-top:10px;text-align:left;}
+  .pe-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:4px 0;border-top:1px solid var(--border);}
+  .pe-row:first-child{border-top:none;}
+  .pe-lbl{color:var(--muted);}
+  .pe-val{font-weight:800;color:var(--text);}
+  .pe-val.better{color:var(--accent2);}
+  .pe-val.worse{color:var(--muted);}
 
   .pstats2025{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
   .pstats2025-hdr{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;}
@@ -246,13 +252,35 @@ function favorColor(pct){
   return `rgb(${c[0]},${c[1]},${c[2]})`;
 }
 
-function expertRangeText(r){
-  if(!r.expertRanks) return "";
+function expertStats(r){
+  if(!r.expertRanks) return null;
   const vals = Object.values(r.expertRanks);
-  if(!vals.length) return "";
-  const best = Math.min(...vals), worst = Math.max(...vals);
-  const range = best === worst ? `#${best}` : `#${best}–${worst}`;
-  return `Ranked ${range} by ${vals.length}/6 experts`;
+  if(!vals.length) return null;
+  return {
+    avg: Math.round((vals.reduce((a, b) => a + b, 0) / vals.length) * 10) / 10,
+    best: Math.min(...vals),
+    worst: Math.max(...vals),
+    n: vals.length,
+  };
+}
+
+// Average/best/worst as a plain labeled list rather than one dense
+// sentence, each line colored against the opponent's same metric — lower
+// rank number is better, so whichever player experts rate higher shows
+// green on that line, the other shows muted.
+function expertStatsList(r, opponent){
+  const mine = expertStats(r);
+  if(!mine) return "";
+  const theirs = opponent ? expertStats(opponent) : null;
+  const cls = (m, t) => (t == null || m === t) ? "" : (m < t ? "better" : "worse");
+  const row = (label, val, opp) => `
+    <div class="pe-row"><span class="pe-lbl">${label}</span><span class="pe-val ${cls(val, opp)}">#${val}</span></div>`;
+  return `
+    <div class="pexperts-list">
+      ${row("Average ranking", mine.avg, theirs ? theirs.avg : null)}
+      ${row("Best ranking", mine.best, theirs ? theirs.best : null)}
+      ${row("Worst ranking", mine.worst, theirs ? theirs.worst : null)}
+    </div>`;
 }
 
 // Season-end position finish / games played / PPR points-per-game, from the
@@ -376,21 +404,21 @@ function renderArena(){
   const ra = state.ratings[a], rb = state.ratings[b];
   const agreement = expertAgreement(ra, rb);
 
-  const card = (name, r, pct, opponentPpg) => {
-    const range = expertRangeText(r);
+  const card = (name, r, pct, opponent) => {
+    const list = expertStatsList(r, opponent);
     return `
     <button type="button" class="pcard" data-choose="${escapeAttr(name)}" style="border-top:3px solid ${POS_COLOR[posFilter]}">
       <div class="pname">${name}</div>
       <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
-      ${pct != null || range ? `
+      ${pct != null || list ? `
         <div class="pexperts">
           ${pct != null ? `
             <div class="favor-pct" style="color:${favorColor(pct)}">${pct}%</div>
             <div class="favor-lbl">of ${agreement.n} expert${agreement.n === 1 ? "" : "s"} favor this player</div>
           ` : ""}
-          ${range ? `<div class="expert-range">${range}</div>` : ""}
+          ${list}
         </div>` : ""}
-      ${stats2025Grid(r, opponentPpg)}
+      ${stats2025Grid(r, opponent ? opponent.ppg2025 : null)}
       <div class="kbd">${name === a ? "←" : "→"}</div>
     </button>`;
   };
@@ -398,9 +426,9 @@ function renderArena(){
   el.innerHTML = `
     <div class="progress-line">Would you rather draft… (${state.comparedPairs.length} compared, ~${Math.max(remaining, 0)} pairs left in this pool)</div>
     <div class="matchup">
-      ${card(a, ra, agreement ? agreement.aPct : null, rb.ppg2025)}
+      ${card(a, ra, agreement ? agreement.aPct : null, rb)}
       <div class="vs">VS</div>
-      ${card(b, rb, agreement ? agreement.bPct : null, ra.ppg2025)}
+      ${card(b, rb, agreement ? agreement.bPct : null, ra)}
     </div>
     <button type="button" class="secondary" id="skipBtn">Not sure — ask me later <span class="kbd" style="margin-left:6px;">↓</span></button>
   `;
