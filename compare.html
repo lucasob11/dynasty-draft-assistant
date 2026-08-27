@@ -92,32 +92,53 @@
   code{background:var(--panel2);padding:1px 5px;border-radius:4px;}
   .footnote{color:var(--muted);font-size:12px;line-height:1.5;padding:0 2px;}
 
-  /* --- mobile: stack cards instead of squeezing two side by side, bigger
-     touch targets, single-column layout instead of the fixed sidebar --- */
+  /* --- mobile: everything shrunk so both cards fit one screen with no
+     scroll — side by side, not full width, not stacked (stacking just
+     doubles the height, which was the actual problem last time) --- */
   @media (max-width: 760px){
-    header{padding:12px 14px;gap:8px 10px;}
-    header h1{font-size:15px;}
-    a.navlink{padding:8px 10px;font-size:12px;}
+    header{padding:8px 10px;gap:6px 8px;}
+    header h1{font-size:13px;}
+    a.navlink{padding:6px 8px;font-size:10.5px;}
     #headerNote{display:none;} /* supplementary context, not worth the space on a phone */
 
-    .postabs{padding:8px 10px;gap:6px;}
-    .postabs button{flex:1;padding:12px 4px;font-size:13px;}
+    .postabs{padding:6px 10px;gap:5px;}
+    .postabs button{flex:1;padding:8px 2px;font-size:11.5px;}
 
     main{grid-template-columns:1fr;min-height:auto;}
-    .col{padding:14px;}
-    .arena{height:auto;padding:8px 0 20px;gap:16px;}
+    .col{padding:8px;}
+    .arena{height:auto;padding:4px 0 10px;gap:6px;justify-content:flex-start;}
+    .progress-line{font-size:10.5px;}
 
-    .matchup{flex-direction:column;max-width:100%;gap:10px;}
-    .pcard{padding:22px 18px;}
-    .pcard .pname{font-size:20px;}
-    .vs{padding:2px 0;}
+    .matchup{flex-direction:row;max-width:100%;gap:6px;align-items:stretch;}
+    .pcard{padding:8px 6px;border-radius:10px;}
+    .pcard .pname{font-size:13.5px;margin-bottom:1px;line-height:1.15;}
+    .pcard .pmeta{font-size:10px;}
+    .vs{font-size:11px;flex-shrink:0;padding:0 1px;}
     .kbd, .pcard .kbd{display:none;} /* arrow-key hints don't apply on touch */
 
-    #skipBtn{width:100%;padding:14px;}
-    .btnrow button{padding:12px 10px;}
-    .postabs button, a.navlink, .btnrow button, #skipBtn, #copyBtn{min-height:44px;} /* comfortable tap targets */
+    .pexperts{margin-top:6px;padding-top:6px;}
+    .pexperts .favor-pct{font-size:17px;}
+    .pexperts .favor-pct.na{font-size:14px;}
+    .pexperts .favor-lbl{font-size:8.5px;line-height:1.25;}
+    /* the 3 ranking rows go from stacked to a mini 3-column grid — matches
+       the 2025-stats layout below it and is the main thing that makes a
+       narrow side-by-side card fit without scrolling */
+    .pexperts-list{display:flex;justify-content:space-between;gap:2px;margin-top:6px;text-align:left;}
+    .pe-row{flex-direction:column-reverse;align-items:center;border-top:none;padding:0;flex:1;text-align:center;}
+    .pe-lbl{font-size:7.5px;line-height:1.15;margin-top:1px;}
+    .pe-val{font-size:11.5px;}
 
-    .ranklist{max-height:280px;}
+    .pstats2025{margin-top:6px;padding-top:6px;}
+    .pstats2025-hdr{font-size:8px;margin-bottom:4px;}
+    .stats2025-grid{gap:2px;}
+    .stats2025-grid .s-val{font-size:12.5px;}
+    .stats2025-grid .s-lbl{font-size:7.5px;}
+
+    #skipBtn{width:100%;padding:9px;font-size:12px;margin-top:2px;}
+    .btnrow button{padding:10px 8px;}
+    .postabs button, a.navlink, .btnrow button, #skipBtn, #copyBtn{min-height:40px;} /* comfortable tap targets, without eating the height budget of 44px */
+
+    .ranklist{max-height:220px;}
   }
 </style>
 </head>
