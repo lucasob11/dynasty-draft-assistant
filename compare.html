@@ -190,7 +190,7 @@ function ensurePosition(pos, allPlayers){
       ratings[p.name] = {rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0};
     }
     Object.assign(ratings[p.name], {
-      team: p.team || "", bye: p.bye || "",
+      team: p.team || "", bye: p.bye || "", age: p.age ?? null,
       expertRanks: p.expertRanks || null, expertCount: p.expertCount || 0,
       games2025: p.games2025 ?? null, ppg2025: p.ppg2025 ?? null, posRank2025: p.posRank2025 ?? null,
     });
@@ -415,7 +415,7 @@ function renderArena(){
     return `
     <button type="button" class="pcard" data-choose="${escapeAttr(name)}" style="border-top:3px solid ${POS_COLOR[posFilter]}">
       <div class="pname">${name}</div>
-      <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
+      <div class="pmeta">${r.team || "FA"}${r.age != null ? " · Age " + r.age : ""}</div>
       <div class="pexperts">
         ${pct != null ? `
           <div class="favor-pct" style="color:${favorColor(pct)}">${pct}%</div>
