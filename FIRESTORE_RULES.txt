@@ -1,0 +1,20 @@
+Paste this into Firebase Console -> Firestore Database -> Rules (replacing
+whatever's there), then click Publish.
+
+This scopes read/write to exactly the two documents this app uses
+(dynastyDraftAssistant/rankings and dynastyDraftAssistant/compareState) —
+nothing else in the project is reachable. There's no login, so anyone who
+found this exact app's source could read/write those two documents; there's
+nothing sensitive in them (fantasy rankings, draft comparison progress), so
+that's an accepted tradeoff for staying login-free. If that ever stops being
+acceptable, the fix is adding Firebase Anonymous Auth and scoping these
+rules to request.auth != null — ask if you want that added later.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /dynastyDraftAssistant/{docId} {
+      allow read, write: if docId in ['rankings', 'compareState'];
+    }
+  }
+}

@@ -2,14 +2,19 @@
 //
 // Rankings normally come from rankings.json (regenerated from the workbook by
 // extract_rankings.py). If the user has edited anything on the Edit Rankings
-// page, that edited copy lives in localStorage and takes over as the source
-// of truth for all three pages until it's reset — so an edit made mid-draft
-// shows up in the live tool immediately on next render/reload. New fields
-// added to rankings.json after that snapshot was saved (e.g. a new data
-// source merged in by extract_rankings.py) still reach the override via a
-// backfill in load() — see there for why that matters.
+// page, that edited copy takes over as the source of truth for all three
+// pages until it's reset — so an edit made mid-draft shows up in the live
+// tool immediately on next render/reload.
+//
+// That override is saved to both localStorage (instant, always works) and
+// Firebase Firestore (best-effort, requires firebase-sync.js to be
+// configured — see FIRESTORE_RULES.txt) so it follows you across devices,
+// not just across reloads of the same browser. load() prefers the Firestore
+// copy when reachable, since it's the one that could have just been edited
+// on a different device.
 const RankingsStore = (() => {
   const KEY = "dynastyRankings:v1";
+  const DOC_ID = "rankings";
 
   function hasOverride(){
     return localStorage.getItem(KEY) !== null;
@@ -20,24 +25,12 @@ const RankingsStore = (() => {
     return res.json();
   }
 
-  async function load(){
-    const raw = localStorage.getItem(KEY);
-    if(!raw) return loadBase();
-    let override;
-    try{
-      override = JSON.parse(raw);
-      if(!Array.isArray(override)) return loadBase();
-    }catch(e){
-      return loadBase();
-    }
-
-    // An override is a full snapshot taken whenever edit.html last saved —
-    // if rankings.json has since gained new fields (a new data source
-    // merged in by extract_rankings.py, run after that snapshot), the
-    // override doesn't know about them and would silently keep shadowing
-    // them forever otherwise. Backfill anything the override is missing
-    // from the current base file; never touch a field the override already
-    // has, since edited values must stay authoritative.
+  // New fields added to rankings.json after an override was saved (a new
+  // data source merged in by extract_rankings.py) don't exist on that old
+  // snapshot — backfill them from the current base file rather than letting
+  // them stay silently missing forever. Never touches a field the override
+  // already has, since edited values must stay authoritative.
+  async function backfillFromBase(override){
     try{
       const base = await loadBase();
       const baseByKey = new Map(base.map(p => [`${p.pos}|${p.name.toLowerCase()}`, p]));
@@ -48,16 +41,43 @@ const RankingsStore = (() => {
           if(!(k in p)) p[k] = b[k];
         }
       }
-    }catch(e){ /* base fetch failed — fall back to the override as-is */ }
+    }catch(e){ /* base fetch failed — use the override as-is */ }
+    return override;
+  }
+
+  async function load(){
+    let override = null;
+
+    if(typeof FirebaseSync !== "undefined" && FirebaseSync.isConfigured()){
+      const remote = await FirebaseSync.pull(DOC_ID);
+      if(Array.isArray(remote)) override = remote;
+    }
+
+    if(!override){
+      const raw = localStorage.getItem(KEY);
+      if(raw){
+        try{
+          const parsed = JSON.parse(raw);
+          if(Array.isArray(parsed)) override = parsed;
+        }catch(e){ /* fall through to base file */ }
+      }
+    }
+
+    if(!override) return loadBase();
+
+    override = await backfillFromBase(override);
+    localStorage.setItem(KEY, JSON.stringify(override)); // keep the local cache fresh
     return override;
   }
 
   function save(players){
     localStorage.setItem(KEY, JSON.stringify(players));
+    if(typeof FirebaseSync !== "undefined") FirebaseSync.push(DOC_ID, players); // fire-and-forget
   }
 
   function reset(){
     localStorage.removeItem(KEY);
+    if(typeof FirebaseSync !== "undefined") FirebaseSync.remove(DOC_ID);
   }
 
   function exportJson(players){

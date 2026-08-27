@@ -139,11 +139,13 @@
   </div>
 </main>
 
+<script src="firebase-sync.js"></script>
 <script src="rankings-store.js?v=2"></script>
 <script>
 const POS_ORDER = ["QB","RB","WR","TE"];
 const POS_COLOR = {QB:"#c084fc", RB:"#5be08a", WR:"#5b9cff", TE:"#ffb84d"};
 const STORE_KEY = "dynastyCompare:v1";
+const FIRESTORE_DOC_ID = "compareState"; // must match FIRESTORE_RULES.txt
 const POOL_SIZE = 20;
 const K_FACTOR = 32;
 
@@ -154,7 +156,18 @@ let prevOrder = {};      // pos -> [name in rank order] from before the last pic
 
 const $ = (sel) => document.querySelector(sel);
 
-function loadState(){
+// Prefers the Firestore copy when reachable (it's the one that could have
+// just been edited on a different device); localStorage is the instant
+// local cache and the fallback when Firebase isn't configured/reachable.
+async function loadState(){
+  if(typeof FirebaseSync !== "undefined" && FirebaseSync.isConfigured()){
+    const remote = await FirebaseSync.pull(FIRESTORE_DOC_ID);
+    if(remote && typeof remote === "object"){
+      compareState = remote;
+      localStorage.setItem(STORE_KEY, JSON.stringify(compareState));
+      return;
+    }
+  }
   try{
     const raw = localStorage.getItem(STORE_KEY);
     compareState = raw ? JSON.parse(raw) : {};
@@ -163,6 +176,7 @@ function loadState(){
 
 function saveState(){
   localStorage.setItem(STORE_KEY, JSON.stringify(compareState));
+  if(typeof FirebaseSync !== "undefined") FirebaseSync.push(FIRESTORE_DOC_ID, compareState); // fire-and-forget
 }
 
 function pairKey(a, b){
@@ -521,8 +535,10 @@ document.addEventListener("keydown", (e) => {
   if(e.key === "ArrowDown" || e.key === " "){ e.preventDefault(); skipPair(); }
 });
 
-loadState();
-loadAndRender();
+(async () => {
+  await loadState(); // must finish before seeding, or a late Firestore pull could clobber freshly-seeded progress
+  await loadAndRender();
+})();
 </script>
 </body>
 </html>
