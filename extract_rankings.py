@@ -7,14 +7,20 @@
     ranks for head-to-head comparisons) from 'Sheet1', which holds six
     experts' top-20-per-position boards: Trade/Cut Rankings, FantasyPros,
     ANDY/JASON/MIKE (FantasyFootballers), and DraftSharks
+  - 2025 season stats (games played, PPR points/game, season-end position
+    rank) from a Pro-Football-Reference fantasy leaders export — a
+    same-origin, no-JS "xls" download that's actually an HTML table
 
 Any player who appears in Sheet1's top 20 but isn't already in the 472-list
 gets appended as a new entry (tier/bye/age left blank — nothing else in the
 workbook has that for them) so their expert data isn't silently dropped.
 
-Re-run this any time the spreadsheet is updated:
+Re-run this any time the spreadsheet or the stats export is updated:
 
-    python3 extract_rankings.py ~/Downloads/2026_Dynasty_Startup_Draft_Prep.xlsx
+    python3 extract_rankings.py ~/Downloads/2026_Dynasty_Startup_Draft_Prep.xlsx ~/Downloads/sportsref_download.xls
+
+Both arguments are optional and default to those exact filenames in ~/Downloads.
+If the stats file isn't found, 2025 stats are just skipped (not a hard failure).
 """
 import difflib
 import json
@@ -184,8 +190,52 @@ def load_expert_consensus(wb):
     return result
 
 
+STATS_ROW_RE = re.compile(r'<tr data-row="\d+">.*?</tr>', re.S)
+STATS_NAME_MARKER_RE = re.compile(r"[*+]+$")  # PFR appends * (Pro Bowl) / + (All-Pro) to names
+STATS_VALID_POS = {"QB", "RB", "WR", "TE"}
+
+
+def stats_cell(row_html, stat):
+    m = re.search(rf'data-stat="{stat}"[^>]*>([^<]*)<', row_html)
+    return m.group(1) if m and m.group(1) != "" else None
+
+
+def load_2025_stats(path):
+    """pos -> {normalized_name: {display, team, games, ppg, posRank}}
+
+    Pro-Football-Reference's fantasy-leaders "Share & Export -> Get table as
+    XLS" is actually an HTML table (the .xls extension is a PFR quirk, not a
+    real Excel file), so this is parsed as HTML rather than via openpyxl.
+    """
+    content = path.read_text(encoding="utf-8", errors="ignore")
+    result = {pos: {} for pos in STATS_VALID_POS}
+    for row in STATS_ROW_RE.findall(content):
+        pos = stats_cell(row, "fantasy_pos")
+        if pos not in STATS_VALID_POS:
+            continue
+        name = stats_cell(row, "player")
+        if not name:
+            continue
+        name = STATS_NAME_MARKER_RE.sub("", name).strip()
+        games = stats_cell(row, "g")
+        ppr = stats_cell(row, "fantasy_points_ppr")
+        pos_rank = stats_cell(row, "fantasy_rank_pos")
+        games = int(games) if games else 0
+        ppg = round(float(ppr) / games, 1) if ppr and games else None
+        key = normalize_name(name)
+        result[pos][key] = {
+            "display": name,
+            "team": stats_cell(row, "team"),
+            "games": games,
+            "ppg": ppg,
+            "posRank": int(pos_rank) if pos_rank else None,
+        }
+    return result
+
+
 def main():
     src = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "Downloads" / "2026_Dynasty_Startup_Draft_Prep.xlsx"
+    stats_src = Path(sys.argv[2]) if len(sys.argv) > 2 else Path.home() / "Downloads" / "sportsref_download.xls"
     wb = openpyxl.load_workbook(src, data_only=True)
 
     tier_exact, tier_by_last = load_tiers(wb)
@@ -282,9 +332,45 @@ def main():
         next_rank += 1
         players.append(p)
 
+    # 2025 season stats (games/PPG/season-end position rank), for the
+    # Compare Players tool — not currently shown on the main dashboard.
+    stats_matched = 0
+    if stats_src.exists():
+        stats = load_2025_stats(stats_src)
+        stats_by_last = {pos: {} for pos in STATS_VALID_POS}
+        for pos, pos_stats in stats.items():
+            for key in pos_stats:
+                stats_by_last[pos].setdefault(last_name(key), []).append(key)
+
+        for player in players:
+            pos = player["pos"]
+            if pos not in stats:
+                continue
+            key = normalize_name(player["name"])
+            entry = stats[pos].get(key)
+            if entry is None:
+                candidates = stats_by_last[pos].get(last_name(key))
+                if candidates and len(candidates) == 1:
+                    entry = stats[pos][candidates[0]]
+            if entry:
+                player["games2025"] = entry["games"]
+                player["ppg2025"] = entry["ppg"]
+                player["posRank2025"] = entry["posRank"]
+                stats_matched += 1
+            else:
+                player["games2025"] = None
+                player["ppg2025"] = None
+                player["posRank2025"] = None
+    else:
+        print(f"(2025 stats file not found at {stats_src} — skipping, not a hard failure)")
+        for player in players:
+            player["games2025"] = None
+            player["ppg2025"] = None
+            player["posRank2025"] = None
+
     out = Path(__file__).parent / "rankings.json"
     out.write_text(json.dumps(players, indent=0))
-    print(f"Wrote {len(players)} players to {out} ({len(new_entries)} newly added from the expert sheet)")
+    print(f"Wrote {len(players)} players to {out} ({len(new_entries)} newly added from the expert sheet, {stats_matched} matched to 2025 stats)")
     if unmatched_tier:
         print(f"{len(unmatched_tier)} player(s) had no tier match:")
         for u in unmatched_tier:

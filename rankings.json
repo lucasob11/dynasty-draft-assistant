@@ -18,7 +18,10 @@
 "JASON": 1,
 "MIKE": 1,
 "DraftSharks": 1
-}
+},
+"games2025": 17,
+"ppg2025": 21.4,
+"posRank2025": 1
 },
 {
 "rank": 3,
@@ -39,7 +42,10 @@
 "JASON": 5,
 "MIKE": 2,
 "DraftSharks": 5
-}
+},
+"games2025": 8,
+"ppg2025": 16.8,
+"posRank2025": 29
 },
 {
 "rank": 2,
@@ -60,7 +66,10 @@
 "JASON": 3,
 "MIKE": 3,
 "DraftSharks": 2
-}
+},
+"games2025": 17,
+"ppg2025": 20.7,
+"posRank2025": 2
 },
 {
 "rank": 4,
@@ -81,7 +90,10 @@
 "JASON": 4,
 "MIKE": 4,
 "DraftSharks": 3
-}
+},
+"games2025": 7,
+"ppg2025": 16.3,
+"posRank2025": 34
 },
 {
 "rank": 5,
@@ -102,7 +114,10 @@
 "JASON": 2,
 "MIKE": 5,
 "DraftSharks": 4
-}
+},
+"games2025": 13,
+"ppg2025": 16.5,
+"posRank2025": 20
 },
 {
 "rank": 7,
@@ -123,7 +138,10 @@
 "JASON": 3,
 "MIKE": 1,
 "DraftSharks": 1
-}
+},
+"games2025": 16,
+"ppg2025": 19.6,
+"posRank2025": 5
 },
 {
 "rank": 6,
@@ -144,7 +162,10 @@
 "JASON": 1,
 "MIKE": 2,
 "DraftSharks": 3
-}
+},
+"games2025": 16,
+"ppg2025": 23.4,
+"posRank2025": 1
 },
 {
 "rank": 8,
@@ -165,7 +186,10 @@
 "JASON": 2,
 "MIKE": 3,
 "DraftSharks": 2
-}
+},
+"games2025": 17,
+"ppg2025": 21.2,
+"posRank2025": 2
 },
 {
 "rank": 10,
@@ -186,7 +210,10 @@
 "JASON": 10,
 "MIKE": 6,
 "DraftSharks": 6
-}
+},
+"games2025": 17,
+"ppg2025": 18.7,
+"posRank2025": 5
 },
 {
 "rank": 9,
@@ -207,7 +234,10 @@
 "JASON": 7,
 "MIKE": 7,
 "DraftSharks": 8
-}
+},
+"games2025": 14,
+"ppg2025": 20.4,
+"posRank2025": 11
 },
 {
 "rank": 11,
@@ -228,7 +258,10 @@
 "JASON": 9,
 "MIKE": 8,
 "DraftSharks": 7
-}
+},
+"games2025": 16,
+"ppg2025": 17.9,
+"posRank2025": 10
 },
 {
 "rank": 12,
@@ -249,7 +282,10 @@
 "JASON": 1,
 "MIKE": 1,
 "DraftSharks": 1
-}
+},
+"games2025": 17,
+"ppg2025": 21.8,
+"posRank2025": 3
 },
 {
 "rank": 13,
@@ -270,7 +306,10 @@
 "JASON": 2,
 "MIKE": 2,
 "DraftSharks": 2
-}
+},
+"games2025": 17,
+"ppg2025": 21.6,
+"posRank2025": 4
 },
 {
 "rank": 14,
@@ -291,7 +330,10 @@
 "JASON": 8,
 "MIKE": 9,
 "DraftSharks": 12
-}
+},
+"games2025": 14,
+"ppg2025": 17.3,
+"posRank2025": 13
 },
 {
 "rank": 15,
@@ -312,7 +354,10 @@
 "JASON": 6,
 "MIKE": 10,
 "DraftSharks": 9
-}
+},
+"games2025": 16,
+"ppg2025": 18.7,
+"posRank2025": 8
 },
 {
 "rank": 16,
@@ -333,7 +378,10 @@
 "JASON": 5,
 "MIKE": 4,
 "DraftSharks": 5
-}
+},
+"games2025": 14,
+"ppg2025": 14.3,
+"posRank2025": 22
 },
 {
 "rank": 17,
@@ -354,7 +402,10 @@
 "JASON": 6,
 "MIKE": 5,
 "DraftSharks": 6
-}
+},
+"games2025": 17,
+"ppg2025": 11.9,
+"posRank2025": 30
 },
 {
 "rank": 21,
@@ -375,7 +426,10 @@
 "JASON": 12,
 "MIKE": 11,
 "DraftSharks": 11
-}
+},
+"games2025": 9,
+"ppg2025": 19.7,
+"posRank2025": 23
 },
 {
 "rank": 18,
@@ -396,7 +450,10 @@
 "JASON": 14,
 "MIKE": 12,
 "DraftSharks": 10
-}
+},
+"games2025": 17,
+"ppg2025": 19.9,
+"posRank2025": 4
 },
 {
 "rank": 20,
@@ -417,7 +474,10 @@
 "JASON": 4,
 "MIKE": 6,
 "DraftSharks": 7
-}
+},
+"games2025": 4,
+"ppg2025": 14.3,
+"posRank2025": 98
 },
 {
 "rank": 19,
@@ -438,7 +498,10 @@
 "JASON": 11,
 "MIKE": 13,
 "DraftSharks": 13
-}
+},
+"games2025": 17,
+"ppg2025": 17.9,
+"posRank2025": 7
 },
 {
 "rank": 22,
@@ -459,7 +522,10 @@
 "JASON": 7,
 "MIKE": 7,
 "DraftSharks": 4
-}
+},
+"games2025": 17,
+"ppg2025": 19.1,
+"posRank2025": 3
 },
 {
 "rank": 24,
@@ -480,7 +546,10 @@
 "JASON": 5,
 "MIKE": 3,
 "DraftSharks": 5
-}
+},
+"games2025": 16,
+"ppg2025": 20.2,
+"posRank2025": 7
 },
 {
 "rank": 25,
@@ -501,7 +570,10 @@
 "JASON": 4,
 "MIKE": 4,
 "DraftSharks": 3
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 23,
@@ -522,7 +594,10 @@
 "JASON": 3,
 "MIKE": 5,
 "DraftSharks": 4
-}
+},
+"games2025": 17,
+"ppg2025": 14.4,
+"posRank2025": 15
 },
 {
 "rank": 31,
@@ -543,7 +618,10 @@
 "JASON": 11,
 "MIKE": 8,
 "DraftSharks": 11
-}
+},
+"games2025": 17,
+"ppg2025": 17.2,
+"posRank2025": 4
 },
 {
 "rank": 27,
@@ -563,7 +641,10 @@
 "ANDY": 2,
 "JASON": 1,
 "MIKE": 1
-}
+},
+"games2025": 12,
+"ppg2025": 14.7,
+"posRank2025": 8
 },
 {
 "rank": 28,
@@ -584,7 +665,10 @@
 "JASON": 2,
 "MIKE": 2,
 "DraftSharks": 1
-}
+},
+"games2025": 17,
+"ppg2025": 18.6,
+"posRank2025": 1
 },
 {
 "rank": 26,
@@ -605,7 +689,10 @@
 "JASON": 8,
 "MIKE": 9,
 "DraftSharks": 8
-}
+},
+"games2025": 12,
+"ppg2025": 16.8,
+"posRank2025": 17
 },
 {
 "rank": 32,
@@ -626,7 +713,10 @@
 "JASON": 9,
 "MIKE": 6,
 "DraftSharks": 8
-}
+},
+"games2025": 17,
+"ppg2025": 17.8,
+"posRank2025": 5
 },
 {
 "rank": 35,
@@ -647,7 +737,10 @@
 "JASON": 12,
 "MIKE": 10,
 "DraftSharks": 12
-}
+},
+"games2025": 16,
+"ppg2025": 16.8,
+"posRank2025": 6
 },
 {
 "rank": 34,
@@ -668,7 +761,10 @@
 "JASON": 8,
 "MIKE": 7,
 "DraftSharks": 9
-}
+},
+"games2025": 17,
+"ppg2025": 11.3,
+"posRank2025": 21
 },
 {
 "rank": 33,
@@ -689,7 +785,10 @@
 "JASON": 13,
 "MIKE": 11,
 "DraftSharks": 9
-}
+},
+"games2025": 15,
+"ppg2025": 15.1,
+"posRank2025": 9
 },
 {
 "rank": 30,
@@ -710,7 +809,10 @@
 "JASON": 6,
 "MIKE": 8,
 "DraftSharks": 7
-}
+},
+"games2025": 9,
+"ppg2025": 15.1,
+"posRank2025": 38
 },
 {
 "rank": 29,
@@ -731,7 +833,10 @@
 "JASON": 9,
 "MIKE": 12,
 "DraftSharks": 10
-}
+},
+"games2025": 17,
+"ppg2025": 12.4,
+"posRank2025": 15
 },
 {
 "rank": 36,
@@ -752,7 +857,10 @@
 "JASON": 7,
 "MIKE": 9,
 "DraftSharks": 6
-}
+},
+"games2025": 17,
+"ppg2025": 21.3,
+"posRank2025": 1
 },
 {
 "rank": 38,
@@ -773,7 +881,10 @@
 "JASON": 15,
 "MIKE": 14,
 "DraftSharks": 15
-}
+},
+"games2025": 15,
+"ppg2025": 15.7,
+"posRank2025": 15
 },
 {
 "rank": 50,
@@ -792,7 +903,10 @@
 "FantasyPros": 20,
 "JASON": 17,
 "MIKE": 15
-}
+},
+"games2025": 11,
+"ppg2025": 14.4,
+"posRank2025": 26
 },
 {
 "rank": 39,
@@ -813,7 +927,10 @@
 "JASON": 14,
 "MIKE": 13,
 "DraftSharks": 15
-}
+},
+"games2025": 7,
+"ppg2025": 14.2,
+"posRank2025": 64
 },
 {
 "rank": 44,
@@ -834,7 +951,10 @@
 "JASON": 19,
 "MIKE": 14,
 "DraftSharks": 20
-}
+},
+"games2025": 17,
+"ppg2025": 11.9,
+"posRank2025": 25
 },
 {
 "rank": 37,
@@ -855,7 +975,10 @@
 "JASON": 16,
 "MIKE": 16,
 "DraftSharks": 14
-}
+},
+"games2025": 17,
+"ppg2025": 18.5,
+"posRank2025": 6
 },
 {
 "rank": 43,
@@ -876,7 +999,10 @@
 "JASON": 17,
 "MIKE": 15,
 "DraftSharks": 13
-}
+},
+"games2025": 17,
+"ppg2025": 11.5,
+"posRank2025": 18
 },
 {
 "rank": 40,
@@ -895,7 +1021,10 @@
 "JASON": 10,
 "MIKE": 16,
 "DraftSharks": 18
-}
+},
+"games2025": 8,
+"ppg2025": 18.8,
+"posRank2025": 41
 },
 {
 "rank": 42,
@@ -916,7 +1045,10 @@
 "JASON": 15,
 "MIKE": 17,
 "DraftSharks": 19
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 45,
@@ -937,7 +1069,10 @@
 "JASON": 10,
 "MIKE": 10,
 "DraftSharks": 15
-}
+},
+"games2025": 17,
+"ppg2025": 16.6,
+"posRank2025": 10
 },
 {
 "rank": 46,
@@ -954,7 +1089,10 @@
 "expertRanks": {
 "JASON": 16,
 "MIKE": 18
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 49,
@@ -974,7 +1112,10 @@
 "JASON": 20,
 "MIKE": 19,
 "DraftSharks": 14
-}
+},
+"games2025": 17,
+"ppg2025": 14.3,
+"posRank2025": 8
 },
 {
 "rank": 48,
@@ -993,7 +1134,10 @@
 "FantasyPros": 17,
 "ANDY": 18,
 "MIKE": 20
-}
+},
+"games2025": 15,
+"ppg2025": 8.5,
+"posRank2025": 49
 },
 {
 "rank": 51,
@@ -1010,7 +1154,10 @@
 "expertRanks": {
 "ANDY": 20,
 "DraftSharks": 17
-}
+},
+"games2025": 15,
+"ppg2025": 14.1,
+"posRank2025": 11
 },
 {
 "rank": 55,
@@ -1029,7 +1176,10 @@
 "FantasyPros": 19,
 "ANDY": 17,
 "MIKE": 17
-}
+},
+"games2025": 17,
+"ppg2025": 11.0,
+"posRank2025": 22
 },
 {
 "rank": 47,
@@ -1049,7 +1199,10 @@
 "ANDY": 17,
 "JASON": 18,
 "DraftSharks": 16
-}
+},
+"games2025": 16,
+"ppg2025": 11.3,
+"posRank2025": 32
 },
 {
 "rank": 52,
@@ -1070,7 +1223,10 @@
 "JASON": 4,
 "MIKE": 3,
 "DraftSharks": 2
-}
+},
+"games2025": 16,
+"ppg2025": 10.3,
+"posRank2025": 9
 },
 {
 "rank": 53,
@@ -1087,7 +1243,10 @@
 "expertRanks": {
 "Trade/Cut": 20,
 "FantasyPros": 20
-}
+},
+"games2025": 15,
+"ppg2025": 14.7,
+"posRank2025": 14
 },
 {
 "rank": 54,
@@ -1108,7 +1267,10 @@
 "JASON": 11,
 "MIKE": 11,
 "DraftSharks": 11
-}
+},
+"games2025": 17,
+"ppg2025": 24.5,
+"posRank2025": 2
 },
 {
 "rank": 69,
@@ -1124,7 +1286,10 @@
 "expertCount": 1,
 "expertRanks": {
 "MIKE": 18
-}
+},
+"games2025": 17,
+"ppg2025": 13.8,
+"posRank2025": 14
 },
 {
 "rank": 56,
@@ -1145,7 +1310,10 @@
 "JASON": 3,
 "MIKE": 4,
 "DraftSharks": 4
-}
+},
+"games2025": 17,
+"ppg2025": 11.1,
+"posRank2025": 7
 },
 {
 "rank": 41,
@@ -1166,7 +1334,10 @@
 "JASON": 13,
 "MIKE": 19,
 "DraftSharks": 16
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 60,
@@ -1180,7 +1351,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 12.1,
+"posRank2025": 19
 },
 {
 "rank": 59,
@@ -1201,7 +1375,10 @@
 "JASON": 18,
 "MIKE": 20,
 "DraftSharks": 18
-}
+},
+"games2025": 17,
+"ppg2025": 16.0,
+"posRank2025": 12
 },
 {
 "rank": 63,
@@ -1215,7 +1392,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 12.9,
+"posRank2025": 10
 },
 {
 "rank": 61,
@@ -1236,7 +1416,10 @@
 "JASON": 15,
 "MIKE": 12,
 "DraftSharks": 10
-}
+},
+"games2025": 16,
+"ppg2025": 13.0,
+"posRank2025": 18
 },
 {
 "rank": 64,
@@ -1257,7 +1440,10 @@
 "JASON": 17,
 "MIKE": 13,
 "DraftSharks": 13
-}
+},
+"games2025": 16,
+"ppg2025": 14.5,
+"posRank2025": 13
 },
 {
 "rank": 58,
@@ -1271,7 +1457,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 12.2,
+"posRank2025": 36
 },
 {
 "rank": 62,
@@ -1292,7 +1481,10 @@
 "JASON": 12,
 "MIKE": 14,
 "DraftSharks": 12
-}
+},
+"games2025": 17,
+"ppg2025": 12.1,
+"posRank2025": 19
 },
 {
 "rank": 65,
@@ -1306,7 +1498,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 10.7,
+"posRank2025": 48
 },
 {
 "rank": 57,
@@ -1325,7 +1520,10 @@
 "FantasyPros": 16,
 "ANDY": 14,
 "DraftSharks": 20
-}
+},
+"games2025": 17,
+"ppg2025": 17.5,
+"posRank2025": 9
 },
 {
 "rank": 82,
@@ -1339,7 +1537,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 13.2,
+"posRank2025": 40
 },
 {
 "rank": 66,
@@ -1357,7 +1558,10 @@
 "ANDY": 20,
 "JASON": 20,
 "DraftSharks": 17
-}
+},
+"games2025": 14,
+"ppg2025": 14.9,
+"posRank2025": 21
 },
 {
 "rank": 68,
@@ -1374,7 +1578,10 @@
 "expertRanks": {
 "JASON": 19,
 "DraftSharks": 19
-}
+},
+"games2025": 5,
+"ppg2025": 15.6,
+"posRank2025": 38
 },
 {
 "rank": 70,
@@ -1395,7 +1602,10 @@
 "JASON": 5,
 "MIKE": 5,
 "DraftSharks": 3
-}
+},
+"games2025": 16,
+"ppg2025": 11.7,
+"posRank2025": 6
 },
 {
 "rank": 71,
@@ -1416,7 +1626,10 @@
 "JASON": 6,
 "MIKE": 6,
 "DraftSharks": 5
-}
+},
+"games2025": 8,
+"ppg2025": 14.7,
+"posRank2025": 17
 },
 {
 "rank": 73,
@@ -1437,7 +1650,10 @@
 "JASON": 18,
 "MIKE": 15,
 "DraftSharks": 14
-}
+},
+"games2025": 14,
+"ppg2025": 12.1,
+"posRank2025": 26
 },
 {
 "rank": 75,
@@ -1457,7 +1673,10 @@
 "JASON": 14,
 "MIKE": 16,
 "DraftSharks": 18
-}
+},
+"games2025": 17,
+"ppg2025": 15.5,
+"posRank2025": 8
 },
 {
 "rank": 79,
@@ -1475,7 +1694,10 @@
 "FantasyPros": 19,
 "ANDY": 19,
 "MIKE": 17
-}
+},
+"games2025": 17,
+"ppg2025": 14.9,
+"posRank2025": 9
 },
 {
 "rank": 72,
@@ -1495,7 +1717,10 @@
 "JASON": 16,
 "MIKE": 18,
 "DraftSharks": 17
-}
+},
+"games2025": 10,
+"ppg2025": 13.8,
+"posRank2025": 36
 },
 {
 "rank": 76,
@@ -1516,7 +1741,10 @@
 "JASON": 7,
 "MIKE": 7,
 "DraftSharks": 8
-}
+},
+"games2025": 9,
+"ppg2025": 11.9,
+"posRank2025": 26
 },
 {
 "rank": 77,
@@ -1535,7 +1763,10 @@
 "JASON": 19,
 "MIKE": 19,
 "DraftSharks": 16
-}
+},
+"games2025": 15,
+"ppg2025": 15.8,
+"posRank2025": 12
 },
 {
 "rank": 67,
@@ -1549,7 +1780,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 85,
@@ -1568,7 +1802,10 @@
 "FantasyPros": 18,
 "ANDY": 20,
 "MIKE": 20
-}
+},
+"games2025": 16,
+"ppg2025": 15.2,
+"posRank2025": 11
 },
 {
 "rank": 74,
@@ -1586,7 +1823,10 @@
 "Trade/Cut": 19,
 "FantasyPros": 20,
 "JASON": 13
-}
+},
+"games2025": 8,
+"ppg2025": 16.0,
+"posRank2025": 39
 },
 {
 "rank": 81,
@@ -1600,7 +1840,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 12.8,
+"posRank2025": 43
 },
 {
 "rank": 78,
@@ -1614,7 +1857,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 9.9,
+"posRank2025": 45
 },
 {
 "rank": 83,
@@ -1628,7 +1874,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 17.4,
+"posRank2025": 17
 },
 {
 "rank": 84,
@@ -1642,7 +1891,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 13.6,
+"posRank2025": 19
 },
 {
 "rank": 80,
@@ -1661,7 +1913,10 @@
 "ANDY": 17,
 "JASON": 20,
 "DraftSharks": 19
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 87,
@@ -1675,7 +1930,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.0,
+"posRank2025": 28
 },
 {
 "rank": 92,
@@ -1689,7 +1947,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 12.2,
+"posRank2025": 16
 },
 {
 "rank": 88,
@@ -1710,7 +1971,10 @@
 "JASON": 9,
 "MIKE": 8,
 "DraftSharks": 6
-}
+},
+"games2025": 17,
+"ppg2025": 12.4,
+"posRank2025": 3
 },
 {
 "rank": 89,
@@ -1724,7 +1988,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 11.4,
+"posRank2025": 52
 },
 {
 "rank": 90,
@@ -1738,7 +2005,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 20.6,
+"posRank2025": 3
 },
 {
 "rank": 91,
@@ -1752,7 +2022,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 9.7,
+"posRank2025": 43
 },
 {
 "rank": 93,
@@ -1766,7 +2039,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 12.5,
+"posRank2025": 20
 },
 {
 "rank": 86,
@@ -1780,7 +2056,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 96,
@@ -1794,7 +2073,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.9,
+"posRank2025": 48
 },
 {
 "rank": 95,
@@ -1815,7 +2097,10 @@
 "JASON": 8,
 "MIKE": 9,
 "DraftSharks": 7
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 94,
@@ -1831,7 +2116,10 @@
 "expertCount": 1,
 "expertRanks": {
 "DraftSharks": 20
-}
+},
+"games2025": 17,
+"ppg2025": 16.4,
+"posRank2025": 6
 },
 {
 "rank": 97,
@@ -1852,7 +2140,10 @@
 "JASON": 14,
 "MIKE": 13,
 "DraftSharks": 15
-}
+},
+"games2025": 17,
+"ppg2025": 13.0,
+"posRank2025": 13
 },
 {
 "rank": 98,
@@ -1873,7 +2164,10 @@
 "JASON": 10,
 "MIKE": 10,
 "DraftSharks": 11
-}
+},
+"games2025": 15,
+"ppg2025": 8.8,
+"posRank2025": 20
 },
 {
 "rank": 99,
@@ -1887,7 +2181,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 11.0,
+"posRank2025": 38
 },
 {
 "rank": 100,
@@ -1901,7 +2198,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 15.9,
+"posRank2025": 7
 },
 {
 "rank": 102,
@@ -1915,7 +2215,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 12.9,
+"posRank2025": 12
 },
 {
 "rank": 101,
@@ -1929,7 +2232,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 10.6,
+"posRank2025": 76
 },
 {
 "rank": 107,
@@ -1943,7 +2249,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 8.5,
+"posRank2025": 50
 },
 {
 "rank": 104,
@@ -1957,7 +2266,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 14.3,
+"posRank2025": 14
 },
 {
 "rank": 103,
@@ -1971,7 +2283,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 9.8,
+"posRank2025": 78
 },
 {
 "rank": 113,
@@ -1985,7 +2300,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 11.3,
+"posRank2025": 20
 },
 {
 "rank": 109,
@@ -1999,7 +2317,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 13.6,
+"posRank2025": 23
 },
 {
 "rank": 105,
@@ -2013,7 +2334,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 11.9,
+"posRank2025": 26
 },
 {
 "rank": 123,
@@ -2027,7 +2351,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 106,
@@ -2041,7 +2368,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 9.8,
+"posRank2025": 27
 },
 {
 "rank": 118,
@@ -2061,7 +2391,10 @@
 "JASON": 18,
 "MIKE": 11,
 "DraftSharks": 14
-}
+},
+"games2025": 14,
+"ppg2025": 4.4,
+"posRank2025": 50
 },
 {
 "rank": 116,
@@ -2082,7 +2415,10 @@
 "JASON": 13,
 "MIKE": 12,
 "DraftSharks": 10
-}
+},
+"games2025": 17,
+"ppg2025": 11.1,
+"posRank2025": 10
 },
 {
 "rank": 121,
@@ -2096,7 +2432,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 13.6,
+"posRank2025": 17
 },
 {
 "rank": 119,
@@ -2110,7 +2449,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 12.2,
+"posRank2025": 27
 },
 {
 "rank": 124,
@@ -2124,7 +2466,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 1.4,
+"posRank2025": 165
 },
 {
 "rank": 112,
@@ -2145,7 +2490,10 @@
 "JASON": 11,
 "MIKE": 13,
 "DraftSharks": 9
-}
+},
+"games2025": 12,
+"ppg2025": 10.5,
+"posRank2025": 15
 },
 {
 "rank": 117,
@@ -2159,7 +2507,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 11.5,
+"posRank2025": 21
 },
 {
 "rank": 125,
@@ -2180,7 +2531,10 @@
 "JASON": 16,
 "MIKE": 14,
 "DraftSharks": 15
-}
+},
+"games2025": 12,
+"ppg2025": 9.8,
+"posRank2025": 23
 },
 {
 "rank": 108,
@@ -2194,7 +2548,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 7.9,
+"posRank2025": 59
 },
 {
 "rank": 114,
@@ -2208,7 +2565,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 6.9,
+"posRank2025": 118
 },
 {
 "rank": 127,
@@ -2222,7 +2582,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 8.4,
+"posRank2025": 42
 },
 {
 "rank": 122,
@@ -2243,7 +2606,10 @@
 "JASON": 15,
 "MIKE": 15,
 "DraftSharks": 13
-}
+},
+"games2025": 11,
+"ppg2025": 14.7,
+"posRank2025": 11
 },
 {
 "rank": 129,
@@ -2257,7 +2623,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 10.3,
+"posRank2025": 34
 },
 {
 "rank": 120,
@@ -2271,7 +2640,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 5.0,
+"posRank2025": 92
 },
 {
 "rank": 111,
@@ -2292,7 +2664,10 @@
 "JASON": 12,
 "MIKE": 16,
 "DraftSharks": 12
-}
+},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 115,
@@ -2309,7 +2684,10 @@
 "expertRanks": {
 "ANDY": 20,
 "DraftSharks": 17
-}
+},
+"games2025": 17,
+"ppg2025": 7.6,
+"posRank2025": 47
 },
 {
 "rank": 110,
@@ -2323,7 +2701,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 12.2,
+"posRank2025": 22
 },
 {
 "rank": 135,
@@ -2337,7 +2718,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 126,
@@ -2351,7 +2735,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 10.4,
+"posRank2025": 42
 },
 {
 "rank": 130,
@@ -2365,7 +2752,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 128,
@@ -2379,7 +2769,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 9.2,
+"posRank2025": 81
 },
 {
 "rank": 132,
@@ -2400,7 +2793,10 @@
 "JASON": 14,
 "MIKE": 17,
 "DraftSharks": 19
-}
+},
+"games2025": 17,
+"ppg2025": 7.7,
+"posRank2025": 18
 },
 {
 "rank": 133,
@@ -2414,7 +2810,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 8.6,
+"posRank2025": 29
 },
 {
 "rank": 138,
@@ -2428,7 +2827,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 12.7,
+"posRank2025": 16
 },
 {
 "rank": 131,
@@ -2442,7 +2844,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 9.1,
+"posRank2025": 105
 },
 {
 "rank": 134,
@@ -2456,7 +2861,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 12.8,
+"posRank2025": 25
 },
 {
 "rank": 146,
@@ -2470,7 +2878,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 12.5,
+"posRank2025": 32
 },
 {
 "rank": 136,
@@ -2484,7 +2895,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 7.2,
+"posRank2025": 34
 },
 {
 "rank": 139,
@@ -2498,7 +2912,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 10.6,
+"posRank2025": 37
 },
 {
 "rank": 140,
@@ -2517,7 +2934,10 @@
 "ANDY": 18,
 "JASON": 17,
 "MIKE": 18
-}
+},
+"games2025": 17,
+"ppg2025": 7.3,
+"posRank2025": 24
 },
 {
 "rank": 143,
@@ -2531,7 +2951,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 8.3,
+"posRank2025": 28
 },
 {
 "rank": 142,
@@ -2545,7 +2968,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 8.2,
+"posRank2025": 70
 },
 {
 "rank": 141,
@@ -2559,7 +2985,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.9,
+"posRank2025": 23
 },
 {
 "rank": 160,
@@ -2573,7 +3002,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 11.6,
+"posRank2025": 37
 },
 {
 "rank": 147,
@@ -2587,7 +3019,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 11.6,
+"posRank2025": 29
 },
 {
 "rank": 156,
@@ -2601,7 +3036,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 11.5,
+"posRank2025": 25
 },
 {
 "rank": 150,
@@ -2615,7 +3053,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 18,
+"ppg2025": 8.7,
+"posRank2025": 39
 },
 {
 "rank": 144,
@@ -2629,7 +3070,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 154,
@@ -2643,7 +3087,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 12.4,
+"posRank2025": 24
 },
 {
 "rank": 149,
@@ -2657,7 +3104,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 145,
@@ -2671,7 +3121,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 155,
@@ -2692,7 +3145,10 @@
 "JASON": 9,
 "MIKE": 12,
 "DraftSharks": 10
-}
+},
+"games2025": 4,
+"ppg2025": 7.5,
+"posRank2025": 141
 },
 {
 "rank": 157,
@@ -2709,7 +3165,10 @@
 "expertRanks": {
 "MIKE": 19,
 "DraftSharks": 18
-}
+},
+"games2025": 17,
+"ppg2025": 10.6,
+"posRank2025": 12
 },
 {
 "rank": 151,
@@ -2723,7 +3182,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 2,
+"ppg2025": 5.2,
+"posRank2025": 169
 },
 {
 "rank": 162,
@@ -2737,7 +3199,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 7.1,
+"posRank2025": 56
 },
 {
 "rank": 137,
@@ -2751,7 +3216,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 13.4,
+"posRank2025": 33
 },
 {
 "rank": 153,
@@ -2770,7 +3238,10 @@
 "ANDY": 17,
 "MIKE": 20,
 "DraftSharks": 16
-}
+},
+"games2025": 15,
+"ppg2025": 12.3,
+"posRank2025": 2
 },
 {
 "rank": 148,
@@ -2784,7 +3255,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 13.0,
+"posRank2025": 24
 },
 {
 "rank": 158,
@@ -2798,7 +3272,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 7.2,
+"posRank2025": 35
 },
 {
 "rank": 159,
@@ -2812,7 +3289,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 10.7,
+"posRank2025": 32
 },
 {
 "rank": 169,
@@ -2826,7 +3306,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.0,
+"posRank2025": 86
 },
 {
 "rank": 170,
@@ -2840,7 +3323,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 8.9,
+"posRank2025": 44
 },
 {
 "rank": 168,
@@ -2854,7 +3340,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.5,
+"posRank2025": 4
 },
 {
 "rank": 164,
@@ -2870,7 +3359,10 @@
 "expertCount": 1,
 "expertRanks": {
 "JASON": 20
-}
+},
+"games2025": 17,
+"ppg2025": 11.4,
+"posRank2025": 5
 },
 {
 "rank": 165,
@@ -2884,7 +3376,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 8.1,
+"posRank2025": 33
 },
 {
 "rank": 166,
@@ -2898,7 +3393,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.0,
+"posRank2025": 89
 },
 {
 "rank": 163,
@@ -2916,7 +3414,10 @@
 "Trade/Cut": 19,
 "FantasyPros": 20,
 "ANDY": 20
-}
+},
+"games2025": 17,
+"ppg2025": 8.7,
+"posRank2025": 14
 },
 {
 "rank": 173,
@@ -2930,7 +3431,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.5,
+"posRank2025": 13
 },
 {
 "rank": 175,
@@ -2944,7 +3448,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 174,
@@ -2958,7 +3465,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.1,
+"posRank2025": 96
 },
 {
 "rank": 152,
@@ -2972,7 +3482,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 172,
@@ -2990,7 +3503,10 @@
 "Trade/Cut": 17,
 "FantasyPros": 19,
 "DraftSharks": 17
-}
+},
+"games2025": 14,
+"ppg2025": 3.7,
+"posRank2025": 40
 },
 {
 "rank": 167,
@@ -3006,7 +3522,10 @@
 "expertCount": 1,
 "expertRanks": {
 "JASON": 19
-}
+},
+"games2025": 15,
+"ppg2025": 7.5,
+"posRank2025": 29
 },
 {
 "rank": 171,
@@ -3020,7 +3539,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.4,
+"posRank2025": 33
 },
 {
 "rank": 176,
@@ -3034,7 +3556,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 11.8,
+"posRank2025": 31
 },
 {
 "rank": 161,
@@ -3048,7 +3573,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 177,
@@ -3062,7 +3590,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 8.4,
+"posRank2025": 40
 },
 {
 "rank": 179,
@@ -3076,7 +3607,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 178,
@@ -3090,7 +3624,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 9.4,
+"posRank2025": 31
 },
 {
 "rank": 180,
@@ -3104,7 +3641,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 13.4,
+"posRank2025": 108
 },
 {
 "rank": 181,
@@ -3118,7 +3658,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 9.9,
+"posRank2025": 44
 },
 {
 "rank": 182,
@@ -3132,7 +3675,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 8.6,
+"posRank2025": 54
 },
 {
 "rank": 183,
@@ -3146,7 +3692,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 197,
@@ -3160,7 +3709,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 185,
@@ -3174,7 +3726,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 188,
@@ -3188,7 +3743,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 191,
@@ -3202,7 +3760,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 7.4,
+"posRank2025": 51
 },
 {
 "rank": 184,
@@ -3216,7 +3777,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 5.5,
+"posRank2025": 75
 },
 {
 "rank": 189,
@@ -3230,7 +3794,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 186,
@@ -3244,7 +3811,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.5,
+"posRank2025": 68
 },
 {
 "rank": 190,
@@ -3258,7 +3828,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.9,
+"posRank2025": 97
 },
 {
 "rank": 187,
@@ -3272,7 +3845,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 3.3,
+"posRank2025": 106
 },
 {
 "rank": 198,
@@ -3286,7 +3862,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 7.1,
+"posRank2025": 45
 },
 {
 "rank": 195,
@@ -3300,7 +3879,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 7.6,
+"posRank2025": 28
 },
 {
 "rank": 194,
@@ -3314,7 +3896,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 6.8,
+"posRank2025": 37
 },
 {
 "rank": 192,
@@ -3328,7 +3913,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 7.3,
+"posRank2025": 53
 },
 {
 "rank": 196,
@@ -3342,7 +3930,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 193,
@@ -3356,7 +3947,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.8,
+"posRank2025": 57
 },
 {
 "rank": 205,
@@ -3370,7 +3964,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 8.1,
+"posRank2025": 79
 },
 {
 "rank": 200,
@@ -3387,7 +3984,10 @@
 "expertRanks": {
 "MIKE": 19,
 "DraftSharks": 18
-}
+},
+"games2025": 15,
+"ppg2025": 8.5,
+"posRank2025": 19
 },
 {
 "rank": 201,
@@ -3401,7 +4001,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 9.2,
+"posRank2025": 53
 },
 {
 "rank": 204,
@@ -3415,7 +4018,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 3.8,
+"posRank2025": 96
 },
 {
 "rank": 207,
@@ -3429,7 +4035,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 9.1,
+"posRank2025": 41
 },
 {
 "rank": 202,
@@ -3443,7 +4052,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 254,
@@ -3457,7 +4069,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.7,
+"posRank2025": 37
 },
 {
 "rank": 213,
@@ -3471,7 +4086,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 223,
@@ -3485,7 +4103,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.6,
+"posRank2025": 47
 },
 {
 "rank": 209,
@@ -3499,7 +4120,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 16.2,
+"posRank2025": 16
 },
 {
 "rank": 208,
@@ -3513,7 +4137,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 11.6,
+"posRank2025": 24
 },
 {
 "rank": 212,
@@ -3527,7 +4154,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 5.4,
+"posRank2025": 83
 },
 {
 "rank": 211,
@@ -3541,7 +4171,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 7.2,
+"posRank2025": 31
 },
 {
 "rank": 219,
@@ -3555,7 +4188,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 9.5,
+"posRank2025": 35
 },
 {
 "rank": 203,
@@ -3569,7 +4205,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 215,
@@ -3583,7 +4222,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 6.7,
+"posRank2025": 22
 },
 {
 "rank": 214,
@@ -3597,7 +4239,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 5.7,
+"posRank2025": 34
 },
 {
 "rank": 218,
@@ -3611,7 +4256,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 2.6,
+"posRank2025": 127
 },
 {
 "rank": 216,
@@ -3625,7 +4273,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.3,
+"posRank2025": 103
 },
 {
 "rank": 210,
@@ -3639,7 +4290,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.5,
+"posRank2025": 80
 },
 {
 "rank": 222,
@@ -3653,7 +4307,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 7.9,
+"posRank2025": 62
 },
 {
 "rank": 206,
@@ -3667,7 +4324,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 6.7,
+"posRank2025": 52
 },
 {
 "rank": 220,
@@ -3681,7 +4341,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 8.8,
+"posRank2025": 80
 },
 {
 "rank": 217,
@@ -3695,7 +4358,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 6.8,
+"posRank2025": 114
 },
 {
 "rank": 221,
@@ -3709,7 +4375,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.2,
+"posRank2025": 60
 },
 {
 "rank": 224,
@@ -3723,7 +4392,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 6.2,
+"posRank2025": 72
 },
 {
 "rank": 255,
@@ -3737,7 +4409,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 11.8,
+"posRank2025": 30
 },
 {
 "rank": 226,
@@ -3751,7 +4426,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 6.9,
+"posRank2025": 57
 },
 {
 "rank": 228,
@@ -3765,7 +4443,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.8,
+"posRank2025": 59
 },
 {
 "rank": 227,
@@ -3786,7 +4467,10 @@
 "JASON": 1,
 "MIKE": 1,
 "DraftSharks": 1
-}
+},
+"games2025": 17,
+"ppg2025": 3.7,
+"posRank2025": 58
 },
 {
 "rank": 199,
@@ -3800,7 +4484,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 233,
@@ -3814,7 +4501,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 3,
+"ppg2025": 11.1,
+"posRank2025": 75
 },
 {
 "rank": 230,
@@ -3828,7 +4518,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.3,
+"posRank2025": 64
 },
 {
 "rank": 225,
@@ -3842,7 +4535,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 231,
@@ -3856,7 +4552,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 6.0,
+"posRank2025": 68
 },
 {
 "rank": 234,
@@ -3870,7 +4569,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.2,
+"posRank2025": 63
 },
 {
 "rank": 235,
@@ -3884,7 +4586,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 0.9,
+"posRank2025": 109
 },
 {
 "rank": 251,
@@ -3898,7 +4603,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 237,
@@ -3912,7 +4620,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 10.7,
+"posRank2025": 37
 },
 {
 "rank": 238,
@@ -3926,7 +4637,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.5,
+"posRank2025": 116
 },
 {
 "rank": 236,
@@ -3942,7 +4656,10 @@
 "expertCount": 1,
 "expertRanks": {
 "DraftSharks": 20
-}
+},
+"games2025": 13,
+"ppg2025": 2.8,
+"posRank2025": 62
 },
 {
 "rank": 240,
@@ -3956,7 +4673,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.4,
+"posRank2025": 46
 },
 {
 "rank": 244,
@@ -3970,7 +4690,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 5.1,
+"posRank2025": 90
 },
 {
 "rank": 242,
@@ -3984,7 +4707,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 4.8,
+"posRank2025": 67
 },
 {
 "rank": 241,
@@ -3998,7 +4724,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.6,
+"posRank2025": 61
 },
 {
 "rank": 229,
@@ -4012,7 +4741,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 2,
+"ppg2025": 5.2,
+"posRank2025": 169
 },
 {
 "rank": 245,
@@ -4026,7 +4758,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 15.9,
+"posRank2025": 28
 },
 {
 "rank": 243,
@@ -4040,7 +4775,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 7.3,
+"posRank2025": 58
 },
 {
 "rank": 247,
@@ -4054,7 +4792,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.6,
+"posRank2025": 99
 },
 {
 "rank": 270,
@@ -4068,7 +4809,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 249,
@@ -4082,7 +4826,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 4.5,
+"posRank2025": 61
 },
 {
 "rank": 246,
@@ -4096,7 +4843,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 6.0,
+"posRank2025": 77
 },
 {
 "rank": 239,
@@ -4110,7 +4860,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 259,
@@ -4124,7 +4877,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 5.7,
+"posRank2025": 45
 },
 {
 "rank": 261,
@@ -4138,7 +4894,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 10.3,
+"posRank2025": 35
 },
 {
 "rank": 250,
@@ -4152,7 +4911,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 5.8,
+"posRank2025": 63
 },
 {
 "rank": 286,
@@ -4166,7 +4928,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 256,
@@ -4180,7 +4945,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 266,
@@ -4194,7 +4962,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 7.1,
+"posRank2025": 54
 },
 {
 "rank": 248,
@@ -4208,7 +4979,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 4.1,
+"posRank2025": 84
 },
 {
 "rank": 263,
@@ -4222,7 +4996,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 6.4,
+"posRank2025": 32
 },
 {
 "rank": 260,
@@ -4236,7 +5013,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.9,
+"posRank2025": 55
 },
 {
 "rank": 268,
@@ -4250,7 +5030,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 252,
@@ -4264,7 +5047,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 262,
@@ -4278,7 +5064,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 1.8,
+"posRank2025": 67
 },
 {
 "rank": 273,
@@ -4292,7 +5081,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 7.1,
+"posRank2025": 66
 },
 {
 "rank": 258,
@@ -4306,7 +5098,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.7,
+"posRank2025": 70
 },
 {
 "rank": 257,
@@ -4320,7 +5115,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 267,
@@ -4334,7 +5132,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 3.4,
+"posRank2025": 101
 },
 {
 "rank": 253,
@@ -4348,7 +5149,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 14.2,
+"posRank2025": 18
 },
 {
 "rank": 269,
@@ -4366,7 +5170,10 @@
 "FantasyPros": 19,
 "ANDY": 19,
 "MIKE": 17
-}
+},
+"games2025": 17,
+"ppg2025": 0.7,
+"posRank2025": 104
 },
 {
 "rank": 265,
@@ -4380,7 +5187,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 3,
+"ppg2025": 3.9,
+"posRank2025": 105
 },
 {
 "rank": 281,
@@ -4394,7 +5204,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 4.4,
+"posRank2025": 113
 },
 {
 "rank": 274,
@@ -4408,7 +5221,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 4.8,
+"posRank2025": 73
 },
 {
 "rank": 271,
@@ -4422,7 +5238,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 276,
@@ -4436,7 +5255,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 272,
@@ -4450,7 +5272,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 295,
@@ -4464,7 +5289,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 1.5,
+"posRank2025": 92
 },
 {
 "rank": 289,
@@ -4478,7 +5306,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 1.6,
+"posRank2025": 152
 },
 {
 "rank": 278,
@@ -4492,7 +5323,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 283,
@@ -4506,7 +5340,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 280,
@@ -4520,7 +5357,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 1.1,
+"posRank2025": 101
 },
 {
 "rank": 277,
@@ -4534,7 +5374,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 282,
@@ -4548,7 +5391,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 5.4,
+"posRank2025": 38
 },
 {
 "rank": 279,
@@ -4562,7 +5408,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 284,
@@ -4576,7 +5425,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.2,
+"posRank2025": 58
 },
 {
 "rank": 308,
@@ -4590,7 +5442,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 309,
@@ -4604,7 +5459,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 287,
@@ -4618,7 +5476,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 1.2,
+"posRank2025": 106
 },
 {
 "rank": 288,
@@ -4632,7 +5493,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 3.4,
+"posRank2025": 86
 },
 {
 "rank": 292,
@@ -4646,7 +5510,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 2.1,
+"posRank2025": 145
 },
 {
 "rank": 294,
@@ -4660,7 +5527,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 4.6,
+"posRank2025": 39
 },
 {
 "rank": 300,
@@ -4674,7 +5544,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 6.5,
+"posRank2025": 66
 },
 {
 "rank": 293,
@@ -4688,7 +5561,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.3,
+"posRank2025": 71
 },
 {
 "rank": 298,
@@ -4702,7 +5578,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 5.7,
+"posRank2025": 95
 },
 {
 "rank": 290,
@@ -4716,7 +5595,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 6.3,
+"posRank2025": 48
 },
 {
 "rank": 275,
@@ -4730,7 +5612,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 291,
@@ -4744,7 +5629,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 0.4,
+"posRank2025": 118
 },
 {
 "rank": 297,
@@ -4758,7 +5646,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 8.7,
+"posRank2025": 16
 },
 {
 "rank": 328,
@@ -4772,7 +5663,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 7.9,
+"posRank2025": 62
 },
 {
 "rank": 299,
@@ -4786,7 +5680,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 4.9,
+"posRank2025": 33
 },
 {
 "rank": 296,
@@ -4800,7 +5697,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 6.4,
+"posRank2025": 43
 },
 {
 "rank": 303,
@@ -4814,7 +5714,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 301,
@@ -4828,7 +5731,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 1.9,
+"posRank2025": 83
 },
 {
 "rank": 313,
@@ -4842,7 +5748,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 5.1,
+"posRank2025": 88
 },
 {
 "rank": 304,
@@ -4856,7 +5765,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 3.6,
+"posRank2025": 119
 },
 {
 "rank": 305,
@@ -4870,7 +5782,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 306,
@@ -4884,7 +5799,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 3.3,
+"posRank2025": 106
 },
 {
 "rank": 320,
@@ -4905,7 +5823,10 @@
 "JASON": 19,
 "MIKE": 14,
 "DraftSharks": 20
-}
+},
+"games2025": 10,
+"ppg2025": 1.6,
+"posRank2025": 157
 },
 {
 "rank": 312,
@@ -4919,7 +5840,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 325,
@@ -4933,7 +5857,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 3,
+"ppg2025": 14.4,
+"posRank2025": 46
 },
 {
 "rank": 310,
@@ -4947,7 +5874,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 3.2,
+"posRank2025": 135
 },
 {
 "rank": 307,
@@ -4961,7 +5891,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.0,
+"posRank2025": 109
 },
 {
 "rank": 329,
@@ -4975,7 +5908,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 314,
@@ -4989,7 +5925,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 8.6,
+"posRank2025": 30
 },
 {
 "rank": 316,
@@ -5003,7 +5942,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 3.9,
+"posRank2025": 74
 },
 {
 "rank": 315,
@@ -5017,7 +5959,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.0,
+"posRank2025": 35
 },
 {
 "rank": 321,
@@ -5031,7 +5976,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.9,
+"posRank2025": 49
 },
 {
 "rank": 311,
@@ -5045,7 +5993,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.1,
+"posRank2025": 139
 },
 {
 "rank": 330,
@@ -5059,7 +6010,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 6.9,
+"posRank2025": 71
 },
 {
 "rank": 319,
@@ -5073,7 +6027,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 3.6,
+"posRank2025": 136
 },
 {
 "rank": 317,
@@ -5094,7 +6051,10 @@
 "JASON": 14,
 "MIKE": 13,
 "DraftSharks": 15
-}
+},
+"games2025": 13,
+"ppg2025": 3.0,
+"posRank2025": 122
 },
 {
 "rank": 350,
@@ -5108,7 +6068,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 1.3,
+"posRank2025": 97
 },
 {
 "rank": 322,
@@ -5122,7 +6085,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 11.4,
+"posRank2025": 31
 },
 {
 "rank": 264,
@@ -5136,7 +6102,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.6,
+"posRank2025": 61
 },
 {
 "rank": 353,
@@ -5150,7 +6119,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 5.8,
+"posRank2025": 51
 },
 {
 "rank": 337,
@@ -5164,7 +6136,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 326,
@@ -5178,7 +6153,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.5,
+"posRank2025": 30
 },
 {
 "rank": 327,
@@ -5192,7 +6170,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 6.2,
+"posRank2025": 73
 },
 {
 "rank": 345,
@@ -5206,7 +6187,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 7.6,
+"posRank2025": 60
 },
 {
 "rank": 340,
@@ -5220,7 +6204,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 302,
@@ -5241,7 +6228,10 @@
 "JASON": 7,
 "MIKE": 9,
 "DraftSharks": 6
-}
+},
+"games2025": 17,
+"ppg2025": 21.3,
+"posRank2025": 1
 },
 {
 "rank": 339,
@@ -5255,7 +6245,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.6,
+"posRank2025": 69
 },
 {
 "rank": 343,
@@ -5269,7 +6262,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 8.3,
+"posRank2025": 48
 },
 {
 "rank": 373,
@@ -5283,7 +6279,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.2,
+"posRank2025": 56
 },
 {
 "rank": 335,
@@ -5297,7 +6296,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 2.4,
+"posRank2025": 65
 },
 {
 "rank": 351,
@@ -5311,7 +6313,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.8,
+"posRank2025": 52
 },
 {
 "rank": 336,
@@ -5325,7 +6330,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.9,
+"posRank2025": 85
 },
 {
 "rank": 358,
@@ -5339,7 +6347,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 2.6,
+"posRank2025": 58
 },
 {
 "rank": 334,
@@ -5353,7 +6364,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 7.1,
+"posRank2025": 36
 },
 {
 "rank": 346,
@@ -5367,7 +6381,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 3.6,
+"posRank2025": 117
 },
 {
 "rank": 344,
@@ -5381,7 +6398,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.0,
+"posRank2025": 41
 },
 {
 "rank": 341,
@@ -5395,7 +6415,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 3.1,
+"posRank2025": 124
 },
 {
 "rank": 347,
@@ -5409,7 +6432,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 5.8,
+"posRank2025": 67
 },
 {
 "rank": 370,
@@ -5423,7 +6449,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 11.3,
+"posRank2025": 27
 },
 {
 "rank": 360,
@@ -5437,7 +6466,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 348,
@@ -5451,7 +6483,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 4.5,
+"posRank2025": 100
 },
 {
 "rank": 356,
@@ -5465,7 +6500,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 2,
+"ppg2025": 3.5,
+"posRank2025": 185
 },
 {
 "rank": 355,
@@ -5479,7 +6517,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.3,
+"posRank2025": 91
 },
 {
 "rank": 377,
@@ -5493,7 +6534,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 2.1,
+"posRank2025": 151
 },
 {
 "rank": 374,
@@ -5507,7 +6551,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 3.1,
+"posRank2025": 110
 },
 {
 "rank": 376,
@@ -5521,7 +6568,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 7.7,
+"posRank2025": 51
 },
 {
 "rank": 359,
@@ -5535,7 +6585,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 9.7,
+"posRank2025": 21
 },
 {
 "rank": 369,
@@ -5549,7 +6602,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 4.2,
+"posRank2025": 104
 },
 {
 "rank": 382,
@@ -5563,7 +6619,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 3.4,
+"posRank2025": 56
 },
 {
 "rank": 365,
@@ -5577,7 +6636,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 3.7,
+"posRank2025": 42
 },
 {
 "rank": 403,
@@ -5591,7 +6653,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 5.8,
+"posRank2025": 65
 },
 {
 "rank": 394,
@@ -5605,7 +6670,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 2.2,
+"posRank2025": 142
 },
 {
 "rank": 381,
@@ -5619,7 +6687,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 1.3,
+"posRank2025": 167
 },
 {
 "rank": 386,
@@ -5633,7 +6704,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 363,
@@ -5647,7 +6721,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.9,
+"posRank2025": 57
 },
 {
 "rank": 367,
@@ -5661,7 +6738,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 6.1,
+"posRank2025": 25
 },
 {
 "rank": 333,
@@ -5675,7 +6755,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 5.9,
+"posRank2025": 50
 },
 {
 "rank": 331,
@@ -5689,7 +6772,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 14,
+"ppg2025": 9.9,
+"posRank2025": 45
 },
 {
 "rank": 338,
@@ -5703,7 +6789,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 413,
@@ -5717,7 +6806,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 7.0,
+"posRank2025": 40
 },
 {
 "rank": 409,
@@ -5731,7 +6823,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.4,
+"posRank2025": 54
 },
 {
 "rank": 412,
@@ -5745,7 +6840,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 285,
@@ -5759,7 +6857,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 354,
@@ -5773,7 +6874,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 1.3,
+"posRank2025": 80
 },
 {
 "rank": 408,
@@ -5787,7 +6891,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 0.8,
+"posRank2025": 180
 },
 {
 "rank": 383,
@@ -5801,7 +6908,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 6,
+"ppg2025": 8.3,
+"posRank2025": 44
 },
 {
 "rank": 371,
@@ -5815,7 +6925,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 401,
@@ -5829,7 +6942,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 361,
@@ -5843,7 +6959,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 6.7,
+"posRank2025": 85
 },
 {
 "rank": 400,
@@ -5857,7 +6976,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 318,
@@ -5871,7 +6993,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 398,
@@ -5885,7 +7010,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 4.8,
+"posRank2025": 73
 },
 {
 "rank": 357,
@@ -5899,7 +7027,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 323,
@@ -5913,7 +7044,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 1.5,
+"posRank2025": 146
 },
 {
 "rank": 342,
@@ -5927,7 +7061,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 0.3,
+"posRank2025": 198
 },
 {
 "rank": 368,
@@ -5941,7 +7078,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 349,
@@ -5955,7 +7095,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 1.1,
+"posRank2025": 188
 },
 {
 "rank": 332,
@@ -5969,7 +7112,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 232,
@@ -5983,7 +7129,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 375,
@@ -5997,7 +7146,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 384,
@@ -6011,7 +7163,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 0.7,
+"posRank2025": 123
 },
 {
 "rank": 324,
@@ -6025,7 +7180,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 352,
@@ -6039,7 +7197,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 362,
@@ -6053,7 +7214,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 5.8,
+"posRank2025": 74
 },
 {
 "rank": 366,
@@ -6067,7 +7231,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 372,
@@ -6081,7 +7248,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 6,
+"ppg2025": 3.5,
+"posRank2025": 149
 },
 {
 "rank": 378,
@@ -6095,7 +7265,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 6,
+"ppg2025": 5.1,
+"posRank2025": 137
 },
 {
 "rank": 379,
@@ -6109,7 +7282,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 3.5,
+"posRank2025": 120
 },
 {
 "rank": 387,
@@ -6123,7 +7299,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 388,
@@ -6137,7 +7316,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 380,
@@ -6151,7 +7333,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 3.2,
+"posRank2025": 51
 },
 {
 "rank": 395,
@@ -6165,7 +7350,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 389,
@@ -6179,7 +7367,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 385,
@@ -6193,7 +7384,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 1,
+"ppg2025": 10.9,
+"posRank2025": 103
 },
 {
 "rank": 396,
@@ -6207,7 +7401,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 390,
@@ -6221,7 +7418,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 391,
@@ -6235,7 +7435,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 3.9,
+"posRank2025": 143
 },
 {
 "rank": 392,
@@ -6249,7 +7452,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 1.1,
+"posRank2025": 196
 },
 {
 "rank": 393,
@@ -6263,7 +7469,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 399,
@@ -6277,7 +7486,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 397,
@@ -6298,7 +7510,10 @@
 "JASON": 6,
 "MIKE": 5,
 "DraftSharks": 6
-}
+},
+"games2025": 16,
+"ppg2025": 4.4,
+"posRank2025": 93
 },
 {
 "rank": 406,
@@ -6312,7 +7527,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 4.6,
+"posRank2025": 81
 },
 {
 "rank": 404,
@@ -6326,7 +7544,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 3.8,
+"posRank2025": 47
 },
 {
 "rank": 402,
@@ -6340,7 +7561,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 407,
@@ -6354,7 +7578,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 1.6,
+"posRank2025": 74
 },
 {
 "rank": 410,
@@ -6368,7 +7595,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 411,
@@ -6382,7 +7612,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 3.7,
+"posRank2025": 43
 },
 {
 "rank": 405,
@@ -6396,7 +7629,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 364,
@@ -6410,7 +7646,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 11.0,
+"posRank2025": 36
 },
 {
 "rank": 414,
@@ -6424,7 +7663,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 3.7,
+"posRank2025": 46
 },
 {
 "rank": 415,
@@ -6438,7 +7680,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 4.5,
+"posRank2025": 65
 },
 {
 "rank": 416,
@@ -6452,7 +7697,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 2.3,
+"posRank2025": 81
 },
 {
 "rank": 417,
@@ -6466,7 +7714,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 2.4,
+"posRank2025": 131
 },
 {
 "rank": 418,
@@ -6480,7 +7731,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 9.9,
+"posRank2025": 27
 },
 {
 "rank": 419,
@@ -6494,7 +7748,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 2,
+"ppg2025": 6.5,
+"posRank2025": 107
 },
 {
 "rank": 420,
@@ -6508,7 +7765,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.3,
+"posRank2025": 62
 },
 {
 "rank": 421,
@@ -6522,7 +7782,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 5.3,
+"posRank2025": 84
 },
 {
 "rank": 422,
@@ -6536,7 +7799,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 2.2,
+"posRank2025": 87
 },
 {
 "rank": 423,
@@ -6550,7 +7816,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 7,
+"ppg2025": 0.9,
+"posRank2025": 116
 },
 {
 "rank": 424,
@@ -6564,7 +7833,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 2.4,
+"posRank2025": 87
 },
 {
 "rank": 425,
@@ -6578,7 +7850,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 426,
@@ -6592,7 +7867,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 4.5,
+"posRank2025": 88
 },
 {
 "rank": 427,
@@ -6606,7 +7884,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 3.6,
+"posRank2025": 136
 },
 {
 "rank": 428,
@@ -6620,7 +7901,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 429,
@@ -6634,7 +7918,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 430,
@@ -6648,7 +7935,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 1.2,
+"posRank2025": 89
 },
 {
 "rank": 431,
@@ -6662,7 +7952,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 432,
@@ -6676,7 +7969,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 433,
@@ -6690,7 +7986,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.7,
+"posRank2025": 56
 },
 {
 "rank": 434,
@@ -6704,7 +8003,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 3.9,
+"posRank2025": 107
 },
 {
 "rank": 435,
@@ -6718,7 +8020,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 3.3,
+"posRank2025": 170
 },
 {
 "rank": 436,
@@ -6732,7 +8037,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 4.6,
+"posRank2025": 155
 },
 {
 "rank": 437,
@@ -6746,7 +8054,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 4.3,
+"posRank2025": 94
 },
 {
 "rank": 438,
@@ -6760,7 +8071,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 439,
@@ -6774,7 +8088,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 13,
+"ppg2025": 6.3,
+"posRank2025": 87
 },
 {
 "rank": 440,
@@ -6788,7 +8105,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.7,
+"posRank2025": 112
 },
 {
 "rank": 441,
@@ -6802,7 +8122,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 442,
@@ -6816,7 +8139,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 443,
@@ -6830,7 +8156,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 444,
@@ -6844,7 +8173,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 6,
+"ppg2025": 11.4,
+"posRank2025": 41
 },
 {
 "rank": 445,
@@ -6858,7 +8190,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 11,
+"ppg2025": 3.3,
+"posRank2025": 61
 },
 {
 "rank": 446,
@@ -6872,7 +8207,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 1,
+"ppg2025": 4.8,
+"posRank2025": 61
 },
 {
 "rank": 447,
@@ -6886,7 +8224,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 3.0,
+"posRank2025": 54
 },
 {
 "rank": 448,
@@ -6900,7 +8241,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 449,
@@ -6914,7 +8258,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 450,
@@ -6928,7 +8275,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 451,
@@ -6942,7 +8292,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 452,
@@ -6956,7 +8309,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 3,
+"ppg2025": 8.6,
+"posRank2025": 134
 },
 {
 "rank": 453,
@@ -6970,7 +8326,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 16,
+"ppg2025": 11.0,
+"posRank2025": 38
 },
 {
 "rank": 454,
@@ -6984,7 +8343,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 455,
@@ -6998,7 +8360,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 456,
@@ -7012,7 +8377,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.1,
+"posRank2025": 55
 },
 {
 "rank": 457,
@@ -7026,7 +8394,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 17,
+"ppg2025": 2.8,
+"posRank2025": 60
 },
 {
 "rank": 458,
@@ -7040,7 +8411,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 1,
+"ppg2025": 4.0,
+"posRank2025": 205
 },
 {
 "rank": 459,
@@ -7054,7 +8428,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 8,
+"ppg2025": 4.1,
+"posRank2025": 133
 },
 {
 "rank": 460,
@@ -7068,7 +8445,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 3.0,
+"posRank2025": 130
 },
 {
 "rank": 461,
@@ -7082,7 +8462,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 3.5,
+"posRank2025": 128
 },
 {
 "rank": 462,
@@ -7096,7 +8479,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 463,
@@ -7110,7 +8496,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 10,
+"ppg2025": 4.1,
+"posRank2025": 69
 },
 {
 "rank": 464,
@@ -7124,7 +8513,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 9,
+"ppg2025": 2.3,
+"posRank2025": 159
 },
 {
 "rank": 465,
@@ -7138,7 +8530,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 12,
+"ppg2025": 6.3,
+"posRank2025": 82
 },
 {
 "rank": 466,
@@ -7152,7 +8547,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 15,
+"ppg2025": 1.5,
+"posRank2025": 72
 },
 {
 "rank": 467,
@@ -7166,7 +8564,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 468,
@@ -7180,7 +8581,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 7.8,
+"posRank2025": 50
 },
 {
 "rank": 469,
@@ -7194,7 +8598,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 4,
+"ppg2025": 3.5,
+"posRank2025": 55
 },
 {
 "rank": 470,
@@ -7208,7 +8615,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": 5,
+"ppg2025": 8.0,
+"posRank2025": 47
 },
 {
 "rank": 471,
@@ -7222,7 +8632,10 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 },
 {
 "rank": 472,
@@ -7236,6 +8649,9 @@
 "expertWorst": null,
 "expertAvg": null,
 "expertCount": null,
-"expertRanks": {}
+"expertRanks": {},
+"games2025": null,
+"ppg2025": null,
+"posRank2025": null
 }
 ]

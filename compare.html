@@ -45,6 +45,7 @@
   .pcard .pname{font-size:22px;font-weight:800;margin-bottom:8px;}
   .pcard .pmeta{color:var(--muted);font-size:13px;}
   .pcard .prating{color:var(--muted);font-size:11px;margin-top:12px;}
+  .pcard .pstats2025{color:var(--muted);font-size:11px;margin-top:6px;padding-top:8px;border-top:1px solid var(--border);}
   .pcard .kbd{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:2px 7px;}
   .vs{font-size:14px;font-weight:800;color:var(--muted);flex-shrink:0;text-align:center;}
   .agreement{font-size:10px;font-weight:600;color:var(--muted);margin-top:8px;white-space:nowrap;letter-spacing:0;}
@@ -159,6 +160,7 @@ function ensurePosition(pos, allPlayers){
     ratings[p.name] = {
       rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || "",
       expertRanks: p.expertRanks || null, expertCount: p.expertCount || 0,
+      games2025: p.games2025 ?? null, ppg2025: p.ppg2025 ?? null, posRank2025: p.posRank2025 ?? null,
     };
   });
   compareState[pos] = {ratings, comparedPairs: [], history: [], skipped: {}};
@@ -210,6 +212,14 @@ function expertAgreement(ra, rb){
   let aWins = 0;
   for(const s of sources){ if(ra.expertRanks[s] < rb.expertRanks[s]) aWins++; }
   return {n: sources.length, aPct: Math.round((aWins / sources.length) * 100), bPct: Math.round(((sources.length - aWins) / sources.length) * 100)};
+}
+
+// "2025: RB2 · 17 GP · 24.5 PPG" — season-end position finish, games played,
+// and PPR points/game, from the Pro-Football-Reference stats export. Not
+// every player has this (rookies, or anyone outside the export's coverage).
+function stats2025Line(r){
+  if(r.posRank2025 == null) return "";
+  return `<div class="pstats2025">2025: ${posFilter}${r.posRank2025} · ${r.games2025} GP · ${r.ppg2025} PPG</div>`;
 }
 
 const SKIP_COOLDOWN = 3; // how many other picks/skips happen before a skipped pair can resurface
@@ -314,6 +324,7 @@ function renderArena(){
       <div class="pname">${name}</div>
       <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
       <div class="prating">Rating ${Math.round(r.rating)} · ${r.comparisons} comparison${r.comparisons === 1 ? "" : "s"}</div>
+      ${stats2025Line(r)}
       <div class="kbd">${name === a ? "←" : "→"}</div>
     </button>`;
 
