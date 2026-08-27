@@ -50,6 +50,7 @@
 
   .pexperts{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
   .pexperts .favor-pct{font-size:26px;font-weight:800;line-height:1.1;}
+  .pexperts .favor-pct.na{color:var(--muted) !important;opacity:.5;font-size:20px;}
   .pexperts .favor-lbl{font-size:11px;color:var(--muted);margin-top:2px;}
   .pexperts-list{margin-top:10px;text-align:left;}
   .pe-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:4px 0;border-top:1px solid var(--border);}
@@ -58,6 +59,7 @@
   .pe-val{font-weight:800;color:var(--text);}
   .pe-val.better{color:var(--accent2);}
   .pe-val.worse{color:var(--muted);}
+  .pe-val.na{color:var(--muted);opacity:.5;font-weight:600;}
 
   .pstats2025{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
   .pstats2025-hdr{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;}
@@ -66,6 +68,7 @@
   .stats2025-grid .s-val{font-size:18px;font-weight:800;color:var(--text);}
   .stats2025-grid .s-val.better{color:var(--accent2);}
   .stats2025-grid .s-val.worse{color:var(--muted);}
+  .stats2025-grid .s-val.na{color:var(--muted);opacity:.5;}
   .stats2025-grid .s-lbl{font-size:9.5px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.04em;}
   .arena-controls{display:flex;gap:8px;}
   .complete{text-align:center;color:var(--muted);max-width:420px;}
@@ -267,40 +270,43 @@ function expertStats(r){
 // Average/best/worst as a plain labeled list rather than one dense
 // sentence, each line colored against the opponent's same metric — lower
 // rank number is better, so whichever player experts rate higher shows
-// green on that line, the other shows muted.
+// green on that line, the other shows muted. Always renders all three rows
+// (N/A when a player has no expert coverage at all) so a card for someone
+// with no data doesn't end up visibly shorter than the one next to it.
 function expertStatsList(r, opponent){
   const mine = expertStats(r);
-  if(!mine) return "";
   const theirs = opponent ? expertStats(opponent) : null;
-  const cls = (m, t) => (t == null || m === t) ? "" : (m < t ? "better" : "worse");
+  const cls = (m, t) => (m == null || t == null || m === t) ? "" : (m < t ? "better" : "worse");
   const row = (label, val, opp) => `
-    <div class="pe-row"><span class="pe-lbl">${label}</span><span class="pe-val ${cls(val, opp)}">#${val}</span></div>`;
+    <div class="pe-row"><span class="pe-lbl">${label}</span><span class="pe-val ${cls(val, opp)}${val == null ? " na" : ""}">${val == null ? "N/A" : "#" + val}</span></div>`;
   return `
     <div class="pexperts-list">
-      ${row("Average ranking", mine.avg, theirs ? theirs.avg : null)}
-      ${row("Best ranking", mine.best, theirs ? theirs.best : null)}
-      ${row("Worst ranking", mine.worst, theirs ? theirs.worst : null)}
+      ${row("Average ranking", mine ? mine.avg : null, theirs ? theirs.avg : null)}
+      ${row("Best ranking", mine ? mine.best : null, theirs ? theirs.best : null)}
+      ${row("Worst ranking", mine ? mine.worst : null, theirs ? theirs.worst : null)}
     </div>`;
 }
 
 // Season-end position finish / games played / PPR points-per-game, from the
 // Pro-Football-Reference export. Not every player has this (rookies, or
-// anyone outside the export's ~500-player coverage). PPG — the number that
-// actually answers "who produced more" — is colored against the opponent's
-// so the better 2025 season is obvious without doing math.
+// anyone outside the export's ~500-player coverage) — always renders the
+// block with N/A placeholders rather than omitting it, so a card for a
+// rookie doesn't end up visibly shorter than the veteran next to it. PPG —
+// the number that actually answers "who produced more" — is colored
+// against the opponent's so the better 2025 season is obvious at a glance.
 function stats2025Grid(r, opponentPpg){
-  if(r.posRank2025 == null) return "";
+  const hasData = r.posRank2025 != null;
   let ppgClass = "";
-  if(opponentPpg != null && r.ppg2025 != null && r.ppg2025 !== opponentPpg){
+  if(hasData && opponentPpg != null && r.ppg2025 != null && r.ppg2025 !== opponentPpg){
     ppgClass = r.ppg2025 > opponentPpg ? "better" : "worse";
   }
   return `
     <div class="pstats2025">
       <div class="pstats2025-hdr">2025 Season</div>
       <div class="stats2025-grid">
-        <div class="s-item"><span class="s-val">${posFilter}${r.posRank2025}</span><span class="s-lbl">Finish</span></div>
-        <div class="s-item"><span class="s-val">${r.games2025}</span><span class="s-lbl">GP</span></div>
-        <div class="s-item"><span class="s-val ${ppgClass}">${r.ppg2025}</span><span class="s-lbl">PPG</span></div>
+        <div class="s-item"><span class="s-val${hasData ? "" : " na"}">${hasData ? posFilter + r.posRank2025 : "N/A"}</span><span class="s-lbl">Finish</span></div>
+        <div class="s-item"><span class="s-val${hasData ? "" : " na"}">${hasData ? r.games2025 : "—"}</span><span class="s-lbl">GP</span></div>
+        <div class="s-item"><span class="s-val ${hasData ? ppgClass : "na"}">${hasData ? r.ppg2025 : "—"}</span><span class="s-lbl">PPG</span></div>
       </div>
     </div>`;
 }
@@ -410,14 +416,16 @@ function renderArena(){
     <button type="button" class="pcard" data-choose="${escapeAttr(name)}" style="border-top:3px solid ${POS_COLOR[posFilter]}">
       <div class="pname">${name}</div>
       <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
-      ${pct != null || list ? `
-        <div class="pexperts">
-          ${pct != null ? `
-            <div class="favor-pct" style="color:${favorColor(pct)}">${pct}%</div>
-            <div class="favor-lbl">of ${agreement.n} expert${agreement.n === 1 ? "" : "s"} favor this player</div>
-          ` : ""}
-          ${list}
-        </div>` : ""}
+      <div class="pexperts">
+        ${pct != null ? `
+          <div class="favor-pct" style="color:${favorColor(pct)}">${pct}%</div>
+          <div class="favor-lbl">of ${agreement.n} expert${agreement.n === 1 ? "" : "s"} favor this player</div>
+        ` : `
+          <div class="favor-pct na">—</div>
+          <div class="favor-lbl">No overlapping expert coverage</div>
+        `}
+        ${list}
+      </div>
       ${stats2025Grid(r, opponent ? opponent.ppg2025 : null)}
       <div class="kbd">${name === a ? "←" : "→"}</div>
     </button>`;
