@@ -95,6 +95,7 @@
       <h2>Progress</h2>
       <div class="stat-row"><span>Comparisons made</span><span class="v" id="statCompared">0</span></div>
       <div class="stat-row"><span>Pairs remaining</span><span class="v" id="statRemaining">0</span></div>
+      <div class="stat-row"><span>Skipped (pending)</span><span class="v" id="statSkipped">0</span></div>
       <div class="btnrow" style="margin-top:10px;">
         <button class="secondary" id="undoBtn">Undo last</button>
         <button class="danger" id="resetBtn">Reset position</button>
@@ -156,11 +157,16 @@ function ensurePosition(pos, allPlayers){
     // order instead of starting from a flat coin-flip prior.
     ratings[p.name] = {rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || ""};
   });
-  compareState[pos] = {ratings, comparedPairs: [], history: []};
+  compareState[pos] = {ratings, comparedPairs: [], history: [], skipped: {}};
 }
 
+// Finds the next pair to show. Two passes: first honoring skip cooldowns
+// (so a "not sure" pair doesn't just reappear immediately), then — only if
+// every remaining pair happens to be on cooldown — ignoring cooldowns so
+// the tool never falsely reports "done" just because everything's pending.
 function pickNextPair(pos){
   const state = compareState[pos];
+  if(!state.skipped) state.skipped = {};
   const names = Object.keys(state.ratings);
   if(names.length < 2) return null;
   const comparedSet = new Set(state.comparedPairs);
@@ -169,17 +175,45 @@ function pickNextPair(pos){
     state.ratings[a].comparisons - state.ratings[b].comparisons || Math.random() - 0.5
   );
 
-  for(const a of byFewestComparisons){
-    const candidates = names.filter(b => b !== a && !comparedSet.has(pairKey(a, b)));
-    if(candidates.length){
-      candidates.sort((x, y) =>
-        Math.abs(state.ratings[x].rating - state.ratings[a].rating) - Math.abs(state.ratings[y].rating - state.ratings[a].rating)
+  const findPair = (respectCooldown) => {
+    for(const a of byFewestComparisons){
+      const candidates = names.filter(b =>
+        b !== a &&
+        !comparedSet.has(pairKey(a, b)) &&
+        !(respectCooldown && state.skipped[pairKey(a, b)] > 0)
       );
-      const pair = [a, candidates[0]];
-      return Math.random() < 0.5 ? pair : [pair[1], pair[0]];
+      if(candidates.length){
+        candidates.sort((x, y) =>
+          Math.abs(state.ratings[x].rating - state.ratings[a].rating) - Math.abs(state.ratings[y].rating - state.ratings[a].rating)
+        );
+        const pair = [a, candidates[0]];
+        return Math.random() < 0.5 ? pair : [pair[1], pair[0]];
+      }
     }
+    return null;
+  };
+
+  return findPair(true) || findPair(false); // every pair in this pool has been compared
+}
+
+const SKIP_COOLDOWN = 3; // how many other picks/skips happen before a skipped pair can resurface
+
+function decaySkipCooldowns(pos){
+  const skipped = compareState[pos].skipped || {};
+  for(const key of Object.keys(skipped)){
+    skipped[key]--;
+    if(skipped[key] <= 0) delete skipped[key];
   }
-  return null; // every pair in this pool has been compared
+}
+
+function skipPair(){
+  const state = compareState[posFilter];
+  if(!state.skipped) state.skipped = {};
+  state.skipped[pairKey(currentPair[0], currentPair[1])] = SKIP_COOLDOWN;
+  decaySkipCooldowns(posFilter);
+  saveState();
+  currentPair = null;
+  render();
 }
 
 function totalPossiblePairs(n){
@@ -209,6 +243,8 @@ function choose(winner){
   rw.comparisons++; rl.comparisons++;
 
   state.comparedPairs.push(pairKey(winner, loser));
+  decaySkipCooldowns(posFilter);
+  currentPair = null;
   saveState();
   render();
 }
@@ -272,10 +308,12 @@ function renderArena(){
       <div class="vs">VS</div>
       ${card(b, rb)}
     </div>
+    <button type="button" class="secondary" id="skipBtn">Not sure — ask me later <span class="kbd" style="margin-left:6px;">↓</span></button>
   `;
   el.querySelectorAll("[data-choose]").forEach(elm => {
     elm.addEventListener("click", () => choose(elm.dataset.choose));
   });
+  $("#skipBtn").addEventListener("click", skipPair);
 }
 
 function renderSidebar(){
@@ -284,6 +322,7 @@ function renderSidebar(){
   const n = names.length;
   $("#statCompared").textContent = state.comparedPairs.length;
   $("#statRemaining").textContent = Math.max(totalPossiblePairs(n) - state.comparedPairs.length, 0);
+  $("#statSkipped").textContent = Object.keys(state.skipped || {}).length;
   $("#undoBtn").disabled = state.history.length === 0;
   $("#rankPosLabel").textContent = `(${posFilter})`;
 
@@ -349,6 +388,7 @@ document.addEventListener("keydown", (e) => {
   if(!currentPair) return;
   if(e.key === "ArrowLeft") choose(currentPair[0]);
   if(e.key === "ArrowRight") choose(currentPair[1]);
+  if(e.key === "ArrowDown" || e.key === " "){ e.preventDefault(); skipPair(); }
 });
 
 loadState();
