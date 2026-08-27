@@ -91,6 +91,34 @@
   .empty{color:var(--muted);font-size:13px;padding:8px 0;}
   code{background:var(--panel2);padding:1px 5px;border-radius:4px;}
   .footnote{color:var(--muted);font-size:12px;line-height:1.5;padding:0 2px;}
+
+  /* --- mobile: stack cards instead of squeezing two side by side, bigger
+     touch targets, single-column layout instead of the fixed sidebar --- */
+  @media (max-width: 760px){
+    header{padding:12px 14px;gap:8px 10px;}
+    header h1{font-size:15px;}
+    a.navlink{padding:8px 10px;font-size:12px;}
+    #headerNote{display:none;} /* supplementary context, not worth the space on a phone */
+
+    .postabs{padding:8px 10px;gap:6px;}
+    .postabs button{flex:1;padding:12px 4px;font-size:13px;}
+
+    main{grid-template-columns:1fr;min-height:auto;}
+    .col{padding:14px;}
+    .arena{height:auto;padding:8px 0 20px;gap:16px;}
+
+    .matchup{flex-direction:column;max-width:100%;gap:10px;}
+    .pcard{padding:22px 18px;}
+    .pcard .pname{font-size:20px;}
+    .vs{padding:2px 0;}
+    .kbd, .pcard .kbd{display:none;} /* arrow-key hints don't apply on touch */
+
+    #skipBtn{width:100%;padding:14px;}
+    .btnrow button{padding:12px 10px;}
+    .postabs button, a.navlink, .btnrow button, #skipBtn, #copyBtn{min-height:44px;} /* comfortable tap targets */
+
+    .ranklist{max-height:280px;}
+  }
 </style>
 </head>
 <body>
@@ -100,7 +128,7 @@
   <a class="navlink" href="index.html">← Back to Draft Assistant</a>
   <a class="navlink" href="edit.html">✎ Edit Rankings</a>
   <div class="spacer"></div>
-  <div class="footnote" style="max-width:280px;text-align:right;">Doesn't change your main rankings — this just builds its own ranked list for you to reference.</div>
+  <div class="footnote" id="headerNote" style="max-width:280px;text-align:right;">Doesn't change your main rankings — this just builds its own ranked list for you to reference.</div>
 </header>
 
 <div class="postabs" id="posTabs">
