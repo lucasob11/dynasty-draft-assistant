@@ -44,11 +44,23 @@
   .pcard:focus-visible{outline:2px solid var(--accent2);outline-offset:2px;}
   .pcard .pname{font-size:22px;font-weight:800;margin-bottom:8px;}
   .pcard .pmeta{color:var(--muted);font-size:13px;}
-  .pcard .prating{color:var(--muted);font-size:11px;margin-top:12px;}
-  .pcard .pstats2025{color:var(--muted);font-size:11px;margin-top:6px;padding-top:8px;border-top:1px solid var(--border);}
   .pcard .kbd{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:2px 7px;}
   .vs{font-size:14px;font-weight:800;color:var(--muted);flex-shrink:0;text-align:center;}
-  .agreement{font-size:10px;font-weight:600;color:var(--muted);margin-top:8px;white-space:nowrap;letter-spacing:0;}
+  .vs .vs-n{font-size:10px;font-weight:600;color:var(--muted);margin-top:6px;white-space:nowrap;}
+
+  .pexperts{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
+  .pexperts .favor-pct{font-size:26px;font-weight:800;line-height:1.1;}
+  .pexperts .favor-lbl{font-size:11px;color:var(--muted);margin-top:2px;}
+  .pexperts .expert-range{font-size:11px;color:var(--muted);margin-top:8px;}
+
+  .pstats2025{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
+  .pstats2025-hdr{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;}
+  .stats2025-grid{display:flex;justify-content:space-around;gap:6px;}
+  .stats2025-grid .s-item{display:flex;flex-direction:column;align-items:center;min-width:0;}
+  .stats2025-grid .s-val{font-size:18px;font-weight:800;color:var(--text);}
+  .stats2025-grid .s-val.better{color:var(--accent2);}
+  .stats2025-grid .s-val.worse{color:var(--muted);}
+  .stats2025-grid .s-lbl{font-size:9.5px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.04em;}
   .arena-controls{display:flex;gap:8px;}
   .complete{text-align:center;color:var(--muted);max-width:420px;}
   .complete h2{color:var(--text);font-size:18px;margin-bottom:8px;}
@@ -214,12 +226,45 @@ function expertAgreement(ra, rb){
   return {n: sources.length, aPct: Math.round((aWins / sources.length) * 100), bPct: Math.round(((sources.length - aWins) / sources.length) * 100)};
 }
 
-// "2025: RB2 · 17 GP · 24.5 PPG" — season-end position finish, games played,
-// and PPR points/game, from the Pro-Football-Reference stats export. Not
-// every player has this (rookies, or anyone outside the export's coverage).
-function stats2025Line(r){
+// Continuous red -> muted-grey -> green scale, so a 51/49 split reads as
+// barely-there while a 90/10 split reads as a strong, obvious color —
+// "heavy favorite" should look different from "toss-up" at a glance.
+function favorColor(pct){
+  const red = [255, 107, 107], neutral = [139, 147, 167], green = [62, 232, 181];
+  const [from, to, t] = pct <= 50 ? [red, neutral, pct / 50] : [neutral, green, (pct - 50) / 50];
+  const c = from.map((v, i) => Math.round(v + (to[i] - v) * t));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+
+function expertRangeText(r){
+  if(!r.expertRanks) return "";
+  const vals = Object.values(r.expertRanks);
+  if(!vals.length) return "";
+  const best = Math.min(...vals), worst = Math.max(...vals);
+  const range = best === worst ? `#${best}` : `#${best}–${worst}`;
+  return `Ranked ${range} by ${vals.length}/6 experts`;
+}
+
+// Season-end position finish / games played / PPR points-per-game, from the
+// Pro-Football-Reference export. Not every player has this (rookies, or
+// anyone outside the export's ~500-player coverage). PPG — the number that
+// actually answers "who produced more" — is colored against the opponent's
+// so the better 2025 season is obvious without doing math.
+function stats2025Grid(r, opponentPpg){
   if(r.posRank2025 == null) return "";
-  return `<div class="pstats2025">2025: ${posFilter}${r.posRank2025} · ${r.games2025} GP · ${r.ppg2025} PPG</div>`;
+  let ppgClass = "";
+  if(opponentPpg != null && r.ppg2025 != null && r.ppg2025 !== opponentPpg){
+    ppgClass = r.ppg2025 > opponentPpg ? "better" : "worse";
+  }
+  return `
+    <div class="pstats2025">
+      <div class="pstats2025-hdr">2025 Season</div>
+      <div class="stats2025-grid">
+        <div class="s-item"><span class="s-val">${posFilter}${r.posRank2025}</span><span class="s-lbl">Finish</span></div>
+        <div class="s-item"><span class="s-val">${r.games2025}</span><span class="s-lbl">GP</span></div>
+        <div class="s-item"><span class="s-val ${ppgClass}">${r.ppg2025}</span><span class="s-lbl">PPG</span></div>
+      </div>
+    </div>`;
 }
 
 const SKIP_COOLDOWN = 3; // how many other picks/skips happen before a skipped pair can resurface
@@ -319,26 +364,33 @@ function renderArena(){
 
   const [a, b] = currentPair;
   const ra = state.ratings[a], rb = state.ratings[b];
-  const card = (name, r) => `
+  const agreement = expertAgreement(ra, rb);
+
+  const card = (name, r, pct, opponentPpg) => {
+    const range = expertRangeText(r);
+    return `
     <button type="button" class="pcard" data-choose="${escapeAttr(name)}" style="border-top:3px solid ${POS_COLOR[posFilter]}">
       <div class="pname">${name}</div>
       <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
-      <div class="prating">Rating ${Math.round(r.rating)} · ${r.comparisons} comparison${r.comparisons === 1 ? "" : "s"}</div>
-      ${stats2025Line(r)}
+      ${pct != null || range ? `
+        <div class="pexperts">
+          ${pct != null ? `
+            <div class="favor-pct" style="color:${favorColor(pct)}">${pct}%</div>
+            <div class="favor-lbl">of ${agreement.n} expert${agreement.n === 1 ? "" : "s"} favor this player</div>
+          ` : ""}
+          ${range ? `<div class="expert-range">${range}</div>` : ""}
+        </div>` : ""}
+      ${stats2025Grid(r, opponentPpg)}
       <div class="kbd">${name === a ? "←" : "→"}</div>
     </button>`;
-
-  const agreement = expertAgreement(ra, rb);
-  const vsHtml = agreement
-    ? `<div class="vs">VS<div class="agreement">${agreement.aPct}% ◀ ${agreement.n} expert${agreement.n === 1 ? "" : "s"} ▶ ${agreement.bPct}%</div></div>`
-    : `<div class="vs">VS</div>`;
+  };
 
   el.innerHTML = `
     <div class="progress-line">Would you rather draft… (${state.comparedPairs.length} compared, ~${Math.max(remaining, 0)} pairs left in this pool)</div>
     <div class="matchup">
-      ${card(a, ra)}
-      ${vsHtml}
-      ${card(b, rb)}
+      ${card(a, ra, agreement ? agreement.aPct : null, rb.ppg2025)}
+      <div class="vs">VS</div>
+      ${card(b, rb, agreement ? agreement.bPct : null, ra.ppg2025)}
     </div>
     <button type="button" class="secondary" id="skipBtn">Not sure — ask me later <span class="kbd" style="margin-left:6px;">↓</span></button>
   `;
