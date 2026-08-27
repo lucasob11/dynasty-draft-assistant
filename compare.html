@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compare Players — Dynasty Draft Assistant</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131826; --panel2:#1a2032; --border:#262e42;
+    --text:#e8ebf2; --muted:#8b93a7; --accent:#5b8cff; --accent2:#3ee8b5;
+    --danger:#ff6b6b; --qb:#c084fc; --rb:#5be08a; --wr:#5b9cff; --te:#ffb84d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);}
+  header h1{font-size:17px;margin:0;font-weight:600;white-space:nowrap;}
+  header h1 span{color:var(--accent2);}
+  a.navlink{color:var(--text);text-decoration:none;font-size:13px;font-weight:600;background:var(--panel2);border:1px solid var(--border);padding:8px 14px;border-radius:6px;}
+  a.navlink:hover{opacity:.9;}
+  .spacer{flex:1;}
+  button{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;}
+  button:hover{opacity:.9;}
+  button.secondary{background:var(--panel2);border:1px solid var(--border);color:var(--text);}
+  button.danger{background:rgba(255,107,107,.15);border:1px solid var(--danger);color:var(--danger);}
+  button:disabled{opacity:.35;cursor:default;}
+
+  .postabs{padding:12px 20px;display:flex;gap:8px;border-bottom:1px solid var(--border);background:var(--panel);}
+  .postabs button{padding:8px 18px;font-size:13px;background:var(--panel2);border:1px solid var(--border);color:var(--muted);}
+  .postabs button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+  main{display:grid;grid-template-columns:1fr 340px;gap:1px;background:var(--border);min-height:calc(100vh - 113px);}
+  .col{background:var(--bg);padding:24px;}
+
+  .arena{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:20px;}
+  .progress-line{color:var(--muted);font-size:13px;}
+  .matchup{display:flex;align-items:center;gap:20px;width:100%;max-width:720px;}
+  .pcard{
+    flex:1;background:var(--panel);border:2px solid var(--border);border-radius:14px;
+    padding:32px 20px;text-align:center;cursor:pointer;transition:border-color .12s, transform .12s;
+    font-family:inherit;color:inherit;display:block;width:100%;
+  }
+  .pcard:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .pcard:active{transform:translateY(0);}
+  .pcard:focus-visible{outline:2px solid var(--accent2);outline-offset:2px;}
+  .pcard .pname{font-size:22px;font-weight:800;margin-bottom:8px;}
+  .pcard .pmeta{color:var(--muted);font-size:13px;}
+  .pcard .prating{color:var(--muted);font-size:11px;margin-top:12px;}
+  .pcard .kbd{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:2px 7px;}
+  .vs{font-size:14px;font-weight:800;color:var(--muted);flex-shrink:0;}
+  .arena-controls{display:flex;gap:8px;}
+  .complete{text-align:center;color:var(--muted);max-width:420px;}
+  .complete h2{color:var(--text);font-size:18px;margin-bottom:8px;}
+
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px;}
+  .card h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:0 0 10px;}
+  .stat-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;}
+  .stat-row .v{color:var(--muted);}
+  .ranklist{max-height:520px;overflow-y:auto;}
+  .rank-row{display:flex;align-items:center;gap:8px;padding:6px 4px;border-top:1px solid var(--border);font-size:12.5px;}
+  .rank-row:first-child{border-top:none;}
+  .rank-row .rn{width:22px;color:var(--muted);font-weight:700;flex-shrink:0;}
+  .rank-row .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rank-row .rt{color:var(--muted);font-size:11px;flex-shrink:0;}
+  .rank-row.moved-up .rn{color:var(--accent2);}
+  .rank-row.moved-down .rn{color:var(--danger);}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap;}
+  .btnrow button{flex:1;}
+  .empty{color:var(--muted);font-size:13px;padding:8px 0;}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;}
+  .footnote{color:var(--muted);font-size:12px;line-height:1.5;padding:0 2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚖ Compare <span>Players</span></h1>
+  <a class="navlink" href="index.html">← Back to Draft Assistant</a>
+  <a class="navlink" href="edit.html">✎ Edit Rankings</a>
+  <div class="spacer"></div>
+  <div class="footnote" style="max-width:280px;text-align:right;">Doesn't change your main rankings — this just builds its own ranked list for you to reference.</div>
+</header>
+
+<div class="postabs" id="posTabs">
+  <button data-pos="QB" class="active">QB</button>
+  <button data-pos="RB">RB</button>
+  <button data-pos="WR">WR</button>
+  <button data-pos="TE">TE</button>
+</div>
+
+<main>
+  <div class="col arena" id="arena"></div>
+
+  <div class="col" style="padding:16px;">
+    <div class="card">
+      <h2>Progress</h2>
+      <div class="stat-row"><span>Comparisons made</span><span class="v" id="statCompared">0</span></div>
+      <div class="stat-row"><span>Pairs remaining</span><span class="v" id="statRemaining">0</span></div>
+      <div class="btnrow" style="margin-top:10px;">
+        <button class="secondary" id="undoBtn">Undo last</button>
+        <button class="danger" id="resetBtn">Reset position</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Current Ranking <span id="rankPosLabel" style="font-weight:400;text-transform:none;"></span></h2>
+      <div class="ranklist" id="rankList"></div>
+      <div class="btnrow" style="margin-top:10px;">
+        <button class="secondary" id="copyBtn">Copy ranked list</button>
+      </div>
+    </div>
+    <div class="footnote">
+      Each pick nudges an Elo-style rating — closer, less-certain matchups get shown more, so you don't have to
+      compare all 190 possible pairs to get a solid order. Stop any time; the ranking on the right is always current.
+      Progress is saved per position in this browser.
+    </div>
+  </div>
+</main>
+
+<script src="rankings-store.js"></script>
+<script>
+const POS_ORDER = ["QB","RB","WR","TE"];
+const POS_COLOR = {QB:"#c084fc", RB:"#5be08a", WR:"#5b9cff", TE:"#ffb84d"};
+const STORE_KEY = "dynastyCompare:v1";
+const POOL_SIZE = 20;
+const K_FACTOR = 32;
+
+let posFilter = "QB";
+let compareState = {};   // pos -> {ratings: {name: {rating, comparisons, meta}}, comparedPairs: [pairKey...], history: [...]}
+let currentPair = null;  // [nameA, nameB] as currently displayed (already randomized)
+let prevOrder = {};      // pos -> [name in rank order] from before the last pick, for up/down indicators
+
+const $ = (sel) => document.querySelector(sel);
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    compareState = raw ? JSON.parse(raw) : {};
+  }catch(e){ compareState = {}; }
+}
+
+function saveState(){
+  localStorage.setItem(STORE_KEY, JSON.stringify(compareState));
+}
+
+function pairKey(a, b){
+  return [a, b].sort().join("|");
+}
+
+// Seeds a position's pool from the current rankings (top 20 by rank), only
+// if it hasn't been started yet — re-running this never clobbers progress.
+function ensurePosition(pos, allPlayers){
+  if(compareState[pos]) return;
+  const top20 = allPlayers.filter(p => p.pos === pos).sort((a, b) => a.rank - b.rank).slice(0, POOL_SIZE);
+  const ratings = {};
+  top20.forEach((p, i) => {
+    // Seed from current rank so early comparisons refine an already-sane
+    // order instead of starting from a flat coin-flip prior.
+    ratings[p.name] = {rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || ""};
+  });
+  compareState[pos] = {ratings, comparedPairs: [], history: []};
+}
+
+function pickNextPair(pos){
+  const state = compareState[pos];
+  const names = Object.keys(state.ratings);
+  if(names.length < 2) return null;
+  const comparedSet = new Set(state.comparedPairs);
+
+  const byFewestComparisons = [...names].sort((a, b) =>
+    state.ratings[a].comparisons - state.ratings[b].comparisons || Math.random() - 0.5
+  );
+
+  for(const a of byFewestComparisons){
+    const candidates = names.filter(b => b !== a && !comparedSet.has(pairKey(a, b)));
+    if(candidates.length){
+      candidates.sort((x, y) =>
+        Math.abs(state.ratings[x].rating - state.ratings[a].rating) - Math.abs(state.ratings[y].rating - state.ratings[a].rating)
+      );
+      const pair = [a, candidates[0]];
+      return Math.random() < 0.5 ? pair : [pair[1], pair[0]];
+    }
+  }
+  return null; // every pair in this pool has been compared
+}
+
+function totalPossiblePairs(n){
+  return n * (n - 1) / 2;
+}
+
+function rankedNames(pos){
+  const state = compareState[pos];
+  return Object.keys(state.ratings).sort((a, b) => state.ratings[b].rating - state.ratings[a].rating);
+}
+
+function choose(winner){
+  const loser = currentPair[0] === winner ? currentPair[1] : currentPair[0];
+  const state = compareState[posFilter];
+  const rw = state.ratings[winner], rl = state.ratings[loser];
+
+  prevOrder[posFilter] = rankedNames(posFilter);
+
+  state.history.push({
+    winner, loser,
+    prevWinner: {...rw}, prevLoser: {...rl},
+  });
+
+  const ea = 1 / (1 + Math.pow(10, (rl.rating - rw.rating) / 400));
+  rw.rating = rw.rating + K_FACTOR * (1 - ea);
+  rl.rating = rl.rating + K_FACTOR * (0 - (1 - ea));
+  rw.comparisons++; rl.comparisons++;
+
+  state.comparedPairs.push(pairKey(winner, loser));
+  saveState();
+  render();
+}
+
+function undoLast(){
+  const state = compareState[posFilter];
+  const last = state.history.pop();
+  if(!last) return;
+  state.ratings[last.winner] = last.prevWinner;
+  state.ratings[last.loser] = last.prevLoser;
+  const key = pairKey(last.winner, last.loser);
+  const idx = state.comparedPairs.lastIndexOf(key);
+  if(idx !== -1) state.comparedPairs.splice(idx, 1);
+  saveState();
+  currentPair = null; // force a fresh pair pick
+  render();
+}
+
+function resetPosition(){
+  if(!confirm(`Reset all comparisons for ${posFilter}? This can't be undone.`)) return;
+  delete compareState[posFilter];
+  saveState();
+  currentPair = null;
+  loadAndRender();
+}
+
+function renderArena(){
+  const el = $("#arena");
+  const state = compareState[posFilter];
+  const names = Object.keys(state.ratings);
+  const n = names.length;
+  const remaining = totalPossiblePairs(n) - state.comparedPairs.length;
+
+  if(!currentPair){
+    currentPair = pickNextPair(posFilter);
+  }
+
+  if(!currentPair){
+    el.innerHTML = `
+      <div class="complete">
+        <h2>All ${totalPossiblePairs(n)} pairs compared</h2>
+        <div>Every possible matchup at ${posFilter} has been made. The ranking on the right is as refined as this tool can make it — reset if you want to start over.</div>
+      </div>`;
+    return;
+  }
+
+  const [a, b] = currentPair;
+  const ra = state.ratings[a], rb = state.ratings[b];
+  const card = (name, r) => `
+    <button type="button" class="pcard" data-choose="${escapeAttr(name)}" style="border-top:3px solid ${POS_COLOR[posFilter]}">
+      <div class="pname">${name}</div>
+      <div class="pmeta">${r.team || "FA"}${r.bye ? " · Bye " + r.bye : ""}</div>
+      <div class="prating">Rating ${Math.round(r.rating)} · ${r.comparisons} comparison${r.comparisons === 1 ? "" : "s"}</div>
+      <div class="kbd">${name === a ? "←" : "→"}</div>
+    </button>`;
+
+  el.innerHTML = `
+    <div class="progress-line">Would you rather draft… (${state.comparedPairs.length} compared, ~${Math.max(remaining, 0)} pairs left in this pool)</div>
+    <div class="matchup">
+      ${card(a, ra)}
+      <div class="vs">VS</div>
+      ${card(b, rb)}
+    </div>
+  `;
+  el.querySelectorAll("[data-choose]").forEach(elm => {
+    elm.addEventListener("click", () => choose(elm.dataset.choose));
+  });
+}
+
+function renderSidebar(){
+  const state = compareState[posFilter];
+  const names = Object.keys(state.ratings);
+  const n = names.length;
+  $("#statCompared").textContent = state.comparedPairs.length;
+  $("#statRemaining").textContent = Math.max(totalPossiblePairs(n) - state.comparedPairs.length, 0);
+  $("#undoBtn").disabled = state.history.length === 0;
+  $("#rankPosLabel").textContent = `(${posFilter})`;
+
+  const order = rankedNames(posFilter);
+  const before = prevOrder[posFilter];
+  $("#rankList").innerHTML = order.map((name, i) => {
+    const r = state.ratings[name];
+    let moveCls = "";
+    if(before){
+      const prevIdx = before.indexOf(name);
+      if(prevIdx > i) moveCls = "moved-up";
+      else if(prevIdx < i && prevIdx !== -1) moveCls = "moved-down";
+    }
+    return `
+      <div class="rank-row ${moveCls}">
+        <span class="rn">${i + 1}</span>
+        <span class="nm">${name}</span>
+        <span class="rt">${Math.round(r.rating)}</span>
+      </div>`;
+  }).join("") || `<div class="empty">No players in this pool.</div>`;
+}
+
+function escapeAttr(s){
+  return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
+function render(){
+  renderArena();
+  renderSidebar();
+}
+
+async function loadAndRender(){
+  const players = await RankingsStore.load();
+  ensurePosition(posFilter, players);
+  currentPair = null;
+  render();
+}
+
+$("#posTabs").addEventListener("click", (e) => {
+  if(e.target.tagName !== "BUTTON") return;
+  posFilter = e.target.dataset.pos;
+  document.querySelectorAll("#posTabs button").forEach(b => b.classList.toggle("active", b === e.target));
+  loadAndRender();
+});
+
+$("#undoBtn").addEventListener("click", undoLast);
+$("#resetBtn").addEventListener("click", resetPosition);
+$("#copyBtn").addEventListener("click", async () => {
+  const order = rankedNames(posFilter);
+  const text = `${posFilter} ranking (from Compare Players):\n` + order.map((n, i) => `${i + 1}. ${n}`).join("\n");
+  try{
+    await navigator.clipboard.writeText(text);
+    const btn = $("#copyBtn");
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  }catch(e){
+    alert(text); // clipboard blocked (e.g. insecure context) — show it instead
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if(!currentPair) return;
+  if(e.key === "ArrowLeft") choose(currentPair[0]);
+  if(e.key === "ArrowRight") choose(currentPair[1]);
+});
+
+loadState();
+loadAndRender();
+</script>
+</body>
+</html>
