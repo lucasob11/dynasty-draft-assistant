@@ -96,6 +96,7 @@
   .reason-line{font-size:10.5px;color:var(--muted);margin-top:8px;font-style:italic;line-height:1.35;border-top:1px solid var(--border);padding-top:7px;}
   .handcuff-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;display:inline-block;margin-top:6px;background:rgba(192,132,252,.16);color:var(--qb);}
   .handcuff-inline{color:var(--qb) !important;font-weight:600;}
+  .expert-avg{color:var(--muted);}
 
   /* dashboard: position columns at best remaining tier */
   .pos-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;}
@@ -807,8 +808,18 @@ function renderRecommendation(avail){
   body.innerHTML = `<div class="rec-meta">Your next pick: ${puts != null ? `in ${puts} pick${puts === 1 ? "" : "s"} (#${nextPickNo + puts})` : "—"}</div>`;
 }
 
+// "Experts #2–5 (avg 3.3, 6/6)" — best/worst/average rank across the six
+// sources in the workbook's Sheet1 tab, and how many of them ranked this
+// player at all (only ~100 of 472 players have this; most don't).
+function expertLine(p){
+  if(!p.expertCount) return "";
+  const range = p.expertBest === p.expertWorst ? `#${p.expertBest}` : `#${p.expertBest}–${p.expertWorst}`;
+  return `Experts ${range} <span class="expert-avg">avg ${p.expertAvg} · ${p.expertCount}/6</span>`;
+}
+
 function posColRowHtml(p){
   const handcuff = handcuffInfo(p.name, p.pos);
+  const expert = expertLine(p);
   return `
     <div class="pos-col-row">
       ${avatarImg(p.name, p.pos, 26)}
@@ -818,6 +829,7 @@ function posColRowHtml(p){
           <span class="prank">#${p.rank}</span>
         </div>
         <div class="psub">${p.team || "FA"} · Bye ${p.bye || "—"} · Age ${p.age != null ? p.age : "—"}</div>
+        ${expert ? `<div class="psub">${expert}</div>` : ""}
         ${handcuff ? `<div class="psub handcuff-inline">🔒 Tier ${handcuff.tier} handcuff for ${handcuff.starterName}</div>` : ""}
       </div>
     </div>`;
@@ -843,6 +855,7 @@ function renderDashboard(avail){
       </div>
       <div class="meta">Rank #${p.rank}${p.tier != null ? ` · Tier ${p.tier}` : ""}</div>
       <div class="meta">Bye ${p.bye || "—"} · Age ${p.age != null ? p.age : "—"}</div>
+      ${expertLine(p) ? `<div class="meta">${expertLine(p)}</div>` : ""}
       ${handcuff ? `<span class="handcuff-badge">🔒 Tier ${handcuff.tier} handcuff for ${handcuff.starterName}</span>` : ""}
       ${teamStack ? `<div class="stack-badge">⚠ ${teamStack}</div>` : ""}
       <div class="reason-line">${reasons.slice(0, 2).join(" · ")}</div>

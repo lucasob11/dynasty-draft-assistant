@@ -46,7 +46,8 @@
   .pcard .pmeta{color:var(--muted);font-size:13px;}
   .pcard .prating{color:var(--muted);font-size:11px;margin-top:12px;}
   .pcard .kbd{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:2px 7px;}
-  .vs{font-size:14px;font-weight:800;color:var(--muted);flex-shrink:0;}
+  .vs{font-size:14px;font-weight:800;color:var(--muted);flex-shrink:0;text-align:center;}
+  .agreement{font-size:10px;font-weight:600;color:var(--muted);margin-top:8px;white-space:nowrap;letter-spacing:0;}
   .arena-controls{display:flex;gap:8px;}
   .complete{text-align:center;color:var(--muted);max-width:420px;}
   .complete h2{color:var(--text);font-size:18px;margin-bottom:8px;}
@@ -155,7 +156,10 @@ function ensurePosition(pos, allPlayers){
   top20.forEach((p, i) => {
     // Seed from current rank so early comparisons refine an already-sane
     // order instead of starting from a flat coin-flip prior.
-    ratings[p.name] = {rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || ""};
+    ratings[p.name] = {
+      rating: 1500 + (POOL_SIZE - i) * 8, comparisons: 0, team: p.team || "", bye: p.bye || "",
+      expertRanks: p.expertRanks || null, expertCount: p.expertCount || 0,
+    };
   });
   compareState[pos] = {ratings, comparedPairs: [], history: [], skipped: {}};
 }
@@ -194,6 +198,18 @@ function pickNextPair(pos){
   };
 
   return findPair(true) || findPair(false); // every pair in this pool has been compared
+}
+
+// Of the expert sources that ranked BOTH players (not every source covers
+// every player), what share picked ra ahead of rb? Returns null if there's
+// no overlapping coverage — most pairs won't have expert data at all.
+function expertAgreement(ra, rb){
+  if(!ra.expertRanks || !rb.expertRanks) return null;
+  const sources = Object.keys(ra.expertRanks).filter(s => rb.expertRanks[s] != null);
+  if(!sources.length) return null;
+  let aWins = 0;
+  for(const s of sources){ if(ra.expertRanks[s] < rb.expertRanks[s]) aWins++; }
+  return {n: sources.length, aPct: Math.round((aWins / sources.length) * 100), bPct: Math.round(((sources.length - aWins) / sources.length) * 100)};
 }
 
 const SKIP_COOLDOWN = 3; // how many other picks/skips happen before a skipped pair can resurface
@@ -301,11 +317,16 @@ function renderArena(){
       <div class="kbd">${name === a ? "←" : "→"}</div>
     </button>`;
 
+  const agreement = expertAgreement(ra, rb);
+  const vsHtml = agreement
+    ? `<div class="vs">VS<div class="agreement">${agreement.aPct}% ◀ ${agreement.n} expert${agreement.n === 1 ? "" : "s"} ▶ ${agreement.bPct}%</div></div>`
+    : `<div class="vs">VS</div>`;
+
   el.innerHTML = `
     <div class="progress-line">Would you rather draft… (${state.comparedPairs.length} compared, ~${Math.max(remaining, 0)} pairs left in this pool)</div>
     <div class="matchup">
       ${card(a, ra)}
-      <div class="vs">VS</div>
+      ${vsHtml}
       ${card(b, rb)}
     </div>
     <button type="button" class="secondary" id="skipBtn">Not sure — ask me later <span class="kbd" style="margin-left:6px;">↓</span></button>

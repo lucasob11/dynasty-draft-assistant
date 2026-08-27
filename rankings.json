@@ -6,16 +6,19 @@
 "team": "BUF",
 "bye": "7",
 "age": 30.3,
-"tier": 1
-},
-{
-"rank": 2,
-"name": "Drake Maye",
-"pos": "QB",
-"team": "NE",
-"bye": "11",
-"age": 24.0,
-"tier": 1
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 1,
+"expertAvg": 1.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 1,
+"FantasyPros": 1,
+"ANDY": 1,
+"JASON": 1,
+"MIKE": 1,
+"DraftSharks": 1
+}
 },
 {
 "rank": 3,
@@ -24,7 +27,40 @@
 "team": "CIN",
 "bye": "6",
 "age": 29.7,
-"tier": 2
+"tier": 2,
+"expertBest": 2,
+"expertWorst": 6,
+"expertAvg": 4.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 6,
+"FantasyPros": 5,
+"ANDY": 4,
+"JASON": 5,
+"MIKE": 2,
+"DraftSharks": 5
+}
+},
+{
+"rank": 2,
+"name": "Drake Maye",
+"pos": "QB",
+"team": "NE",
+"bye": "11",
+"age": 24.0,
+"tier": 1,
+"expertBest": 2,
+"expertWorst": 3,
+"expertAvg": 2.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 2,
+"FantasyPros": 2,
+"ANDY": 2,
+"JASON": 3,
+"MIKE": 3,
+"DraftSharks": 2
+}
 },
 {
 "rank": 4,
@@ -33,7 +69,19 @@
 "team": "WAS",
 "bye": "7",
 "age": 25.7,
-"tier": 2
+"tier": 2,
+"expertBest": 3,
+"expertWorst": 5,
+"expertAvg": 3.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 5,
+"FantasyPros": 4,
+"ANDY": 3,
+"JASON": 4,
+"MIKE": 4,
+"DraftSharks": 3
+}
 },
 {
 "rank": 5,
@@ -42,16 +90,19 @@
 "team": "BAL",
 "bye": "13",
 "age": 29.7,
-"tier": 2
-},
-{
-"rank": 6,
-"name": "Puka Nacua",
-"pos": "WR",
-"team": "LAR",
-"bye": "11",
-"age": 25.3,
-"tier": 1
+"tier": 2,
+"expertBest": 2,
+"expertWorst": 5,
+"expertAvg": 3.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 4,
+"FantasyPros": 3,
+"ANDY": 5,
+"JASON": 2,
+"MIKE": 5,
+"DraftSharks": 4
+}
 },
 {
 "rank": 7,
@@ -60,7 +111,40 @@
 "team": "CIN",
 "bye": "6",
 "age": 26.5,
-"tier": 1
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 3,
+"expertAvg": 1.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 1,
+"FantasyPros": 1,
+"ANDY": 2,
+"JASON": 3,
+"MIKE": 1,
+"DraftSharks": 1
+}
+},
+{
+"rank": 6,
+"name": "Puka Nacua",
+"pos": "WR",
+"team": "LAR",
+"bye": "11",
+"age": 25.3,
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 3,
+"expertAvg": 2.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 3,
+"FantasyPros": 3,
+"ANDY": 1,
+"JASON": 1,
+"MIKE": 2,
+"DraftSharks": 3
+}
 },
 {
 "rank": 8,
@@ -69,16 +153,19 @@
 "team": "SEA",
 "bye": "11",
 "age": 24.5,
-"tier": 1
-},
-{
-"rank": 9,
-"name": "Patrick Mahomes",
-"pos": "QB",
-"team": "KC",
-"bye": "5",
-"age": 31.0,
-"tier": 3
+"tier": 1,
+"expertBest": 2,
+"expertWorst": 3,
+"expertAvg": 2.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 2,
+"FantasyPros": 2,
+"ANDY": 3,
+"JASON": 2,
+"MIKE": 3,
+"DraftSharks": 2
+}
 },
 {
 "rank": 10,
@@ -87,7 +174,40 @@
 "team": "CHI",
 "bye": "10",
 "age": 24.8,
-"tier": 3
+"tier": 3,
+"expertBest": 3,
+"expertWorst": 10,
+"expertAvg": 6.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 3,
+"FantasyPros": 6,
+"ANDY": 9,
+"JASON": 10,
+"MIKE": 6,
+"DraftSharks": 6
+}
+},
+{
+"rank": 9,
+"name": "Patrick Mahomes",
+"pos": "QB",
+"team": "KC",
+"bye": "5",
+"age": 31.0,
+"tier": 3,
+"expertBest": 7,
+"expertWorst": 11,
+"expertAvg": 8.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 11,
+"FantasyPros": 8,
+"ANDY": 7,
+"JASON": 7,
+"MIKE": 7,
+"DraftSharks": 8
+}
 },
 {
 "rank": 11,
@@ -96,7 +216,19 @@
 "team": "LAC",
 "bye": "7",
 "age": 28.5,
-"tier": 3
+"tier": 3,
+"expertBest": 7,
+"expertWorst": 9,
+"expertAvg": 7.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 7,
+"FantasyPros": 7,
+"ANDY": 8,
+"JASON": 9,
+"MIKE": 8,
+"DraftSharks": 7
+}
 },
 {
 "rank": 12,
@@ -105,7 +237,19 @@
 "team": "ATL",
 "bye": "11",
 "age": 24.6,
-"tier": 1
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 2,
+"expertAvg": 1.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 1,
+"FantasyPros": 1,
+"ANDY": 2,
+"JASON": 1,
+"MIKE": 1,
+"DraftSharks": 1
+}
 },
 {
 "rank": 13,
@@ -114,7 +258,19 @@
 "team": "DET",
 "bye": "6",
 "age": 24.5,
-"tier": 1
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 2,
+"expertAvg": 1.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 2,
+"FantasyPros": 2,
+"ANDY": 1,
+"JASON": 2,
+"MIKE": 2,
+"DraftSharks": 2
+}
 },
 {
 "rank": 14,
@@ -123,7 +279,19 @@
 "team": "NYG",
 "bye": "8",
 "age": 23.3,
-"tier": 4
+"tier": 4,
+"expertBest": 8,
+"expertWorst": 12,
+"expertAvg": 10.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 12,
+"FantasyPros": 12,
+"ANDY": 10,
+"JASON": 8,
+"MIKE": 9,
+"DraftSharks": 12
+}
 },
 {
 "rank": 15,
@@ -132,7 +300,19 @@
 "team": "PHI",
 "bye": "10",
 "age": 28.1,
-"tier": 4
+"tier": 4,
+"expertBest": 6,
+"expertWorst": 12,
+"expertAvg": 9.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 9,
+"FantasyPros": 9,
+"ANDY": 12,
+"JASON": 6,
+"MIKE": 10,
+"DraftSharks": 9
+}
 },
 {
 "rank": 16,
@@ -141,7 +321,19 @@
 "team": "DAL",
 "bye": "14",
 "age": 27.4,
-"tier": 2
+"tier": 2,
+"expertBest": 4,
+"expertWorst": 7,
+"expertAvg": 5.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 7,
+"FantasyPros": 6,
+"ANDY": 6,
+"JASON": 5,
+"MIKE": 4,
+"DraftSharks": 5
+}
 },
 {
 "rank": 17,
@@ -150,34 +342,19 @@
 "team": "MIN",
 "bye": "6",
 "age": 27.2,
-"tier": 2
-},
-{
-"rank": 18,
-"name": "Trevor Lawrence",
-"pos": "QB",
-"team": "JAX",
-"bye": "7",
-"age": 26.9,
-"tier": 4
-},
-{
-"rank": 19,
-"name": "Bo Nix",
-"pos": "QB",
-"team": "DEN",
-"bye": "10",
-"age": 26.5,
-"tier": 4
-},
-{
-"rank": 20,
-"name": "Malik Nabers",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 23.1,
-"tier": 2
+"tier": 2,
+"expertBest": 4,
+"expertWorst": 6,
+"expertAvg": 5.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 6,
+"FantasyPros": 5,
+"ANDY": 4,
+"JASON": 6,
+"MIKE": 5,
+"DraftSharks": 6
+}
 },
 {
 "rank": 21,
@@ -186,7 +363,82 @@
 "team": "SF",
 "bye": "8",
 "age": 26.7,
-"tier": 4
+"tier": 4,
+"expertBest": 11,
+"expertWorst": 13,
+"expertAvg": 11.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 13,
+"FantasyPros": 11,
+"ANDY": 13,
+"JASON": 12,
+"MIKE": 11,
+"DraftSharks": 11
+}
+},
+{
+"rank": 18,
+"name": "Trevor Lawrence",
+"pos": "QB",
+"team": "JAX",
+"bye": "7",
+"age": 26.9,
+"tier": 4,
+"expertBest": 6,
+"expertWorst": 14,
+"expertAvg": 10.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 8,
+"FantasyPros": 10,
+"ANDY": 6,
+"JASON": 14,
+"MIKE": 12,
+"DraftSharks": 10
+}
+},
+{
+"rank": 20,
+"name": "Malik Nabers",
+"pos": "WR",
+"team": "NYG",
+"bye": "8",
+"age": 23.1,
+"tier": 2,
+"expertBest": 4,
+"expertWorst": 7,
+"expertAvg": 6.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 5,
+"FantasyPros": 7,
+"ANDY": 7,
+"JASON": 4,
+"MIKE": 6,
+"DraftSharks": 7
+}
+},
+{
+"rank": 19,
+"name": "Bo Nix",
+"pos": "QB",
+"team": "DEN",
+"bye": "10",
+"age": 26.5,
+"tier": 4,
+"expertBest": 10,
+"expertWorst": 13,
+"expertAvg": 11.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 10,
+"FantasyPros": 13,
+"ANDY": 11,
+"JASON": 11,
+"MIKE": 13,
+"DraftSharks": 13
+}
 },
 {
 "rank": 22,
@@ -195,16 +447,19 @@
 "team": "DET",
 "bye": "6",
 "age": 26.9,
-"tier": 2
-},
-{
-"rank": 23,
-"name": "Ashton Jeanty",
-"pos": "RB",
-"team": "LV",
-"bye": "13",
-"age": 22.7,
-"tier": 2
+"tier": 2,
+"expertBest": 4,
+"expertWorst": 7,
+"expertAvg": 5.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 4,
+"FantasyPros": 4,
+"ANDY": 5,
+"JASON": 7,
+"MIKE": 7,
+"DraftSharks": 4
+}
 },
 {
 "rank": 24,
@@ -213,7 +468,19 @@
 "team": "MIA",
 "bye": "6",
 "age": 24.9,
-"tier": 2
+"tier": 2,
+"expertBest": 3,
+"expertWorst": 6,
+"expertAvg": 4.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 6,
+"FantasyPros": 5,
+"ANDY": 4,
+"JASON": 5,
+"MIKE": 3,
+"DraftSharks": 5
+}
 },
 {
 "rank": 25,
@@ -222,52 +489,40 @@
 "team": "ARI",
 "bye": "14",
 "age": 21.3,
-"tier": 2
+"tier": 2,
+"expertBest": 3,
+"expertWorst": 5,
+"expertAvg": 3.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 3,
+"FantasyPros": 4,
+"ANDY": 5,
+"JASON": 4,
+"MIKE": 4,
+"DraftSharks": 3
+}
 },
 {
-"rank": 26,
-"name": "Drake London",
-"pos": "WR",
-"team": "ATL",
-"bye": "11",
-"age": 25.1,
-"tier": 2
-},
-{
-"rank": 27,
-"name": "Brock Bowers",
-"pos": "TE",
+"rank": 23,
+"name": "Ashton Jeanty",
+"pos": "RB",
 "team": "LV",
 "bye": "13",
-"age": 23.7,
-"tier": 1
-},
-{
-"rank": 28,
-"name": "Trey McBride",
-"pos": "TE",
-"team": "ARI",
-"bye": "14",
-"age": 26.8,
-"tier": 2
-},
-{
-"rank": 29,
-"name": "Tetairoa McMillan",
-"pos": "WR",
-"team": "CAR",
-"bye": "5",
-"age": 23.4,
-"tier": 3
-},
-{
-"rank": 30,
-"name": "Omarion Hampton",
-"pos": "RB",
-"team": "LAC",
-"bye": "7",
-"age": 23.5,
-"tier": 2
+"age": 22.7,
+"tier": 2,
+"expertBest": 3,
+"expertWorst": 5,
+"expertAvg": 3.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 4,
+"FantasyPros": 3,
+"ANDY": 3,
+"JASON": 3,
+"MIKE": 5,
+"DraftSharks": 4
+}
 },
 {
 "rank": 31,
@@ -276,7 +531,81 @@
 "team": "DAL",
 "bye": "14",
 "age": 25.5,
-"tier": 3
+"tier": 3,
+"expertBest": 8,
+"expertWorst": 11,
+"expertAvg": 10.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 11,
+"FantasyPros": 11,
+"ANDY": 11,
+"JASON": 11,
+"MIKE": 8,
+"DraftSharks": 11
+}
+},
+{
+"rank": 27,
+"name": "Brock Bowers",
+"pos": "TE",
+"team": "LV",
+"bye": "13",
+"age": 23.7,
+"tier": 1,
+"expertBest": 1,
+"expertWorst": 2,
+"expertAvg": 1.2,
+"expertCount": 5,
+"expertRanks": {
+"Trade/Cut": 1,
+"FantasyPros": 1,
+"ANDY": 2,
+"JASON": 1,
+"MIKE": 1
+}
+},
+{
+"rank": 28,
+"name": "Trey McBride",
+"pos": "TE",
+"team": "ARI",
+"bye": "14",
+"age": 26.8,
+"tier": 2,
+"expertBest": 1,
+"expertWorst": 2,
+"expertAvg": 1.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 2,
+"FantasyPros": 2,
+"ANDY": 1,
+"JASON": 2,
+"MIKE": 2,
+"DraftSharks": 1
+}
+},
+{
+"rank": 26,
+"name": "Drake London",
+"pos": "WR",
+"team": "ATL",
+"bye": "11",
+"age": 25.1,
+"tier": 2,
+"expertBest": 8,
+"expertWorst": 9,
+"expertAvg": 8.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 8,
+"FantasyPros": 8,
+"ANDY": 9,
+"JASON": 8,
+"MIKE": 9,
+"DraftSharks": 8
+}
 },
 {
 "rank": 32,
@@ -285,25 +614,19 @@
 "team": "BUF",
 "bye": "7",
 "age": 26.9,
-"tier": 3
-},
-{
-"rank": 33,
-"name": "Nico Collins",
-"pos": "WR",
-"team": "HOU",
-"bye": "8",
-"age": 27.5,
-"tier": 3
-},
-{
-"rank": 34,
-"name": "Kenneth Walker",
-"pos": "RB",
-"team": "KC",
-"bye": "5",
-"age": 25.9,
-"tier": 3
+"tier": 3,
+"expertBest": 6,
+"expertWorst": 9,
+"expertAvg": 7.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 7,
+"FantasyPros": 6,
+"ANDY": 7,
+"JASON": 9,
+"MIKE": 6,
+"DraftSharks": 8
+}
 },
 {
 "rank": 35,
@@ -312,7 +635,103 @@
 "team": "NO",
 "bye": "8",
 "age": 26.2,
-"tier": 3
+"tier": 3,
+"expertBest": 10,
+"expertWorst": 13,
+"expertAvg": 11.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 12,
+"FantasyPros": 13,
+"ANDY": 12,
+"JASON": 12,
+"MIKE": 10,
+"DraftSharks": 12
+}
+},
+{
+"rank": 34,
+"name": "Kenneth Walker",
+"pos": "RB",
+"team": "KC",
+"bye": "5",
+"age": 25.9,
+"tier": 3,
+"expertBest": 7,
+"expertWorst": 9,
+"expertAvg": 8.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 9,
+"FantasyPros": 9,
+"ANDY": 9,
+"JASON": 8,
+"MIKE": 7,
+"DraftSharks": 9
+}
+},
+{
+"rank": 33,
+"name": "Nico Collins",
+"pos": "WR",
+"team": "HOU",
+"bye": "8",
+"age": 27.5,
+"tier": 3,
+"expertBest": 9,
+"expertWorst": 13,
+"expertAvg": 11.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 13,
+"FantasyPros": 10,
+"ANDY": 10,
+"JASON": 13,
+"MIKE": 11,
+"DraftSharks": 9
+}
+},
+{
+"rank": 30,
+"name": "Omarion Hampton",
+"pos": "RB",
+"team": "LAC",
+"bye": "7",
+"age": 23.5,
+"tier": 2,
+"expertBest": 5,
+"expertWorst": 8,
+"expertAvg": 6.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 5,
+"FantasyPros": 7,
+"ANDY": 6,
+"JASON": 6,
+"MIKE": 8,
+"DraftSharks": 7
+}
+},
+{
+"rank": 29,
+"name": "Tetairoa McMillan",
+"pos": "WR",
+"team": "CAR",
+"bye": "5",
+"age": 23.4,
+"tier": 3,
+"expertBest": 8,
+"expertWorst": 12,
+"expertAvg": 9.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 10,
+"FantasyPros": 9,
+"ANDY": 8,
+"JASON": 9,
+"MIKE": 12,
+"DraftSharks": 10
+}
 },
 {
 "rank": 36,
@@ -321,16 +740,19 @@
 "team": "IND",
 "bye": "13",
 "age": 27.6,
-"tier": 3
-},
-{
-"rank": 37,
-"name": "Dak Prescott",
-"pos": "QB",
-"team": "DAL",
-"bye": "14",
-"age": 33.1,
-"tier": 5
+"tier": 3,
+"expertBest": 6,
+"expertWorst": 9,
+"expertAvg": 7.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 8,
+"FantasyPros": 8,
+"ANDY": 8,
+"JASON": 7,
+"MIKE": 9,
+"DraftSharks": 6
+}
 },
 {
 "rank": 38,
@@ -339,106 +761,19 @@
 "team": "GB",
 "bye": "11",
 "age": 27.8,
-"tier": 5
-},
-{
-"rank": 39,
-"name": "Garrett Wilson",
-"pos": "WR",
-"team": "NYJ",
-"bye": "13",
-"age": 26.1,
-"tier": 4
-},
-{
-"rank": 40,
-"name": "Rashee Rice",
-"pos": "WR",
-"team": "KC",
-"bye": "5",
-"age": 26.4,
-"tier": 4
-},
-{
-"rank": 41,
-"name": "Fernando Mendoza",
-"pos": "QB",
-"team": "LV",
-"bye": "13",
-"age": 22.9,
-"tier": 5
-},
-{
-"rank": 42,
-"name": "Carnell Tate",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 21.6,
-"tier": 4
-},
-{
-"rank": 43,
-"name": "Emeka Egbuka",
-"pos": "WR",
-"team": "TB",
-"bye": "10",
-"age": 23.9,
-"tier": 4
-},
-{
-"rank": 44,
-"name": "DeVonta Smith",
-"pos": "WR",
-"team": "PHI",
-"bye": "10",
-"age": 27.8,
-"tier": 5
-},
-{
-"rank": 45,
-"name": "Chase Brown",
-"pos": "RB",
-"team": "CIN",
-"bye": "6",
-"age": 26.4,
-"tier": 4
-},
-{
-"rank": 46,
-"name": "Jordyn Tyson",
-"pos": "WR",
-"team": "NO",
-"bye": "8",
-"age": 22.1,
-"tier": 5
-},
-{
-"rank": 47,
-"name": "Ladd McConkey",
-"pos": "WR",
-"team": "LAC",
-"bye": "7",
-"age": 24.8,
-"tier": 4
-},
-{
-"rank": 48,
-"name": "Luther Burden III",
-"pos": "WR",
-"team": "CHI",
-"bye": "10",
-"age": 22.7,
-"tier": 5
-},
-{
-"rank": 49,
-"name": "Zay Flowers",
-"pos": "WR",
-"team": "BAL",
-"bye": "13",
-"age": 26.0,
-"tier": 4
+"tier": 5,
+"expertBest": 14,
+"expertWorst": 19,
+"expertAvg": 15.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 14,
+"FantasyPros": 15,
+"ANDY": 19,
+"JASON": 15,
+"MIKE": 14,
+"DraftSharks": 15
+}
 },
 {
 "rank": 50,
@@ -447,7 +782,218 @@
 "team": "NO",
 "bye": "8",
 "age": 26.9,
-"tier": 6
+"tier": 6,
+"expertBest": 15,
+"expertWorst": 20,
+"expertAvg": 17.2,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 17,
+"FantasyPros": 20,
+"JASON": 17,
+"MIKE": 15
+}
+},
+{
+"rank": 39,
+"name": "Garrett Wilson",
+"pos": "WR",
+"team": "NYJ",
+"bye": "13",
+"age": 26.1,
+"tier": 4,
+"expertBest": 13,
+"expertWorst": 16,
+"expertAvg": 14.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 16,
+"FantasyPros": 14,
+"ANDY": 13,
+"JASON": 14,
+"MIKE": 13,
+"DraftSharks": 15
+}
+},
+{
+"rank": 44,
+"name": "DeVonta Smith",
+"pos": "WR",
+"team": "PHI",
+"bye": "10",
+"age": 27.8,
+"tier": 5,
+"expertBest": 14,
+"expertWorst": 20,
+"expertAvg": 17.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 17,
+"FantasyPros": 18,
+"ANDY": 19,
+"JASON": 19,
+"MIKE": 14,
+"DraftSharks": 20
+}
+},
+{
+"rank": 37,
+"name": "Dak Prescott",
+"pos": "QB",
+"team": "DAL",
+"bye": "14",
+"age": 33.1,
+"tier": 5,
+"expertBest": 14,
+"expertWorst": 16,
+"expertAvg": 15.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 16,
+"FantasyPros": 14,
+"ANDY": 15,
+"JASON": 16,
+"MIKE": 16,
+"DraftSharks": 14
+}
+},
+{
+"rank": 43,
+"name": "Emeka Egbuka",
+"pos": "WR",
+"team": "TB",
+"bye": "10",
+"age": 23.9,
+"tier": 4,
+"expertBest": 9,
+"expertWorst": 17,
+"expertAvg": 13.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 9,
+"FantasyPros": 12,
+"ANDY": 15,
+"JASON": 17,
+"MIKE": 15,
+"DraftSharks": 13
+}
+},
+{
+"rank": 40,
+"name": "Rashee Rice",
+"pos": "WR",
+"team": "KC",
+"bye": "5",
+"age": 26.4,
+"tier": 4,
+"expertBest": 10,
+"expertWorst": 18,
+"expertAvg": 15.0,
+"expertCount": 4,
+"expertRanks": {
+"ANDY": 16,
+"JASON": 10,
+"MIKE": 16,
+"DraftSharks": 18
+}
+},
+{
+"rank": 42,
+"name": "Carnell Tate",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 21.6,
+"tier": 4,
+"expertBest": 14,
+"expertWorst": 19,
+"expertAvg": 15.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 15,
+"FantasyPros": 15,
+"ANDY": 14,
+"JASON": 15,
+"MIKE": 17,
+"DraftSharks": 19
+}
+},
+{
+"rank": 45,
+"name": "Chase Brown",
+"pos": "RB",
+"team": "CIN",
+"bye": "6",
+"age": 26.4,
+"tier": 4,
+"expertBest": 10,
+"expertWorst": 15,
+"expertAvg": 11.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 10,
+"FantasyPros": 11,
+"ANDY": 10,
+"JASON": 10,
+"MIKE": 10,
+"DraftSharks": 15
+}
+},
+{
+"rank": 46,
+"name": "Jordyn Tyson",
+"pos": "WR",
+"team": "NO",
+"bye": "8",
+"age": 22.1,
+"tier": 5,
+"expertBest": 16,
+"expertWorst": 18,
+"expertAvg": 17.0,
+"expertCount": 2,
+"expertRanks": {
+"JASON": 16,
+"MIKE": 18
+}
+},
+{
+"rank": 49,
+"name": "Zay Flowers",
+"pos": "WR",
+"team": "BAL",
+"bye": "13",
+"age": 26.0,
+"tier": 4,
+"expertBest": 14,
+"expertWorst": 20,
+"expertAvg": 17.6,
+"expertCount": 5,
+"expertRanks": {
+"Trade/Cut": 19,
+"FantasyPros": 16,
+"JASON": 20,
+"MIKE": 19,
+"DraftSharks": 14
+}
+},
+{
+"rank": 48,
+"name": "Luther Burden III",
+"pos": "WR",
+"team": "CHI",
+"bye": "10",
+"age": 22.7,
+"tier": 5,
+"expertBest": 17,
+"expertWorst": 20,
+"expertAvg": 18.2,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 18,
+"FantasyPros": 17,
+"ANDY": 18,
+"MIKE": 20
+}
 },
 {
 "rank": 51,
@@ -456,34 +1002,15 @@
 "team": "CIN",
 "bye": "6",
 "age": 27.6,
-"tier": 5
-},
-{
-"rank": 52,
-"name": "Colston Loveland",
-"pos": "TE",
-"team": "CHI",
-"bye": "10",
-"age": 22.4,
-"tier": 3
-},
-{
-"rank": 53,
-"name": "A.J. Brown",
-"pos": "WR",
-"team": "NE",
-"bye": "11",
-"age": 29.2,
-"tier": 6
-},
-{
-"rank": 54,
-"name": "Christian McCaffrey",
-"pos": "RB",
-"team": "SF",
-"bye": "8",
-"age": 30.2,
-"tier": 4
+"tier": 5,
+"expertBest": 17,
+"expertWorst": 20,
+"expertAvg": 18.5,
+"expertCount": 2,
+"expertRanks": {
+"ANDY": 20,
+"DraftSharks": 17
+}
 },
 {
 "rank": 55,
@@ -492,124 +1019,96 @@
 "team": "TEN",
 "bye": "9",
 "age": 24.3,
-"tier": 6
+"tier": 6,
+"expertBest": 17,
+"expertWorst": 19,
+"expertAvg": 17.8,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 18,
+"FantasyPros": 19,
+"ANDY": 17,
+"MIKE": 17
+}
 },
 {
-"rank": 56,
-"name": "Tyler Warren",
-"pos": "TE",
-"team": "IND",
-"bye": "13",
-"age": 24.3,
-"tier": 4
-},
-{
-"rank": 57,
-"name": "Jared Goff",
-"pos": "QB",
-"team": "DET",
-"bye": "6",
-"age": 31.9,
-"tier": 6
-},
-{
-"rank": 58,
-"name": "Rome Odunze",
+"rank": 47,
+"name": "Ladd McConkey",
 "pos": "WR",
+"team": "LAC",
+"bye": "7",
+"age": 24.8,
+"tier": 4,
+"expertBest": 14,
+"expertWorst": 19,
+"expertAvg": 16.8,
+"expertCount": 5,
+"expertRanks": {
+"Trade/Cut": 14,
+"FantasyPros": 19,
+"ANDY": 17,
+"JASON": 18,
+"DraftSharks": 16
+}
+},
+{
+"rank": 52,
+"name": "Colston Loveland",
+"pos": "TE",
 "team": "CHI",
 "bye": "10",
-"age": 24.2,
-"tier": 6
+"age": 22.4,
+"tier": 3,
+"expertBest": 2,
+"expertWorst": 4,
+"expertAvg": 3.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 3,
+"FantasyPros": 3,
+"ANDY": 3,
+"JASON": 4,
+"MIKE": 3,
+"DraftSharks": 2
+}
 },
 {
-"rank": 59,
-"name": "Baker Mayfield",
-"pos": "QB",
-"team": "TB",
-"bye": "10",
-"age": 31.4,
-"tier": 6
-},
-{
-"rank": 60,
-"name": "Jaylen Waddle",
+"rank": 53,
+"name": "A.J. Brown",
 "pos": "WR",
-"team": "DEN",
-"bye": "10",
-"age": 27.8,
-"tier": 6
-},
-{
-"rank": 61,
-"name": "Breece Hall",
-"pos": "RB",
-"team": "NYJ",
-"bye": "13",
-"age": 25.3,
-"tier": 4
-},
-{
-"rank": 62,
-"name": "TreVeyon Henderson",
-"pos": "RB",
 "team": "NE",
 "bye": "11",
-"age": 23.9,
-"tier": 4
+"age": 29.2,
+"tier": 6,
+"expertBest": 20,
+"expertWorst": 20,
+"expertAvg": 20.0,
+"expertCount": 2,
+"expertRanks": {
+"Trade/Cut": 20,
+"FantasyPros": 20
+}
 },
 {
-"rank": 63,
-"name": "Jameson Williams",
-"pos": "WR",
-"team": "DET",
-"bye": "6",
-"age": 25.4,
-"tier": 6
-},
-{
-"rank": 64,
-"name": "Saquon Barkley",
+"rank": 54,
+"name": "Christian McCaffrey",
 "pos": "RB",
-"team": "PHI",
-"bye": "10",
-"age": 29.6,
-"tier": 4
-},
-{
-"rank": 65,
-"name": "Marvin Harrison Jr.",
-"pos": "WR",
-"team": "ARI",
-"bye": "14",
-"age": 24.1,
-"tier": 7
-},
-{
-"rank": 66,
-"name": "C.J. Stroud",
-"pos": "QB",
-"team": "HOU",
+"team": "SF",
 "bye": "8",
-"age": 24.9,
-"tier": 6
-},
-{
-"rank": 67,
-"name": "Makai Lemon",
-"pos": "WR",
-"team": "PHI",
-"bye": "10",
-"age": 22.2,
-"tier": 6
-},
-{
-"rank": 68,
-"name": "Kyler Murray",
-"pos": "QB",
-"team": "MIN",
-"bye": "6",
-"age": 29.1,
-"tier": 6
+"age": 30.2,
+"tier": 4,
+"expertBest": 11,
+"expertWorst": 13,
+"expertAvg": 11.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 13,
+"FantasyPros": 13,
+"ANDY": 12,
+"JASON": 11,
+"MIKE": 11,
+"DraftSharks": 11
+}
 },
 {
 "rank": 69,
@@ -618,115 +1117,215 @@
 "team": "SEA",
 "bye": "11",
 "age": 29.2,
-"tier": 6
+"tier": 6,
+"expertBest": 18,
+"expertWorst": 18,
+"expertAvg": 18.0,
+"expertCount": 1,
+"expertRanks": {
+"MIKE": 18
+}
 },
 {
-"rank": 70,
-"name": "Harold Fannin Jr.",
+"rank": 56,
+"name": "Tyler Warren",
 "pos": "TE",
-"team": "CLE",
-"bye": "11",
-"age": 22.1,
-"tier": 4
+"team": "IND",
+"bye": "13",
+"age": 24.3,
+"tier": 4,
+"expertBest": 3,
+"expertWorst": 4,
+"expertAvg": 3.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 4,
+"FantasyPros": 4,
+"ANDY": 4,
+"JASON": 3,
+"MIKE": 4,
+"DraftSharks": 4
+}
 },
 {
-"rank": 71,
-"name": "Tucker Kraft",
-"pos": "TE",
-"team": "GB",
-"bye": "11",
-"age": 25.8,
-"tier": 4
+"rank": 41,
+"name": "Fernando Mendoza",
+"pos": "QB",
+"team": "LV",
+"bye": "13",
+"age": 22.9,
+"tier": 5,
+"expertBest": 13,
+"expertWorst": 19,
+"expertAvg": 16.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 15,
+"FantasyPros": 17,
+"ANDY": 16,
+"JASON": 13,
+"MIKE": 19,
+"DraftSharks": 16
+}
 },
 {
-"rank": 72,
-"name": "Bucky Irving",
-"pos": "RB",
+"rank": 60,
+"name": "Jaylen Waddle",
+"pos": "WR",
+"team": "DEN",
+"bye": "10",
+"age": 27.8,
+"tier": 6,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 59,
+"name": "Baker Mayfield",
+"pos": "QB",
 "team": "TB",
 "bye": "10",
-"age": 24.0,
-"tier": 5
+"age": 31.4,
+"tier": 6,
+"expertBest": 18,
+"expertWorst": 20,
+"expertAvg": 18.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 20,
+"FantasyPros": 18,
+"ANDY": 18,
+"JASON": 18,
+"MIKE": 20,
+"DraftSharks": 18
+}
 },
 {
-"rank": 73,
-"name": "Quinshon Judkins",
-"pos": "RB",
-"team": "CLE",
-"bye": "11",
-"age": 22.8,
-"tier": 5
-},
-{
-"rank": 74,
-"name": "Cam Skattebo",
-"pos": "RB",
-"team": "NYG",
-"bye": "8",
-"age": 24.6,
-"tier": 6
-},
-{
-"rank": 75,
-"name": "Kyren Williams",
-"pos": "RB",
-"team": "LAR",
-"bye": "11",
-"age": 26.0,
-"tier": 5
-},
-{
-"rank": 76,
-"name": "Sam LaPorta",
-"pos": "TE",
+"rank": 63,
+"name": "Jameson Williams",
+"pos": "WR",
 "team": "DET",
 "bye": "6",
-"age": 25.6,
-"tier": 5
+"age": 25.4,
+"tier": 6,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 77,
-"name": "Josh Jacobs",
+"rank": 61,
+"name": "Breece Hall",
 "pos": "RB",
-"team": "GB",
-"bye": "11",
-"age": 28.6,
-"tier": 5
+"team": "NYJ",
+"bye": "13",
+"age": 25.3,
+"tier": 4,
+"expertBest": 10,
+"expertWorst": 15,
+"expertAvg": 12.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 14,
+"FantasyPros": 10,
+"ANDY": 11,
+"JASON": 15,
+"MIKE": 12,
+"DraftSharks": 10
+}
 },
 {
-"rank": 78,
-"name": "Brian Thomas Jr.",
+"rank": 64,
+"name": "Saquon Barkley",
+"pos": "RB",
+"team": "PHI",
+"bye": "10",
+"age": 29.6,
+"tier": 4,
+"expertBest": 12,
+"expertWorst": 17,
+"expertAvg": 13.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 12,
+"FantasyPros": 14,
+"ANDY": 13,
+"JASON": 17,
+"MIKE": 13,
+"DraftSharks": 13
+}
+},
+{
+"rank": 58,
+"name": "Rome Odunze",
 "pos": "WR",
-"team": "JAX",
-"bye": "7",
-"age": 23.9,
-"tier": 7
+"team": "CHI",
+"bye": "10",
+"age": 24.2,
+"tier": 6,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 79,
-"name": "Travis Etienne Jr.",
+"rank": 62,
+"name": "TreVeyon Henderson",
 "pos": "RB",
-"team": "NO",
-"bye": "8",
-"age": 27.6,
-"tier": 6
-},
-{
-"rank": 80,
-"name": "Jadarian Price",
-"pos": "RB",
-"team": "SEA",
+"team": "NE",
 "bye": "11",
-"age": 22.9,
-"tier": 6
+"age": 23.9,
+"tier": 4,
+"expertBest": 12,
+"expertWorst": 18,
+"expertAvg": 14.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 18,
+"FantasyPros": 15,
+"ANDY": 15,
+"JASON": 12,
+"MIKE": 14,
+"DraftSharks": 12
+}
 },
 {
-"rank": 81,
-"name": "Malik Willis",
+"rank": 65,
+"name": "Marvin Harrison Jr.",
+"pos": "WR",
+"team": "ARI",
+"bye": "14",
+"age": 24.1,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 57,
+"name": "Jared Goff",
 "pos": "QB",
-"team": "MIA",
+"team": "DET",
 "bye": "6",
-"age": 27.3,
-"tier": 7
+"age": 31.9,
+"tier": 6,
+"expertBest": 14,
+"expertWorst": 20,
+"expertAvg": 17.2,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 19,
+"FantasyPros": 16,
+"ANDY": 14,
+"DraftSharks": 20
+}
 },
 {
 "rank": 82,
@@ -735,25 +1334,222 @@
 "team": "GB",
 "bye": "11",
 "age": 27.3,
-"tier": 7
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 83,
-"name": "Daniel Jones",
+"rank": 66,
+"name": "C.J. Stroud",
 "pos": "QB",
-"team": "IND",
-"bye": "13",
-"age": 29.3,
-"tier": 7
+"team": "HOU",
+"bye": "8",
+"age": 24.9,
+"tier": 6,
+"expertBest": 17,
+"expertWorst": 20,
+"expertAvg": 19.0,
+"expertCount": 3,
+"expertRanks": {
+"ANDY": 20,
+"JASON": 20,
+"DraftSharks": 17
+}
 },
 {
-"rank": 84,
-"name": "Bryce Young",
+"rank": 68,
+"name": "Kyler Murray",
 "pos": "QB",
-"team": "CAR",
-"bye": "5",
-"age": 25.1,
-"tier": 7
+"team": "MIN",
+"bye": "6",
+"age": 29.1,
+"tier": 6,
+"expertBest": 19,
+"expertWorst": 19,
+"expertAvg": 19.0,
+"expertCount": 2,
+"expertRanks": {
+"JASON": 19,
+"DraftSharks": 19
+}
+},
+{
+"rank": 70,
+"name": "Harold Fannin Jr.",
+"pos": "TE",
+"team": "CLE",
+"bye": "11",
+"age": 22.1,
+"tier": 4,
+"expertBest": 3,
+"expertWorst": 6,
+"expertAvg": 5.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 6,
+"FantasyPros": 6,
+"ANDY": 6,
+"JASON": 5,
+"MIKE": 5,
+"DraftSharks": 3
+}
+},
+{
+"rank": 71,
+"name": "Tucker Kraft",
+"pos": "TE",
+"team": "GB",
+"bye": "11",
+"age": 25.8,
+"tier": 4,
+"expertBest": 5,
+"expertWorst": 6,
+"expertAvg": 5.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 5,
+"FantasyPros": 5,
+"ANDY": 5,
+"JASON": 6,
+"MIKE": 6,
+"DraftSharks": 5
+}
+},
+{
+"rank": 73,
+"name": "Quinshon Judkins",
+"pos": "RB",
+"team": "CLE",
+"bye": "11",
+"age": 22.8,
+"tier": 5,
+"expertBest": 12,
+"expertWorst": 18,
+"expertAvg": 15.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 15,
+"FantasyPros": 12,
+"ANDY": 18,
+"JASON": 18,
+"MIKE": 15,
+"DraftSharks": 14
+}
+},
+{
+"rank": 75,
+"name": "Kyren Williams",
+"pos": "RB",
+"team": "LAR",
+"bye": "11",
+"age": 26.0,
+"tier": 5,
+"expertBest": 14,
+"expertWorst": 18,
+"expertAvg": 16.2,
+"expertCount": 5,
+"expertRanks": {
+"Trade/Cut": 17,
+"FantasyPros": 16,
+"JASON": 14,
+"MIKE": 16,
+"DraftSharks": 18
+}
+},
+{
+"rank": 79,
+"name": "Travis Etienne Jr.",
+"pos": "RB",
+"team": "NO",
+"bye": "8",
+"age": 27.6,
+"tier": 6,
+"expertBest": 17,
+"expertWorst": 19,
+"expertAvg": 18.3,
+"expertCount": 3,
+"expertRanks": {
+"FantasyPros": 19,
+"ANDY": 19,
+"MIKE": 17
+}
+},
+{
+"rank": 72,
+"name": "Bucky Irving",
+"pos": "RB",
+"team": "TB",
+"bye": "10",
+"age": 24.0,
+"tier": 5,
+"expertBest": 14,
+"expertWorst": 18,
+"expertAvg": 16.4,
+"expertCount": 5,
+"expertRanks": {
+"FantasyPros": 17,
+"ANDY": 14,
+"JASON": 16,
+"MIKE": 18,
+"DraftSharks": 17
+}
+},
+{
+"rank": 76,
+"name": "Sam LaPorta",
+"pos": "TE",
+"team": "DET",
+"bye": "6",
+"age": 25.6,
+"tier": 5,
+"expertBest": 7,
+"expertWorst": 8,
+"expertAvg": 7.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 7,
+"FantasyPros": 7,
+"ANDY": 7,
+"JASON": 7,
+"MIKE": 7,
+"DraftSharks": 8
+}
+},
+{
+"rank": 77,
+"name": "Josh Jacobs",
+"pos": "RB",
+"team": "GB",
+"bye": "11",
+"age": 28.6,
+"tier": 5,
+"expertBest": 16,
+"expertWorst": 19,
+"expertAvg": 17.5,
+"expertCount": 4,
+"expertRanks": {
+"ANDY": 16,
+"JASON": 19,
+"MIKE": 19,
+"DraftSharks": 16
+}
+},
+{
+"rank": 67,
+"name": "Makai Lemon",
+"pos": "WR",
+"team": "PHI",
+"bye": "10",
+"age": 22.2,
+"tier": 6,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 85,
@@ -762,16 +1558,110 @@
 "team": "DAL",
 "bye": "14",
 "age": 26.4,
-"tier": 6
+"tier": 6,
+"expertBest": 18,
+"expertWorst": 20,
+"expertAvg": 19.5,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 20,
+"FantasyPros": 18,
+"ANDY": 20,
+"MIKE": 20
+}
 },
 {
-"rank": 86,
-"name": "KC Concepcion",
+"rank": 74,
+"name": "Cam Skattebo",
+"pos": "RB",
+"team": "NYG",
+"bye": "8",
+"age": 24.6,
+"tier": 6,
+"expertBest": 13,
+"expertWorst": 20,
+"expertAvg": 17.3,
+"expertCount": 3,
+"expertRanks": {
+"Trade/Cut": 19,
+"FantasyPros": 20,
+"JASON": 13
+}
+},
+{
+"rank": 81,
+"name": "Malik Willis",
+"pos": "QB",
+"team": "MIA",
+"bye": "6",
+"age": 27.3,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 78,
+"name": "Brian Thomas Jr.",
 "pos": "WR",
-"team": "CLE",
+"team": "JAX",
+"bye": "7",
+"age": 23.9,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 83,
+"name": "Daniel Jones",
+"pos": "QB",
+"team": "IND",
+"bye": "13",
+"age": 29.3,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 84,
+"name": "Bryce Young",
+"pos": "QB",
+"team": "CAR",
+"bye": "5",
+"age": 25.1,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 80,
+"name": "Jadarian Price",
+"pos": "RB",
+"team": "SEA",
 "bye": "11",
-"age": 21.9,
-"tier": 7
+"age": 22.9,
+"tier": 6,
+"expertBest": 16,
+"expertWorst": 20,
+"expertAvg": 18.0,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 16,
+"ANDY": 17,
+"JASON": 20,
+"DraftSharks": 19
+}
 },
 {
 "rank": 87,
@@ -780,43 +1670,12 @@
 "team": "BUF",
 "bye": "7",
 "age": 29.4,
-"tier": 7
-},
-{
-"rank": 88,
-"name": "Kyle Pitts Sr.",
-"pos": "TE",
-"team": "ATL",
-"bye": "11",
-"age": 25.9,
-"tier": 5
-},
-{
-"rank": 89,
-"name": "Terry McLaurin",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 31.0,
-"tier": 7
-},
-{
-"rank": 90,
-"name": "Matthew Stafford",
-"pos": "QB",
-"team": "LAR",
-"bye": "11",
-"age": 38.6,
-"tier": 7
-},
-{
-"rank": 91,
-"name": "Jordan Addison",
-"pos": "WR",
-"team": "MIN",
-"bye": "6",
-"age": 24.6,
-"tier": 7
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 92,
@@ -825,7 +1684,75 @@
 "team": "IND",
 "bye": "13",
 "age": 26.3,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 88,
+"name": "Kyle Pitts Sr.",
+"pos": "TE",
+"team": "ATL",
+"bye": "11",
+"age": 25.9,
+"tier": 5,
+"expertBest": 6,
+"expertWorst": 9,
+"expertAvg": 7.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 8,
+"FantasyPros": 8,
+"ANDY": 8,
+"JASON": 9,
+"MIKE": 8,
+"DraftSharks": 6
+}
+},
+{
+"rank": 89,
+"name": "Terry McLaurin",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 31.0,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 90,
+"name": "Matthew Stafford",
+"pos": "QB",
+"team": "LAR",
+"bye": "11",
+"age": 38.6,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 91,
+"name": "Jordan Addison",
+"pos": "WR",
+"team": "MIN",
+"bye": "6",
+"age": 24.6,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 93,
@@ -834,25 +1761,26 @@
 "team": "PIT",
 "bye": "9",
 "age": 28.7,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 94,
-"name": "Derrick Henry",
-"pos": "RB",
-"team": "BAL",
-"bye": "13",
-"age": 32.7,
-"tier": 6
-},
-{
-"rank": 95,
-"name": "Kenyon Sadiq",
-"pos": "TE",
-"team": "NYJ",
-"bye": "13",
-"age": 21.5,
-"tier": 5
+"rank": 86,
+"name": "KC Concepcion",
+"pos": "WR",
+"team": "CLE",
+"bye": "11",
+"age": 21.9,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 96,
@@ -861,7 +1789,49 @@
 "team": "JAX",
 "bye": "7",
 "age": 24.5,
-"tier": 7
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 95,
+"name": "Kenyon Sadiq",
+"pos": "TE",
+"team": "NYJ",
+"bye": "13",
+"age": 21.5,
+"tier": 5,
+"expertBest": 7,
+"expertWorst": 11,
+"expertAvg": 8.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 9,
+"FantasyPros": 9,
+"ANDY": 11,
+"JASON": 8,
+"MIKE": 9,
+"DraftSharks": 7
+}
+},
+{
+"rank": 94,
+"name": "Derrick Henry",
+"pos": "RB",
+"team": "BAL",
+"bye": "13",
+"age": 32.7,
+"tier": 6,
+"expertBest": 20,
+"expertWorst": 20,
+"expertAvg": 20.0,
+"expertCount": 1,
+"expertRanks": {
+"DraftSharks": 20
+}
 },
 {
 "rank": 97,
@@ -870,7 +1840,19 @@
 "team": "ARI",
 "bye": "14",
 "age": 26.5,
-"tier": 8
+"tier": 8,
+"expertBest": 13,
+"expertWorst": 16,
+"expertAvg": 14.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 16,
+"FantasyPros": 14,
+"ANDY": 13,
+"JASON": 14,
+"MIKE": 13,
+"DraftSharks": 15
+}
 },
 {
 "rank": 98,
@@ -879,7 +1861,19 @@
 "team": "LAC",
 "bye": "7",
 "age": 23.2,
-"tier": 6
+"tier": 6,
+"expertBest": 9,
+"expertWorst": 16,
+"expertAvg": 11.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 14,
+"FantasyPros": 16,
+"ANDY": 9,
+"JASON": 10,
+"MIKE": 10,
+"DraftSharks": 11
+}
 },
 {
 "rank": 99,
@@ -888,7 +1882,12 @@
 "team": "JAX",
 "bye": "7",
 "age": 29.8,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 100,
@@ -897,16 +1896,12 @@
 "team": "LAR",
 "bye": "11",
 "age": 33.7,
-"tier": 8
-},
-{
-"rank": 101,
-"name": "Mike Evans",
-"pos": "WR",
-"team": "SF",
-"bye": "8",
-"age": 33.0,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 102,
@@ -915,43 +1910,26 @@
 "team": "DEN",
 "bye": "10",
 "age": 30.9,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 103,
-"name": "Ricky Pearsall",
+"rank": 101,
+"name": "Mike Evans",
 "pos": "WR",
 "team": "SF",
 "bye": "8",
-"age": 26.0,
-"tier": 10
-},
-{
-"rank": 104,
-"name": "D'Andre Swift",
-"pos": "RB",
-"team": "CHI",
-"bye": "10",
-"age": 27.6,
-"tier": 7
-},
-{
-"rank": 105,
-"name": "Michael Pittman Jr.",
-"pos": "WR",
-"team": "PIT",
-"bye": "9",
-"age": 28.9,
-"tier": 8
-},
-{
-"rank": 106,
-"name": "David Montgomery",
-"pos": "RB",
-"team": "HOU",
-"bye": "8",
-"age": 29.2,
-"tier": 7
+"age": 33.0,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 107,
@@ -960,52 +1938,40 @@
 "team": "IND",
 "bye": "13",
 "age": 25.1,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 108,
-"name": "Xavier Worthy",
-"pos": "WR",
-"team": "KC",
-"bye": "5",
-"age": 23.3,
-"tier": 9
-},
-{
-"rank": 109,
-"name": "Wan'Dale Robinson",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 25.7,
-"tier": 9
-},
-{
-"rank": 110,
-"name": "RJ Harvey",
+"rank": 104,
+"name": "D'Andre Swift",
 "pos": "RB",
-"team": "DEN",
+"team": "CHI",
 "bye": "10",
-"age": 25.6,
-"tier": 8
+"age": 27.6,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 111,
-"name": "Eli Stowers",
-"pos": "TE",
-"team": "PHI",
-"bye": "10",
-"age": 23.4,
-"tier": 6
-},
-{
-"rank": 112,
-"name": "Dalton Kincaid",
-"pos": "TE",
-"team": "BUF",
-"bye": "7",
-"age": 26.9,
-"tier": 6
+"rank": 103,
+"name": "Ricky Pearsall",
+"pos": "WR",
+"team": "SF",
+"bye": "8",
+"age": 26.0,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 113,
@@ -1014,88 +1980,40 @@
 "team": "SEA",
 "bye": "11",
 "age": 25.6,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 114,
-"name": "Jayden Reed",
+"rank": 109,
+"name": "Wan'Dale Robinson",
 "pos": "WR",
-"team": "GB",
-"bye": "11",
-"age": 26.3,
-"tier": 9
+"team": "TEN",
+"bye": "9",
+"age": 25.7,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 115,
-"name": "Jayden Higgins",
+"rank": 105,
+"name": "Michael Pittman Jr.",
 "pos": "WR",
-"team": "HOU",
-"bye": "8",
-"age": 23.7,
-"tier": 11
-},
-{
-"rank": 116,
-"name": "Jake Ferguson",
-"pos": "TE",
-"team": "DAL",
-"bye": "14",
-"age": 27.6,
-"tier": 6
-},
-{
-"rank": 117,
-"name": "Parker Washington",
-"pos": "WR",
-"team": "JAX",
-"bye": "7",
-"age": 24.4,
-"tier": 8
-},
-{
-"rank": 118,
-"name": "Isaiah Likely",
-"pos": "TE",
-"team": "NYG",
-"bye": "8",
-"age": 26.4,
-"tier": 7
-},
-{
-"rank": 119,
-"name": "Quentin Johnston",
-"pos": "WR",
-"team": "LAC",
-"bye": "7",
-"age": 25.0,
-"tier": 10
-},
-{
-"rank": 120,
-"name": "Matthew Golden",
-"pos": "WR",
-"team": "GB",
-"bye": "11",
-"age": 23.1,
-"tier": 9
-},
-{
-"rank": 121,
-"name": "Jaylen Warren",
-"pos": "RB",
 "team": "PIT",
 "bye": "9",
-"age": 27.8,
-"tier": 8
-},
-{
-"rank": 122,
-"name": "George Kittle",
-"pos": "TE",
-"team": "SF",
-"bye": "8",
-"age": 32.9,
-"tier": 7
+"age": 28.9,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 123,
@@ -1104,7 +2022,95 @@
 "team": "CLE",
 "bye": "11",
 "age": 22.7,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 106,
+"name": "David Montgomery",
+"pos": "RB",
+"team": "HOU",
+"bye": "8",
+"age": 29.2,
+"tier": 7,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 118,
+"name": "Isaiah Likely",
+"pos": "TE",
+"team": "NYG",
+"bye": "8",
+"age": 26.4,
+"tier": 7,
+"expertBest": 11,
+"expertWorst": 18,
+"expertAvg": 13.4,
+"expertCount": 5,
+"expertRanks": {
+"FantasyPros": 11,
+"ANDY": 13,
+"JASON": 18,
+"MIKE": 11,
+"DraftSharks": 14
+}
+},
+{
+"rank": 116,
+"name": "Jake Ferguson",
+"pos": "TE",
+"team": "DAL",
+"bye": "14",
+"age": 27.6,
+"tier": 6,
+"expertBest": 10,
+"expertWorst": 15,
+"expertAvg": 13.0,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 15,
+"FantasyPros": 14,
+"ANDY": 14,
+"JASON": 13,
+"MIKE": 12,
+"DraftSharks": 10
+}
+},
+{
+"rank": 121,
+"name": "Jaylen Warren",
+"pos": "RB",
+"team": "PIT",
+"bye": "9",
+"age": 27.8,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 119,
+"name": "Quentin Johnston",
+"pos": "WR",
+"team": "LAC",
+"bye": "7",
+"age": 25.0,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 124,
@@ -1113,7 +2119,47 @@
 "team": "NYJ",
 "bye": "13",
 "age": 22.7,
-"tier": 10
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 112,
+"name": "Dalton Kincaid",
+"pos": "TE",
+"team": "BUF",
+"bye": "7",
+"age": 26.9,
+"tier": 6,
+"expertBest": 9,
+"expertWorst": 13,
+"expertAvg": 11.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 12,
+"FantasyPros": 10,
+"ANDY": 12,
+"JASON": 11,
+"MIKE": 13,
+"DraftSharks": 9
+}
+},
+{
+"rank": 117,
+"name": "Parker Washington",
+"pos": "WR",
+"team": "JAX",
+"bye": "7",
+"age": 24.4,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 125,
@@ -1122,16 +2168,47 @@
 "team": "JAX",
 "bye": "7",
 "age": 25.7,
-"tier": 7
+"tier": 7,
+"expertBest": 14,
+"expertWorst": 16,
+"expertAvg": 15.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 16,
+"FantasyPros": 15,
+"ANDY": 16,
+"JASON": 16,
+"MIKE": 14,
+"DraftSharks": 15
+}
 },
 {
-"rank": 126,
-"name": "Khalil Shakir",
+"rank": 108,
+"name": "Xavier Worthy",
 "pos": "WR",
-"team": "BUF",
-"bye": "7",
-"age": 26.6,
-"tier": 9
+"team": "KC",
+"bye": "5",
+"age": 23.3,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 114,
+"name": "Jayden Reed",
+"pos": "WR",
+"team": "GB",
+"bye": "11",
+"age": 26.3,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 127,
@@ -1140,16 +2217,33 @@
 "team": "CAR",
 "bye": "5",
 "age": 27.2,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 128,
-"name": "Chris Godwin Jr.",
-"pos": "WR",
-"team": "TB",
-"bye": "10",
-"age": 30.5,
-"tier": 10
+"rank": 122,
+"name": "George Kittle",
+"pos": "TE",
+"team": "SF",
+"bye": "8",
+"age": 32.9,
+"tier": 7,
+"expertBest": 11,
+"expertWorst": 15,
+"expertAvg": 13.5,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 11,
+"FantasyPros": 12,
+"ANDY": 15,
+"JASON": 15,
+"MIKE": 15,
+"DraftSharks": 13
+}
 },
 {
 "rank": 129,
@@ -1158,52 +2252,78 @@
 "team": "NE",
 "bye": "11",
 "age": 26.4,
-"tier": 10
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 130,
-"name": "Ty Simpson",
-"pos": "QB",
-"team": "LAR",
-"bye": "11",
-"age": 23.7,
-"tier": 8
-},
-{
-"rank": 131,
-"name": "Travis Hunter",
+"rank": 120,
+"name": "Matthew Golden",
 "pos": "WR",
-"team": "JAX",
-"bye": "7",
-"age": 23.3,
-"tier": 11
-},
-{
-"rank": 132,
-"name": "Mark Andrews",
-"pos": "TE",
-"team": "BAL",
-"bye": "13",
-"age": 31.0,
-"tier": 8
-},
-{
-"rank": 133,
-"name": "Kyle Monangai",
-"pos": "RB",
-"team": "CHI",
-"bye": "10",
-"age": 24.5,
-"tier": 9
-},
-{
-"rank": 134,
-"name": "Rhamondre Stevenson",
-"pos": "RB",
-"team": "NE",
+"team": "GB",
 "bye": "11",
-"age": 28.5,
-"tier": 8
+"age": 23.1,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 111,
+"name": "Eli Stowers",
+"pos": "TE",
+"team": "PHI",
+"bye": "10",
+"age": 23.4,
+"tier": 6,
+"expertBest": 10,
+"expertWorst": 16,
+"expertAvg": 12.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 13,
+"FantasyPros": 13,
+"ANDY": 10,
+"JASON": 12,
+"MIKE": 16,
+"DraftSharks": 12
+}
+},
+{
+"rank": 115,
+"name": "Jayden Higgins",
+"pos": "WR",
+"team": "HOU",
+"bye": "8",
+"age": 23.7,
+"tier": 11,
+"expertBest": 17,
+"expertWorst": 20,
+"expertAvg": 18.5,
+"expertCount": 2,
+"expertRanks": {
+"ANDY": 20,
+"DraftSharks": 17
+}
+},
+{
+"rank": 110,
+"name": "RJ Harvey",
+"pos": "RB",
+"team": "DEN",
+"bye": "10",
+"age": 25.6,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 135,
@@ -1212,25 +2332,89 @@
 "team": "SF",
 "bye": "8",
 "age": 23.7,
-"tier": 10
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 136,
-"name": "Blake Corum",
-"pos": "RB",
+"rank": 126,
+"name": "Khalil Shakir",
+"pos": "WR",
+"team": "BUF",
+"bye": "7",
+"age": 26.6,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 130,
+"name": "Ty Simpson",
+"pos": "QB",
 "team": "LAR",
 "bye": "11",
-"age": 25.8,
-"tier": 9
+"age": 23.7,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 137,
-"name": "Michael Penix Jr.",
-"pos": "QB",
-"team": "ATL",
-"bye": "11",
-"age": 26.3,
-"tier": 8
+"rank": 128,
+"name": "Chris Godwin Jr.",
+"pos": "WR",
+"team": "TB",
+"bye": "10",
+"age": 30.5,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 132,
+"name": "Mark Andrews",
+"pos": "TE",
+"team": "BAL",
+"bye": "13",
+"age": 31.0,
+"tier": 8,
+"expertBest": 14,
+"expertWorst": 20,
+"expertAvg": 17.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 20,
+"FantasyPros": 17,
+"ANDY": 19,
+"JASON": 14,
+"MIKE": 17,
+"DraftSharks": 19
+}
+},
+{
+"rank": 133,
+"name": "Kyle Monangai",
+"pos": "RB",
+"team": "CHI",
+"bye": "10",
+"age": 24.5,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 138,
@@ -1239,70 +2423,40 @@
 "team": "PIT",
 "bye": "9",
 "age": 28.2,
-"tier": 10
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 139,
-"name": "Shedeur Sanders",
-"pos": "QB",
-"team": "CLE",
+"rank": 131,
+"name": "Travis Hunter",
+"pos": "WR",
+"team": "JAX",
+"bye": "7",
+"age": 23.3,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 134,
+"name": "Rhamondre Stevenson",
+"pos": "RB",
+"team": "NE",
 "bye": "11",
-"age": 24.6,
-"tier": 8
-},
-{
-"rank": 140,
-"name": "Chig Okonkwo",
-"pos": "TE",
-"team": "WAS",
-"bye": "7",
-"age": 27.0,
-"tier": 8
-},
-{
-"rank": 141,
-"name": "Tony Pollard",
-"pos": "RB",
-"team": "TEN",
-"bye": "9",
-"age": 29.3,
-"tier": 9
-},
-{
-"rank": 142,
-"name": "Jalen Coker",
-"pos": "WR",
-"team": "CAR",
-"bye": "5",
-"age": 24.8,
-"tier": 11
-},
-{
-"rank": 143,
-"name": "Jacory Croskey-Merritt",
-"pos": "RB",
-"team": "WAS",
-"bye": "7",
-"age": 25.4,
-"tier": 9
-},
-{
-"rank": 144,
-"name": "Jonah Coleman",
-"pos": "RB",
-"team": "DEN",
-"bye": "10",
-"age": 23.0,
-"tier": 10
-},
-{
-"rank": 145,
-"name": "Brandon Aiyuk",
-"pos": "WR",
-"team": "SF",
-"bye": "8",
 "age": 28.5,
-"tier": 14
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 146,
@@ -1311,124 +2465,101 @@
 "team": "MIN",
 "bye": "6",
 "age": 23.6,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 147,
-"name": "Jauan Jennings",
-"pos": "WR",
-"team": "MIN",
-"bye": "6",
-"age": 29.1,
-"tier": 13
-},
-{
-"rank": 148,
-"name": "Kenny Gainwell",
+"rank": 136,
+"name": "Blake Corum",
 "pos": "RB",
-"team": "TB",
-"bye": "10",
-"age": 27.5,
-"tier": 10
-},
-{
-"rank": 149,
-"name": "Germie Bernard",
-"pos": "WR",
-"team": "PIT",
-"bye": "9",
-"age": 22.7,
-"tier": 11
-},
-{
-"rank": 150,
-"name": "Rashid Shaheed",
-"pos": "WR",
-"team": "SEA",
+"team": "LAR",
 "bye": "11",
-"age": 28.0,
-"tier": 11
+"age": 25.8,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 151,
-"name": "Chris Bell",
-"pos": "WR",
-"team": "MIA",
-"bye": "6",
-"age": 22.2,
-"tier": 12
-},
-{
-"rank": 152,
-"name": "Antonio Williams",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 22.1,
-"tier": 11
-},
-{
-"rank": 153,
-"name": "Dallas Goedert",
-"pos": "TE",
-"team": "PHI",
-"bye": "10",
-"age": 31.7,
-"tier": 8
-},
-{
-"rank": 154,
-"name": "Stefon Diggs",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 32.8,
-"tier": 12
-},
-{
-"rank": 155,
-"name": "Jalen McMillan",
-"pos": "WR",
-"team": "TB",
-"bye": "10",
-"age": 24.7,
-"tier": 11
-},
-{
-"rank": 156,
-"name": "Tua Tagovailoa",
+"rank": 139,
+"name": "Shedeur Sanders",
 "pos": "QB",
-"team": "ATL",
+"team": "CLE",
 "bye": "11",
-"age": 28.5,
-"tier": 8
+"age": 24.6,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 157,
-"name": "Juwan Johnson",
+"rank": 140,
+"name": "Chig Okonkwo",
 "pos": "TE",
-"team": "NO",
-"bye": "8",
-"age": 30.0,
-"tier": 8
+"team": "WAS",
+"bye": "7",
+"age": 27.0,
+"tier": 8,
+"expertBest": 17,
+"expertWorst": 18,
+"expertAvg": 17.8,
+"expertCount": 4,
+"expertRanks": {
+"Trade/Cut": 18,
+"ANDY": 18,
+"JASON": 17,
+"MIKE": 18
+}
 },
 {
-"rank": 158,
-"name": "Tyler Allgeier",
+"rank": 143,
+"name": "Jacory Croskey-Merritt",
 "pos": "RB",
-"team": "ARI",
-"bye": "14",
-"age": 26.4,
-"tier": 11
+"team": "WAS",
+"bye": "7",
+"age": 25.4,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 159,
-"name": "Tyrone Tracy Jr.",
+"rank": 142,
+"name": "Jalen Coker",
+"pos": "WR",
+"team": "CAR",
+"bye": "5",
+"age": 24.8,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 141,
+"name": "Tony Pollard",
 "pos": "RB",
-"team": "NYG",
-"bye": "8",
-"age": 26.8,
-"tier": 11
+"team": "TEN",
+"bye": "9",
+"age": 29.3,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 160,
@@ -1437,16 +2568,162 @@
 "team": "DEN",
 "bye": "10",
 "age": 27.7,
-"tier": 11
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 161,
-"name": "Ted Hurst III",
+"rank": 147,
+"name": "Jauan Jennings",
+"pos": "WR",
+"team": "MIN",
+"bye": "6",
+"age": 29.1,
+"tier": 13,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 156,
+"name": "Tua Tagovailoa",
+"pos": "QB",
+"team": "ATL",
+"bye": "11",
+"age": 28.5,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 150,
+"name": "Rashid Shaheed",
+"pos": "WR",
+"team": "SEA",
+"bye": "11",
+"age": 28.0,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 144,
+"name": "Jonah Coleman",
+"pos": "RB",
+"team": "DEN",
+"bye": "10",
+"age": 23.0,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 154,
+"name": "Stefon Diggs",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 32.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 149,
+"name": "Germie Bernard",
+"pos": "WR",
+"team": "PIT",
+"bye": "9",
+"age": 22.7,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 145,
+"name": "Brandon Aiyuk",
+"pos": "WR",
+"team": "SF",
+"bye": "8",
+"age": 28.5,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 155,
+"name": "Jalen McMillan",
 "pos": "WR",
 "team": "TB",
 "bye": "10",
+"age": 24.7,
+"tier": 11,
+"expertBest": 8,
+"expertWorst": 12,
+"expertAvg": 9.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 10,
+"FantasyPros": 9,
+"ANDY": 8,
+"JASON": 9,
+"MIKE": 12,
+"DraftSharks": 10
+}
+},
+{
+"rank": 157,
+"name": "Juwan Johnson",
+"pos": "TE",
+"team": "NO",
+"bye": "8",
+"age": 30.0,
+"tier": 8,
+"expertBest": 18,
+"expertWorst": 19,
+"expertAvg": 18.5,
+"expertCount": 2,
+"expertRanks": {
+"MIKE": 19,
+"DraftSharks": 18
+}
+},
+{
+"rank": 151,
+"name": "Chris Bell",
+"pos": "WR",
+"team": "MIA",
+"bye": "6",
 "age": 22.2,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 162,
@@ -1455,61 +2732,87 @@
 "team": "CLE",
 "bye": "11",
 "age": 27.4,
-"tier": 13
+"tier": 13,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 163,
-"name": "AJ Barner",
-"pos": "TE",
-"team": "SEA",
+"rank": 137,
+"name": "Michael Penix Jr.",
+"pos": "QB",
+"team": "ATL",
 "bye": "11",
-"age": 24.3,
-"tier": 9
+"age": 26.3,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 164,
-"name": "Travis Kelce",
+"rank": 153,
+"name": "Dallas Goedert",
 "pos": "TE",
-"team": "KC",
-"bye": "5",
-"age": 36.9,
-"tier": 9
-},
-{
-"rank": 165,
-"name": "Jordan Mason",
-"pos": "RB",
-"team": "MIN",
-"bye": "6",
-"age": 27.3,
-"tier": 10
-},
-{
-"rank": 166,
-"name": "Jaylin Noel",
-"pos": "WR",
-"team": "HOU",
-"bye": "8",
-"age": 24.0,
-"tier": 12
-},
-{
-"rank": 167,
-"name": "T.J. Hockenson",
-"pos": "TE",
-"team": "MIN",
-"bye": "6",
-"age": 29.2,
-"tier": 10
-},
-{
-"rank": 168,
-"name": "Hunter Henry",
-"pos": "TE",
-"team": "NE",
-"bye": "11",
+"team": "PHI",
+"bye": "10",
 "age": 31.7,
-"tier": 9
+"tier": 8,
+"expertBest": 16,
+"expertWorst": 20,
+"expertAvg": 17.8,
+"expertCount": 4,
+"expertRanks": {
+"FantasyPros": 18,
+"ANDY": 17,
+"MIKE": 20,
+"DraftSharks": 16
+}
+},
+{
+"rank": 148,
+"name": "Kenny Gainwell",
+"pos": "RB",
+"team": "TB",
+"bye": "10",
+"age": 27.5,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 158,
+"name": "Tyler Allgeier",
+"pos": "RB",
+"team": "ARI",
+"bye": "14",
+"age": 26.4,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 159,
+"name": "Tyrone Tracy Jr.",
+"pos": "RB",
+"team": "NYG",
+"bye": "8",
+"age": 26.8,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 169,
@@ -1518,7 +2821,12 @@
 "team": "DEN",
 "bye": "10",
 "age": 23.7,
-"tier": 11
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 170,
@@ -1527,25 +2835,88 @@
 "team": "HOU",
 "bye": "8",
 "age": 24.3,
-"tier": 13
+"tier": 13,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 171,
-"name": "Troy Franklin",
-"pos": "WR",
-"team": "DEN",
-"bye": "10",
-"age": 23.6,
-"tier": 13
-},
-{
-"rank": 172,
-"name": "Terrance Ferguson",
+"rank": 168,
+"name": "Hunter Henry",
 "pos": "TE",
-"team": "LAR",
+"team": "NE",
 "bye": "11",
-"age": 23.5,
-"tier": 8
+"age": 31.7,
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 164,
+"name": "Travis Kelce",
+"pos": "TE",
+"team": "KC",
+"bye": "5",
+"age": 36.9,
+"tier": 9,
+"expertBest": 20,
+"expertWorst": 20,
+"expertAvg": 20.0,
+"expertCount": 1,
+"expertRanks": {
+"JASON": 20
+}
+},
+{
+"rank": 165,
+"name": "Jordan Mason",
+"pos": "RB",
+"team": "MIN",
+"bye": "6",
+"age": 27.3,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 166,
+"name": "Jaylin Noel",
+"pos": "WR",
+"team": "HOU",
+"bye": "8",
+"age": 24.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 163,
+"name": "AJ Barner",
+"pos": "TE",
+"team": "SEA",
+"bye": "11",
+"age": 24.3,
+"tier": 9,
+"expertBest": 19,
+"expertWorst": 20,
+"expertAvg": 19.7,
+"expertCount": 3,
+"expertRanks": {
+"Trade/Cut": 19,
+"FantasyPros": 20,
+"ANDY": 20
+}
 },
 {
 "rank": 173,
@@ -1554,16 +2925,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 30.1,
-"tier": 10
-},
-{
-"rank": 174,
-"name": "Tre' Harris",
-"pos": "WR",
-"team": "LAC",
-"bye": "7",
-"age": 24.5,
-"tier": 12
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 175,
@@ -1572,7 +2939,88 @@
 "team": "NYG",
 "bye": "8",
 "age": 23.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 174,
+"name": "Tre' Harris",
+"pos": "WR",
+"team": "LAC",
+"bye": "7",
+"age": 24.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 152,
+"name": "Antonio Williams",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 22.1,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 172,
+"name": "Terrance Ferguson",
+"pos": "TE",
+"team": "LAR",
+"bye": "11",
+"age": 23.5,
+"tier": 8,
+"expertBest": 17,
+"expertWorst": 19,
+"expertAvg": 17.7,
+"expertCount": 3,
+"expertRanks": {
+"Trade/Cut": 17,
+"FantasyPros": 19,
+"DraftSharks": 17
+}
+},
+{
+"rank": 167,
+"name": "T.J. Hockenson",
+"pos": "TE",
+"team": "MIN",
+"bye": "6",
+"age": 29.2,
+"tier": 10,
+"expertBest": 19,
+"expertWorst": 19,
+"expertAvg": 19.0,
+"expertCount": 1,
+"expertRanks": {
+"JASON": 19
+}
+},
+{
+"rank": 171,
+"name": "Troy Franklin",
+"pos": "WR",
+"team": "DEN",
+"bye": "10",
+"age": 23.6,
+"tier": 13,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 176,
@@ -1581,7 +3029,26 @@
 "team": "SF",
 "bye": "8",
 "age": 30.6,
-"tier": 14
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 161,
+"name": "Ted Hurst III",
+"pos": "WR",
+"team": "TB",
+"bye": "10",
+"age": 22.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 177,
@@ -1590,16 +3057,12 @@
 "team": "WAS",
 "bye": "7",
 "age": 27.6,
-"tier": 11
-},
-{
-"rank": 178,
-"name": "Woody Marks",
-"pos": "RB",
-"team": "HOU",
-"bye": "8",
-"age": 25.7,
-"tier": 10
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 179,
@@ -1608,7 +3071,26 @@
 "team": "CAR",
 "bye": "5",
 "age": 23.1,
-"tier": 9
+"tier": 9,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 178,
+"name": "Woody Marks",
+"pos": "RB",
+"team": "HOU",
+"bye": "8",
+"age": 25.7,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 180,
@@ -1617,7 +3099,12 @@
 "team": "FA",
 "bye": "-",
 "age": 32.5,
-"tier": 13
+"tier": 13,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 181,
@@ -1626,7 +3113,12 @@
 "team": "MIN",
 "bye": "6",
 "age": 31.8,
-"tier": 11
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 182,
@@ -1635,7 +3127,12 @@
 "team": "TEN",
 "bye": "9",
 "age": 25.2,
-"tier": 11
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 183,
@@ -1644,124 +3141,12 @@
 "team": "TEN",
 "bye": "9",
 "age": 22.7,
-"tier": 11
-},
-{
-"rank": 184,
-"name": "Adonai Mitchell",
-"pos": "WR",
-"team": "NYJ",
-"bye": "13",
-"age": 23.9,
-"tier": 14
-},
-{
-"rank": 185,
-"name": "Emmett Johnson",
-"pos": "RB",
-"team": "KC",
-"bye": "5",
-"age": 22.9,
-"tier": 11
-},
-{
-"rank": 186,
-"name": "Isaac TeSlaa",
-"pos": "WR",
-"team": "DET",
-"bye": "6",
-"age": 24.5,
-"tier": 14
-},
-{
-"rank": 187,
-"name": "Ja'Kobi Lane",
-"pos": "WR",
-"team": "BAL",
-"bye": "13",
-"age": 22.1,
-"tier": 12
-},
-{
-"rank": 188,
-"name": "Zachariah Branch",
-"pos": "WR",
-"team": "ATL",
-"bye": "11",
-"age": 22.4,
-"tier": 14
-},
-{
-"rank": 189,
-"name": "Mike Washington Jr.",
-"pos": "RB",
-"team": "LV",
-"bye": "13",
-"age": 23.2,
-"tier": 11
-},
-{
-"rank": 190,
-"name": "Kyle Williams",
-"pos": "WR",
-"team": "NE",
-"bye": "11",
-"age": 23.8,
-"tier": 15
-},
-{
-"rank": 191,
-"name": "Chimere Dike",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 24.7,
-"tier": 14
-},
-{
-"rank": 192,
-"name": "Elic Ayomanor",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 23.2,
-"tier": 14
-},
-{
-"rank": 193,
-"name": "Dylan Sampson",
-"pos": "RB",
-"team": "CLE",
-"bye": "11",
-"age": 22.0,
-"tier": 12
-},
-{
-"rank": 194,
-"name": "Mason Taylor",
-"pos": "TE",
-"team": "NYJ",
-"bye": "13",
-"age": 22.3,
-"tier": 10
-},
-{
-"rank": 195,
-"name": "Cade Otton",
-"pos": "TE",
-"team": "TB",
-"bye": "10",
-"age": 27.4,
-"tier": 11
-},
-{
-"rank": 196,
-"name": "Tank Dell",
-"pos": "WR",
-"team": "HOU",
-"bye": "8",
-"age": 26.8,
-"tier": 15
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 197,
@@ -1770,7 +3155,124 @@
 "team": "CAR",
 "bye": "5",
 "age": 22.9,
-"tier": 14
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 185,
+"name": "Emmett Johnson",
+"pos": "RB",
+"team": "KC",
+"bye": "5",
+"age": 22.9,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 188,
+"name": "Zachariah Branch",
+"pos": "WR",
+"team": "ATL",
+"bye": "11",
+"age": 22.4,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 191,
+"name": "Chimere Dike",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 24.7,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 184,
+"name": "Adonai Mitchell",
+"pos": "WR",
+"team": "NYJ",
+"bye": "13",
+"age": 23.9,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 189,
+"name": "Mike Washington Jr.",
+"pos": "RB",
+"team": "LV",
+"bye": "13",
+"age": 23.2,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 186,
+"name": "Isaac TeSlaa",
+"pos": "WR",
+"team": "DET",
+"bye": "6",
+"age": 24.5,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 190,
+"name": "Kyle Williams",
+"pos": "WR",
+"team": "NE",
+"bye": "11",
+"age": 23.8,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 187,
+"name": "Ja'Kobi Lane",
+"pos": "WR",
+"team": "BAL",
+"bye": "13",
+"age": 22.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 198,
@@ -1779,61 +3281,82 @@
 "team": "JAX",
 "bye": "7",
 "age": 25.9,
-"tier": 11
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 199,
-"name": "Elijah Sarratt",
-"pos": "WR",
-"team": "BAL",
-"bye": "13",
-"age": 23.3,
-"tier": 15
-},
-{
-"rank": 200,
-"name": "Theo Johnson",
+"rank": 195,
+"name": "Cade Otton",
 "pos": "TE",
-"team": "NYG",
-"bye": "8",
-"age": 25.5,
-"tier": 11
+"team": "TB",
+"bye": "10",
+"age": 27.4,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 201,
-"name": "Alvin Kamara",
-"pos": "RB",
-"team": "NO",
-"bye": "8",
-"age": 31.1,
-"tier": 12
-},
-{
-"rank": 202,
-"name": "Kaytron Allen",
-"pos": "RB",
-"team": "WAS",
-"bye": "7",
-"age": 23.6,
-"tier": 12
-},
-{
-"rank": 203,
-"name": "Adam Randall",
-"pos": "RB",
-"team": "BAL",
-"bye": "13",
-"age": 22.1,
-"tier": 12
-},
-{
-"rank": 204,
-"name": "Braelon Allen",
-"pos": "RB",
+"rank": 194,
+"name": "Mason Taylor",
+"pos": "TE",
 "team": "NYJ",
 "bye": "13",
-"age": 22.6,
-"tier": 11
+"age": 22.3,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 192,
+"name": "Elic Ayomanor",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 23.2,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 196,
+"name": "Tank Dell",
+"pos": "WR",
+"team": "HOU",
+"bye": "8",
+"age": 26.8,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 193,
+"name": "Dylan Sampson",
+"pos": "RB",
+"team": "CLE",
+"bye": "11",
+"age": 22.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 205,
@@ -1842,16 +3365,57 @@
 "team": "SEA",
 "bye": "11",
 "age": 23.8,
-"tier": 15
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 206,
-"name": "Isiah Pacheco",
+"rank": 200,
+"name": "Theo Johnson",
+"pos": "TE",
+"team": "NYG",
+"bye": "8",
+"age": 25.5,
+"tier": 11,
+"expertBest": 18,
+"expertWorst": 19,
+"expertAvg": 18.5,
+"expertCount": 2,
+"expertRanks": {
+"MIKE": 19,
+"DraftSharks": 18
+}
+},
+{
+"rank": 201,
+"name": "Alvin Kamara",
 "pos": "RB",
-"team": "DET",
-"bye": "6",
-"age": 27.5,
-"tier": 12
+"team": "NO",
+"bye": "8",
+"age": 31.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 204,
+"name": "Braelon Allen",
+"pos": "RB",
+"team": "NYJ",
+"bye": "13",
+"age": 22.6,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 207,
@@ -1860,421 +3424,26 @@
 "team": "LAC",
 "bye": "7",
 "age": 25.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 208,
-"name": "Geno Smith",
-"pos": "QB",
-"team": "NYJ",
-"bye": "13",
-"age": 35.9,
-"tier": 8
-},
-{
-"rank": 209,
-"name": "Jacoby Brissett",
-"pos": "QB",
-"team": "ARI",
-"bye": "14",
-"age": 33.7,
-"tier": 8
-},
-{
-"rank": 210,
-"name": "Darnell Mooney",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 28.8,
-"tier": 15
-},
-{
-"rank": 211,
-"name": "David Njoku",
-"pos": "TE",
-"team": "LAC",
+"rank": 202,
+"name": "Kaytron Allen",
+"pos": "RB",
+"team": "WAS",
 "bye": "7",
-"age": 30.1,
-"tier": 11
-},
-{
-"rank": 212,
-"name": "Dontayvion Wicks",
-"pos": "WR",
-"team": "PHI",
-"bye": "10",
-"age": 25.2,
-"tier": 14
-},
-{
-"rank": 213,
-"name": "Kaelon Black",
-"pos": "RB",
-"team": "SF",
-"bye": "8",
-"age": 24.9,
-"tier": 12
-},
-{
-"rank": 214,
-"name": "Gunnar Helm",
-"pos": "TE",
-"team": "TEN",
-"bye": "9",
-"age": 24.0,
-"tier": 10
-},
-{
-"rank": 215,
-"name": "Pat Freiermuth",
-"pos": "TE",
-"team": "PIT",
-"bye": "9",
-"age": 27.9,
-"tier": 11
-},
-{
-"rank": 216,
-"name": "Rashod Bateman",
-"pos": "WR",
-"team": "BAL",
-"bye": "13",
-"age": 26.8,
-"tier": 15
-},
-{
-"rank": 217,
-"name": "Calvin Ridley",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 31.7,
-"tier": 15
-},
-{
-"rank": 218,
-"name": "Jack Bech",
-"pos": "WR",
-"team": "LV",
-"bye": "13",
-"age": 23.7,
-"tier": 14
-},
-{
-"rank": 219,
-"name": "Tre Tucker",
-"pos": "WR",
-"team": "LV",
-"bye": "13",
-"age": 25.5,
-"tier": 15
-},
-{
-"rank": 220,
-"name": "Trey Benson",
-"pos": "RB",
-"team": "FA",
-"bye": "-",
-"age": 24.1,
-"tier": 12
-},
-{
-"rank": 221,
-"name": "Tank Bigsby",
-"pos": "RB",
-"team": "PHI",
-"bye": "10",
-"age": 25.0,
-"tier": 12
-},
-{
-"rank": 222,
-"name": "Keon Coleman",
-"pos": "WR",
-"team": "BUF",
-"bye": "7",
-"age": 23.3,
-"tier": 15
-},
-{
-"rank": 223,
-"name": "Emanuel Wilson",
-"pos": "RB",
-"team": "SEA",
-"bye": "11",
-"age": 27.3,
-"tier": 12
-},
-{
-"rank": 224,
-"name": "Marvin Mims Jr.",
-"pos": "WR",
-"team": "DEN",
-"bye": "10",
-"age": 24.5,
-"tier": 15
-},
-{
-"rank": 225,
-"name": "Anthony Richardson Sr.",
-"pos": "QB",
-"team": "IND",
-"bye": "13",
-"age": 24.3,
-"tier": 8
-},
-{
-"rank": 226,
-"name": "Malik Washington",
-"pos": "WR",
-"team": "MIA",
-"bye": "6",
-"age": 25.9,
-"tier": 14
-},
-{
-"rank": 227,
-"name": "Brian Robinson",
-"pos": "RB",
-"team": "ATL",
-"bye": "11",
-"age": 27.4,
-"tier": 12
-},
-{
-"rank": 228,
-"name": "Ray Davis",
-"pos": "RB",
-"team": "BUF",
-"bye": "7",
-"age": 26.8,
-"tier": 12
-},
-{
-"rank": 229,
-"name": "Skyler Bell",
-"pos": "WR",
-"team": "BUF",
-"bye": "7",
-"age": 24.2,
-"tier": 15
-},
-{
-"rank": 230,
-"name": "Keaton Mitchell",
-"pos": "RB",
-"team": "LAC",
-"bye": "7",
-"age": 24.6,
-"tier": 12
-},
-{
-"rank": 231,
-"name": "Devin Neal",
-"pos": "RB",
-"team": "NO",
-"bye": "8",
-"age": 23.1,
-"tier": 12
-},
-{
-"rank": 232,
-"name": "Garrett Nussmeier",
-"pos": "QB",
-"team": "KC",
-"bye": "5",
-"age": 24.6,
-"tier": 8
-},
-{
-"rank": 233,
-"name": "James Conner",
-"pos": "RB",
-"team": "ARI",
-"bye": "14",
-"age": 31.3,
-"tier": 12
-},
-{
-"rank": 234,
-"name": "Ollie Gordon II",
-"pos": "RB",
-"team": "MIA",
-"bye": "6",
-"age": 22.6,
-"tier": 12
-},
-{
-"rank": 235,
-"name": "Kaleb Johnson",
-"pos": "RB",
-"team": "PIT",
-"bye": "9",
-"age": 23.0,
-"tier": 12
-},
-{
-"rank": 236,
-"name": "Elijah Arroyo",
-"pos": "TE",
-"team": "SEA",
-"bye": "11",
-"age": 23.4,
-"tier": 10
-},
-{
-"rank": 237,
-"name": "Keenan Allen",
-"pos": "WR",
-"team": "IND",
-"bye": "13",
-"age": 34.4,
-"tier": 15
-},
-{
-"rank": 238,
-"name": "Christian Kirk",
-"pos": "WR",
-"team": "SF",
-"bye": "8",
-"age": 29.8,
-"tier": 16
-},
-{
-"rank": 239,
-"name": "Max Klare",
-"pos": "TE",
-"team": "LAR",
-"bye": "11",
-"age": 23.1,
-"tier": 12
-},
-{
-"rank": 240,
-"name": "Sean Tucker",
-"pos": "RB",
-"team": "TB",
-"bye": "10",
-"age": 24.9,
-"tier": 12
-},
-{
-"rank": 241,
-"name": "DeMario Douglas",
-"pos": "WR",
-"team": "NE",
-"bye": "11",
-"age": 25.7,
-"tier": 16
-},
-{
-"rank": 242,
-"name": "Jaylen Wright",
-"pos": "RB",
-"team": "MIA",
-"bye": "6",
-"age": 23.4,
-"tier": 12
-},
-{
-"rank": 243,
-"name": "Cooper Kupp",
-"pos": "WR",
-"team": "SEA",
-"bye": "11",
-"age": 33.2,
-"tier": 16
-},
-{
-"rank": 244,
-"name": "Devaughn Vele",
-"pos": "WR",
-"team": "NO",
-"bye": "8",
-"age": 28.7,
-"tier": 16
-},
-{
-"rank": 245,
-"name": "Justin Fields",
-"pos": "QB",
-"team": "KC",
-"bye": "5",
-"age": 27.5,
-"tier": 8
-},
-{
-"rank": 246,
-"name": "Xavier Legette",
-"pos": "WR",
-"team": "CAR",
-"bye": "5",
-"age": 25.6,
-"tier": 16
-},
-{
-"rank": 247,
-"name": "Cedric Tillman",
-"pos": "WR",
-"team": "CLE",
-"bye": "11",
-"age": 26.4,
-"tier": 16
-},
-{
-"rank": 248,
-"name": "Jaydon Blue",
-"pos": "RB",
-"team": "DAL",
-"bye": "14",
-"age": 22.6,
-"tier": 12
-},
-{
-"rank": 249,
-"name": "Isaiah Davis",
-"pos": "RB",
-"team": "NYJ",
-"bye": "13",
-"age": 24.5,
-"tier": 12
-},
-{
-"rank": 250,
-"name": "Tez Johnson",
-"pos": "WR",
-"team": "TB",
-"bye": "10",
-"age": 24.3,
-"tier": 16
-},
-{
-"rank": 251,
-"name": "Eli Raridon",
-"pos": "TE",
-"team": "NE",
-"bye": "11",
-"age": 22.5,
-"tier": 12
-},
-{
-"rank": 252,
-"name": "Oscar Delp",
-"pos": "TE",
-"team": "NO",
-"bye": "8",
-"age": 23.1,
-"tier": 12
-},
-{
-"rank": 253,
-"name": "Aaron Rodgers",
-"pos": "QB",
-"team": "PIT",
-"bye": "9",
-"age": 42.8,
-"tier": 8
+"age": 23.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 254,
@@ -2283,7 +3452,278 @@
 "team": "KC",
 "bye": "5",
 "age": 23.6,
-"tier": 15
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 213,
+"name": "Kaelon Black",
+"pos": "RB",
+"team": "SF",
+"bye": "8",
+"age": 24.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 223,
+"name": "Emanuel Wilson",
+"pos": "RB",
+"team": "SEA",
+"bye": "11",
+"age": 27.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 209,
+"name": "Jacoby Brissett",
+"pos": "QB",
+"team": "ARI",
+"bye": "14",
+"age": 33.7,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 208,
+"name": "Geno Smith",
+"pos": "QB",
+"team": "NYJ",
+"bye": "13",
+"age": 35.9,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 212,
+"name": "Dontayvion Wicks",
+"pos": "WR",
+"team": "PHI",
+"bye": "10",
+"age": 25.2,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 211,
+"name": "David Njoku",
+"pos": "TE",
+"team": "LAC",
+"bye": "7",
+"age": 30.1,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 219,
+"name": "Tre Tucker",
+"pos": "WR",
+"team": "LV",
+"bye": "13",
+"age": 25.5,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 203,
+"name": "Adam Randall",
+"pos": "RB",
+"team": "BAL",
+"bye": "13",
+"age": 22.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 215,
+"name": "Pat Freiermuth",
+"pos": "TE",
+"team": "PIT",
+"bye": "9",
+"age": 27.9,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 214,
+"name": "Gunnar Helm",
+"pos": "TE",
+"team": "TEN",
+"bye": "9",
+"age": 24.0,
+"tier": 10,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 218,
+"name": "Jack Bech",
+"pos": "WR",
+"team": "LV",
+"bye": "13",
+"age": 23.7,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 216,
+"name": "Rashod Bateman",
+"pos": "WR",
+"team": "BAL",
+"bye": "13",
+"age": 26.8,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 210,
+"name": "Darnell Mooney",
+"pos": "WR",
+"team": "NYG",
+"bye": "8",
+"age": 28.8,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 222,
+"name": "Keon Coleman",
+"pos": "WR",
+"team": "BUF",
+"bye": "7",
+"age": 23.3,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 206,
+"name": "Isiah Pacheco",
+"pos": "RB",
+"team": "DET",
+"bye": "6",
+"age": 27.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 220,
+"name": "Trey Benson",
+"pos": "RB",
+"team": "FA",
+"bye": "-",
+"age": 24.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 217,
+"name": "Calvin Ridley",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 31.7,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 221,
+"name": "Tank Bigsby",
+"pos": "RB",
+"team": "PHI",
+"bye": "10",
+"age": 25.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 224,
+"name": "Marvin Mims Jr.",
+"pos": "WR",
+"team": "DEN",
+"bye": "10",
+"age": 24.5,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 255,
@@ -2292,133 +3732,329 @@
 "team": "SF",
 "bye": "8",
 "age": 28.0,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 256,
-"name": "Jalen Royals",
-"pos": "WR",
-"team": "KC",
-"bye": "5",
-"age": 23.5,
-"tier": 16
-},
-{
-"rank": 257,
-"name": "Bryce Lance",
-"pos": "WR",
-"team": "NO",
-"bye": "8",
-"age": 24.0,
-"tier": 15
-},
-{
-"rank": 258,
-"name": "Brashard Smith",
-"pos": "RB",
-"team": "KC",
-"bye": "5",
-"age": 23.4,
-"tier": 12
-},
-{
-"rank": 259,
-"name": "Michael Mayer",
-"pos": "TE",
-"team": "LV",
-"bye": "13",
-"age": 25.2,
-"tier": 11
-},
-{
-"rank": 260,
-"name": "Jalen Nailor",
-"pos": "WR",
-"team": "LV",
-"bye": "13",
-"age": 27.5,
-"tier": 16
-},
-{
-"rank": 261,
-"name": "Kirk Cousins",
-"pos": "QB",
-"team": "LV",
-"bye": "13",
-"age": 38.0,
-"tier": 8
-},
-{
-"rank": 262,
-"name": "Ben Sinnott",
-"pos": "TE",
-"team": "WAS",
-"bye": "7",
-"age": 24.2,
-"tier": 12
-},
-{
-"rank": 263,
-"name": "Evan Engram",
-"pos": "TE",
-"team": "DEN",
-"bye": "10",
-"age": 32.0,
-"tier": 12
-},
-{
-"rank": 264,
-"name": "Caleb Douglas",
+"rank": 226,
+"name": "Malik Washington",
 "pos": "WR",
 "team": "MIA",
 "bye": "6",
-"age": 23.0,
-"tier": 14
+"age": 25.9,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 265,
-"name": "Najee Harris",
+"rank": 228,
+"name": "Ray Davis",
 "pos": "RB",
-"team": "NYG",
-"bye": "8",
-"age": 28.5,
-"tier": 12
-},
-{
-"rank": 266,
-"name": "Ryan Flournoy",
-"pos": "WR",
-"team": "DAL",
-"bye": "14",
+"team": "BUF",
+"bye": "7",
 "age": 26.8,
-"tier": 15
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 267,
-"name": "Isaiah Bond",
+"rank": 227,
+"name": "Brian Robinson",
+"pos": "RB",
+"team": "ATL",
+"bye": "11",
+"age": 27.4,
+"tier": 12,
+"expertBest": 1,
+"expertWorst": 2,
+"expertAvg": 1.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 1,
+"FantasyPros": 1,
+"ANDY": 2,
+"JASON": 1,
+"MIKE": 1,
+"DraftSharks": 1
+}
+},
+{
+"rank": 199,
+"name": "Elijah Sarratt",
+"pos": "WR",
+"team": "BAL",
+"bye": "13",
+"age": 23.3,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 233,
+"name": "James Conner",
+"pos": "RB",
+"team": "ARI",
+"bye": "14",
+"age": 31.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 230,
+"name": "Keaton Mitchell",
+"pos": "RB",
+"team": "LAC",
+"bye": "7",
+"age": 24.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 225,
+"name": "Anthony Richardson Sr.",
+"pos": "QB",
+"team": "IND",
+"bye": "13",
+"age": 24.3,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 231,
+"name": "Devin Neal",
+"pos": "RB",
+"team": "NO",
+"bye": "8",
+"age": 23.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 234,
+"name": "Ollie Gordon II",
+"pos": "RB",
+"team": "MIA",
+"bye": "6",
+"age": 22.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 235,
+"name": "Kaleb Johnson",
+"pos": "RB",
+"team": "PIT",
+"bye": "9",
+"age": 23.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 251,
+"name": "Eli Raridon",
+"pos": "TE",
+"team": "NE",
+"bye": "11",
+"age": 22.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 237,
+"name": "Keenan Allen",
+"pos": "WR",
+"team": "IND",
+"bye": "13",
+"age": 34.4,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 238,
+"name": "Christian Kirk",
+"pos": "WR",
+"team": "SF",
+"bye": "8",
+"age": 29.8,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 236,
+"name": "Elijah Arroyo",
+"pos": "TE",
+"team": "SEA",
+"bye": "11",
+"age": 23.4,
+"tier": 10,
+"expertBest": 20,
+"expertWorst": 20,
+"expertAvg": 20.0,
+"expertCount": 1,
+"expertRanks": {
+"DraftSharks": 20
+}
+},
+{
+"rank": 240,
+"name": "Sean Tucker",
+"pos": "RB",
+"team": "TB",
+"bye": "10",
+"age": 24.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 244,
+"name": "Devaughn Vele",
+"pos": "WR",
+"team": "NO",
+"bye": "8",
+"age": 28.7,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 242,
+"name": "Jaylen Wright",
+"pos": "RB",
+"team": "MIA",
+"bye": "6",
+"age": 23.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 241,
+"name": "DeMario Douglas",
+"pos": "WR",
+"team": "NE",
+"bye": "11",
+"age": 25.7,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 229,
+"name": "Skyler Bell",
+"pos": "WR",
+"team": "BUF",
+"bye": "7",
+"age": 24.2,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 245,
+"name": "Justin Fields",
+"pos": "QB",
+"team": "KC",
+"bye": "5",
+"age": 27.5,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 243,
+"name": "Cooper Kupp",
+"pos": "WR",
+"team": "SEA",
+"bye": "11",
+"age": 33.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 247,
+"name": "Cedric Tillman",
 "pos": "WR",
 "team": "CLE",
 "bye": "11",
-"age": 22.5,
-"tier": 16
-},
-{
-"rank": 268,
-"name": "Carson Beck",
-"pos": "QB",
-"team": "ARI",
-"bye": "14",
-"age": 24.8,
-"tier": 8
-},
-{
-"rank": 269,
-"name": "Trevor Etienne",
-"pos": "RB",
-"team": "CAR",
-"bye": "5",
-"age": 22.1,
-"tier": 12
+"age": 26.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 270,
@@ -2427,142 +4063,96 @@
 "team": "MIN",
 "bye": "6",
 "age": 22.9,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 271,
-"name": "Hollywood Brown",
-"pos": "WR",
-"team": "PHI",
-"bye": "10",
-"age": 29.2,
-"tier": 16
-},
-{
-"rank": 272,
-"name": "Jarquez Hunter",
+"rank": 249,
+"name": "Isaiah Davis",
 "pos": "RB",
-"team": "LAR",
-"bye": "11",
-"age": 23.7,
-"tier": 12
-},
-{
-"rank": 273,
-"name": "Darius Slayton",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 29.6,
-"tier": 16
-},
-{
-"rank": 274,
-"name": "Kendre Miller",
-"pos": "RB",
-"team": "NO",
-"bye": "8",
-"age": 24.2,
-"tier": 12
-},
-{
-"rank": 275,
-"name": "Eli Heidenreich",
-"pos": "RB",
-"team": "PIT",
-"bye": "9",
-"age": 23.1,
-"tier": 12
-},
-{
-"rank": 276,
-"name": "Isaac Guerendo",
-"pos": "RB",
-"team": "SF",
-"bye": "8",
-"age": 26.2,
-"tier": 12
-},
-{
-"rank": 277,
-"name": "Brenen Thompson",
-"pos": "WR",
-"team": "LAC",
-"bye": "7",
-"age": 23.1,
-"tier": 16
-},
-{
-"rank": 278,
-"name": "Seth McGowan",
-"pos": "RB",
-"team": "IND",
+"team": "NYJ",
 "bye": "13",
-"age": 24.9,
-"tier": 12
+"age": 24.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 279,
-"name": "MarShawn Lloyd",
-"pos": "RB",
-"team": "GB",
-"bye": "11",
-"age": 25.7,
-"tier": 12
-},
-{
-"rank": 280,
-"name": "DJ Giddens",
-"pos": "RB",
-"team": "IND",
-"bye": "13",
-"age": 23.0,
-"tier": 12
-},
-{
-"rank": 281,
-"name": "Joshua Palmer",
+"rank": 246,
+"name": "Xavier Legette",
 "pos": "WR",
-"team": "BUF",
-"bye": "7",
-"age": 26.9,
-"tier": 16
-},
-{
-"rank": 282,
-"name": "Mike Gesicki",
-"pos": "TE",
-"team": "CIN",
-"bye": "6",
-"age": 30.9,
-"tier": 12
-},
-{
-"rank": 283,
-"name": "Jordan James",
-"pos": "RB",
-"team": "SF",
-"bye": "8",
-"age": 22.4,
-"tier": 12
-},
-{
-"rank": 284,
-"name": "Ja'Tavion Sanders",
-"pos": "TE",
 "team": "CAR",
 "bye": "5",
-"age": 23.4,
-"tier": 12
+"age": 25.6,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 285,
-"name": "Michael Trigg",
+"rank": 239,
+"name": "Max Klare",
 "pos": "TE",
-"team": "DAL",
-"bye": "14",
-"age": 24.2,
-"tier": 12
+"team": "LAR",
+"bye": "11",
+"age": 23.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 259,
+"name": "Michael Mayer",
+"pos": "TE",
+"team": "LV",
+"bye": "13",
+"age": 25.2,
+"tier": 11,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 261,
+"name": "Kirk Cousins",
+"pos": "QB",
+"team": "LV",
+"bye": "13",
+"age": 38.0,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 250,
+"name": "Tez Johnson",
+"pos": "WR",
+"team": "TB",
+"bye": "10",
+"age": 24.3,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 286,
@@ -2571,79 +4161,296 @@
 "team": "SEA",
 "bye": "11",
 "age": 23.7,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 287,
-"name": "Will Shipley",
+"rank": 256,
+"name": "Jalen Royals",
+"pos": "WR",
+"team": "KC",
+"bye": "5",
+"age": 23.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 266,
+"name": "Ryan Flournoy",
+"pos": "WR",
+"team": "DAL",
+"bye": "14",
+"age": 26.8,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 248,
+"name": "Jaydon Blue",
 "pos": "RB",
-"team": "PHI",
+"team": "DAL",
+"bye": "14",
+"age": 22.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 263,
+"name": "Evan Engram",
+"pos": "TE",
+"team": "DEN",
 "bye": "10",
-"age": 24.0,
-"tier": 12
+"age": 32.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 288,
-"name": "Jerome Ford",
-"pos": "RB",
-"team": "FA",
-"bye": "-",
-"age": 27.0,
-"tier": 12
-},
-{
-"rank": 289,
-"name": "Dont'e Thornton Jr.",
+"rank": 260,
+"name": "Jalen Nailor",
 "pos": "WR",
 "team": "LV",
 "bye": "13",
-"age": 23.8,
-"tier": 16
+"age": 27.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 290,
-"name": "Greg Dulcich",
-"pos": "TE",
-"team": "MIA",
-"bye": "6",
-"age": 26.4,
-"tier": 12
-},
-{
-"rank": 291,
-"name": "Tahj Brooks",
-"pos": "RB",
-"team": "CIN",
-"bye": "6",
-"age": 24.3,
-"tier": 12
-},
-{
-"rank": 292,
-"name": "Savion Williams",
-"pos": "WR",
-"team": "GB",
-"bye": "11",
+"rank": 268,
+"name": "Carson Beck",
+"pos": "QB",
+"team": "ARI",
+"bye": "14",
 "age": 24.8,
-"tier": 16
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 293,
-"name": "Andrei Iosivas",
-"pos": "WR",
-"team": "CIN",
-"bye": "6",
-"age": 26.9,
-"tier": 16
-},
-{
-"rank": 294,
-"name": "Darnell Washington",
+"rank": 252,
+"name": "Oscar Delp",
 "pos": "TE",
+"team": "NO",
+"bye": "8",
+"age": 23.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 262,
+"name": "Ben Sinnott",
+"pos": "TE",
+"team": "WAS",
+"bye": "7",
+"age": 24.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 273,
+"name": "Darius Slayton",
+"pos": "WR",
+"team": "NYG",
+"bye": "8",
+"age": 29.6,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 258,
+"name": "Brashard Smith",
+"pos": "RB",
+"team": "KC",
+"bye": "5",
+"age": 23.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 257,
+"name": "Bryce Lance",
+"pos": "WR",
+"team": "NO",
+"bye": "8",
+"age": 24.0,
+"tier": 15,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 267,
+"name": "Isaiah Bond",
+"pos": "WR",
+"team": "CLE",
+"bye": "11",
+"age": 22.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 253,
+"name": "Aaron Rodgers",
+"pos": "QB",
 "team": "PIT",
 "bye": "9",
-"age": 25.0,
-"tier": 12
+"age": 42.8,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 269,
+"name": "Trevor Etienne",
+"pos": "RB",
+"team": "CAR",
+"bye": "5",
+"age": 22.1,
+"tier": 12,
+"expertBest": 17,
+"expertWorst": 19,
+"expertAvg": 18.3,
+"expertCount": 3,
+"expertRanks": {
+"FantasyPros": 19,
+"ANDY": 19,
+"MIKE": 17
+}
+},
+{
+"rank": 265,
+"name": "Najee Harris",
+"pos": "RB",
+"team": "NYG",
+"bye": "8",
+"age": 28.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 281,
+"name": "Joshua Palmer",
+"pos": "WR",
+"team": "BUF",
+"bye": "7",
+"age": 26.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 274,
+"name": "Kendre Miller",
+"pos": "RB",
+"team": "NO",
+"bye": "8",
+"age": 24.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 271,
+"name": "Hollywood Brown",
+"pos": "WR",
+"team": "PHI",
+"bye": "10",
+"age": 29.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 276,
+"name": "Isaac Guerendo",
+"pos": "RB",
+"team": "SF",
+"bye": "8",
+"age": 26.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 272,
+"name": "Jarquez Hunter",
+"pos": "RB",
+"team": "LAR",
+"bye": "11",
+"age": 23.7,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 295,
@@ -2652,115 +4459,124 @@
 "team": "JAX",
 "bye": "7",
 "age": 22.1,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 296,
-"name": "Devin Singletary",
-"pos": "RB",
-"team": "NYG",
-"bye": "8",
-"age": 29.0,
-"tier": 12
-},
-{
-"rank": 297,
-"name": "Colby Parkinson",
-"pos": "TE",
-"team": "LAR",
-"bye": "11",
-"age": 27.6,
-"tier": 12
-},
-{
-"rank": 298,
-"name": "Luke McCaffrey",
+"rank": 289,
+"name": "Dont'e Thornton Jr.",
 "pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 25.4,
-"tier": 16
-},
-{
-"rank": 299,
-"name": "Cole Kmet",
-"pos": "TE",
-"team": "CHI",
-"bye": "10",
-"age": 27.5,
-"tier": 12
-},
-{
-"rank": 300,
-"name": "Justice Hill",
-"pos": "RB",
-"team": "BAL",
+"team": "LV",
 "bye": "13",
-"age": 28.8,
-"tier": 12
+"age": 23.8,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 301,
-"name": "Chris Brooks",
+"rank": 278,
+"name": "Seth McGowan",
+"pos": "RB",
+"team": "IND",
+"bye": "13",
+"age": 24.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 283,
+"name": "Jordan James",
+"pos": "RB",
+"team": "SF",
+"bye": "8",
+"age": 22.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 280,
+"name": "DJ Giddens",
+"pos": "RB",
+"team": "IND",
+"bye": "13",
+"age": 23.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 277,
+"name": "Brenen Thompson",
+"pos": "WR",
+"team": "LAC",
+"bye": "7",
+"age": 23.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 282,
+"name": "Mike Gesicki",
+"pos": "TE",
+"team": "CIN",
+"bye": "6",
+"age": 30.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 279,
+"name": "MarShawn Lloyd",
 "pos": "RB",
 "team": "GB",
 "bye": "11",
-"age": 26.6,
-"tier": 12
+"age": 25.7,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 302,
-"name": "J'Mari Taylor",
-"pos": "RB",
-"team": "JAX",
-"bye": "7",
-"age": 24.6,
-"tier": 12
-},
-{
-"rank": 303,
-"name": "Joe Mixon",
-"pos": "RB",
-"team": "FA",
-"bye": "-",
-"age": 30.1,
-"tier": 12
-},
-{
-"rank": 304,
-"name": "Jalen Tolbert",
-"pos": "WR",
-"team": "MIA",
-"bye": "6",
-"age": 27.5,
-"tier": 16
-},
-{
-"rank": 305,
-"name": "Deshaun Watson",
-"pos": "QB",
-"team": "CLE",
-"bye": "11",
-"age": 31.0,
-"tier": 8
-},
-{
-"rank": 306,
-"name": "Jaylin Lane",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 24.3,
-"tier": 16
-},
-{
-"rank": 307,
-"name": "Jahan Dotson",
-"pos": "WR",
-"team": "ATL",
-"bye": "11",
-"age": 26.4,
-"tier": 16
+"rank": 284,
+"name": "Ja'Tavion Sanders",
+"pos": "TE",
+"team": "CAR",
+"bye": "5",
+"age": 23.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 308,
@@ -2769,7 +4585,12 @@
 "team": "DEN",
 "bye": "10",
 "age": 22.1,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 309,
@@ -2778,169 +4599,166 @@
 "team": "PIT",
 "bye": "9",
 "age": 22.5,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 310,
-"name": "Elijah Moore",
-"pos": "WR",
+"rank": 287,
+"name": "Will Shipley",
+"pos": "RB",
 "team": "PHI",
 "bye": "10",
-"age": 26.4,
-"tier": 16
+"age": 24.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 311,
-"name": "Jordan Whittington",
-"pos": "WR",
-"team": "LAR",
-"bye": "11",
-"age": 25.9,
-"tier": 16
-},
-{
-"rank": 312,
-"name": "Sam Roush",
-"pos": "TE",
-"team": "CHI",
-"bye": "10",
-"age": 23.0,
-"tier": 12
-},
-{
-"rank": 313,
-"name": "Raheim Sanders",
-"pos": "RB",
-"team": "CLE",
-"bye": "11",
-"age": 24.2,
-"tier": 12
-},
-{
-"rank": 314,
-"name": "Kareem Hunt",
+"rank": 288,
+"name": "Jerome Ford",
 "pos": "RB",
 "team": "FA",
 "bye": "-",
-"age": 31.1,
-"tier": 12
+"age": 27.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 315,
-"name": "Jonnu Smith",
-"pos": "TE",
-"team": "FA",
-"bye": "-",
-"age": 31.0,
-"tier": 12
-},
-{
-"rank": 316,
-"name": "Jaleel McLaughlin",
-"pos": "RB",
-"team": "DEN",
-"bye": "10",
-"age": 26.0,
-"tier": 12
-},
-{
-"rank": 317,
-"name": "Roman Wilson",
+"rank": 292,
+"name": "Savion Williams",
 "pos": "WR",
+"team": "GB",
+"bye": "11",
+"age": 24.8,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 294,
+"name": "Darnell Washington",
+"pos": "TE",
 "team": "PIT",
 "bye": "9",
-"age": 25.2,
-"tier": 16
+"age": 25.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 318,
-"name": "Roman Hemby",
+"rank": 300,
+"name": "Justice Hill",
 "pos": "RB",
-"team": "LV",
+"team": "BAL",
 "bye": "13",
-"age": 24.0,
-"tier": 12
+"age": 28.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 319,
-"name": "Deion Burks",
+"rank": 293,
+"name": "Andrei Iosivas",
 "pos": "WR",
-"team": "IND",
-"bye": "13",
-"age": 23.6,
-"tier": 16
+"team": "CIN",
+"bye": "6",
+"age": 26.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 320,
-"name": "Keandre Lambert-Smith",
+"rank": 298,
+"name": "Luke McCaffrey",
 "pos": "WR",
-"team": "LAC",
-"bye": "7",
-"age": 24.1,
-"tier": 16
-},
-{
-"rank": 321,
-"name": "Ty Johnson",
-"pos": "RB",
-"team": "BUF",
-"bye": "7",
-"age": 29.0,
-"tier": 12
-},
-{
-"rank": 322,
-"name": "Marcus Mariota",
-"pos": "QB",
 "team": "WAS",
 "bye": "7",
-"age": 32.8,
-"tier": 8
+"age": 25.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 323,
-"name": "Konata Mumpfield",
-"pos": "WR",
+"rank": 290,
+"name": "Greg Dulcich",
+"pos": "TE",
+"team": "MIA",
+"bye": "6",
+"age": 26.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 275,
+"name": "Eli Heidenreich",
+"pos": "RB",
+"team": "PIT",
+"bye": "9",
+"age": 23.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 291,
+"name": "Tahj Brooks",
+"pos": "RB",
+"team": "CIN",
+"bye": "6",
+"age": 24.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 297,
+"name": "Colby Parkinson",
+"pos": "TE",
 "team": "LAR",
 "bye": "11",
-"age": 23.9,
-"tier": 16
-},
-{
-"rank": 324,
-"name": "Cole Payton",
-"pos": "QB",
-"team": "PHI",
-"bye": "10",
-"age": 23.8,
-"tier": 8
-},
-{
-"rank": 325,
-"name": "Jameis Winston",
-"pos": "QB",
-"team": "NYG",
-"bye": "8",
-"age": 32.7,
-"tier": 8
-},
-{
-"rank": 326,
-"name": "Jake Tonges",
-"pos": "TE",
-"team": "SF",
-"bye": "8",
-"age": 27.2,
-"tier": 12
-},
-{
-"rank": 327,
-"name": "Calvin Austin III",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 27.4,
-"tier": 16
+"age": 27.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 328,
@@ -2949,7 +4767,201 @@
 "team": "MIA",
 "bye": "6",
 "age": 23.0,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 299,
+"name": "Cole Kmet",
+"pos": "TE",
+"team": "CHI",
+"bye": "10",
+"age": 27.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 296,
+"name": "Devin Singletary",
+"pos": "RB",
+"team": "NYG",
+"bye": "8",
+"age": 29.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 303,
+"name": "Joe Mixon",
+"pos": "RB",
+"team": "FA",
+"bye": "-",
+"age": 30.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 301,
+"name": "Chris Brooks",
+"pos": "RB",
+"team": "GB",
+"bye": "11",
+"age": 26.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 313,
+"name": "Raheim Sanders",
+"pos": "RB",
+"team": "CLE",
+"bye": "11",
+"age": 24.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 304,
+"name": "Jalen Tolbert",
+"pos": "WR",
+"team": "MIA",
+"bye": "6",
+"age": 27.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 305,
+"name": "Deshaun Watson",
+"pos": "QB",
+"team": "CLE",
+"bye": "11",
+"age": 31.0,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 306,
+"name": "Jaylin Lane",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 24.3,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 320,
+"name": "Keandre Lambert-Smith",
+"pos": "WR",
+"team": "LAC",
+"bye": "7",
+"age": 24.1,
+"tier": 16,
+"expertBest": 14,
+"expertWorst": 20,
+"expertAvg": 17.8,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 17,
+"FantasyPros": 18,
+"ANDY": 19,
+"JASON": 19,
+"MIKE": 14,
+"DraftSharks": 20
+}
+},
+{
+"rank": 312,
+"name": "Sam Roush",
+"pos": "TE",
+"team": "CHI",
+"bye": "10",
+"age": 23.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 325,
+"name": "Jameis Winston",
+"pos": "QB",
+"team": "NYG",
+"bye": "8",
+"age": 32.7,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 310,
+"name": "Elijah Moore",
+"pos": "WR",
+"team": "PHI",
+"bye": "10",
+"age": 26.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 307,
+"name": "Jahan Dotson",
+"pos": "WR",
+"team": "ATL",
+"bye": "11",
+"age": 26.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 329,
@@ -2958,7 +4970,82 @@
 "team": "CIN",
 "bye": "6",
 "age": 22.4,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 314,
+"name": "Kareem Hunt",
+"pos": "RB",
+"team": "FA",
+"bye": "-",
+"age": 31.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 316,
+"name": "Jaleel McLaughlin",
+"pos": "RB",
+"team": "DEN",
+"bye": "10",
+"age": 26.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 315,
+"name": "Jonnu Smith",
+"pos": "TE",
+"team": "FA",
+"bye": "-",
+"age": 31.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 321,
+"name": "Ty Johnson",
+"pos": "RB",
+"team": "BUF",
+"bye": "7",
+"age": 29.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 311,
+"name": "Jordan Whittington",
+"pos": "WR",
+"team": "LAR",
+"bye": "11",
+"age": 25.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 330,
@@ -2967,178 +5054,47 @@
 "team": "NO",
 "bye": "8",
 "age": 23.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 331,
-"name": "Zavion Thomas",
+"rank": 319,
+"name": "Deion Burks",
 "pos": "WR",
-"team": "CHI",
-"bye": "10",
-"age": 22.5,
-"tier": 16
-},
-{
-"rank": 332,
-"name": "Cade Klubnik",
-"pos": "QB",
-"team": "NYJ",
+"team": "IND",
 "bye": "13",
-"age": 22.9,
-"tier": 8
-},
-{
-"rank": 333,
-"name": "Nick Chubb",
-"pos": "RB",
-"team": "FA",
-"bye": "-",
-"age": 30.7,
-"tier": 12
-},
-{
-"rank": 334,
-"name": "Tyler Higbee",
-"pos": "TE",
-"team": "LAR",
-"bye": "11",
-"age": 33.7,
-"tier": 12
-},
-{
-"rank": 335,
-"name": "Noah Gray",
-"pos": "TE",
-"team": "KC",
-"bye": "5",
-"age": 27.3,
-"tier": 12
-},
-{
-"rank": 336,
-"name": "DeAndre Hopkins",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 34.2,
-"tier": 16
-},
-{
-"rank": 337,
-"name": "Taylen Green",
-"pos": "QB",
-"team": "CLE",
-"bye": "11",
-"age": 23.9,
-"tier": 8
-},
-{
-"rank": 338,
-"name": "Marlin Klein",
-"pos": "TE",
-"team": "HOU",
-"bye": "8",
-"age": 24.0,
-"tier": 12
-},
-{
-"rank": 339,
-"name": "KaVontae Turpin",
-"pos": "WR",
-"team": "DAL",
-"bye": "14",
-"age": 30.1,
-"tier": 16
-},
-{
-"rank": 340,
-"name": "Tanner Koziol",
-"pos": "TE",
-"team": "JAX",
-"bye": "7",
 "age": 23.6,
-"tier": 12
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 341,
-"name": "Tutu Atwell",
+"rank": 317,
+"name": "Roman Wilson",
 "pos": "WR",
-"team": "MIA",
-"bye": "6",
-"age": 26.9,
-"tier": 16
-},
-{
-"rank": 342,
-"name": "Tai Felton",
-"pos": "WR",
-"team": "MIN",
-"bye": "6",
-"age": 23.5,
-"tier": 16
-},
-{
-"rank": 343,
-"name": "Quinn Ewers",
-"pos": "QB",
-"team": "MIA",
-"bye": "6",
-"age": 23.5,
-"tier": 8
-},
-{
-"rank": 344,
-"name": "Noah Fant",
-"pos": "TE",
-"team": "NO",
-"bye": "8",
-"age": 28.8,
-"tier": 12
-},
-{
-"rank": 345,
-"name": "Mack Hollins",
-"pos": "WR",
-"team": "NE",
-"bye": "11",
-"age": 33.0,
-"tier": 16
-},
-{
-"rank": 346,
-"name": "Dyami Brown",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 26.8,
-"tier": 16
-},
-{
-"rank": 347,
-"name": "Tyquan Thornton",
-"pos": "WR",
-"team": "KC",
-"bye": "5",
-"age": 26.1,
-"tier": 16
-},
-{
-"rank": 348,
-"name": "John Metchie III",
-"pos": "WR",
-"team": "CAR",
-"bye": "5",
-"age": 26.1,
-"tier": 16
-},
-{
-"rank": 349,
-"name": "Jalin Hyatt",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 24.9,
-"tier": 16
+"team": "PIT",
+"bye": "9",
+"age": 25.2,
+"tier": 16,
+"expertBest": 13,
+"expertWorst": 16,
+"expertAvg": 14.2,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 16,
+"FantasyPros": 14,
+"ANDY": 13,
+"JASON": 14,
+"MIKE": 13,
+"DraftSharks": 15
+}
 },
 {
 "rank": 350,
@@ -3147,25 +5103,40 @@
 "team": "SEA",
 "bye": "11",
 "age": 26.7,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 351,
-"name": "Mitchell Evans",
-"pos": "TE",
-"team": "CAR",
-"bye": "5",
-"age": 23.5,
-"tier": 12
+"rank": 322,
+"name": "Marcus Mariota",
+"pos": "QB",
+"team": "WAS",
+"bye": "7",
+"age": 32.8,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 352,
-"name": "CJ Daniels",
+"rank": 264,
+"name": "Caleb Douglas",
 "pos": "WR",
-"team": "LAR",
-"bye": "11",
-"age": 24.7,
-"tier": 16
+"team": "MIA",
+"bye": "6",
+"age": 23.0,
+"tier": 14,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 353,
@@ -3174,178 +5145,131 @@
 "team": "IND",
 "bye": "13",
 "age": 24.0,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 354,
-"name": "Tyler Conklin",
-"pos": "TE",
-"team": "DET",
-"bye": "6",
-"age": 31.1,
-"tier": 12
-},
-{
-"rank": 355,
-"name": "Tyler Lockett",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 33.9,
-"tier": 16
-},
-{
-"rank": 356,
-"name": "Xavier Restrepo",
-"pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 24.4,
-"tier": 16
-},
-{
-"rank": 357,
-"name": "Barion Brown",
-"pos": "WR",
-"team": "NO",
-"bye": "8",
-"age": 22.7,
-"tier": 16
-},
-{
-"rank": 358,
-"name": "Joe Milton III",
+"rank": 337,
+"name": "Taylen Green",
 "pos": "QB",
-"team": "DAL",
-"bye": "14",
-"age": 26.5,
-"tier": 8
-},
-{
-"rank": 359,
-"name": "Zach Ertz",
-"pos": "TE",
-"team": "FA",
-"bye": "-",
-"age": 35.8,
-"tier": 12
-},
-{
-"rank": 360,
-"name": "Erick All Jr.",
-"pos": "TE",
-"team": "CIN",
-"bye": "6",
-"age": 26.0,
-"tier": 12
-},
-{
-"rank": 361,
-"name": "Miles Sanders",
-"pos": "RB",
-"team": "FA",
-"bye": "-",
-"age": 29.3,
-"tier": 12
-},
-{
-"rank": 362,
-"name": "Kendrick Bourne",
-"pos": "WR",
-"team": "ARI",
-"bye": "14",
-"age": 31.1,
-"tier": 16
-},
-{
-"rank": 363,
-"name": "Luke Musgrave",
-"pos": "TE",
-"team": "GB",
+"team": "CLE",
 "bye": "11",
-"age": 26.0,
-"tier": 12
-},
-{
-"rank": 364,
-"name": "Spencer Rattler",
-"pos": "QB",
-"team": "NO",
-"bye": "8",
-"age": 25.9,
-"tier": 8
-},
-{
-"rank": 365,
-"name": "Daniel Bellinger",
-"pos": "TE",
-"team": "TEN",
-"bye": "9",
-"age": 25.9,
-"tier": 12
-},
-{
-"rank": 366,
-"name": "Malik Benson",
-"pos": "WR",
-"team": "LV",
-"bye": "13",
 "age": 23.9,
-"tier": 16
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 367,
-"name": "Dawson Knox",
+"rank": 326,
+"name": "Jake Tonges",
 "pos": "TE",
-"team": "BUF",
-"bye": "7",
-"age": 29.8,
-"tier": 12
-},
-{
-"rank": 368,
-"name": "Matt Hibner",
-"pos": "TE",
-"team": "BAL",
-"bye": "13",
-"age": 24.5,
-"tier": 12
-},
-{
-"rank": 369,
-"name": "Demarcus Robinson",
-"pos": "WR",
 "team": "SF",
 "bye": "8",
-"age": 31.9,
-"tier": 16
+"age": 27.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 370,
-"name": "Joe Flacco",
-"pos": "QB",
-"team": "CIN",
-"bye": "6",
-"age": 41.6,
-"tier": 8
-},
-{
-"rank": 371,
-"name": "Roschon Johnson",
-"pos": "RB",
-"team": "CHI",
-"bye": "10",
-"age": 25.6,
-"tier": 12
-},
-{
-"rank": 372,
-"name": "Curtis Samuel",
+"rank": 327,
+"name": "Calvin Austin III",
 "pos": "WR",
-"team": "FA",
-"bye": "-",
+"team": "NYG",
+"bye": "8",
+"age": 27.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 345,
+"name": "Mack Hollins",
+"pos": "WR",
+"team": "NE",
+"bye": "11",
+"age": 33.0,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 340,
+"name": "Tanner Koziol",
+"pos": "TE",
+"team": "JAX",
+"bye": "7",
+"age": 23.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 302,
+"name": "J'Mari Taylor",
+"pos": "RB",
+"team": "JAX",
+"bye": "7",
+"age": 24.6,
+"tier": 12,
+"expertBest": 6,
+"expertWorst": 9,
+"expertAvg": 7.7,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 8,
+"FantasyPros": 8,
+"ANDY": 8,
+"JASON": 7,
+"MIKE": 9,
+"DraftSharks": 6
+}
+},
+{
+"rank": 339,
+"name": "KaVontae Turpin",
+"pos": "WR",
+"team": "DAL",
+"bye": "14",
 "age": 30.1,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 343,
+"name": "Quinn Ewers",
+"pos": "QB",
+"team": "MIA",
+"bye": "6",
+"age": 23.5,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 373,
@@ -3354,34 +5278,208 @@
 "team": "CIN",
 "bye": "6",
 "age": 31.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 374,
-"name": "Devontez Walker",
+"rank": 335,
+"name": "Noah Gray",
+"pos": "TE",
+"team": "KC",
+"bye": "5",
+"age": 27.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 351,
+"name": "Mitchell Evans",
+"pos": "TE",
+"team": "CAR",
+"bye": "5",
+"age": 23.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 336,
+"name": "DeAndre Hopkins",
 "pos": "WR",
-"team": "BAL",
-"bye": "13",
-"age": 25.2,
-"tier": 16
+"team": "FA",
+"bye": "-",
+"age": 34.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 375,
-"name": "Damien Martinez",
-"pos": "RB",
-"team": "GB",
-"bye": "11",
-"age": 22.6,
-"tier": 12
-},
-{
-"rank": 376,
-"name": "Bam Knight",
-"pos": "RB",
-"team": "ARI",
+"rank": 358,
+"name": "Joe Milton III",
+"pos": "QB",
+"team": "DAL",
 "bye": "14",
-"age": 25.4,
-"tier": 12
+"age": 26.5,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 334,
+"name": "Tyler Higbee",
+"pos": "TE",
+"team": "LAR",
+"bye": "11",
+"age": 33.7,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 346,
+"name": "Dyami Brown",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 26.8,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 344,
+"name": "Noah Fant",
+"pos": "TE",
+"team": "NO",
+"bye": "8",
+"age": 28.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 341,
+"name": "Tutu Atwell",
+"pos": "WR",
+"team": "MIA",
+"bye": "6",
+"age": 26.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 347,
+"name": "Tyquan Thornton",
+"pos": "WR",
+"team": "KC",
+"bye": "5",
+"age": 26.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 370,
+"name": "Joe Flacco",
+"pos": "QB",
+"team": "CIN",
+"bye": "6",
+"age": 41.6,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 360,
+"name": "Erick All Jr.",
+"pos": "TE",
+"team": "CIN",
+"bye": "6",
+"age": 26.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 348,
+"name": "John Metchie III",
+"pos": "WR",
+"team": "CAR",
+"bye": "5",
+"age": 26.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 356,
+"name": "Xavier Restrepo",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 24.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 355,
+"name": "Tyler Lockett",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 33.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 377,
@@ -3390,43 +5488,68 @@
 "team": "NE",
 "bye": "11",
 "age": 24.8,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 378,
-"name": "Gabe Davis",
+"rank": 374,
+"name": "Devontez Walker",
 "pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 27.4,
-"tier": 16
+"team": "BAL",
+"bye": "13",
+"age": 25.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 379,
-"name": "Brandin Cooks",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 32.9,
-"tier": 16
+"rank": 376,
+"name": "Bam Knight",
+"pos": "RB",
+"team": "ARI",
+"bye": "14",
+"age": 25.4,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 380,
-"name": "Taysom Hill",
+"rank": 359,
+"name": "Zach Ertz",
 "pos": "TE",
 "team": "FA",
 "bye": "-",
-"age": 36.0,
-"tier": 12
+"age": 35.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 381,
-"name": "Nick Westbrook-Ikhine",
+"rank": 369,
+"name": "Demarcus Robinson",
 "pos": "WR",
-"team": "IND",
-"bye": "13",
-"age": 29.5,
-"tier": 16
+"team": "SF",
+"bye": "8",
+"age": 31.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 382,
@@ -3435,187 +5558,26 @@
 "team": "LAC",
 "bye": "7",
 "age": 26.3,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 383,
-"name": "Russell Wilson",
-"pos": "QB",
-"team": "FA",
-"bye": "-",
-"age": 37.8,
-"tier": 8
-},
-{
-"rank": 384,
-"name": "Dameon Pierce",
-"pos": "RB",
-"team": "PHI",
-"bye": "10",
-"age": 26.5,
-"tier": 12
-},
-{
-"rank": 385,
-"name": "Phil Mafah",
-"pos": "RB",
-"team": "DAL",
-"bye": "14",
-"age": 23.9,
-"tier": 12
-},
-{
-"rank": 386,
-"name": "Will Howard",
-"pos": "QB",
-"team": "PIT",
+"rank": 365,
+"name": "Daniel Bellinger",
+"pos": "TE",
+"team": "TEN",
 "bye": "9",
-"age": 24.9,
-"tier": 8
-},
-{
-"rank": 387,
-"name": "Diontae Johnson",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 30.2,
-"tier": 16
-},
-{
-"rank": 388,
-"name": "Josh Cameron",
-"pos": "WR",
-"team": "JAX",
-"bye": "7",
-"age": 23.5,
-"tier": 16
-},
-{
-"rank": 389,
-"name": "Jermaine Burton",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 25.2,
-"tier": 16
-},
-{
-"rank": 390,
-"name": "Ja'Lynn Polk",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 25.4,
-"tier": 16
-},
-{
-"rank": 391,
-"name": "Isaiah Hodgins",
-"pos": "WR",
-"team": "NYG",
-"bye": "8",
-"age": 27.9,
-"tier": 16
-},
-{
-"rank": 392,
-"name": "Jordan Watkins",
-"pos": "WR",
-"team": "SF",
-"bye": "8",
-"age": 24.5,
-"tier": 16
-},
-{
-"rank": 393,
-"name": "Jeff Caldwell",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 23.5,
-"tier": 16
-},
-{
-"rank": 394,
-"name": "Jimmy Horn Jr.",
-"pos": "WR",
-"team": "CAR",
-"bye": "5",
-"age": 24.0,
-"tier": 16
-},
-{
-"rank": 395,
-"name": "Nate Boerkircher",
-"pos": "TE",
-"team": "JAX",
-"bye": "7",
-"age": 25.0,
-"tier": 12
-},
-{
-"rank": 396,
-"name": "RJ Maryland",
-"pos": "TE",
-"team": "FA",
-"bye": "-",
-"age": 22.1,
-"tier": 12
-},
-{
-"rank": 397,
-"name": "Van Jefferson",
-"pos": "WR",
-"team": "WAS",
-"bye": "7",
-"age": 30.1,
-"tier": 16
-},
-{
-"rank": 398,
-"name": "Jam Miller",
-"pos": "RB",
-"team": "NE",
-"bye": "11",
-"age": 22.3,
-"tier": 12
-},
-{
-"rank": 399,
-"name": "Will Kacmarek",
-"pos": "TE",
-"team": "MIA",
-"bye": "6",
-"age": 23.5,
-"tier": 12
-},
-{
-"rank": 400,
-"name": "Kendrick Law",
-"pos": "WR",
-"team": "DET",
-"bye": "6",
-"age": 22.2,
-"tier": 16
-},
-{
-"rank": 401,
-"name": "Reggie Virgil",
-"pos": "WR",
-"team": "ARI",
-"bye": "14",
-"age": 22.3,
-"tier": 16
-},
-{
-"rank": 402,
-"name": "Javon Baker",
-"pos": "WR",
-"team": "FA",
-"bye": "-",
-"age": 24.5,
-"tier": 16
+"age": 25.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 403,
@@ -3624,88 +5586,124 @@
 "team": "HOU",
 "bye": "8",
 "age": 26.3,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 404,
-"name": "Tommy Tremble",
-"pos": "TE",
+"rank": 394,
+"name": "Jimmy Horn Jr.",
+"pos": "WR",
 "team": "CAR",
 "bye": "5",
-"age": 26.2,
-"tier": 12
+"age": 24.0,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 405,
-"name": "Tyren Montgomery",
+"rank": 381,
+"name": "Nick Westbrook-Ikhine",
 "pos": "WR",
-"team": "TEN",
-"bye": "9",
-"age": 25.2,
-"tier": 16
+"team": "IND",
+"bye": "13",
+"age": 29.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 406,
-"name": "Antonio Gibson",
+"rank": 386,
+"name": "Will Howard",
+"pos": "QB",
+"team": "PIT",
+"bye": "9",
+"age": 24.9,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 363,
+"name": "Luke Musgrave",
+"pos": "TE",
+"team": "GB",
+"bye": "11",
+"age": 26.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 367,
+"name": "Dawson Knox",
+"pos": "TE",
+"team": "BUF",
+"bye": "7",
+"age": 29.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 333,
+"name": "Nick Chubb",
 "pos": "RB",
 "team": "FA",
 "bye": "-",
-"age": 28.2,
-"tier": 12
+"age": 30.7,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 407,
-"name": "Luke Schoonmaker",
-"pos": "TE",
-"team": "DAL",
-"bye": "14",
-"age": 27.9,
-"tier": 12
-},
-{
-"rank": 408,
-"name": "Colbie Young",
+"rank": 331,
+"name": "Zavion Thomas",
 "pos": "WR",
-"team": "CIN",
-"bye": "6",
-"age": 24.1,
-"tier": 16
+"team": "CHI",
+"bye": "10",
+"age": 22.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
-"rank": 409,
-"name": "Elijah Higgins",
+"rank": 338,
+"name": "Marlin Klein",
 "pos": "TE",
-"team": "ARI",
-"bye": "14",
-"age": 25.8,
-"tier": 12
-},
-{
-"rank": 410,
-"name": "Joe Royer",
-"pos": "TE",
-"team": "CLE",
-"bye": "11",
-"age": 24.5,
-"tier": 12
-},
-{
-"rank": 411,
-"name": "Josh Oliver",
-"pos": "TE",
-"team": "MIN",
-"bye": "6",
-"age": 29.5,
-"tier": 12
-},
-{
-"rank": 412,
-"name": "Kaden Wetjen",
-"pos": "WR",
-"team": "PIT",
-"bye": "9",
-"age": 24.5,
-"tier": 16
+"team": "HOU",
+"bye": "8",
+"age": 24.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 413,
@@ -3714,7 +5712,705 @@
 "team": "CLE",
 "bye": "11",
 "age": 25.7,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 409,
+"name": "Elijah Higgins",
+"pos": "TE",
+"team": "ARI",
+"bye": "14",
+"age": 25.8,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 412,
+"name": "Kaden Wetjen",
+"pos": "WR",
+"team": "PIT",
+"bye": "9",
+"age": 24.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 285,
+"name": "Michael Trigg",
+"pos": "TE",
+"team": "DAL",
+"bye": "14",
+"age": 24.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 354,
+"name": "Tyler Conklin",
+"pos": "TE",
+"team": "DET",
+"bye": "6",
+"age": 31.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 408,
+"name": "Colbie Young",
+"pos": "WR",
+"team": "CIN",
+"bye": "6",
+"age": 24.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 383,
+"name": "Russell Wilson",
+"pos": "QB",
+"team": "FA",
+"bye": "-",
+"age": 37.8,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 371,
+"name": "Roschon Johnson",
+"pos": "RB",
+"team": "CHI",
+"bye": "10",
+"age": 25.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 401,
+"name": "Reggie Virgil",
+"pos": "WR",
+"team": "ARI",
+"bye": "14",
+"age": 22.3,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 361,
+"name": "Miles Sanders",
+"pos": "RB",
+"team": "FA",
+"bye": "-",
+"age": 29.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 400,
+"name": "Kendrick Law",
+"pos": "WR",
+"team": "DET",
+"bye": "6",
+"age": 22.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 318,
+"name": "Roman Hemby",
+"pos": "RB",
+"team": "LV",
+"bye": "13",
+"age": 24.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 398,
+"name": "Jam Miller",
+"pos": "RB",
+"team": "NE",
+"bye": "11",
+"age": 22.3,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 357,
+"name": "Barion Brown",
+"pos": "WR",
+"team": "NO",
+"bye": "8",
+"age": 22.7,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 323,
+"name": "Konata Mumpfield",
+"pos": "WR",
+"team": "LAR",
+"bye": "11",
+"age": 23.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 342,
+"name": "Tai Felton",
+"pos": "WR",
+"team": "MIN",
+"bye": "6",
+"age": 23.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 368,
+"name": "Matt Hibner",
+"pos": "TE",
+"team": "BAL",
+"bye": "13",
+"age": 24.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 349,
+"name": "Jalin Hyatt",
+"pos": "WR",
+"team": "NYG",
+"bye": "8",
+"age": 24.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 332,
+"name": "Cade Klubnik",
+"pos": "QB",
+"team": "NYJ",
+"bye": "13",
+"age": 22.9,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 232,
+"name": "Garrett Nussmeier",
+"pos": "QB",
+"team": "KC",
+"bye": "5",
+"age": 24.6,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 375,
+"name": "Damien Martinez",
+"pos": "RB",
+"team": "GB",
+"bye": "11",
+"age": 22.6,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 384,
+"name": "Dameon Pierce",
+"pos": "RB",
+"team": "PHI",
+"bye": "10",
+"age": 26.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 324,
+"name": "Cole Payton",
+"pos": "QB",
+"team": "PHI",
+"bye": "10",
+"age": 23.8,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 352,
+"name": "CJ Daniels",
+"pos": "WR",
+"team": "LAR",
+"bye": "11",
+"age": 24.7,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 362,
+"name": "Kendrick Bourne",
+"pos": "WR",
+"team": "ARI",
+"bye": "14",
+"age": 31.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 366,
+"name": "Malik Benson",
+"pos": "WR",
+"team": "LV",
+"bye": "13",
+"age": 23.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 372,
+"name": "Curtis Samuel",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 30.1,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 378,
+"name": "Gabe Davis",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 27.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 379,
+"name": "Brandin Cooks",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 32.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 387,
+"name": "Diontae Johnson",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 30.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 388,
+"name": "Josh Cameron",
+"pos": "WR",
+"team": "JAX",
+"bye": "7",
+"age": 23.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 380,
+"name": "Taysom Hill",
+"pos": "TE",
+"team": "FA",
+"bye": "-",
+"age": 36.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 395,
+"name": "Nate Boerkircher",
+"pos": "TE",
+"team": "JAX",
+"bye": "7",
+"age": 25.0,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 389,
+"name": "Jermaine Burton",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 25.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 385,
+"name": "Phil Mafah",
+"pos": "RB",
+"team": "DAL",
+"bye": "14",
+"age": 23.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 396,
+"name": "RJ Maryland",
+"pos": "TE",
+"team": "FA",
+"bye": "-",
+"age": 22.1,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 390,
+"name": "Ja'Lynn Polk",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 25.4,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 391,
+"name": "Isaiah Hodgins",
+"pos": "WR",
+"team": "NYG",
+"bye": "8",
+"age": 27.9,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 392,
+"name": "Jordan Watkins",
+"pos": "WR",
+"team": "SF",
+"bye": "8",
+"age": 24.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 393,
+"name": "Jeff Caldwell",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 23.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 399,
+"name": "Will Kacmarek",
+"pos": "TE",
+"team": "MIA",
+"bye": "6",
+"age": 23.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 397,
+"name": "Van Jefferson",
+"pos": "WR",
+"team": "WAS",
+"bye": "7",
+"age": 30.1,
+"tier": 16,
+"expertBest": 4,
+"expertWorst": 6,
+"expertAvg": 5.3,
+"expertCount": 6,
+"expertRanks": {
+"Trade/Cut": 6,
+"FantasyPros": 5,
+"ANDY": 4,
+"JASON": 6,
+"MIKE": 5,
+"DraftSharks": 6
+}
+},
+{
+"rank": 406,
+"name": "Antonio Gibson",
+"pos": "RB",
+"team": "FA",
+"bye": "-",
+"age": 28.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 404,
+"name": "Tommy Tremble",
+"pos": "TE",
+"team": "CAR",
+"bye": "5",
+"age": 26.2,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 402,
+"name": "Javon Baker",
+"pos": "WR",
+"team": "FA",
+"bye": "-",
+"age": 24.5,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 407,
+"name": "Luke Schoonmaker",
+"pos": "TE",
+"team": "DAL",
+"bye": "14",
+"age": 27.9,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 410,
+"name": "Joe Royer",
+"pos": "TE",
+"team": "CLE",
+"bye": "11",
+"age": 24.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 411,
+"name": "Josh Oliver",
+"pos": "TE",
+"team": "MIN",
+"bye": "6",
+"age": 29.5,
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 405,
+"name": "Tyren Montgomery",
+"pos": "WR",
+"team": "TEN",
+"bye": "9",
+"age": 25.2,
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
+},
+{
+"rank": 364,
+"name": "Spencer Rattler",
+"pos": "QB",
+"team": "NO",
+"bye": "8",
+"age": 25.9,
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 414,
@@ -3723,7 +6419,12 @@
 "team": "ATL",
 "bye": "11",
 "age": 31.8,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 415,
@@ -3732,7 +6433,12 @@
 "team": "KC",
 "bye": "5",
 "age": 27.6,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 416,
@@ -3741,7 +6447,12 @@
 "team": "FA",
 "bye": "-",
 "age": 30.2,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 417,
@@ -3750,7 +6461,12 @@
 "team": "CLE",
 "bye": "11",
 "age": 24.4,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 418,
@@ -3759,7 +6475,12 @@
 "team": "CAR",
 "bye": "5",
 "age": 34.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 419,
@@ -3768,7 +6489,12 @@
 "team": "FA",
 "bye": "-",
 "age": 31.3,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 420,
@@ -3777,7 +6503,12 @@
 "team": "WAS",
 "bye": "7",
 "age": 30.7,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 421,
@@ -3786,7 +6517,12 @@
 "team": "ATL",
 "bye": "11",
 "age": 29.1,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 422,
@@ -3795,7 +6531,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 26.2,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 423,
@@ -3804,7 +6545,12 @@
 "team": "SF",
 "bye": "8",
 "age": 28.4,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 424,
@@ -3813,7 +6559,12 @@
 "team": "FA",
 "bye": "-",
 "age": 34.4,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 425,
@@ -3822,7 +6573,12 @@
 "team": "SF",
 "bye": "8",
 "age": 25.6,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 426,
@@ -3831,7 +6587,12 @@
 "team": "CHI",
 "bye": "10",
 "age": 32.1,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 427,
@@ -3840,7 +6601,12 @@
 "team": "WAS",
 "bye": "7",
 "age": 26.4,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 428,
@@ -3849,7 +6615,12 @@
 "team": "CHI",
 "bye": "10",
 "age": 26.2,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 429,
@@ -3858,7 +6629,12 @@
 "team": "PIT",
 "bye": "9",
 "age": 24.2,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 430,
@@ -3867,7 +6643,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 29.3,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 431,
@@ -3876,7 +6657,12 @@
 "team": "TEN",
 "bye": "9",
 "age": 27.2,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 432,
@@ -3885,7 +6671,12 @@
 "team": "MIA",
 "bye": "6",
 "age": 24.1,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 433,
@@ -3894,7 +6685,12 @@
 "team": "DEN",
 "bye": "10",
 "age": 29.6,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 434,
@@ -3903,7 +6699,12 @@
 "team": "NYJ",
 "bye": "13",
 "age": 25.6,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 435,
@@ -3912,7 +6713,12 @@
 "team": "FA",
 "bye": "-",
 "age": 30.7,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 436,
@@ -3921,7 +6727,12 @@
 "team": "FA",
 "bye": "-",
 "age": 31.5,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 437,
@@ -3930,7 +6741,12 @@
 "team": "FA",
 "bye": "-",
 "age": 29.8,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 438,
@@ -3939,7 +6755,12 @@
 "team": "DEN",
 "bye": "10",
 "age": 25.7,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 439,
@@ -3948,7 +6769,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 33.6,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 440,
@@ -3957,7 +6783,12 @@
 "team": "BUF",
 "bye": "7",
 "age": 27.0,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 441,
@@ -3966,7 +6797,12 @@
 "team": "BAL",
 "bye": "13",
 "age": 23.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 442,
@@ -3975,7 +6811,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 26.1,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 443,
@@ -3984,7 +6825,12 @@
 "team": "ARI",
 "bye": "14",
 "age": 30.3,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 444,
@@ -3993,7 +6839,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 27.9,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 445,
@@ -4002,7 +6853,12 @@
 "team": "FA",
 "bye": "-",
 "age": 22.9,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 446,
@@ -4011,7 +6867,12 @@
 "team": "LV",
 "bye": "13",
 "age": 28.0,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 447,
@@ -4020,7 +6881,12 @@
 "team": "PIT",
 "bye": "9",
 "age": 31.1,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 448,
@@ -4029,7 +6895,12 @@
 "team": "TEN",
 "bye": "9",
 "age": 22.6,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 449,
@@ -4038,7 +6909,12 @@
 "team": "CLE",
 "bye": "11",
 "age": 23.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 450,
@@ -4047,7 +6923,12 @@
 "team": "KC",
 "bye": "5",
 "age": 25.8,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 451,
@@ -4056,7 +6937,12 @@
 "team": "LV",
 "bye": "13",
 "age": 25.6,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 452,
@@ -4065,7 +6951,12 @@
 "team": "MIA",
 "bye": "6",
 "age": 25.2,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 453,
@@ -4074,7 +6965,12 @@
 "team": "CIN",
 "bye": "6",
 "age": 26.2,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 454,
@@ -4083,7 +6979,12 @@
 "team": "FA",
 "bye": "-",
 "age": 25.4,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 455,
@@ -4092,7 +6993,12 @@
 "team": "LAR",
 "bye": "11",
 "age": 23.0,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 456,
@@ -4101,7 +7007,12 @@
 "team": "LAC",
 "bye": "7",
 "age": 27.6,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 457,
@@ -4110,7 +7021,12 @@
 "team": "NYJ",
 "bye": "13",
 "age": 26.1,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 458,
@@ -4119,7 +7035,12 @@
 "team": "HOU",
 "bye": "8",
 "age": 25.9,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 459,
@@ -4128,7 +7049,12 @@
 "team": "NO",
 "bye": "8",
 "age": 26.4,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 460,
@@ -4137,7 +7063,12 @@
 "team": "CHI",
 "bye": "10",
 "age": 24.2,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 461,
@@ -4146,7 +7077,12 @@
 "team": "DEN",
 "bye": "10",
 "age": 28.4,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 462,
@@ -4155,7 +7091,12 @@
 "team": "KC",
 "bye": "5",
 "age": 23.7,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 463,
@@ -4164,7 +7105,12 @@
 "team": "DAL",
 "bye": "14",
 "age": 27.8,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 464,
@@ -4173,7 +7119,12 @@
 "team": "CLE",
 "bye": "11",
 "age": 25.7,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 465,
@@ -4182,7 +7133,12 @@
 "team": "DET",
 "bye": "6",
 "age": 28.3,
-"tier": 16
+"tier": 16,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 466,
@@ -4191,7 +7147,12 @@
 "team": "PHI",
 "bye": "10",
 "age": 27.7,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 467,
@@ -4200,7 +7161,12 @@
 "team": "NYG",
 "bye": "8",
 "age": 23.9,
-"tier": 12
+"tier": 12,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 468,
@@ -4209,7 +7175,12 @@
 "team": "TEN",
 "bye": "9",
 "age": 32.0,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 469,
@@ -4218,7 +7189,12 @@
 "team": "PHI",
 "bye": "10",
 "age": 26.3,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 470,
@@ -4227,7 +7203,12 @@
 "team": "BAL",
 "bye": "13",
 "age": 28.6,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 471,
@@ -4236,7 +7217,12 @@
 "team": "FA",
 "bye": "-",
 "age": 34.8,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 },
 {
 "rank": 472,
@@ -4245,6 +7231,11 @@
 "team": "DEN",
 "bye": "10",
 "age": 30.1,
-"tier": 8
+"tier": 8,
+"expertBest": null,
+"expertWorst": null,
+"expertAvg": null,
+"expertCount": null,
+"expertRanks": {}
 }
 ]
