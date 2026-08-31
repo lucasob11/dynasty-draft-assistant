@@ -83,9 +83,14 @@
   .rank-row:first-child{border-top:none;}
   .rank-row .rn{width:22px;color:var(--muted);font-weight:700;flex-shrink:0;}
   .rank-row .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .rank-row .rt{color:var(--muted);font-size:11px;flex-shrink:0;}
+  .rank-row .rt{color:var(--muted);font-size:11px;flex-shrink:0;width:34px;text-align:right;}
   .rank-row.moved-up .rn{color:var(--accent2);}
   .rank-row.moved-down .rn{color:var(--danger);}
+  .lockBtn{background:none;border:none;padding:2px 4px;margin:0;font-size:13px;line-height:1;cursor:pointer;color:var(--muted);opacity:.55;flex-shrink:0;}
+  .lockBtn:hover{opacity:1;}
+  .lockBtn.on{opacity:1;color:var(--accent2);}
+  .lockBtn.auto{cursor:default;opacity:.4;}
+  .lockBtn.auto:hover{opacity:.4;}
   .btnrow{display:flex;gap:8px;flex-wrap:wrap;}
   .btnrow button{flex:1;}
   .empty{color:var(--muted);font-size:13px;padding:8px 0;}
@@ -248,7 +253,7 @@ function pairKey(a, b){
 function ensurePosition(pos, allPlayers){
   const top20 = allPlayers.filter(p => p.pos === pos).sort((a, b) => a.rank - b.rank).slice(0, POOL_SIZE);
   if(!compareState[pos]){
-    compareState[pos] = {ratings: {}, comparedPairs: [], history: [], skipped: {}};
+    compareState[pos] = {ratings: {}, comparedPairs: [], history: [], skipped: {}, locked: {}, lockAdded: {}};
   }
   const ratings = compareState[pos].ratings;
   top20.forEach((p, i) => {
@@ -265,6 +270,63 @@ function ensurePosition(pos, allPlayers){
   });
 }
 
+// A player is "fully graded" once they've been compared (or lock-resolved,
+// see lockPlayer below) against every other name currently in the pool —
+// at that point they naturally stop being offered as a matchup, so the
+// lock icon can just reflect that state rather than needing a click.
+function isFullyGraded(pos, name){
+  const state = compareState[pos];
+  const names = Object.keys(state.ratings);
+  if(names.length < 2) return false;
+  const comparedSet = new Set(state.comparedPairs);
+  return names.every(other => other === name || comparedSet.has(pairKey(name, other)));
+}
+
+// Locking a player resolves every one of their still-pending pairs without
+// recording a winner (no Elo change) — they keep their current rating and
+// spot in the ranking, they just stop being offered as a matchup. The set
+// of keys added is remembered per-name so unlocking can cleanly reverse it.
+function lockPlayer(pos, name){
+  const state = compareState[pos];
+  if(!state.locked) state.locked = {};
+  if(!state.lockAdded) state.lockAdded = {};
+  if(state.locked[name]) return;
+  state.locked[name] = true;
+  const comparedSet = new Set(state.comparedPairs);
+  const added = [];
+  for(const other of Object.keys(state.ratings)){
+    if(other === name) continue;
+    const key = pairKey(name, other);
+    if(!comparedSet.has(key)){
+      state.comparedPairs.push(key);
+      comparedSet.add(key);
+      added.push(key);
+    }
+  }
+  state.lockAdded[name] = added;
+}
+
+function unlockPlayer(pos, name){
+  const state = compareState[pos];
+  if(!state.locked || !state.locked[name]) return;
+  delete state.locked[name];
+  const added = (state.lockAdded && state.lockAdded[name]) || [];
+  if(added.length){
+    const removeSet = new Set(added);
+    state.comparedPairs = state.comparedPairs.filter(k => !removeSet.has(k));
+  }
+  if(state.lockAdded) delete state.lockAdded[name];
+}
+
+function toggleLock(pos, name){
+  const state = compareState[pos];
+  if(state.locked && state.locked[name]) unlockPlayer(pos, name);
+  else lockPlayer(pos, name);
+  saveState();
+  if(currentPair && currentPair.includes(name)) currentPair = null;
+  render();
+}
+
 // Finds the next pair to show. Two passes: first honoring skip cooldowns
 // (so a "not sure" pair doesn't just reappear immediately), then — only if
 // every remaining pair happens to be on cooldown — ignoring cooldowns so
@@ -272,7 +334,8 @@ function ensurePosition(pos, allPlayers){
 function pickNextPair(pos){
   const state = compareState[pos];
   if(!state.skipped) state.skipped = {};
-  const names = Object.keys(state.ratings);
+  if(!state.locked) state.locked = {};
+  const names = Object.keys(state.ratings).filter(n => !state.locked[n]);
   if(names.length < 2) return null;
   const comparedSet = new Set(state.comparedPairs);
 
@@ -534,13 +597,24 @@ function renderSidebar(){
       if(prevIdx > i) moveCls = "moved-up";
       else if(prevIdx < i && prevIdx !== -1) moveCls = "moved-down";
     }
+    const manual = !!(state.locked && state.locked[name]);
+    const graded = isFullyGraded(posFilter, name);
+    const lockBtn = manual
+      ? `<button type="button" class="lockBtn on" data-lock="${escapeAttr(name)}" title="Locked — click to unlock">🔒</button>`
+      : graded
+        ? `<button type="button" class="lockBtn auto" title="Fully compared — locked automatically">🔒</button>`
+        : `<button type="button" class="lockBtn" data-lock="${escapeAttr(name)}" title="Lock this player's rank and skip remaining comparisons">🔓</button>`;
     return `
       <div class="rank-row ${moveCls}">
         <span class="rn">${i + 1}</span>
         <span class="nm">${name}</span>
+        ${lockBtn}
         <span class="rt">${Math.round(r.rating)}</span>
       </div>`;
   }).join("") || `<div class="empty">No players in this pool.</div>`;
+  $("#rankList").querySelectorAll("[data-lock]").forEach(elm => {
+    elm.addEventListener("click", () => toggleLock(posFilter, elm.dataset.lock));
+  });
 }
 
 function escapeAttr(s){
