@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dynasty Mock Draft Assistant</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131826; --panel2:#1a2032; --border:#262e42;
+    --text:#e8ebf2; --muted:#8b93a7; --accent:#5b8cff; --accent2:#3ee8b5;
+    --danger:#ff6b6b; --qb:#c084fc; --rb:#5be08a; --wr:#5b9cff; --te:#ffb84d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);}
+  header h1{font-size:17px;margin:0;font-weight:600;white-space:nowrap;}
+  header h1 span{color:var(--accent2);}
+  .setup{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex:1;}
+  input[type=text], select{
+    background:var(--panel2);border:1px solid var(--border);color:var(--text);
+    padding:8px 10px;border-radius:6px;font-size:13px;
+  }
+  input[type=text]{flex:1;min-width:220px;}
+  button{
+    background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:6px;
+    font-size:13px;font-weight:600;cursor:pointer;
+  }
+  button:hover{opacity:.9;}
+  button.secondary{background:var(--panel2);border:1px solid var(--border);color:var(--text);}
+  button:disabled{opacity:.4;cursor:default;}
+  #status{font-size:12px;color:var(--muted);white-space:nowrap;}
+  #status.live{color:var(--accent2);}
+  #status.err{color:var(--danger);}
+  main{display:grid;grid-template-columns:340px 1fr 340px;gap:1px;background:var(--border);height:calc(100vh - 61px);}
+  .col{background:var(--bg);overflow-y:auto;overflow-x:hidden;padding:14px;min-width:0;}
+  @media (max-width: 1000px){
+    main{grid-template-columns:1fr;height:auto;}
+    .col{max-height:none;}
+  }
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:12px;}
+  .card h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:0 0 10px;}
+  .onclock{background:linear-gradient(135deg,#1c2a1f,#132018);border:1px solid var(--accent2);}
+  .onclock h2{color:var(--accent2);}
+  .rec-player{display:flex;align-items:baseline;gap:8px;margin-bottom:2px;}
+  .rec-player .name{font-size:20px;font-weight:700;}
+  .rec-player .pos{font-size:11px;padding:2px 6px;border-radius:4px;font-weight:700;}
+  .rec-meta{font-size:12px;color:var(--muted);margin-top:4px;}
+  .pos-tag{font-size:10px;padding:1px 5px;border-radius:4px;font-weight:700;letter-spacing:.02em;}
+  .pos-QB{background:rgba(192,132,252,.18);color:var(--qb);}
+  .pos-RB{background:rgba(91,224,138,.18);color:var(--rb);}
+  .pos-WR{background:rgba(91,156,255,.18);color:var(--wr);}
+  .pos-TE{background:rgba(255,184,77,.18);color:var(--te);}
+  .filters{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;}
+  .filters button{padding:5px 10px;font-size:12px;background:var(--panel2);border:1px solid var(--border);color:var(--muted);}
+  .filters button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;padding:4px 6px;position:sticky;top:0;background:var(--panel);}
+  td{padding:6px;border-top:1px solid var(--border);}
+  tr.mine td{background:rgba(91,140,255,.10);}
+  .rank-col{color:var(--muted);width:32px;}
+  .pick-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 4px;border-top:1px solid var(--border);font-size:13px;}
+  .pick-row:first-child{border-top:none;}
+  .pick-row .pno{color:var(--muted);width:30px;flex-shrink:0;}
+  .pick-row .pname-inline{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .pick-row.mine{background:rgba(91,140,255,.10);border-radius:6px;}
+  .empty{color:var(--muted);font-size:13px;padding:8px 0;}
+  .helptext{color:var(--muted);font-size:12px;line-height:1.5;}
+  a{color:var(--accent);}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;}
+  #matchWarnBtn{display:none;background:none;border:none;color:var(--danger);font-size:11px;cursor:pointer;text-decoration:underline;padding:0;margin-top:6px;}
+  .roundhdr{color:var(--muted);font-size:11px;text-transform:uppercase;margin:10px 0 4px;letter-spacing:.05em;}
+
+  /* age & rookies stat card */
+  .agerookie-row{display:flex;gap:10px;}
+  .ar-stat{flex:1;text-align:center;background:var(--panel2);border-radius:8px;padding:10px 6px;}
+  .ar-num{font-size:22px;font-weight:800;}
+  .ar-label{font-size:10.5px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.04em;}
+  .ar-rookie-names{color:var(--muted);font-size:11.5px;margin-top:8px;line-height:1.5;}
+
+  /* player avatars (Sleeper headshot CDN, with initials fallback) */
+  .avatar-img{border-radius:50%;object-fit:cover;background:var(--panel2);flex-shrink:0;display:block;}
+  .avatar-fallback{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--panel2);color:var(--muted);font-weight:700;flex-shrink:0;}
+
+  /* dashboard: top-5 row */
+  .top5-row{display:flex;gap:10px;overflow-x:auto;overflow-y:visible;padding:4px 2px 10px;margin-bottom:14px;border-bottom:1px solid var(--border);}
+  .top5-card{flex:1 1 170px;min-width:170px;background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:10px;}
+  .top5-card.first{border-color:var(--accent2);box-shadow:0 0 0 1px var(--accent2);}
+  .top5-card .toprow{display:flex;align-items:center;gap:8px;}
+  .top5-card .rankbadge{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;font-weight:800;font-size:11px;min-width:22px;height:20px;padding:0 6px;border-radius:10px;flex-shrink:0;}
+  .top5-card.first .rankbadge{background:var(--accent2);color:#04231a;}
+  .top5-card .name{font-weight:700;font-size:13.5px;margin-top:8px;line-height:1.3;overflow-wrap:break-word;}
+  .top5-card .meta{font-size:11px;color:var(--muted);margin-top:7px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+
+  /* recommendation engine badges */
+  .stack-badge{font-size:10.5px;color:var(--danger);margin-top:6px;font-weight:600;}
+  .reason-line{font-size:10.5px;color:var(--muted);margin-top:8px;font-style:italic;line-height:1.35;border-top:1px solid var(--border);padding-top:7px;}
+  .handcuff-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;display:inline-block;margin-top:6px;background:rgba(192,132,252,.16);color:var(--qb);}
+  .handcuff-inline{color:var(--qb) !important;font-weight:600;}
+
+  /* dashboard: position columns at best remaining tier */
+  .pos-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;}
+  .pos-col{background:var(--panel2);border:1px solid var(--border);border-top:3px solid var(--border);border-radius:10px;padding:10px;}
+  .pos-col-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;padding-bottom:7px;border-bottom:1px solid var(--border);gap:6px;cursor:pointer;user-select:none;}
+  .pos-col-hdr:hover .pname{text-decoration:underline;}
+  .pos-col-hdr .pname{font-weight:800;font-size:13px;letter-spacing:.02em;}
+  .pos-col-hdr .ptier{font-size:10.5px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:5px;}
+  .pos-col-hdr .chevron{font-size:9px;color:var(--muted);transition:transform .15s;display:inline-block;}
+  .pos-col-hdr .chevron.open{transform:rotate(90deg);}
+  .pos-col-row{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:12.5px;border-top:1px solid var(--border);}
+  .pos-col-row:first-child{border-top:none;}
+  .pos-col-row .pinfo{flex:1;min-width:0;}
+  .pos-col-row .ptop{display:flex;justify-content:space-between;gap:6px;}
+  .pos-col-row .pn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .pos-col-row .prank{color:var(--muted);font-size:10.5px;flex-shrink:0;}
+  .pos-col-row .psub{color:var(--muted);font-size:10.5px;margin-top:1px;}
+  .pos-col-tier-divider{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding:7px 0 3px;border-top:1px solid var(--border);margin-top:2px;}
+  .pos-col-tier-divider:first-child{border-top:none;margin-top:0;padding-top:0;}
+
+  /* tier grouping in best-available table */
+  .tier-hdr td{background:var(--panel2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;padding:5px 6px;border-top:1px solid var(--border);}
+  .tier-col{width:44px;color:var(--muted);font-size:11px;}
+
+  /* roster */
+  .roster-row{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;margin-bottom:4px;font-size:13px;}
+  .roster-row.filled{background:var(--panel2);}
+  .roster-row.empty-slot{border:1px dashed var(--border);color:var(--muted);}
+  .roster-row .slot-label{width:42px;flex-shrink:0;font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.03em;}
+  .roster-row .pname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .roster-row .pmeta{color:var(--muted);font-size:11px;flex-shrink:0;}
+  .value-chip{font-size:10px;padding:1px 5px;border-radius:4px;font-weight:700;flex-shrink:0;}
+  .value-chip.pos{background:rgba(62,232,181,.15);color:var(--accent2);}
+  .value-chip.neg{background:rgba(255,107,107,.15);color:var(--danger);}
+  .value-chip.flat{background:var(--panel2);color:var(--muted);}
+  .bench-hdr{color:var(--muted);font-size:11px;text-transform:uppercase;margin:12px 0 4px;letter-spacing:.05em;border-top:1px solid var(--border);padding-top:10px;}
+
+  /* position balance bars */
+  .bal-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px;}
+  .bal-label{width:26px;flex-shrink:0;font-weight:800;}
+  .bal-track{flex:1;background:var(--panel2);border-radius:4px;height:10px;overflow:hidden;}
+  .bal-fill{height:100%;border-radius:4px;}
+  .bal-count{width:16px;text-align:right;color:var(--muted);font-size:11px;}
+
+  /* draft value */
+  .value-summary{font-size:26px;font-weight:800;line-height:1.1;}
+  .value-summary.pos{color:var(--accent2);}
+  .value-summary.neg{color:var(--danger);}
+  .value-summary.flat{color:var(--text);}
+  .value-sub{color:var(--muted);font-size:12px;margin-top:2px;margin-bottom:10px;}
+  .divbar{display:flex;align-items:center;height:14px;width:100%;}
+  .divbar .neg-half, .divbar .pos-half{flex:1;height:100%;display:flex;}
+  .divbar .neg-half{justify-content:flex-end;}
+  .divbar .neg-bar{background:var(--danger);height:100%;border-radius:3px 0 0 3px;min-width:0;}
+  .divbar .pos-bar{background:var(--accent2);height:100%;border-radius:0 3px 3px 0;min-width:0;}
+  .divbar .center-line{width:2px;background:var(--border);height:16px;flex-shrink:0;}
+  .value-pos-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .value-pos-row .bal-label{width:26px;}
+  .value-pos-row .vnum{width:38px;text-align:left;font-size:11px;color:var(--muted);flex-shrink:0;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏈 Dynasty Draft <span>Assistant</span></h1>
+  <div class="setup">
+    <input type="text" id="draftUrl" placeholder="Paste Sleeper mock draft URL or draft ID…" />
+    <select id="mySlot"><option value="">My pick slot…</option></select>
+    <button id="connectBtn">Connect</button>
+    <button id="disconnectBtn" class="secondary" style="display:none">Stop</button>
+  </div>
+  <a href="edit.html" class="secondary" style="text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600;background:var(--panel2);border:1px solid var(--border);color:var(--text);">✎ Edit Rankings</a>
+  <a href="compare.html" class="secondary" style="text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600;background:var(--panel2);border:1px solid var(--border);color:var(--text);">⚖ Compare Players</a>
+  <a href="index.html" class="secondary" style="text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600;background:var(--panel2);border:1px solid var(--border);color:var(--text);">⇄ Switch Format</a>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+    <div id="status">Not connected</div>
+    <div id="rankingsBadge" style="font-size:11px;color:var(--muted);"></div>
+  </div>
+</header>
+
+<main>
+  <!-- LEFT: recommendation + your team -->
+  <div class="col">
+    <div class="card onclock" id="recCard">
+      <h2 id="recTitle">Recommended Pick</h2>
+      <div id="recBody" class="empty">Connect to a draft to see recommendations.</div>
+    </div>
+    <div class="card">
+      <h2>Draft Value</h2>
+      <div id="valueSummary">
+        <div class="value-summary flat" id="valueScore">—</div>
+        <div class="value-sub" id="valueSub">Connect and select your slot to track value.</div>
+      </div>
+      <div id="valueByPos"></div>
+    </div>
+    <div class="card">
+      <h2>Position Balance <span style="font-weight:400;text-transform:none;">(all your picks)</span></h2>
+      <div id="posBalance" class="empty">No picks yet.</div>
+    </div>
+    <div class="card">
+      <h2>Age &amp; Rookies <span style="font-weight:400;text-transform:none;">(your team)</span></h2>
+      <div id="ageRookies" class="empty">Select your slot above.</div>
+    </div>
+    <div class="card">
+      <h2>Your Team</h2>
+      <div id="myTeam" class="empty">Select your slot above.</div>
+    </div>
+    <div class="card">
+      <h2>How this works</h2>
+      <div class="helptext">
+        1. Start or join a mock draft on Sleeper.<br/>
+        2. Paste the draft URL (or just the draft ID) above.<br/>
+        3. Pick which slot is you.<br/>
+        4. This polls Sleeper every 3s and ranks best-available using your <code>Footballers 2QB</code> sheet.
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER: best available board -->
+  <div class="col">
+    <div class="card" style="height:calc(100% - 24px);display:flex;flex-direction:column;overflow:hidden;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+        <h2 style="margin:0;">Best Available</h2>
+        <div class="filters" id="viewToggle">
+          <button data-view="dashboard" class="active">Dashboard</button>
+          <button data-view="list">Full List</button>
+        </div>
+      </div>
+      <button id="matchWarnBtn" style="margin-bottom:8px;"></button>
+
+      <!-- default view: top 5 overall + best-remaining-tier by position -->
+      <div id="dashboardView" style="overflow-y:auto;flex:1;min-height:0;">
+        <div class="top5-row" id="top5Row"></div>
+        <div class="pos-columns" id="posColumns"></div>
+      </div>
+
+      <!-- deep-dive view: full ranked table, filterable/tiered by position -->
+      <div id="fullListView" style="display:none;flex-direction:column;flex:1;min-height:0;">
+        <div class="filters" id="posFilters">
+          <button data-pos="ALL" class="active">ALL</button>
+          <button data-pos="QB">QB</button>
+          <button data-pos="RB">RB</button>
+          <button data-pos="WR">WR</button>
+          <button data-pos="TE">TE</button>
+        </div>
+        <div style="overflow:auto;flex:1;">
+          <table>
+            <thead><tr><th class="rank-col">#</th><th>Player</th><th>Pos</th><th>Team</th><th>Bye</th><th class="tier-col">Tier</th></tr></thead>
+            <tbody id="bestAvailBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: live pick feed -->
+  <div class="col">
+    <div class="card">
+      <h2>Draft Board <span id="pickCount" style="color:var(--muted);font-weight:400;"></span></h2>
+      <div id="pickFeed" class="empty">No picks yet.</div>
+    </div>
+  </div>
+</main>
+
+<script src="firebase-sync.js"></script>
+<script src="rankings-store.js?v=2"></script>
+<script>
+const POS_ORDER = ["QB","RB","WR","TE"];
+const POS_COLOR = {QB:"#c084fc", RB:"#5be08a", WR:"#5b9cff", TE:"#ffb84d"};
+const ROSTER_SLOTS = ["QB","RB","RB","WR","WR","WR","TE","FLEX","FLEX","FLEX","SF"];
+const SLOT_ELIGIBILITY = {
+  QB: ["QB"], RB: ["RB"], WR: ["WR"], TE: ["TE"],
+  FLEX: ["RB","WR","TE"], SF: ["QB","RB","WR","TE"]
+};
+const VALUE_SCALE = 24; // picks of value/reach that fills a diverging bar
+
+// --- recommendation engine tuning ---
+const NEED_CRITICAL_BONUS = 10;  // virtual-rank improvement when a dedicated slot is open
+const SATURATION_BASE = 35;      // virtual-rank penalty once a position has no open slot left
+const SATURATION_STEP = 15;      // extra penalty per redundant player already owned beyond that
+const SATURATION_CAP = 80;
+const SCARCITY_BONUS_TIGHT = 8;  // <=1 player left in this tier
+const SCARCITY_BONUS_LOW = 4;    // <=3 players left in this tier
+const HANDCUFF_BONUS = {S: 10, A: 7, B: 4, C: 2, D: 0}; // reach-worthiness by tier, when you own the starter
+// NOTE: an "availability" (will-this-player-survive-to-my-next-pick) signal
+// used to live here — removed 2026-08-26, see git history ("Checkpoint
+// before removing the likely gone availability feature") to restore it.
+// It degenerated for small pick gaps: the clear best-available player at a
+// position has ~0 same-position rank-ahead by construction, which collapsed
+// the survival ratio to "likely gone" no matter how few picks were actually
+// happening before the next turn.
+
+let RANKINGS = [];          // full list from rankings.json, sorted by rank
+let rankLookup = new Map(); // normalizedName -> ranking object (best match kept)
+let lastNameLookup = new Map(); // "pos|lastname" -> ranking object, only when unambiguous
+
+// Sleeper's own player database (~12k players) — used for headshot lookups
+// and years_exp (rookie detection), neither of which live in our rankings
+// sheet. Loaded once in the background; the UI degrades gracefully (initials
+// avatars, "—" for rookie count) until it's ready.
+let sleeperById = new Map();          // player_id -> {years_exp, age, position}
+let sleeperByName = new Map();        // "pos|normalizedName" -> player_id
+let sleeperLastNameLookup = new Map();// "pos|lastname" -> player_id, only when unambiguous
+let sleeperPlayersLoaded = false;
+let rbStarterByTeam = new Map();      // team abbr -> {id, name}, the live depth_chart_order:1 RB
+
+let draftId = null;
+let draftMeta = null;       // /v1/draft/{id}
+let picks = [];             // /v1/draft/{id}/picks
+let mySlot = null;
+let pollTimer = null;
+let posFilter = "ALL";
+let viewMode = "dashboard"; // "dashboard" | "list"
+let unmatchedCount = 0;
+let expandedPos = {QB: false, RB: false, WR: false, TE: false}; // dashboard tier-expand state per position
+
+const $ = (sel) => document.querySelector(sel);
+
+function normalizeName(name){
+  return (name || "")
+    .toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "") // strip accents
+    .replace(/\./g, "")
+    .replace(/[’']/g, "")
+    .replace(/-/g, " ")
+    .replace(/\b(jr|sr|ii|iii|iv|v)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function lastNameOf(normalized){
+  const parts = normalized.split(" ");
+  return parts[parts.length - 1] || "";
+}
+
+async function loadRankings(){
+  RANKINGS = await RankingsStore.load();
+  RANKINGS.sort((a,b) => a.rank - b.rank);
+  $("#rankingsBadge").textContent = RankingsStore.hasOverride()
+    ? "Using your edited rankings"
+    : "Using rankings.json";
+  rankLookup = new Map();
+  const lastNameCandidates = new Map(); // "pos|last" -> Set(player)
+  for(const p of RANKINGS){
+    const key = normalizeName(p.name);
+    rankLookup.set(key, p);
+    const lnKey = `${p.pos}|${lastNameOf(key)}`;
+    if(!lastNameCandidates.has(lnKey)) lastNameCandidates.set(lnKey, new Set());
+    lastNameCandidates.get(lnKey).add(p);
+  }
+  lastNameLookup = new Map();
+  for(const [key, set] of lastNameCandidates){
+    if(set.size === 1) lastNameLookup.set(key, [...set][0]);
+  }
+}
+
+// Matches a drafted player (from Sleeper pick metadata) to a ranking entry.
+// Falls back to a last-name+position match for nickname mismatches
+// (e.g. tier sheet "Cameron Ward" vs rankings "Cam Ward").
+function matchRanking(fullName, pos){
+  const key = normalizeName(fullName);
+  let match = rankLookup.get(key);
+  if(!match && pos){
+    match = lastNameLookup.get(`${pos}|${lastNameOf(key)}`);
+  }
+  return match || null;
+}
+
+// Sleeper's full player list (~2.5MB gzipped) — fetched once in the
+// background. It's the only source we have for headshots and years_exp,
+// since neither exists in the workbook-derived rankings.
+async function loadSleeperPlayers(){
+  try{
+    const res = await fetch("https://api.sleeper.app/v1/players/nfl");
+    const data = await res.json();
+    sleeperById = new Map();
+    sleeperByName = new Map();
+    const lastNameCandidates = new Map(); // "pos|last" -> Set(player_id)
+    for(const id in data){
+      const p = data[id];
+      if(!p || !p.position) continue;
+      sleeperById.set(id, {
+        years_exp: p.years_exp, age: p.age, position: p.position,
+        team: p.team, depth_chart_order: p.depth_chart_order,
+      });
+      const full = p.full_name || `${p.first_name || ""} ${p.last_name || ""}`.trim();
+      if(!full) continue;
+      const key = normalizeName(full);
+      sleeperByName.set(`${p.position}|${key}`, id);
+      const lnKey = `${p.position}|${lastNameOf(key)}`;
+      if(!lastNameCandidates.has(lnKey)) lastNameCandidates.set(lnKey, new Set());
+      lastNameCandidates.get(lnKey).add(id);
+      // RB1 by depth chart, per team — the live "who does this handcuff" answer.
+      if(p.position === "RB" && p.depth_chart_order === 1 && p.team){
+        rbStarterByTeam.set(p.team, {id, name: full});
+      }
+    }
+    sleeperLastNameLookup = new Map();
+    for(const [key, set] of lastNameCandidates){
+      if(set.size === 1) sleeperLastNameLookup.set(key, [...set][0]);
+    }
+    sleeperPlayersLoaded = true;
+  }catch(e){
+    console.warn("Couldn't load Sleeper player metadata (headshots/rookie data unavailable):", e);
+  }
+}
+
+// Handcuff quality tiers (S/A/B/C/D) curated from a published rankings
+// article — not something Sleeper's API exposes. Static and will drift as
+// backups get traded/promoted/injured through the season; re-editing
+// handcuffs.json is the way to refresh it. To guard against that drift, the
+// "is this actually still a backup" check below always uses Sleeper's live
+// depth chart, not this file — so a name here that's since become a starter
+// (or been cut) just stops matching instead of showing stale advice.
+let HANDCUFFS = [];
+let handcuffTierByName = new Map(); // "RB|normalizedName" -> tier letter
+
+async function loadHandcuffs(){
+  try{
+    const res = await fetch(`handcuffs.json?_=${Date.now()}`, {cache: "no-store"});
+    HANDCUFFS = await res.json();
+    handcuffTierByName = new Map();
+    for(const h of HANDCUFFS){
+      handcuffTierByName.set(`RB|${normalizeName(h.name)}`, h.tier);
+    }
+  }catch(e){
+    console.warn("Couldn't load handcuffs.json:", e);
+  }
+}
+
+// Returns {tier, starterName, starterId} if this player is a curated
+// handcuff AND Sleeper's live depth chart still has them behind someone
+// (order >= 2) — null if they're not on the list, or if they've since
+// become the starter themselves (the list going stale self-corrects here).
+function handcuffInfo(name, pos){
+  if(pos !== "RB") return null;
+  const tier = handcuffTierByName.get(`RB|${normalizeName(name)}`);
+  if(!tier) return null;
+  const id = sleeperIdFor(name, "RB");
+  const meta = id ? sleeperById.get(id) : null;
+  if(!meta || !meta.team || meta.depth_chart_order == null || meta.depth_chart_order < 2) return null;
+  const starter = rbStarterByTeam.get(meta.team);
+  if(!starter || starter.id === id) return null;
+  return {tier, starterName: starter.name, starterId: starter.id};
+}
+
+function sleeperIdFor(name, pos){
+  const key = normalizeName(name);
+  let id = sleeperByName.get(`${pos}|${key}`);
+  if(!id) id = sleeperLastNameLookup.get(`${pos}|${lastNameOf(key)}`);
+  return id || null;
+}
+
+function headshotUrl(name, pos){
+  const id = sleeperIdFor(name, pos);
+  return id ? `https://sleepercdn.com/content/nfl/players/thumb/${id}.jpg` : null;
+}
+
+function initialsOf(name){
+  return (name || "?").split(" ").filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+}
+
+// Renders an <img> for a player's Sleeper headshot, falling back to an
+// initials badge if we don't have an id yet or the image 404s.
+function avatarImg(name, pos, size){
+  const url = headshotUrl(name, pos);
+  const initials = initialsOf(name);
+  if(!url){
+    return `<span class="avatar-fallback" style="width:${size}px;height:${size}px;font-size:${Math.round(size * 0.4)}px;">${initials}</span>`;
+  }
+  return `<img class="avatar-img" src="${url}" width="${size}" height="${size}" data-initials="${initials}" onerror="handleAvatarError(this)" />`;
+}
+
+function handleAvatarError(imgEl){
+  const span = document.createElement("span");
+  span.className = "avatar-fallback";
+  span.style.width = imgEl.width + "px";
+  span.style.height = imgEl.height + "px";
+  span.style.fontSize = Math.round(imgEl.width * 0.4) + "px";
+  span.textContent = imgEl.dataset.initials || "?";
+  imgEl.replaceWith(span);
+}
+
+function extractDraftId(input){
+  input = input.trim();
+  if(/^\d+$/.test(input)) return input;
+  const m = input.match(/draft\/nfl\/(\d+)/) || input.match(/\/(\d{10,})/);
+  return m ? m[1] : null;
+}
+
+function setStatus(text, cls){
+  const el = $("#status");
+  el.textContent = text;
+  el.className = cls || "";
+}
+
+async function connect(){
+  const raw = $("#draftUrl").value;
+  const id = extractDraftId(raw);
+  if(!id){
+    setStatus("Couldn't find a draft ID in that link", "err");
+    return;
+  }
+  draftId = id;
+  $("#connectBtn").disabled = true;
+  setStatus("Connecting…");
+
+  try{
+    const metaRes = await fetch(`https://api.sleeper.app/v1/draft/${draftId}`);
+    if(!metaRes.ok) throw new Error("draft not found");
+    draftMeta = await metaRes.json();
+  }catch(e){
+    setStatus("Couldn't load that draft. Check the link/ID.", "err");
+    $("#connectBtn").disabled = false;
+    return;
+  }
+
+  populateSlotOptions(draftMeta.settings?.teams || 12);
+  mySlot = $("#mySlot").value ? parseInt($("#mySlot").value, 10) : null;
+
+  $("#connectBtn").style.display = "none";
+  $("#disconnectBtn").style.display = "";
+  $("#draftUrl").disabled = true;
+
+  await pollPicks();
+  pollTimer = setInterval(pollPicks, 3000);
+}
+
+function disconnect(){
+  if(pollTimer) clearInterval(pollTimer);
+  pollTimer = null;
+  draftId = null; draftMeta = null; picks = [];
+  $("#connectBtn").style.display = "";
+  $("#connectBtn").disabled = false;
+  $("#disconnectBtn").style.display = "none";
+  $("#draftUrl").disabled = false;
+  setStatus("Not connected");
+  render();
+}
+
+function populateSlotOptions(teams){
+  const sel = $("#mySlot");
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">My pick slot…</option>';
+  for(let i=1;i<=teams;i++){
+    const opt = document.createElement("option");
+    opt.value = i; opt.textContent = `Slot ${i}`;
+    sel.appendChild(opt);
+  }
+  if(prev) sel.value = prev;
+}
+
+async function pollPicks(){
+  if(!draftId) return;
+  try{
+    // Sleeper's API sits behind a CDN that caches responses for up to 24h
+    // (s-maxage=86400). A cache-busting query param forces a fresh fetch
+    // on every poll instead of replaying a stale snapshot of the draft.
+    const bust = `_=${Date.now()}`;
+    const [picksRes, metaRes] = await Promise.all([
+      fetch(`https://api.sleeper.app/v1/draft/${draftId}/picks?${bust}`, {cache: "no-store"}),
+      fetch(`https://api.sleeper.app/v1/draft/${draftId}?${bust}`, {cache: "no-store"})
+    ]);
+    picks = await picksRes.json();
+    draftMeta = await metaRes.json();
+    setStatus(`Live — ${picks.length} picks made${draftMeta.status === "complete" ? " (draft complete)" : ""}`, "live");
+  }catch(e){
+    setStatus("Connection error, retrying…", "err");
+    return;
+  }
+  render();
+}
+
+function slotForPickNo(pickNo, teams, type){
+  const round = Math.floor((pickNo - 1) / teams) + 1;
+  const posInRound = ((pickNo - 1) % teams) + 1;
+  if(type === "linear") return posInRound;
+  // snake (default)
+  return (round % 2 === 1) ? posInRound : (teams - posInRound + 1);
+}
+
+// Merges a raw Sleeper pick with its ranking entry (rank/tier/etc, if
+// matched) and Sleeper's own player record (age/years_exp — our rankings
+// sheet has age but not experience, so rookie status always comes from here).
+function pickInfo(p){
+  const md = p.metadata || {};
+  const name = `${md.first_name || ""} ${md.last_name || ""}`.trim() || "Unknown";
+  const pos = md.position || "";
+  const match = matchRanking(name, pos);
+  const sMeta = sleeperById.get(String(p.player_id));
+  return {
+    pick_no: p.pick_no, round: p.round, draft_slot: p.draft_slot, player_id: p.player_id,
+    name, pos: match ? match.pos : pos, team: match ? match.team : (md.team || ""),
+    rank: match ? match.rank : null, tier: match ? match.tier : null,
+    value: match ? (p.pick_no - match.rank) : null,
+    age: match ? match.age : (sMeta ? sMeta.age : null),
+    yearsExp: sMeta ? sMeta.years_exp : null,
+  };
+}
+
+// How many picks happen before you're next on the clock. If you're on the
+// clock right now, this looks past the current pick to the turn after it —
+// "will this player survive to my *next* turn" implies you're taking someone
+// this turn already.
+function picksUntilMyTurn(){
+  if(!draftId || mySlot == null || !draftMeta) return null;
+  const teams = draftMeta.settings?.teams || 10;
+  const type = draftMeta.type || "snake";
+  const nextPickNo = picks.length + 1;
+  let p = nextPickNo;
+  if(slotForPickNo(p, teams, type) === mySlot) p++;
+  while(slotForPickNo(p, teams, type) !== mySlot) p++;
+  return p - nextPickNo;
+}
+
+// Uses assignRoster (defined below) on your current picks to see which of
+// the 11 starting slots are still open, and for each open slot, which
+// positions could fill it. A "dedicated" slot (the lone QB/TE slot, one of
+// the two RB slots, one of the three WR slots) is a hard need; FLEX/SF are
+// shared needs across multiple positions.
+function rosterNeedState(mine){
+  const {slots} = assignRoster(mine);
+  const dedicated = {QB: 0, RB: 0, WR: 0, TE: 0};
+  const shared = {QB: 0, RB: 0, WR: 0, TE: 0};
+  for(const s of slots){
+    if(s.player) continue;
+    if(POS_ORDER.includes(s.label)){
+      dedicated[s.label]++;
+    } else {
+      for(const pos of SLOT_ELIGIBILITY[s.label]) shared[pos]++;
+    }
+  }
+  const countByPos = {QB: 0, RB: 0, WR: 0, TE: 0};
+  for(const p of mine){ if(countByPos[p.pos] != null) countByPos[p.pos]++; }
+  return {dedicated, shared, countByPos};
+}
+
+// Virtual-rank delta for a position given roster need: a boost if a
+// dedicated slot is open, neutral if only a shared FLEX/SF slot remains,
+// and a growing penalty once every eligible slot is filled — bigger the
+// more redundant players you already own there. Positions with more
+// eligible slots (RB/WR, via FLEX) naturally tolerate more depth before
+// saturating than QB/TE do, since this falls straight out of the real
+// roster shape rather than a hardcoded per-position threshold.
+function needAdjustment(pos, need){
+  if(!need) return {delta: 0, tag: null};
+  if(need.dedicated[pos] > 0) return {delta: -NEED_CRITICAL_BONUS, tag: "need"};
+  if(need.shared[pos] > 0) return {delta: 0, tag: null};
+  const redundant = Math.max(0, need.countByPos[pos] - 2);
+  const penalty = Math.min(SATURATION_CAP, SATURATION_BASE + SATURATION_STEP * redundant);
+  return {delta: penalty, tag: "saturated"};
+}
+
+// Small boost when a player's tier is nearly drafted out — the idea being
+// "grab this now, the tier's about to run dry."
+function tierScarcityDelta(player, avail){
+  if(player.tier == null) return 0;
+  const remaining = avail.reduce((n, p) => n + (p.pos === player.pos && p.tier === player.tier ? 1 : 0), 0);
+  if(remaining <= 1) return -SCARCITY_BONUS_TIGHT;
+  if(remaining <= 3) return -SCARCITY_BONUS_LOW;
+  return 0;
+}
+
+// The actual recommendation engine: takes best-available, adjusts each
+// candidate's rank by need/scarcity, flags team stacks, and returns the
+// top n with human-readable reasons attached.
+function computeRecommendations(avail, n){
+  const mine = mySlot != null ? picks.filter(p => p.draft_slot === mySlot).map(pickInfo) : [];
+  const need = mySlot != null ? rosterNeedState(mine) : null;
+  const myTeamCounts = new Map();
+  for(const p of mine){ if(p.team) myTeamCounts.set(p.team, (myTeamCounts.get(p.team) || 0) + 1); }
+  const myPlayerIds = new Set(mine.map(p => String(p.player_id)));
+
+  // Top 60 by raw rank, plus any available handcuff for a starter you own —
+  // handcuffs are backups by nature, so they're routinely ranked well
+  // outside the top 60 and would otherwise never reach the bonus below.
+  const pool = avail.slice(0, 60);
+  if(myPlayerIds.size){
+    const poolSet = new Set(pool);
+    for(const p of avail){
+      if(poolSet.has(p)) continue;
+      const hc = handcuffInfo(p.name, p.pos);
+      if(hc && myPlayerIds.has(String(hc.starterId))) pool.push(p);
+    }
+  }
+
+  const scored = pool.map(p => {
+    let virtualRank = p.rank;
+    const reasons = [];
+
+    const {delta: needDelta, tag: needTag} = needAdjustment(p.pos, need);
+    virtualRank += needDelta;
+    if(needTag === "need") reasons.push(`Fills your open ${p.pos} slot`);
+    if(needTag === "saturated") reasons.push(`You're deep at ${p.pos} already`);
+
+    // Scarcity answers "should I rush this pick?" — irrelevant, even
+    // counterproductive, for a position you're already saturated at. A
+    // thinning QB tier isn't a reason to grab a 3rd QB.
+    const saturated = needTag === "saturated";
+
+    const scarcity = tierScarcityDelta(p, avail);
+    if(scarcity < 0 && !saturated){ virtualRank += scarcity; reasons.push(`Tier ${p.tier} is thinning out`); }
+
+    const stackCount = p.team ? (myTeamCounts.get(p.team) || 0) : 0;
+    const teamStack = stackCount > 0 ? `Would be your ${stackCount + 1}${ordinalSuffix(stackCount + 1)} ${p.team} player` : null;
+
+    // Handcuff awareness: always surface the tag (worth knowing regardless),
+    // but only nudge the score if you actually own the starter they'd
+    // replace — stashing a random Tier-D handcuff for a team you have no
+    // stake in isn't the point.
+    const handcuff = handcuffInfo(p.name, p.pos);
+    if(handcuff && myPlayerIds.has(String(handcuff.starterId))){
+      const bonus = HANDCUFF_BONUS[handcuff.tier] || 0;
+      if(bonus > 0){
+        virtualRank -= bonus;
+        reasons.push(`Handcuff for ${handcuff.starterName} (Tier ${handcuff.tier}) — worth stashing`);
+      }
+    }
+
+    if(!reasons.length) reasons.push("Best player available");
+
+    return {player: p, virtualRank, reasons, teamStack, handcuff};
+  });
+
+  scored.sort((a, b) => a.virtualRank - b.virtualRank);
+  return scored.slice(0, n);
+}
+
+function ordinalSuffix(n){
+  if(n % 10 === 1 && n % 100 !== 11) return "st";
+  if(n % 10 === 2 && n % 100 !== 12) return "nd";
+  if(n % 10 === 3 && n % 100 !== 13) return "rd";
+  return "th";
+}
+
+function getDraftedSet(){
+  const drafted = new Set();
+  unmatchedCount = 0;
+  for(const p of picks){
+    const md = p.metadata || {};
+    const full = `${md.first_name || ""} ${md.last_name || ""}`.trim();
+    if(!full) continue;
+    const match = matchRanking(full, md.position);
+    if(match){
+      drafted.add(normalizeName(match.name));
+    } else {
+      unmatchedCount++;
+    }
+  }
+  return drafted;
+}
+
+function bestAvailable(){
+  const drafted = getDraftedSet();
+  return RANKINGS.filter(p => !drafted.has(normalizeName(p.name)));
+}
+
+function render(){
+  const avail = bestAvailable();
+  renderRecommendation(avail);
+  renderDashboard(avail);
+  renderBestAvailable(avail);
+  renderMyTeam();
+  renderPickFeed();
+  renderPositionBalance();
+  renderDraftValue();
+  renderAgeRookies();
+
+  $("#matchWarnBtn").style.display = unmatchedCount > 0 ? "block" : "none";
+  $("#matchWarnBtn").textContent = `⚠ ${unmatchedCount} drafted player(s) not found in your rankings`;
+}
+
+// Compact "whose turn is it" status strip — the actual player recommendations
+// live in the top-5 row on the dashboard now, so this just tracks the clock.
+function renderRecommendation(avail){
+  const title = $("#recTitle");
+  const body = $("#recBody");
+  const card = $("#recCard");
+
+  if(!draftId){
+    card.classList.remove("onclock");
+    title.textContent = "Draft Status";
+    body.innerHTML = `<div class="empty">Connect to a draft to see recommendations.</div>`;
+    return;
+  }
+
+  const teams = draftMeta?.settings?.teams || 12;
+  const type = draftMeta?.type || "snake";
+  const nextPickNo = picks.length + 1;
+  const round = Math.floor((nextPickNo - 1) / teams) + 1;
+  const onClockSlot = slotForPickNo(nextPickNo, teams, type);
+  const isMe = mySlot && onClockSlot === mySlot;
+
+  if(!mySlot){
+    card.classList.remove("onclock");
+    title.textContent = `Pick ${nextPickNo} (Rd ${round}) — Slot ${onClockSlot} on the clock`;
+    body.innerHTML = `<div class="empty">Select your pick slot to track your turn and get need-aware recommendations below.</div>`;
+    return;
+  }
+
+  if(isMe){
+    card.classList.add("onclock");
+    title.textContent = `You're on the clock — Pick ${nextPickNo} (Rd ${round})`;
+    body.innerHTML = `<div class="rec-meta">See the top 5 recommended players below.</div>`;
+    return;
+  }
+
+  card.classList.remove("onclock");
+  const puts = picksUntilMyTurn();
+  title.textContent = `Pick ${nextPickNo} (Rd ${round}) — Slot ${onClockSlot} on the clock`;
+  body.innerHTML = `<div class="rec-meta">Your next pick: ${puts != null ? `in ${puts} pick${puts === 1 ? "" : "s"} (#${nextPickNo + puts})` : "—"}</div>`;
+}
+
+function posColRowHtml(p){
+  const handcuff = handcuffInfo(p.name, p.pos);
+  return `
+    <div class="pos-col-row">
+      ${avatarImg(p.name, p.pos, 26)}
+      <div class="pinfo">
+        <div class="ptop">
+          <span class="pn">${p.name}</span>
+          <span class="prank">#${p.rank}</span>
+        </div>
+        <div class="psub">${p.team || "FA"} · Bye ${p.bye || "—"} · Age ${p.age != null ? p.age : "—"}</div>
+        ${handcuff ? `<div class="psub handcuff-inline">🔒 Tier ${handcuff.tier} handcuff for ${handcuff.starterName}</div>` : ""}
+      </div>
+    </div>`;
+}
+
+// Default landing view: top 5 best-available regardless of position, plus
+// one column per position showing every player still in that position's
+// best remaining tier (not just a fixed count) — so a whole tier's worth
+// of "still on the board" options is visible at a glance. Click a column's
+// header to expand it to its next 2 remaining tiers as well.
+function renderDashboard(avail){
+  const top5 = computeRecommendations(avail, 5);
+  $("#top5Row").innerHTML = top5.map(({player: p, reasons, teamStack, handcuff}, i) => `
+    <div class="top5-card ${i === 0 ? "first" : ""}">
+      <div class="toprow">
+        ${avatarImg(p.name, p.pos, 40)}
+        <span class="rankbadge">#${i + 1}</span>
+      </div>
+      <div class="name">${p.name}</div>
+      <div class="meta">
+        <span class="pos-tag pos-${p.pos}">${p.pos}</span>
+        <span>${p.team || "FA"}</span>
+      </div>
+      <div class="meta">Rank #${p.rank}${p.tier != null ? ` · Tier ${p.tier}` : ""}</div>
+      <div class="meta">Bye ${p.bye || "—"} · Age ${p.age != null ? p.age : "—"}</div>
+      ${handcuff ? `<span class="handcuff-badge">🔒 Tier ${handcuff.tier} handcuff for ${handcuff.starterName}</span>` : ""}
+      ${teamStack ? `<div class="stack-badge">⚠ ${teamStack}</div>` : ""}
+      <div class="reason-line">${reasons.slice(0, 2).join(" · ")}</div>
+    </div>
+  `).join("") || `<div class="empty">No players available.</div>`;
+
+  $("#posColumns").innerHTML = POS_ORDER.map(pos => {
+    const posAvail = avail.filter(p => p.pos === pos);
+    if(!posAvail.length){
+      return `
+        <div class="pos-col" style="border-top-color:${POS_COLOR[pos]}">
+          <div class="pos-col-hdr"><span class="pname" style="color:${POS_COLOR[pos]}">${pos}</span></div>
+          <div class="empty" style="font-size:12px;padding:4px 0;">None left</div>
+        </div>`;
+    }
+
+    const tiersRemaining = [...new Set(posAvail.map(p => p.tier).filter(t => t != null))].sort((a, b) => a - b);
+    const expanded = !!expandedPos[pos];
+    const tiersToShow = tiersRemaining.length ? tiersRemaining.slice(0, expanded ? 3 : 1) : [];
+    const members = tiersToShow.length ? posAvail.filter(p => tiersToShow.includes(p.tier)) : posAvail.slice(0, 5);
+
+    const tierLabel = tiersToShow.length > 1
+      ? `Tier ${tiersToShow[0]}–${tiersToShow[tiersToShow.length - 1]}`
+      : (tiersToShow.length ? `Tier ${tiersToShow[0]}` : "Untiered");
+    const canExpand = tiersRemaining.length > 1;
+
+    let rowsHtml = "";
+    if(tiersToShow.length > 1){
+      // Multiple tiers shown at once — add a small divider so it's clear
+      // where one tier ends and the next begins.
+      for(const t of tiersToShow){
+        const tierMembers = posAvail.filter(p => p.tier === t);
+        if(!tierMembers.length) continue;
+        rowsHtml += `<div class="pos-col-tier-divider">Tier ${t}</div>`;
+        rowsHtml += tierMembers.map(posColRowHtml).join("");
+      }
+    } else {
+      rowsHtml = members.map(posColRowHtml).join("");
+    }
+
+    return `
+      <div class="pos-col" style="border-top-color:${POS_COLOR[pos]}">
+        <div class="pos-col-hdr" data-toggle-pos="${pos}">
+          <span class="pname" style="color:${POS_COLOR[pos]}">${pos}</span>
+          <span class="ptier">
+            ${tierLabel} · ${members.length}
+            ${canExpand ? `<span class="chevron ${expanded ? "open" : ""}">▶</span>` : ""}
+          </span>
+        </div>
+        ${rowsHtml}
+      </div>`;
+  }).join("");
+}
+
+function renderBestAvailable(avail){
+  let filtered = posFilter === "ALL" ? avail : avail.filter(p => p.pos === posFilter);
+  const groupByTier = posFilter !== "ALL";
+  if(groupByTier){
+    // Sort by tier first (rank only breaks ties within a tier). Sorting by
+    // rank alone doesn't keep tiers clean, since a position's own tier
+    // consensus doesn't perfectly track the combined 472-player rank.
+    filtered = [...filtered].sort((a, b) => {
+      const ta = a.tier ?? 999, tb = b.tier ?? 999;
+      if(ta !== tb) return ta - tb;
+      return (a.rank ?? 999) - (b.rank ?? 999);
+    });
+  }
+  const tbody = $("#bestAvailBody");
+  const rows = filtered.slice(0, 150);
+
+  if(!rows.length){
+    tbody.innerHTML = `<tr><td colspan="6" class="empty">No players match.</td></tr>`;
+    return;
+  }
+
+  let html = "";
+  let lastTier = null;
+  for(const p of rows){
+    if(groupByTier && p.tier != null && p.tier !== lastTier){
+      html += `<tr class="tier-hdr"><td colspan="6">Tier ${p.tier}</td></tr>`;
+      lastTier = p.tier;
+    }
+    html += `
+      <tr>
+        <td class="rank-col">${p.rank}</td>
+        <td>${p.name}</td>
+        <td><span class="pos-tag pos-${p.pos}">${p.pos}</span></td>
+        <td>${p.team || "—"}</td>
+        <td>${p.bye || "—"}</td>
+        <td class="tier-col">${p.tier != null ? p.tier : "—"}</td>
+      </tr>`;
+  }
+  tbody.innerHTML = html;
+}
+
+// Greedily fills the fixed roster shape (QB/RB/RB/WR/WR/WR/TE/FLEX x3/SF)
+// in slot order, pulling the earliest-drafted eligible player for each.
+// Whatever's left over goes to the bench, in draft order.
+function assignRoster(mine){
+  const remaining = [...mine].sort((a,b) => a.pick_no - b.pick_no);
+  const slots = ROSTER_SLOTS.map(label => {
+    const elig = SLOT_ELIGIBILITY[label];
+    const idx = remaining.findIndex(p => elig.includes(p.pos));
+    if(idx === -1) return {label, player: null};
+    const [player] = remaining.splice(idx, 1);
+    return {label, player};
+  });
+  return {slots, bench: remaining};
+}
+
+function valueChip(player){
+  if(player.value == null) return `<span class="value-chip flat">NR</span>`;
+  const cls = player.value > 0 ? "pos" : player.value < 0 ? "neg" : "flat";
+  const sign = player.value > 0 ? "+" : "";
+  return `<span class="value-chip ${cls}">${sign}${player.value}</span>`;
+}
+
+function renderMyTeam(){
+  const el = $("#myTeam");
+  if(!mySlot){ el.innerHTML = `<div class="empty">Select your slot above.</div>`; return; }
+  const mine = picks.filter(p => p.draft_slot === mySlot).map(pickInfo);
+  if(!mine.length){ el.innerHTML = `<div class="empty">No picks yet.</div>`; return; }
+
+  const {slots, bench} = assignRoster(mine);
+  const row = (label, player) => !player
+    ? `<div class="roster-row empty-slot"><span class="slot-label">${label}</span><span class="pname">—</span></div>`
+    : `<div class="roster-row filled">
+        <span class="slot-label">${label}</span>
+        ${avatarImg(player.name, player.pos, 22)}
+        <span class="pname">${player.name}</span>
+        <span class="pmeta">${player.pos}${player.team ? " · " + player.team : ""}</span>
+        ${valueChip(player)}
+      </div>`;
+
+  let html = slots.map(s => row(s.label, s.player)).join("");
+  if(bench.length){
+    html += `<div class="bench-hdr">Bench (${bench.length})</div>`;
+    html += bench.map(p => row("BN", p)).join("");
+  }
+  el.innerHTML = html;
+}
+
+function renderPositionBalance(){
+  const el = $("#posBalance");
+  if(!mySlot){ el.innerHTML = `<div class="empty">Select your slot above.</div>`; return; }
+  const mine = picks.filter(p => p.draft_slot === mySlot).map(pickInfo);
+  if(!mine.length){ el.innerHTML = `<div class="empty">No picks yet.</div>`; return; }
+
+  const counts = {QB:0, RB:0, WR:0, TE:0};
+  for(const p of mine){ if(counts[p.pos] != null) counts[p.pos]++; }
+  const max = Math.max(1, ...Object.values(counts));
+  el.innerHTML = POS_ORDER.map(pos => `
+    <div class="bal-row">
+      <span class="bal-label" style="color:${POS_COLOR[pos]}">${pos}</span>
+      <div class="bal-track"><div class="bal-fill" style="width:${(counts[pos]/max*100).toFixed(0)}%;background:${POS_COLOR[pos]}"></div></div>
+      <span class="bal-count">${counts[pos]}</span>
+    </div>
+  `).join("");
+}
+
+// Average age and rookie count matter more in dynasty than redraft — an
+// "elite" team of 27-year-olds is aging out while a rookie-laden team is
+// still climbing. Rookie status comes from Sleeper's years_exp (0 = rookie),
+// since that's not something the rankings workbook tracks.
+function renderAgeRookies(){
+  const el = $("#ageRookies");
+  if(!mySlot){ el.innerHTML = `<div class="empty">Select your slot above.</div>`; return; }
+  const mine = picks.filter(p => p.draft_slot === mySlot).map(pickInfo);
+  if(!mine.length){ el.innerHTML = `<div class="empty">No picks yet.</div>`; return; }
+
+  const ages = mine.map(p => p.age).filter(a => a != null);
+  const avgAge = ages.length ? ages.reduce((s, a) => s + a, 0) / ages.length : null;
+
+  const withExp = mine.filter(p => p.yearsExp != null);
+  const rookies = withExp.filter(p => p.yearsExp === 0);
+
+  el.innerHTML = `
+    <div class="agerookie-row">
+      <div class="ar-stat">
+        <div class="ar-num">${avgAge != null ? avgAge.toFixed(1) : "—"}</div>
+        <div class="ar-label">Avg Age</div>
+      </div>
+      <div class="ar-stat">
+        <div class="ar-num">${withExp.length ? rookies.length : "—"}</div>
+        <div class="ar-label">Rookies${withExp.length ? ` of ${withExp.length}` : ""}</div>
+      </div>
+    </div>
+    ${!sleeperPlayersLoaded ? `<div class="value-sub" style="margin-top:8px;">Loading player experience data…</div>` : ""}
+    ${rookies.length ? `<div class="ar-rookie-names">${rookies.map(p => p.name).join(", ")}</div>` : ""}
+  `;
+}
+
+// "Value" = pick_no - player's overall rank. Positive means the player
+// fell past their consensus rank when you took them (a steal); negative
+// means you drafted them ahead of rank (a reach).
+function renderDraftValue(){
+  const scoreEl = $("#valueScore");
+  const subEl = $("#valueSub");
+  const byPosEl = $("#valueByPos");
+
+  if(!mySlot){
+    scoreEl.textContent = "—"; scoreEl.className = "value-summary flat";
+    subEl.textContent = "Connect and select your slot to track value.";
+    byPosEl.innerHTML = "";
+    return;
+  }
+  const mine = picks.filter(p => p.draft_slot === mySlot).map(pickInfo).filter(p => p.value != null);
+  if(!mine.length){
+    scoreEl.textContent = "—"; scoreEl.className = "value-summary flat";
+    subEl.textContent = "No ranked picks yet.";
+    byPosEl.innerHTML = "";
+    return;
+  }
+
+  const avg = mine.reduce((s,p) => s + p.value, 0) / mine.length;
+  const rounded = Math.round(avg * 10) / 10;
+  scoreEl.textContent = (rounded > 0 ? "+" : "") + rounded;
+  scoreEl.className = "value-summary " + (rounded > 1 ? "pos" : rounded < -1 ? "neg" : "flat");
+  subEl.textContent = rounded > 1
+    ? `Averaging ${rounded} picks of value — you're finding steals.`
+    : rounded < -1
+      ? `Averaging ${Math.abs(rounded)} picks of reach — drafting ahead of rank.`
+      : `Drafting right around consensus rank.`;
+
+  byPosEl.innerHTML = POS_ORDER.map(pos => {
+    const ps = mine.filter(p => p.pos === pos);
+    if(!ps.length) return "";
+    const posAvg = ps.reduce((s,p) => s + p.value, 0) / ps.length;
+    const pct = Math.min(Math.abs(posAvg) / VALUE_SCALE, 1) * 100;
+    const isPos = posAvg >= 0;
+    return `
+      <div class="value-pos-row">
+        <span class="bal-label" style="color:${POS_COLOR[pos]}">${pos}</span>
+        <div class="divbar">
+          <div class="neg-half">${isPos ? "" : `<div class="neg-bar" style="width:${pct}%"></div>`}</div>
+          <div class="center-line"></div>
+          <div class="pos-half">${isPos ? `<div class="pos-bar" style="width:${pct}%"></div>` : ""}</div>
+        </div>
+        <span class="vnum">${posAvg > 0 ? "+" : ""}${Math.round(posAvg * 10) / 10}</span>
+      </div>`;
+  }).join("");
+}
+
+function renderPickFeed(){
+  const el = $("#pickFeed");
+  $("#pickCount").textContent = picks.length ? `(${picks.length})` : "";
+  if(!picks.length){ el.innerHTML = `<div class="empty">No picks yet.</div>`; return; }
+  const ordered = [...picks].sort((a,b) => b.pick_no - a.pick_no);
+  el.innerHTML = ordered.map(p => {
+    const md = p.metadata || {};
+    const name = `${md.first_name || ""} ${md.last_name || ""}`.trim() || "—";
+    const mine = mySlot && p.draft_slot === mySlot;
+    return `<div class="pick-row ${mine ? "mine" : ""}">
+      <span class="pno">${p.pick_no}</span>
+      ${avatarImg(name, md.position || "", 20)}
+      <span class="pname-inline">${name}</span>
+      <span class="pos-tag pos-${md.position || ''}">${md.position || ""}</span>
+    </div>`;
+  }).join("");
+}
+
+// events
+$("#connectBtn").addEventListener("click", connect);
+$("#disconnectBtn").addEventListener("click", disconnect);
+$("#mySlot").addEventListener("change", (e) => {
+  mySlot = e.target.value ? parseInt(e.target.value, 10) : null;
+  render();
+});
+$("#posFilters").addEventListener("click", (e) => {
+  if(e.target.tagName !== "BUTTON") return;
+  posFilter = e.target.dataset.pos;
+  document.querySelectorAll("#posFilters button").forEach(b => b.classList.toggle("active", b === e.target));
+  render();
+});
+$("#viewToggle").addEventListener("click", (e) => {
+  if(e.target.tagName !== "BUTTON") return;
+  viewMode = e.target.dataset.view;
+  document.querySelectorAll("#viewToggle button").forEach(b => b.classList.toggle("active", b === e.target));
+  $("#dashboardView").style.display = viewMode === "dashboard" ? "block" : "none";
+  $("#fullListView").style.display = viewMode === "list" ? "flex" : "none";
+});
+$("#posColumns").addEventListener("click", (e) => {
+  const hdr = e.target.closest("[data-toggle-pos]");
+  if(!hdr) return;
+  const pos = hdr.dataset.togglePos;
+  expandedPos[pos] = !expandedPos[pos];
+  render();
+});
+$("#draftUrl").addEventListener("keydown", (e) => { if(e.key === "Enter") connect(); });
+
+loadRankings().then(() => render());
+// Headshots/rookie data load separately (large payload) so they never block
+// the initial page render — the UI just upgrades in place once ready.
+loadSleeperPlayers().then(() => render());
+loadHandcuffs().then(() => render());
+</script>
+</body>
+</html>
