@@ -250,7 +250,7 @@
 <script>
 const POS_ORDER = ["QB","RB","WR","TE"];
 const POS_COLOR = {QB:"#c084fc", RB:"#5be08a", WR:"#5b9cff", TE:"#ffb84d"};
-const ROSTER_SLOTS = ["QB","RB","RB","WR","WR","WR","TE","FLEX","FLEX","FLEX","SF"];
+const ROSTER_SLOTS = ["QB","RB","RB","WR","WR","TE","FLEX","SF"];
 const SLOT_ELIGIBILITY = {
   QB: ["QB"], RB: ["RB"], WR: ["WR"], TE: ["TE"],
   FLEX: ["RB","WR","TE"], SF: ["QB","RB","WR","TE"]
@@ -576,9 +576,9 @@ function picksUntilMyTurn(){
 }
 
 // Uses assignRoster (defined below) on your current picks to see which of
-// the 11 starting slots are still open, and for each open slot, which
+// the 8 starting slots are still open, and for each open slot, which
 // positions could fill it. A "dedicated" slot (the lone QB/TE slot, one of
-// the two RB slots, one of the three WR slots) is a hard need; FLEX/SF are
+// the two RB slots, one of the two WR slots) is a hard need; FLEX/SF are
 // shared needs across multiple positions.
 function rosterNeedState(mine){
   const {slots} = assignRoster(mine);
@@ -901,9 +901,9 @@ function renderBestAvailable(avail){
   tbody.innerHTML = html;
 }
 
-// Greedily fills the fixed roster shape (QB/RB/RB/WR/WR/WR/TE/FLEX x3/SF)
-// in slot order, pulling the earliest-drafted eligible player for each.
-// Whatever's left over goes to the bench, in draft order.
+// Greedily fills the fixed roster shape (QB/RB/RB/WR/WR/TE/FLEX/SF) in slot
+// order, pulling the earliest-drafted eligible player for each. Whatever's
+// left over goes to the bench, in draft order.
 function assignRoster(mine){
   const remaining = [...mine].sort((a,b) => a.pick_no - b.pick_no);
   const slots = ROSTER_SLOTS.map(label => {
