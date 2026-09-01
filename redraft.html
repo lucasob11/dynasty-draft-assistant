@@ -257,15 +257,26 @@ const SLOT_ELIGIBILITY = {
 };
 const VALUE_SCALE = 24; // picks of value/reach that fills a diverging bar
 
-// --- recommendation engine tuning (same weights as the dynasty assistant —
-// none of this factored in age there either, so redraft needed no changes) ---
-const NEED_CRITICAL_BONUS = 10;  // virtual-rank improvement when a dedicated slot is open
-const SATURATION_BASE = 35;      // virtual-rank penalty once a position has no open slot left
-const SATURATION_STEP = 15;      // extra penalty per redundant player already owned beyond that
-const SATURATION_CAP = 80;
-const SCARCITY_BONUS_TIGHT = 8;  // <=1 player left in this tier
-const SCARCITY_BONUS_LOW = 4;    // <=3 players left in this tier
-const HANDCUFF_BONUS = {S: 10, A: 7, B: 4, C: 2, D: 0}; // reach-worthiness by tier, when you own the starter
+// --- recommendation engine tuning ---
+// Redraft-specific: a one-year roster needs real depth (byes, matchup
+// flexibility) not just a filled starting lineup, so this scores against
+// realistic total-roster targets rather than just open slots (FLEX/SF
+// already implicitly pull extra RB/WR/QB demand into these ranges).
+const ROSTER_TARGETS = {QB: [3, 4], RB: [4, 5], WR: [5, 6], TE: [2, 2]}; // [min, max] you actually want to own
+const QB_HARD_CAP = 4;               // never recommend a 5th QB, full stop
+const QB_CAP_LAST_ROUNDS = 3;        // the 4th QB only shows up in the draft's final 3 rounds
+const ROUND_FLOORS = {RB: 4, WR: 5, QB: 6, TE: 9}; // "must have 1+ by round N" guardrails
+const FLOOR_EMERGENCY_ADD = 5000;    // added straight to score once a floor is missed — must win outright, not just nudge
+const DEFAULT_TOTAL_ROUNDS = 15;     // fallback when Sleeper doesn't report settings.rounds
+const CLIFF_TIGHT_MULT = 1.5;        // <=1 player left in this exact tier
+const CLIFF_LOW_MULT = 1.25;         // <=2 players left in this exact tier
+const DEPTH_THIN_MULT = 1.3;         // <=2 players left at this position in the next few rounds
+const DEPTH_LOW_MULT = 1.1;          // <=5 players left at this position in the next few rounds
+const DEPTH_WINDOW_ROUNDS = 3;
+const HANDCUFF_POINTS = {S: 40, A: 28, B: 16, C: 8, D: 0}; // added straight to score, when you own the starter
+const HANDCUFF_LATE_ROUND = 8;       // from this round on, a cheap handcuff's bump is amplified
+const HANDCUFF_LATE_MULT = 1.8;
+const REC_POOL_SIZE = 100;           // wide enough that a starved position's best option is always in range
 
 let RANKINGS = [];          // full list from rankings_redraft.json, sorted by rank
 let rankLookup = new Map(); // normalizedName -> ranking object (best match kept)
@@ -575,116 +586,174 @@ function picksUntilMyTurn(){
   return p - nextPickNo;
 }
 
-// Uses assignRoster (defined below) on your current picks to see which of
-// the 8 starting slots are still open, and for each open slot, which
-// positions could fill it. A "dedicated" slot (the lone QB/TE slot, one of
-// the two RB slots, one of the two WR slots) is a hard need; FLEX/SF are
-// shared needs across multiple positions.
-function rosterNeedState(mine){
-  const {slots} = assignRoster(mine);
-  const dedicated = {QB: 0, RB: 0, WR: 0, TE: 0};
-  const shared = {QB: 0, RB: 0, WR: 0, TE: 0};
-  for(const s of slots){
-    if(s.player) continue;
-    if(POS_ORDER.includes(s.label)){
-      dedicated[s.label]++;
-    } else {
-      for(const pos of SLOT_ELIGIBILITY[s.label]) shared[pos]++;
-    }
+function countsByPos(mine){
+  const counts = {QB: 0, RB: 0, WR: 0, TE: 0};
+  for(const p of mine){ if(counts[p.pos] != null) counts[p.pos]++; }
+  return counts;
+}
+
+function currentRoundNumber(){
+  if(!draftMeta) return 1;
+  const teams = draftMeta.settings?.teams || 12;
+  const nextPickNo = picks.length + 1;
+  return Math.floor((nextPickNo - 1) / teams) + 1;
+}
+
+function totalRoundsCount(){
+  return draftMeta?.settings?.rounds || DEFAULT_TOTAL_ROUNDS;
+}
+
+// Need multiplier from realistic total-roster targets. Empty is urgent no
+// matter what; below the low end ramps down toward neutral as you approach
+// it; past the high end it fades but never to zero — a big enough value
+// pick can still break through a "stocked" position.
+function targetMultiplier(pos, have){
+  const [lo, hi] = ROSTER_TARGETS[pos];
+  if(have === 0) return 2.0;
+  if(have < lo) return 1 + 0.5 * (lo - have) / lo;
+  if(have <= hi) return 1.0;
+  return Math.max(0.35, 1 / (1 + 0.4 * (have - hi)));
+}
+
+// Hard guardrail: a mandatory position that's still empty once its round
+// floor has passed adds a flat score bonus large enough to always win,
+// regardless of how everything else is scoring — the fix for a position
+// going to zero for 8+ rounds because raw value kept pointing elsewhere.
+function roundFloorBonus(pos, have, round){
+  const floor = ROUND_FLOORS[pos];
+  return (floor != null && have === 0 && round >= floor) ? FLOOR_EMERGENCY_ADD : 0;
+}
+
+// How many players remain in this exact tier — a real talent cliff right
+// here should spike priority even for a position that's otherwise not needed.
+function tierRemainingCount(player, avail){
+  if(player.tier == null) return null;
+  return avail.reduce((n, p) => n + (p.pos === player.pos && p.tier === player.tier ? 1 : 0), 0);
+}
+
+// How many players remain at this position within a rough "next few rounds"
+// window — a league-wide depth proxy, not a per-player survival estimate.
+// (A per-player "will THIS guy still be there" version of this degenerated
+// for whoever's currently the best-available at a position, since their own
+// rank-ahead is always ~0 by construction — see the removed "availability"
+// feature, 2026-08-26.) Deep here means it's safe to wait; thin means take
+// it now even if raw rank says there's time — this is what lets TE (almost
+// always thin past the top names) or a shallow WR tier outrank a "luxury"
+// pick's raw ADP.
+function positionDepthWindow(pos, avail){
+  const teams = draftMeta?.settings?.teams || 12;
+  const windowSize = teams * DEPTH_WINDOW_ROUNDS;
+  let count = 0;
+  for(let i = 0; i < avail.length && i < windowSize; i++){
+    if(avail[i].pos === pos) count++;
   }
-  const countByPos = {QB: 0, RB: 0, WR: 0, TE: 0};
-  for(const p of mine){ if(countByPos[p.pos] != null) countByPos[p.pos]++; }
-  return {dedicated, shared, countByPos};
+  return count;
 }
 
-// Virtual-rank delta for a position given roster need: a boost if a
-// dedicated slot is open, neutral if only a shared FLEX/SF slot remains,
-// and a growing penalty once every eligible slot is filled — bigger the
-// more redundant players you already own there. Positions with more
-// eligible slots (RB/WR, via FLEX) naturally tolerate more depth before
-// saturating than QB/TE do, since this falls straight out of the real
-// roster shape rather than a hardcoded per-position threshold.
-function needAdjustment(pos, need){
-  if(!need) return {delta: 0, tag: null};
-  if(need.dedicated[pos] > 0) return {delta: -NEED_CRITICAL_BONUS, tag: "need"};
-  if(need.shared[pos] > 0) return {delta: 0, tag: null};
-  const redundant = Math.max(0, need.countByPos[pos] - 2);
-  const penalty = Math.min(SATURATION_CAP, SATURATION_BASE + SATURATION_STEP * redundant);
-  return {delta: penalty, tag: "saturated"};
+function cliffMultiplier(player, avail, reasons){
+  let mult = 1.0;
+  const tierLeft = tierRemainingCount(player, avail);
+  if(tierLeft != null){
+    if(tierLeft <= 1){ mult *= CLIFF_TIGHT_MULT; reasons.push(`Tier ${player.tier} is down to the last one`); }
+    else if(tierLeft <= 2){ mult *= CLIFF_LOW_MULT; reasons.push(`Tier ${player.tier} is thinning out`); }
+  }
+  const depthLeft = positionDepthWindow(player.pos, avail);
+  if(depthLeft <= 2){ mult *= DEPTH_THIN_MULT; reasons.push(`Almost no ${player.pos} depth left the next few rounds`); }
+  else if(depthLeft <= 5){ mult *= DEPTH_LOW_MULT; }
+  return mult;
 }
 
-// Small boost when a player's tier is nearly drafted out — the idea being
-// "grab this now, the tier's about to run dry."
-function tierScarcityDelta(player, avail){
-  if(player.tier == null) return 0;
-  const remaining = avail.reduce((n, p) => n + (p.pos === player.pos && p.tier === player.tier ? 1 : 0), 0);
-  if(remaining <= 1) return -SCARCITY_BONUS_TIGHT;
-  if(remaining <= 3) return -SCARCITY_BONUS_LOW;
-  return 0;
+// No QB5+ ever; the 4th only once the draft's down to its last few rounds,
+// when a QB-needy league mate has likely already forced the position early
+// and a 4th is basically a free lategame flier rather than a wasted pick.
+function qbCapAllows(have, round){
+  if(have >= QB_HARD_CAP) return false;
+  if(have === QB_HARD_CAP - 1) return round >= totalRoundsCount() - (QB_CAP_LAST_ROUNDS - 1);
+  return true;
 }
 
-// The actual recommendation engine: takes best-available, adjusts each
-// candidate's rank by need/scarcity, flags team stacks, and returns the
-// top n with human-readable reasons attached.
+// The actual recommendation engine: scores best-available by need (against
+// realistic roster targets, not just open starting slots), tier/depth
+// cliffs, and handcuff value, then returns the top n with human-readable
+// reasons attached. Higher score wins (unlike raw rank, where lower is
+// better) — score starts from an inverted-rank base value and gets
+// multiplied/added into from there, so "best player available" still wins
+// by default and every adjustment below is relative to that baseline.
 function computeRecommendations(avail, n){
   const mine = mySlot != null ? picks.filter(p => p.draft_slot === mySlot).map(pickInfo) : [];
-  const need = mySlot != null ? rosterNeedState(mine) : null;
+  const have = countsByPos(mine);
+  const round = currentRoundNumber();
   const myTeamCounts = new Map();
   for(const p of mine){ if(p.team) myTeamCounts.set(p.team, (myTeamCounts.get(p.team) || 0) + 1); }
   const myPlayerIds = new Set(mine.map(p => String(p.player_id)));
 
-  // Top 60 by raw rank, plus any available handcuff for a starter you own —
-  // handcuffs are backups by nature, so they're routinely ranked well
-  // outside the top 60 and would otherwise never reach the bonus below.
-  const pool = avail.slice(0, 60);
+  // A wide pool by raw rank, plus any available handcuff for a starter you
+  // own (handcuffs are backups by nature and routinely fall well outside
+  // it), plus — belt-and-suspenders for the round-floor guardrail below —
+  // the single best remaining player at any position you've completely
+  // whiffed on, however far outside the normal pool they sit.
+  let pool = avail.slice(0, REC_POOL_SIZE);
+  const poolSet = new Set(pool);
+  const addToPool = (p) => { if(!poolSet.has(p)){ pool.push(p); poolSet.add(p); } };
   if(myPlayerIds.size){
-    const poolSet = new Set(pool);
     for(const p of avail){
-      if(poolSet.has(p)) continue;
       const hc = handcuffInfo(p.name, p.pos);
-      if(hc && myPlayerIds.has(String(hc.starterId))) pool.push(p);
+      if(hc && myPlayerIds.has(String(hc.starterId))) addToPool(p);
     }
   }
+  if(mySlot != null){
+    for(const pos of POS_ORDER){
+      if(have[pos] === 0 && round >= (ROUND_FLOORS[pos] || Infinity)){
+        const best = avail.find(p => p.pos === pos);
+        if(best) addToPool(best);
+      }
+    }
+  }
+  pool = pool.filter(p => p.pos !== "QB" || qbCapAllows(have.QB, round));
 
+  const maxRank = RANKINGS.length;
   const scored = pool.map(p => {
-    let virtualRank = p.rank;
     const reasons = [];
 
-    const {delta: needDelta, tag: needTag} = needAdjustment(p.pos, need);
-    virtualRank += needDelta;
-    if(needTag === "need") reasons.push(`Fills your open ${p.pos} slot`);
-    if(needTag === "saturated") reasons.push(`You're deep at ${p.pos} already`);
+    // Need scoring only makes sense once there's an actual roster to weigh
+    // against — before a slot's picked, every position would show as
+    // "0 owned" and get flagged as urgent, which isn't real information.
+    const floorBonus = mySlot != null ? roundFloorBonus(p.pos, have[p.pos], round) : 0;
+    if(floorBonus > 0) reasons.push(`Still zero ${p.pos} past round ${ROUND_FLOORS[p.pos]} — must-address now`);
 
-    // Scarcity answers "should I rush this pick?" — irrelevant, even
-    // counterproductive, for a position you're already saturated at. A
-    // thinning QB tier isn't a reason to grab a 3rd QB.
-    const saturated = needTag === "saturated";
+    const needMult = mySlot != null ? targetMultiplier(p.pos, have[p.pos]) : 1.0;
+    if(mySlot != null && have[p.pos] === 0) reasons.push(`You have no ${p.pos} yet`);
+    else if(needMult > 1) reasons.push(`Still below your target depth at ${p.pos}`);
+    else if(needMult < 1) reasons.push(`You're already stocked at ${p.pos}`);
 
-    const scarcity = tierScarcityDelta(p, avail);
-    if(scarcity < 0 && !saturated){ virtualRank += scarcity; reasons.push(`Tier ${p.tier} is thinning out`); }
+    let score = (maxRank + 1 - p.rank) * needMult * cliffMultiplier(p, avail, reasons);
+    score += floorBonus;
 
     const stackCount = p.team ? (myTeamCounts.get(p.team) || 0) : 0;
     const teamStack = stackCount > 0 ? `Would be your ${stackCount + 1}${ordinalSuffix(stackCount + 1)} ${p.team} player` : null;
 
     // Handcuff awareness: always surface the tag (worth knowing regardless),
-    // but only nudge the score if you actually own the starter they'd
+    // but only bump the score if you actually own the starter they'd
     // replace — stashing a random Tier-D handcuff for a team you have no
-    // stake in isn't the point.
+    // stake in isn't the point. The bump itself grows from round 8 on,
+    // since a cheap handcuff stash gets more attractive as bench spots
+    // near the end of the draft stop having better uses anyway.
     const handcuff = handcuffInfo(p.name, p.pos);
     if(handcuff && myPlayerIds.has(String(handcuff.starterId))){
-      const bonus = HANDCUFF_BONUS[handcuff.tier] || 0;
-      if(bonus > 0){
-        virtualRank -= bonus;
-        reasons.push(`Handcuff for ${handcuff.starterName} (Tier ${handcuff.tier}) — worth stashing`);
+      let bump = HANDCUFF_POINTS[handcuff.tier] || 0;
+      if(bump > 0 && round >= HANDCUFF_LATE_ROUND) bump *= HANDCUFF_LATE_MULT;
+      if(bump > 0){
+        score += bump;
+        reasons.push(`Handcuff for ${handcuff.starterName} (Tier ${handcuff.tier}) — cheap late-round stash`);
       }
     }
 
     if(!reasons.length) reasons.push("Best player available");
 
-    return {player: p, virtualRank, reasons, teamStack, handcuff};
+    return {player: p, score, reasons, teamStack, handcuff};
   });
 
-  scored.sort((a, b) => a.virtualRank - b.virtualRank);
+  scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, n);
 }
 
