@@ -265,7 +265,7 @@ const VALUE_SCALE = 24; // picks of value/reach that fills a diverging bar
 const ROSTER_TARGETS = {QB: [3, 4], RB: [4, 5], WR: [5, 6], TE: [2, 2]}; // [min, max] you actually want to own
 const QB_HARD_CAP = 4;               // never recommend a 5th QB, full stop
 const QB_CAP_LAST_ROUNDS = 3;        // the 4th QB only shows up in the draft's final 3 rounds
-const ROUND_FLOORS = {RB: 4, WR: 5, QB: 6, TE: 9}; // "must have 1+ by round N" guardrails
+const ROUND_FLOORS = {RB: 4, TE: 9}; // "must have 1+ by round N" guardrails — QB/WR don't need one: QB's hard cap plus its own need-multiplier is enough, and WR is the deepest position on the board
 const FLOOR_EMERGENCY_ADD = 5000;    // added straight to score once a floor is missed — must win outright, not just nudge
 const DEFAULT_TOTAL_ROUNDS = 15;     // fallback when Sleeper doesn't report settings.rounds
 const CLIFF_TIGHT_MULT = 1.5;        // <=1 player left in this exact tier
@@ -277,6 +277,7 @@ const HANDCUFF_POINTS = {S: 40, A: 28, B: 16, C: 8, D: 0}; // added straight to 
 const HANDCUFF_LATE_ROUND = 8;       // from this round on, a cheap handcuff's bump is amplified
 const HANDCUFF_LATE_MULT = 1.8;
 const REC_POOL_SIZE = 100;           // wide enough that a starved position's best option is always in range
+const SAME_TEAM_WR_MULT = 0.9;       // small penalty for a 2nd rostered WR on the same NFL team — real target competition, not a hard rule
 
 let RANKINGS = [];          // full list from rankings_redraft.json, sorted by rank
 let rankLookup = new Map(); // normalizedName -> ranking object (best match kept)
@@ -686,6 +687,8 @@ function computeRecommendations(avail, n){
   const myTeamCounts = new Map();
   for(const p of mine){ if(p.team) myTeamCounts.set(p.team, (myTeamCounts.get(p.team) || 0) + 1); }
   const myPlayerIds = new Set(mine.map(p => String(p.player_id)));
+  const myWRTeamCounts = new Map();
+  for(const p of mine){ if(p.pos === "WR" && p.team) myWRTeamCounts.set(p.team, (myWRTeamCounts.get(p.team) || 0) + 1); }
 
   // A wide pool by raw rank, plus any available handcuff for a starter you
   // own (handcuffs are backups by nature and routinely fall well outside
@@ -727,6 +730,15 @@ function computeRecommendations(avail, n){
     else if(needMult < 1) reasons.push(`You're already stocked at ${p.pos}`);
 
     let score = (maxRank + 1 - p.rank) * needMult * cliffMultiplier(p, avail, reasons);
+
+    // Two rostered WRs on the same NFL team are competing for the same
+    // catches — a real but mild negative, not a hard rule (a big enough
+    // talent gap should still win out).
+    if(p.pos === "WR" && p.team && myWRTeamCounts.get(p.team) > 0){
+      score *= SAME_TEAM_WR_MULT;
+      reasons.push(`Already have a WR on ${p.team} — some target competition`);
+    }
+
     score += floorBonus;
 
     const stackCount = p.team ? (myTeamCounts.get(p.team) || 0) : 0;

@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""Rebuilds rankings_redraft.json from the redraft prep workbook:
+"""Rebuilds rankings_redraft.json from the redraft prep workbook and a
+hand-curated tier list:
   - overall rank/name/team/pos from 'Consensus Average' (the 4-source
     consensus big board — the sheet this ranking is meant to go off of)
-  - tier from 'BDGE', which is itself a single tiered board (tier breaks are
-    "   TIER N    — n PLAYERS" header rows, not per-position tabs like the
-    dynasty workbook) — tiers are combined across positions, which is fine
-    since the dashboard only ever compares tier numbers within one position
-    at a time
-  - bye week from BDGE, falling back to Ultimate Draft Guide then Draft
-    Sharks for players BDGE doesn't cover
+  - tier from redraft_tiers.json — hand-curated tiers from a logic-spec doc
+    (see that file's _comment), not derived from the spreadsheet
+  - bye week from 'Ultimate Draft Guide', falling back to 'Draft Sharks'
+    for players it doesn't cover
+
+BDGE is deliberately not used anywhere in this script — its own rankings
+don't factor into this site at all; only Consensus Average (for rank/team)
+and redraft_tiers.json (for tier) do.
 
 No age (the workbook has no birthdate/age data, and it matters much less
 in a one-year redraft league anyway) and no expert-consensus/2025-stats
 fields (those exist only to feed the Compare Players tool, which isn't
 being built for redraft).
 
-Re-run any time the spreadsheet is updated:
+Re-run any time the spreadsheet or redraft_tiers.json is updated:
 
     python3 extract_redraft_rankings.py ~/Downloads/2026_Superflex_Redraft_Rankings.xlsx
 """
@@ -28,13 +30,11 @@ from pathlib import Path
 import openpyxl
 
 CONSENSUS_SHEET = "Consensus Average"
-TIER_SHEET = "BDGE"
-BYE_FALLBACK_SHEETS = ["Ultimate Draft Guide", "Draft Sharks"]  # plain POS column, no rank suffix
+BYE_SHEETS = ["Ultimate Draft Guide", "Draft Sharks"]  # plain POS column, no rank suffix; checked in order
 VALID_POS = {"QB", "RB", "WR", "TE"}
 
 SUFFIX_RE = re.compile(r"\b(jr|sr|ii|iii|iv|v)\b")
 POS_PREFIX_RE = re.compile(r"^([A-Za-z]+)")
-TIER_HDR_RE = re.compile(r"TIER\s*(\d+)", re.I)
 
 
 def normalize_name(name):
@@ -56,7 +56,7 @@ def last_name(normalized):
 
 def first_names_compatible(a, b):
     """True if two normalized names' first tokens look like the same person
-    (exact, or one a prefix of the other — "cam"/"cameron"). Guards the
+    (exact, or one a prefix of the other — "cam"/"cameron"). Guards each
     last-name fallback below against colliding two different players who
     happen to share a surname (e.g. Bijan Robinson vs Brian Robinson Jr.) —
     sharing a last name alone isn't enough evidence they're the same person."""
@@ -74,36 +74,47 @@ def split_pos(raw):
     return pos if pos in VALID_POS else None
 
 
-def load_tier_and_bye(wb):
-    """(pos, normalized_name) -> {"tier": int|None, "bye": str}, plus a
-    last-name fallback map, both built from the BDGE sheet (tiered board)."""
+def load_curated_tiers():
+    """(pos, normalized_name) -> tier int, plus a last-name fallback map and
+    a per-position catch-all tier (the tier every remaining, unlisted player
+    at that position gets — only for positions redraft_tiers.json marks as
+    such, per its "and beyond" / "and the rest of the position" tiers)."""
+    data = json.loads((Path(__file__).parent / "redraft_tiers.json").read_text())
+    catch_all_flags = data["catchAll"]
     exact = {}
     by_last = {}  # (pos, last) -> set of normalized_name
-    ws = wb[TIER_SHEET]
-    tier = None
-    for row in ws.iter_rows(min_row=5, values_only=True):
-        first = row[0]
-        if isinstance(first, str) and TIER_HDR_RE.search(first):
-            tier = int(TIER_HDR_RE.search(first).group(1))
-            continue
-        name = row[1]
-        if not name:
-            continue
-        pos = split_pos(row[3])
-        if not pos:
-            continue
-        key = normalize_name(name)
-        bye = row[4]
-        exact[(pos, key)] = {"tier": tier, "bye": str(bye).strip() if bye not in (None, "—") else ""}
-        by_last.setdefault((pos, last_name(key)), set()).add(key)
-    return exact, by_last
+    catch_all = {}
+    for pos in VALID_POS:
+        tiers = data[pos]
+        if catch_all_flags.get(pos):
+            catch_all[pos] = max(int(t) for t in tiers)
+        for tier_str, names in tiers.items():
+            tier = int(tier_str)
+            for name in names:
+                key = normalize_name(name)
+                exact[(pos, key)] = tier
+                by_last.setdefault((pos, last_name(key)), set()).add(key)
+    return exact, by_last, catch_all
 
 
-def load_bye_fallback(wb):
-    """(pos, normalized_name) -> bye, from sheets with a plain (non-suffixed)
-    POS column, checked in order — first hit wins, doesn't overwrite BDGE."""
+def resolve_tier(pos, key, tier_exact, tier_by_last, catch_all):
+    tier = tier_exact.get((pos, key))
+    if tier is None:
+        candidates = tier_by_last.get((pos, last_name(key)))
+        if candidates and len(candidates) == 1:
+            only = next(iter(candidates))
+            if first_names_compatible(key, only):
+                tier = tier_exact.get((pos, only))
+    if tier is None:
+        tier = catch_all.get(pos)
+    return tier
+
+
+def load_bye(wb):
+    """(pos, normalized_name) -> bye, from BYE_SHEETS in order — first hit
+    wins. Both sheets have a plain (non-suffixed) POS column."""
     result = {}
-    for sheet_name in BYE_FALLBACK_SHEETS:
+    for sheet_name in BYE_SHEETS:
         ws = wb[sheet_name]
         for row in ws.iter_rows(min_row=5, values_only=True):
             name = row[1]
@@ -124,8 +135,8 @@ def main():
     src = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "Downloads" / "2026_Superflex_Redraft_Rankings.xlsx"
     wb = openpyxl.load_workbook(src, data_only=True)
 
-    tier_exact, tier_by_last = load_tier_and_bye(wb)
-    bye_fallback = load_bye_fallback(wb)
+    tier_exact, tier_by_last, catch_all = load_curated_tiers()
+    bye_by_key = load_bye(wb)
 
     ws = wb[CONSENSUS_SHEET]
     players = []
@@ -139,16 +150,8 @@ def main():
             continue
         key = normalize_name(name)
 
-        entry = tier_exact.get((pos, key))
-        if entry is None:
-            candidates = tier_by_last.get((pos, last_name(key)))
-            if candidates and len(candidates) == 1:
-                only = next(iter(candidates))
-                if first_names_compatible(key, only):
-                    entry = tier_exact.get((pos, only))
-
-        tier = entry["tier"] if entry else None
-        bye = entry["bye"] if entry and entry["bye"] else bye_fallback.get((pos, key), "")
+        tier = resolve_tier(pos, key, tier_exact, tier_by_last, catch_all)
+        bye = bye_by_key.get((pos, key), "")
 
         if tier is None:
             unmatched_tier += 1

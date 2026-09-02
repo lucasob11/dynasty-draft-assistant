@@ -29,7 +29,7 @@
 "pos": "WR",
 "team": "CIN",
 "bye": "6",
-"tier": 2
+"tier": 1
 },
 {
 "rank": 5,
@@ -37,7 +37,7 @@
 "pos": "WR",
 "team": "LAR",
 "bye": "11",
-"tier": 2
+"tier": 1
 },
 {
 "rank": 6,
@@ -45,7 +45,7 @@
 "pos": "RB",
 "team": "SF",
 "bye": "8",
-"tier": 2
+"tier": 1
 },
 {
 "rank": 7,
@@ -53,7 +53,7 @@
 "pos": "QB",
 "team": "BAL",
 "bye": "13",
-"tier": 3
+"tier": 1
 },
 {
 "rank": 8,
@@ -61,7 +61,7 @@
 "pos": "WR",
 "team": "SEA",
 "bye": "11",
-"tier": 3
+"tier": 2
 },
 {
 "rank": 9,
@@ -69,7 +69,7 @@
 "pos": "WR",
 "team": "DET",
 "bye": "6",
-"tier": 3
+"tier": 2
 },
 {
 "rank": 10,
@@ -77,7 +77,7 @@
 "pos": "WR",
 "team": "DAL",
 "bye": "14",
-"tier": 4
+"tier": 2
 },
 {
 "rank": 11,
@@ -85,7 +85,7 @@
 "pos": "RB",
 "team": "IND",
 "bye": "13",
-"tier": 4
+"tier": 2
 },
 {
 "rank": 12,
@@ -93,7 +93,7 @@
 "pos": "RB",
 "team": "BUF",
 "bye": "7",
-"tier": 4
+"tier": 2
 },
 {
 "rank": 13,
@@ -101,7 +101,7 @@
 "pos": "QB",
 "team": "WAS",
 "bye": "7",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 14,
@@ -109,7 +109,7 @@
 "pos": "QB",
 "team": "CIN",
 "bye": "6",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 15,
@@ -117,7 +117,7 @@
 "pos": "WR",
 "team": "MIN",
 "bye": "6",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 16,
@@ -125,7 +125,7 @@
 "pos": "QB",
 "team": "PHI",
 "bye": "10",
-"tier": 6
+"tier": 2
 },
 {
 "rank": 17,
@@ -133,7 +133,7 @@
 "pos": "RB",
 "team": "KC",
 "bye": "5",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 18,
@@ -141,7 +141,7 @@
 "pos": "QB",
 "team": "NE",
 "bye": "11",
-"tier": 6
+"tier": 2
 },
 {
 "rank": 19,
@@ -149,7 +149,7 @@
 "pos": "RB",
 "team": "CIN",
 "bye": "6",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 20,
@@ -157,7 +157,7 @@
 "pos": "RB",
 "team": "MIA",
 "bye": "6",
-"tier": 6
+"tier": 2
 },
 {
 "rank": 21,
@@ -165,7 +165,7 @@
 "pos": "QB",
 "team": "JAC",
 "bye": "7",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 22,
@@ -173,7 +173,7 @@
 "pos": "WR",
 "team": "ATL",
 "bye": "11",
-"tier": 5
+"tier": 3
 },
 {
 "rank": 23,
@@ -181,15 +181,15 @@
 "pos": "RB",
 "team": "PHI",
 "bye": "10",
-"tier": 5
+"tier": 2
 },
 {
 "rank": 24,
 "name": "A.J. Brown",
 "pos": "WR",
 "team": "NE",
-"bye": "10",
-"tier": 6
+"bye": "11",
+"tier": 3
 },
 {
 "rank": 25,
@@ -197,7 +197,7 @@
 "pos": "QB",
 "team": "CHI",
 "bye": "10",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 26,
@@ -205,7 +205,7 @@
 "pos": "RB",
 "team": "LAC",
 "bye": "7",
-"tier": 6
+"tier": 2
 },
 {
 "rank": 27,
@@ -213,7 +213,7 @@
 "pos": "TE",
 "team": "LVR",
 "bye": "13",
-"tier": 6
+"tier": 1
 },
 {
 "rank": 28,
@@ -221,7 +221,7 @@
 "pos": "WR",
 "team": "HOU",
 "bye": "8",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 29,
@@ -229,7 +229,7 @@
 "pos": "RB",
 "team": "LVR",
 "bye": "13",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 30,
@@ -237,7 +237,7 @@
 "pos": "QB",
 "team": "LAC",
 "bye": "7",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 31,
@@ -245,7 +245,7 @@
 "pos": "RB",
 "team": "BAL",
 "bye": "13",
-"tier": 5
+"tier": 3
 },
 {
 "rank": 32,
@@ -253,7 +253,7 @@
 "pos": "QB",
 "team": "DAL",
 "bye": "14",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 33,
@@ -261,7 +261,7 @@
 "pos": "WR",
 "team": "DAL",
 "bye": "14",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 34,
@@ -269,7 +269,7 @@
 "pos": "QB",
 "team": "SF",
 "bye": "8",
-"tier": 7
+"tier": 3
 },
 {
 "rank": 35,
@@ -277,7 +277,7 @@
 "pos": "WR",
 "team": "NO",
 "bye": "8",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 36,
@@ -285,7 +285,7 @@
 "pos": "TE",
 "team": "ARI",
 "bye": "14",
-"tier": 7
+"tier": 1
 },
 {
 "rank": 37,
@@ -293,7 +293,7 @@
 "pos": "WR",
 "team": "NYG",
 "bye": "8",
-"tier": 6
+"tier": 3
 },
 {
 "rank": 38,
@@ -301,7 +301,7 @@
 "pos": "WR",
 "team": "KC",
 "bye": "5",
-"tier": 6
+"tier": 4
 },
 {
 "rank": 39,
@@ -309,7 +309,7 @@
 "pos": "QB",
 "team": "NYG",
 "bye": "8",
-"tier": 8
+"tier": 3
 },
 {
 "rank": 40,
@@ -317,7 +317,7 @@
 "pos": "QB",
 "team": "DEN",
 "bye": "10",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 41,
@@ -325,7 +325,7 @@
 "pos": "WR",
 "team": "PHI",
 "bye": "10",
-"tier": 6
+"tier": 4
 },
 {
 "rank": 42,
@@ -333,7 +333,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "13",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 43,
@@ -341,7 +341,7 @@
 "pos": "QB",
 "team": "LAR",
 "bye": "11",
-"tier": 6
+"tier": 4
 },
 {
 "rank": 44,
@@ -349,7 +349,7 @@
 "pos": "RB",
 "team": "ARI",
 "bye": "14",
-"tier": 7
+"tier": 3
 },
 {
 "rank": 45,
@@ -357,7 +357,7 @@
 "pos": "QB",
 "team": "MIN",
 "bye": "6",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 46,
@@ -365,7 +365,7 @@
 "pos": "RB",
 "team": "NYJ",
 "bye": "13",
-"tier": 7
+"tier": 3
 },
 {
 "rank": 47,
@@ -373,7 +373,7 @@
 "pos": "WR",
 "team": "NYJ",
 "bye": "13",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 48,
@@ -381,7 +381,7 @@
 "pos": "QB",
 "team": "KC",
 "bye": "5",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 49,
@@ -389,7 +389,7 @@
 "pos": "WR",
 "team": "CIN",
 "bye": "6",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 50,
@@ -397,7 +397,7 @@
 "pos": "RB",
 "team": "LAR",
 "bye": "11",
-"tier": 7
+"tier": 3
 },
 {
 "rank": 51,
@@ -405,7 +405,7 @@
 "pos": "QB",
 "team": "DET",
 "bye": "6",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 52,
@@ -413,7 +413,7 @@
 "pos": "RB",
 "team": "DAL",
 "bye": "14",
-"tier": 7
+"tier": 3
 },
 {
 "rank": 53,
@@ -421,7 +421,7 @@
 "pos": "WR",
 "team": "DEN",
 "bye": "10",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 54,
@@ -429,7 +429,7 @@
 "pos": "WR",
 "team": "LAC",
 "bye": "7",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 55,
@@ -437,7 +437,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "8",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 56,
@@ -445,7 +445,7 @@
 "pos": "WR",
 "team": "TB",
 "bye": "10",
-"tier": 7
+"tier": 4
 },
 {
 "rank": 57,
@@ -453,7 +453,7 @@
 "pos": "QB",
 "team": "GB",
 "bye": "11",
-"tier": 9
+"tier": 4
 },
 {
 "rank": 58,
@@ -461,7 +461,7 @@
 "pos": "WR",
 "team": "CAR",
 "bye": "5",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 59,
@@ -469,7 +469,7 @@
 "pos": "TE",
 "team": "CHI",
 "bye": "10",
-"tier": 8
+"tier": 2
 },
 {
 "rank": 60,
@@ -477,7 +477,7 @@
 "pos": "RB",
 "team": "CHI",
 "bye": "10",
-"tier": 8
+"tier": 4
 },
 {
 "rank": 61,
@@ -485,7 +485,7 @@
 "pos": "QB",
 "team": "NO",
 "bye": "8",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 62,
@@ -493,7 +493,7 @@
 "pos": "QB",
 "team": "TB",
 "bye": "10",
-"tier": 10
+"tier": 5
 },
 {
 "rank": 63,
@@ -501,7 +501,7 @@
 "pos": "WR",
 "team": "CHI",
 "bye": "10",
-"tier": 8
+"tier": 5
 },
 {
 "rank": 64,
@@ -509,7 +509,7 @@
 "pos": "WR",
 "team": "LAR",
 "bye": "11",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 65,
@@ -517,7 +517,7 @@
 "pos": "TE",
 "team": "IND",
 "bye": "13",
-"tier": 8
+"tier": 2
 },
 {
 "rank": 66,
@@ -525,7 +525,7 @@
 "pos": "RB",
 "team": "TB",
 "bye": "10",
-"tier": 9
+"tier": 4
 },
 {
 "rank": 67,
@@ -533,7 +533,7 @@
 "pos": "WR",
 "team": "GB",
 "bye": "11",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 68,
@@ -541,7 +541,7 @@
 "pos": "RB",
 "team": "NYG",
 "bye": "8",
-"tier": 9
+"tier": 4
 },
 {
 "rank": 69,
@@ -549,7 +549,7 @@
 "pos": "QB",
 "team": "MIA",
 "bye": "6",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 70,
@@ -557,7 +557,7 @@
 "pos": "WR",
 "team": "DET",
 "bye": "6",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 71,
@@ -565,7 +565,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "7",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 72,
@@ -573,7 +573,7 @@
 "pos": "WR",
 "team": "CHI",
 "bye": "10",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 73,
@@ -581,7 +581,7 @@
 "pos": "WR",
 "team": "BUF",
 "bye": "7",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 74,
@@ -589,7 +589,7 @@
 "pos": "RB",
 "team": "CLE",
 "bye": "11",
-"tier": 9
+"tier": 4
 },
 {
 "rank": 75,
@@ -597,7 +597,7 @@
 "pos": "WR",
 "team": "JAC",
 "bye": "7",
-"tier": 9
+"tier": 6
 },
 {
 "rank": 76,
@@ -605,7 +605,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "8",
-"tier": 9
+"tier": 6
 },
 {
 "rank": 77,
@@ -613,7 +613,7 @@
 "pos": "WR",
 "team": "TEN",
 "bye": "9",
-"tier": 10
+"tier": 6
 },
 {
 "rank": 78,
@@ -621,7 +621,7 @@
 "pos": "RB",
 "team": "JAC",
 "bye": "7",
-"tier": 9
+"tier": 4
 },
 {
 "rank": 79,
@@ -629,7 +629,7 @@
 "pos": "RB",
 "team": "HOU",
 "bye": "8",
-"tier": 9
+"tier": 5
 },
 {
 "rank": 80,
@@ -637,7 +637,7 @@
 "pos": "QB",
 "team": "HOU",
 "bye": "8",
-"tier": 10
+"tier": 6
 },
 {
 "rank": 81,
@@ -645,7 +645,7 @@
 "pos": "QB",
 "team": "SEA",
 "bye": "11",
-"tier": 10
+"tier": 6
 },
 {
 "rank": 82,
@@ -653,7 +653,7 @@
 "pos": "WR",
 "team": "ARI",
 "bye": "14",
-"tier": 10
+"tier": 6
 },
 {
 "rank": 83,
@@ -661,7 +661,7 @@
 "pos": "QB",
 "team": "TEN",
 "bye": "9",
-"tier": 13
+"tier": 6
 },
 {
 "rank": 84,
@@ -669,7 +669,7 @@
 "pos": "RB",
 "team": "NE",
 "bye": "11",
-"tier": 10
+"tier": 5
 },
 {
 "rank": 85,
@@ -677,7 +677,7 @@
 "pos": "RB",
 "team": "SEA",
 "bye": "11",
-"tier": 10
+"tier": 5
 },
 {
 "rank": 86,
@@ -685,7 +685,7 @@
 "pos": "QB",
 "team": "IND",
 "bye": "13",
-"tier": 14
+"tier": 6
 },
 {
 "rank": 87,
@@ -693,7 +693,7 @@
 "pos": "RB",
 "team": "NE",
 "bye": "11",
-"tier": 11
+"tier": 5
 },
 {
 "rank": 88,
@@ -701,7 +701,7 @@
 "pos": "TE",
 "team": "GB",
 "bye": "11",
-"tier": 9
+"tier": 3
 },
 {
 "rank": 89,
@@ -709,7 +709,7 @@
 "pos": "WR",
 "team": "PIT",
 "bye": "9",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 90,
@@ -717,7 +717,7 @@
 "pos": "QB",
 "team": "PIT",
 "bye": "9",
-"tier": 11
+"tier": 6
 },
 {
 "rank": 91,
@@ -725,7 +725,7 @@
 "pos": "WR",
 "team": "JAC",
 "bye": "7",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 92,
@@ -733,7 +733,7 @@
 "pos": "TE",
 "team": "CLE",
 "bye": "11",
-"tier": 9
+"tier": 3
 },
 {
 "rank": 93,
@@ -741,7 +741,7 @@
 "pos": "RB",
 "team": "PIT",
 "bye": "9",
-"tier": 10
+"tier": 5
 },
 {
 "rank": 94,
@@ -749,7 +749,7 @@
 "pos": "TE",
 "team": "DET",
 "bye": "6",
-"tier": 9
+"tier": 3
 },
 {
 "rank": 95,
@@ -757,7 +757,7 @@
 "pos": "WR",
 "team": "PIT",
 "bye": "9",
-"tier": 11
+"tier": 7
 },
 {
 "rank": 96,
@@ -765,7 +765,7 @@
 "pos": "QB",
 "team": "CAR",
 "bye": "5",
-"tier": 14
+"tier": 6
 },
 {
 "rank": 97,
@@ -773,7 +773,7 @@
 "pos": "WR",
 "team": "LAC",
 "bye": "7",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 98,
@@ -781,7 +781,7 @@
 "pos": "WR",
 "team": "TB",
 "bye": "10",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 99,
@@ -789,7 +789,7 @@
 "pos": "WR",
 "team": "IND",
 "bye": "13",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 100,
@@ -797,7 +797,7 @@
 "pos": "WR",
 "team": "ARI",
 "bye": "14",
-"tier": 10
+"tier": 7
 },
 {
 "rank": 101,
@@ -805,7 +805,7 @@
 "pos": "RB",
 "team": "GB",
 "bye": "11",
-"tier": 12
+"tier": 5
 },
 {
 "rank": 102,
@@ -813,7 +813,7 @@
 "pos": "WR",
 "team": "DEN",
 "bye": "10",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 103,
@@ -821,7 +821,7 @@
 "pos": "QB",
 "team": "NYJ",
 "bye": "13",
-"tier": 14
+"tier": null
 },
 {
 "rank": 104,
@@ -829,7 +829,7 @@
 "pos": "RB",
 "team": "PIT",
 "bye": "9",
-"tier": 13
+"tier": 6
 },
 {
 "rank": 105,
@@ -837,7 +837,7 @@
 "pos": "RB",
 "team": "CAR",
 "bye": "5",
-"tier": 12
+"tier": 6
 },
 {
 "rank": 106,
@@ -845,7 +845,7 @@
 "pos": "RB",
 "team": "TEN",
 "bye": "9",
-"tier": 12
+"tier": 6
 },
 {
 "rank": 107,
@@ -853,7 +853,7 @@
 "pos": "RB",
 "team": "DEN",
 "bye": "10",
-"tier": 10
+"tier": 6
 },
 {
 "rank": 108,
@@ -861,7 +861,7 @@
 "pos": "WR",
 "team": "TEN",
 "bye": "9",
-"tier": 12
+"tier": 7
 },
 {
 "rank": 109,
@@ -869,7 +869,7 @@
 "pos": "WR",
 "team": "GB",
 "bye": "11",
-"tier": 13
+"tier": 8
 },
 {
 "rank": 110,
@@ -877,7 +877,7 @@
 "pos": "WR",
 "team": "IND",
 "bye": "13",
-"tier": 12
+"tier": 8
 },
 {
 "rank": 111,
@@ -885,7 +885,7 @@
 "pos": "WR",
 "team": "MIN",
 "bye": "6",
-"tier": 14
+"tier": 8
 },
 {
 "rank": 112,
@@ -893,7 +893,7 @@
 "pos": "QB",
 "team": "ARI",
 "bye": "14",
-"tier": 14
+"tier": null
 },
 {
 "rank": 113,
@@ -901,7 +901,7 @@
 "pos": "WR",
 "team": "PHI",
 "bye": "10",
-"tier": 13
+"tier": 8
 },
 {
 "rank": 114,
@@ -909,7 +909,7 @@
 "pos": "TE",
 "team": "ATL",
 "bye": "11",
-"tier": 13
+"tier": 4
 },
 {
 "rank": 115,
@@ -917,7 +917,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "7",
-"tier": 13
+"tier": 8
 },
 {
 "rank": 116,
@@ -925,7 +925,7 @@
 "pos": "WR",
 "team": "JAC",
 "bye": "7",
-"tier": 12
+"tier": 8
 },
 {
 "rank": 117,
@@ -933,7 +933,7 @@
 "pos": "RB",
 "team": "WAS",
 "bye": "7",
-"tier": 14
+"tier": 6
 },
 {
 "rank": 118,
@@ -941,7 +941,7 @@
 "pos": "TE",
 "team": "SF",
 "bye": "8",
-"tier": 14
+"tier": 4
 },
 {
 "rank": 119,
@@ -949,7 +949,7 @@
 "pos": "RB",
 "team": "CAR",
 "bye": "5",
-"tier": 14
+"tier": 6
 },
 {
 "rank": 120,
@@ -957,7 +957,7 @@
 "pos": "WR",
 "team": "CLE",
 "bye": "11",
-"tier": 13
+"tier": 8
 },
 {
 "rank": 121,
@@ -965,7 +965,7 @@
 "pos": "RB",
 "team": "MIN",
 "bye": "6",
-"tier": 13
+"tier": 6
 },
 {
 "rank": 122,
@@ -973,7 +973,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "8",
-"tier": 12
+"tier": 8
 },
 {
 "rank": 123,
@@ -981,7 +981,7 @@
 "pos": "WR",
 "team": "GB",
 "bye": "11",
-"tier": 12
+"tier": 8
 },
 {
 "rank": 124,
@@ -989,7 +989,7 @@
 "pos": "RB",
 "team": "TB",
 "bye": "10",
-"tier": 14
+"tier": 6
 },
 {
 "rank": 125,
@@ -997,7 +997,7 @@
 "pos": "RB",
 "team": "DEN",
 "bye": "10",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 126,
@@ -1005,7 +1005,7 @@
 "pos": "WR",
 "team": "NO",
 "bye": "8",
-"tier": 13
+"tier": 8
 },
 {
 "rank": 127,
@@ -1013,7 +1013,7 @@
 "pos": "TE",
 "team": "KC",
 "bye": "5",
-"tier": 13
+"tier": 4
 },
 {
 "rank": 128,
@@ -1021,7 +1021,7 @@
 "pos": "RB",
 "team": "LAR",
 "bye": "11",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 129,
@@ -1029,7 +1029,7 @@
 "pos": "RB",
 "team": "CHI",
 "bye": "10",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 130,
@@ -1037,7 +1037,7 @@
 "pos": "WR",
 "team": "KC",
 "bye": "5",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 131,
@@ -1045,7 +1045,7 @@
 "pos": "WR",
 "team": "NE",
 "bye": "11",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 132,
@@ -1053,7 +1053,7 @@
 "pos": "RB",
 "team": "WAS",
 "bye": "7",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 133,
@@ -1061,7 +1061,7 @@
 "pos": "WR",
 "team": "CAR",
 "bye": "5",
-"tier": 14
+"tier": 8
 },
 {
 "rank": 134,
@@ -1069,7 +1069,7 @@
 "pos": "QB",
 "team": "LVR",
 "bye": "13",
-"tier": 14
+"tier": null
 },
 {
 "rank": 135,
@@ -1077,7 +1077,7 @@
 "pos": "TE",
 "team": "BUF",
 "bye": "7",
-"tier": 13
+"tier": 4
 },
 {
 "rank": 136,
@@ -1085,7 +1085,7 @@
 "pos": "WR",
 "team": "SEA",
 "bye": "11",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 137,
@@ -1093,7 +1093,7 @@
 "pos": "TE",
 "team": "PHI",
 "bye": "10",
-"tier": 13
+"tier": 4
 },
 {
 "rank": 138,
@@ -1101,7 +1101,7 @@
 "pos": "WR",
 "team": "CLE",
 "bye": "11",
-"tier": 14
+"tier": 8
 },
 {
 "rank": 139,
@@ -1109,7 +1109,7 @@
 "pos": "WR",
 "team": "BUF",
 "bye": "7",
-"tier": 18
+"tier": 8
 },
 {
 "rank": 140,
@@ -1117,7 +1117,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "8",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 141,
@@ -1125,7 +1125,7 @@
 "pos": "RB",
 "team": "MIN",
 "bye": "6",
-"tier": 15
+"tier": 7
 },
 {
 "rank": 142,
@@ -1133,7 +1133,7 @@
 "pos": "TE",
 "team": "NYG",
 "bye": "8",
-"tier": 14
+"tier": 4
 },
 {
 "rank": 143,
@@ -1141,7 +1141,7 @@
 "pos": "WR",
 "team": "IND",
 "bye": "13",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 144,
@@ -1149,7 +1149,7 @@
 "pos": "TE",
 "team": "NO",
 "bye": "8",
-"tier": 14
+"tier": 4
 },
 {
 "rank": 145,
@@ -1157,7 +1157,7 @@
 "pos": "WR",
 "team": "LVR",
 "bye": "13",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 146,
@@ -1165,7 +1165,7 @@
 "pos": "QB",
 "team": "ATL",
 "bye": "11",
-"tier": 17
+"tier": null
 },
 {
 "rank": 147,
@@ -1173,7 +1173,7 @@
 "pos": "TE",
 "team": "DAL",
 "bye": "14",
-"tier": 16
+"tier": 4
 },
 {
 "rank": 148,
@@ -1181,7 +1181,7 @@
 "pos": "QB",
 "team": "ATL",
 "bye": "11",
-"tier": 15
+"tier": null
 },
 {
 "rank": 149,
@@ -1189,7 +1189,7 @@
 "pos": "RB",
 "team": "TEN",
 "bye": "9",
-"tier": null
+"tier": 7
 },
 {
 "rank": 150,
@@ -1197,7 +1197,7 @@
 "pos": "TE",
 "team": "BAL",
 "bye": "13",
-"tier": 16
+"tier": 4
 },
 {
 "rank": 151,
@@ -1205,7 +1205,7 @@
 "pos": "RB",
 "team": "HOU",
 "bye": "8",
-"tier": 16
+"tier": 7
 },
 {
 "rank": 152,
@@ -1213,7 +1213,7 @@
 "pos": "QB",
 "team": "CLE",
 "bye": "11",
-"tier": 17
+"tier": null
 },
 {
 "rank": 153,
@@ -1221,7 +1221,7 @@
 "pos": "TE",
 "team": "JAC",
 "bye": "7",
-"tier": 15
+"tier": 4
 },
 {
 "rank": 154,
@@ -1229,7 +1229,7 @@
 "pos": "RB",
 "team": "JAC",
 "bye": "7",
-"tier": 15
+"tier": 7
 },
 {
 "rank": 155,
@@ -1237,7 +1237,7 @@
 "pos": "RB",
 "team": "LAC",
 "bye": "7",
-"tier": 15
+"tier": 7
 },
 {
 "rank": 156,
@@ -1245,7 +1245,7 @@
 "pos": "RB",
 "team": "LVR",
 "bye": "13",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 157,
@@ -1253,7 +1253,7 @@
 "pos": "WR",
 "team": "TB",
 "bye": "10",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 158,
@@ -1261,15 +1261,15 @@
 "pos": "QB",
 "team": "CLE",
 "bye": "11",
-"tier": 17
+"tier": null
 },
 {
 "rank": 159,
 "name": "Kayshon Boutte",
 "pos": "WR",
 "team": "HOU",
-"bye": "11",
-"tier": 18
+"bye": "8",
+"tier": 8
 },
 {
 "rank": 160,
@@ -1277,7 +1277,7 @@
 "pos": "WR",
 "team": "NYJ",
 "bye": "13",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 161,
@@ -1285,7 +1285,7 @@
 "pos": "RB",
 "team": "PHI",
 "bye": "10",
-"tier": 15
+"tier": 7
 },
 {
 "rank": 162,
@@ -1293,7 +1293,7 @@
 "pos": "QB",
 "team": "LVR",
 "bye": "13",
-"tier": 16
+"tier": null
 },
 {
 "rank": 163,
@@ -1301,7 +1301,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "13",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 164,
@@ -1309,7 +1309,7 @@
 "pos": "WR",
 "team": "NYJ",
 "bye": "13",
-"tier": 14
+"tier": 8
 },
 {
 "rank": 165,
@@ -1317,7 +1317,7 @@
 "pos": "WR",
 "team": "JAC",
 "bye": "7",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 166,
@@ -1325,7 +1325,7 @@
 "pos": "TE",
 "team": "HOU",
 "bye": "8",
-"tier": 17
+"tier": 4
 },
 {
 "rank": 167,
@@ -1333,7 +1333,7 @@
 "pos": "TE",
 "team": "NE",
 "bye": "11",
-"tier": 16
+"tier": 4
 },
 {
 "rank": 168,
@@ -1341,7 +1341,7 @@
 "pos": "WR",
 "team": "LVR",
 "bye": "13",
-"tier": 18
+"tier": 8
 },
 {
 "rank": 169,
@@ -1349,7 +1349,7 @@
 "pos": "RB",
 "team": "CLE",
 "bye": "11",
-"tier": 17
+"tier": 7
 },
 {
 "rank": 170,
@@ -1357,7 +1357,7 @@
 "pos": "RB",
 "team": "SEA",
 "bye": "11",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 171,
@@ -1365,7 +1365,7 @@
 "pos": "WR",
 "team": "LAC",
 "bye": "7",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 172,
@@ -1373,7 +1373,7 @@
 "pos": "RB",
 "team": "GB",
 "bye": "11",
-"tier": 14
+"tier": 7
 },
 {
 "rank": 173,
@@ -1381,7 +1381,7 @@
 "pos": "TE",
 "team": "WAS",
 "bye": "7",
-"tier": 16
+"tier": 4
 },
 {
 "rank": 174,
@@ -1389,7 +1389,7 @@
 "pos": "WR",
 "team": "DEN",
 "bye": "10",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 175,
@@ -1397,7 +1397,7 @@
 "pos": "WR",
 "team": "MIA",
 "bye": "6",
-"tier": null
+"tier": 8
 },
 {
 "rank": 176,
@@ -1405,7 +1405,7 @@
 "pos": "RB",
 "team": "ARI",
 "bye": "14",
-"tier": 16
+"tier": 7
 },
 {
 "rank": 177,
@@ -1413,7 +1413,7 @@
 "pos": "RB",
 "team": "DEN",
 "bye": "10",
-"tier": 16
+"tier": 7
 },
 {
 "rank": 178,
@@ -1421,7 +1421,7 @@
 "pos": "WR",
 "team": "CLE",
 "bye": "11",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 179,
@@ -1429,7 +1429,7 @@
 "pos": "WR",
 "team": "TEN",
 "bye": "9",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 180,
@@ -1437,7 +1437,7 @@
 "pos": "WR",
 "team": "HOU",
 "bye": "8",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 181,
@@ -1445,7 +1445,7 @@
 "pos": "WR",
 "team": "MIA",
 "bye": "6",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 182,
@@ -1453,7 +1453,7 @@
 "pos": "WR",
 "team": "NYG",
 "bye": "8",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 183,
@@ -1461,7 +1461,7 @@
 "pos": "WR",
 "team": "KC",
 "bye": "5",
-"tier": 18
+"tier": 8
 },
 {
 "rank": 184,
@@ -1469,7 +1469,7 @@
 "pos": "TE",
 "team": "SEA",
 "bye": "11",
-"tier": 18
+"tier": 4
 },
 {
 "rank": 185,
@@ -1477,7 +1477,7 @@
 "pos": "TE",
 "team": "MIN",
 "bye": "6",
-"tier": 18
+"tier": 4
 },
 {
 "rank": 186,
@@ -1485,7 +1485,7 @@
 "pos": "RB",
 "team": "DET",
 "bye": "6",
-"tier": null
+"tier": 7
 },
 {
 "rank": 187,
@@ -1493,7 +1493,7 @@
 "pos": "TE",
 "team": "NYJ",
 "bye": "13",
-"tier": 19
+"tier": 4
 },
 {
 "rank": 188,
@@ -1501,7 +1501,7 @@
 "pos": "TE",
 "team": "LAC",
 "bye": "7",
-"tier": 19
+"tier": 4
 },
 {
 "rank": 189,
@@ -1509,7 +1509,7 @@
 "pos": "RB",
 "team": "GB",
 "bye": "11",
-"tier": null
+"tier": 7
 },
 {
 "rank": 190,
@@ -1517,7 +1517,7 @@
 "pos": "RB",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 191,
@@ -1525,7 +1525,7 @@
 "pos": "WR",
 "team": "PHI",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 192,
@@ -1533,7 +1533,7 @@
 "pos": "TE",
 "team": "MIA",
 "bye": "6",
-"tier": 19
+"tier": 4
 },
 {
 "rank": 193,
@@ -1541,7 +1541,7 @@
 "pos": "WR",
 "team": "DAL",
 "bye": "14",
-"tier": null
+"tier": 8
 },
 {
 "rank": 194,
@@ -1549,7 +1549,7 @@
 "pos": "RB",
 "team": "NYG",
 "bye": "8",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 195,
@@ -1557,7 +1557,7 @@
 "pos": "WR",
 "team": "MIA",
 "bye": "6",
-"tier": 15
+"tier": 8
 },
 {
 "rank": 196,
@@ -1565,7 +1565,7 @@
 "pos": "RB",
 "team": "TEN",
 "bye": "9",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 197,
@@ -1573,7 +1573,7 @@
 "pos": "RB",
 "team": "KC",
 "bye": "5",
-"tier": null
+"tier": 7
 },
 {
 "rank": 198,
@@ -1581,7 +1581,7 @@
 "pos": "WR",
 "team": "ATL",
 "bye": "11",
-"tier": 18
+"tier": 8
 },
 {
 "rank": 199,
@@ -1597,7 +1597,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "8",
-"tier": 16
+"tier": 7
 },
 {
 "rank": 201,
@@ -1605,7 +1605,7 @@
 "pos": "WR",
 "team": "PIT",
 "bye": "9",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 202,
@@ -1613,7 +1613,7 @@
 "pos": "WR",
 "team": "MIN",
 "bye": "6",
-"tier": 19
+"tier": 8
 },
 {
 "rank": 203,
@@ -1621,7 +1621,7 @@
 "pos": "TE",
 "team": "PIT",
 "bye": "9",
-"tier": 20
+"tier": 4
 },
 {
 "rank": 204,
@@ -1637,7 +1637,7 @@
 "pos": "RB",
 "team": "ATL",
 "bye": "11",
-"tier": null
+"tier": 7
 },
 {
 "rank": 206,
@@ -1645,7 +1645,7 @@
 "pos": "RB",
 "team": "NYJ",
 "bye": "13",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 207,
@@ -1653,7 +1653,7 @@
 "pos": "TE",
 "team": "LAR",
 "bye": "11",
-"tier": 18
+"tier": 4
 },
 {
 "rank": 208,
@@ -1661,7 +1661,7 @@
 "pos": "TE",
 "team": "LAC",
 "bye": "7",
-"tier": 20
+"tier": 4
 },
 {
 "rank": 209,
@@ -1669,7 +1669,7 @@
 "pos": "WR",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 210,
@@ -1677,7 +1677,7 @@
 "pos": "WR",
 "team": "HOU",
 "bye": "8",
-"tier": 18
+"tier": 8
 },
 {
 "rank": 211,
@@ -1701,7 +1701,7 @@
 "pos": "WR",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 214,
@@ -1709,7 +1709,7 @@
 "pos": "TE",
 "team": "TEN",
 "bye": "9",
-"tier": 19
+"tier": 4
 },
 {
 "rank": 215,
@@ -1717,7 +1717,7 @@
 "pos": "WR",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 216,
@@ -1725,7 +1725,7 @@
 "pos": "RB",
 "team": "DAL",
 "bye": "14",
-"tier": null
+"tier": 7
 },
 {
 "rank": 217,
@@ -1733,7 +1733,7 @@
 "pos": "RB",
 "team": "LAC",
 "bye": "7",
-"tier": null
+"tier": 7
 },
 {
 "rank": 218,
@@ -1741,7 +1741,7 @@
 "pos": "WR",
 "team": "DEN",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 219,
@@ -1749,7 +1749,7 @@
 "pos": "TE",
 "team": "TB",
 "bye": "10",
-"tier": 20
+"tier": 4
 },
 {
 "rank": 220,
@@ -1757,7 +1757,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 221,
@@ -1765,7 +1765,7 @@
 "pos": "WR",
 "team": "SEA",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 222,
@@ -1773,7 +1773,7 @@
 "pos": "TE",
 "team": "CIN",
 "bye": "6",
-"tier": 19
+"tier": 4
 },
 {
 "rank": 223,
@@ -1781,7 +1781,7 @@
 "pos": "RB",
 "team": "TB",
 "bye": "10",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 224,
@@ -1789,7 +1789,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 225,
@@ -1797,7 +1797,7 @@
 "pos": "WR",
 "team": "BUF",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 226,
@@ -1805,7 +1805,7 @@
 "pos": "RB",
 "team": "SF",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 227,
@@ -1813,7 +1813,7 @@
 "pos": "RB",
 "team": "SF",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 228,
@@ -1821,7 +1821,7 @@
 "pos": "WR",
 "team": "LVR",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 229,
@@ -1829,7 +1829,7 @@
 "pos": "RB",
 "team": "GB",
 "bye": "11",
-"tier": null
+"tier": 7
 },
 {
 "rank": 230,
@@ -1837,7 +1837,7 @@
 "pos": "WR",
 "team": "DET",
 "bye": "6",
-"tier": null
+"tier": 8
 },
 {
 "rank": 231,
@@ -1845,7 +1845,7 @@
 "pos": "RB",
 "team": "BUF",
 "bye": "7",
-"tier": null
+"tier": 7
 },
 {
 "rank": 232,
@@ -1853,7 +1853,7 @@
 "pos": "WR",
 "team": "SEA",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 233,
@@ -1861,7 +1861,7 @@
 "pos": "RB",
 "team": "NYJ",
 "bye": "13",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 234,
@@ -1869,7 +1869,7 @@
 "pos": "TE",
 "team": "DEN",
 "bye": "10",
-"tier": 20
+"tier": 4
 },
 {
 "rank": 235,
@@ -1877,7 +1877,7 @@
 "pos": "WR",
 "team": "TEN",
 "bye": "9",
-"tier": null
+"tier": 8
 },
 {
 "rank": 236,
@@ -1885,7 +1885,7 @@
 "pos": "TE",
 "team": "LAC",
 "bye": "7",
-"tier": null
+"tier": 4
 },
 {
 "rank": 237,
@@ -1893,7 +1893,7 @@
 "pos": "WR",
 "team": "TEN",
 "bye": "9",
-"tier": null
+"tier": 8
 },
 {
 "rank": 238,
@@ -1901,7 +1901,7 @@
 "pos": "RB",
 "team": "CIN",
 "bye": "6",
-"tier": null
+"tier": 7
 },
 {
 "rank": 239,
@@ -1909,7 +1909,7 @@
 "pos": "RB",
 "team": "WAS",
 "bye": "7",
-"tier": null
+"tier": 7
 },
 {
 "rank": 240,
@@ -1925,7 +1925,7 @@
 "pos": "TE",
 "team": "LAR",
 "bye": "11",
-"tier": null
+"tier": 4
 },
 {
 "rank": 242,
@@ -1933,7 +1933,7 @@
 "pos": "RB",
 "team": "KC",
 "bye": "5",
-"tier": null
+"tier": 7
 },
 {
 "rank": 243,
@@ -1941,7 +1941,7 @@
 "pos": "TE",
 "team": "PHI",
 "bye": "10",
-"tier": null
+"tier": 4
 },
 {
 "rank": 244,
@@ -1957,7 +1957,7 @@
 "pos": "RB",
 "team": "BAL",
 "bye": "13",
-"tier": null
+"tier": 7
 },
 {
 "rank": 246,
@@ -1965,7 +1965,7 @@
 "pos": "RB",
 "team": "ARI",
 "bye": "14",
-"tier": null
+"tier": 7
 },
 {
 "rank": 247,
@@ -1973,7 +1973,7 @@
 "pos": "WR",
 "team": "NE",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 248,
@@ -1981,7 +1981,7 @@
 "pos": "WR",
 "team": "KC",
 "bye": "5",
-"tier": null
+"tier": 8
 },
 {
 "rank": 249,
@@ -1989,7 +1989,7 @@
 "pos": "RB",
 "team": "MIN",
 "bye": "6",
-"tier": null
+"tier": 7
 },
 {
 "rank": 250,
@@ -1997,7 +1997,7 @@
 "pos": "WR",
 "team": "TB",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 251,
@@ -2005,7 +2005,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 252,
@@ -2013,7 +2013,7 @@
 "pos": "RB",
 "team": "MIA",
 "bye": "6",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 253,
@@ -2021,7 +2021,7 @@
 "pos": "RB",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 254,
@@ -2029,7 +2029,7 @@
 "pos": "WR",
 "team": "NE",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 255,
@@ -2037,7 +2037,7 @@
 "pos": "TE",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 4
 },
 {
 "rank": 256,
@@ -2045,7 +2045,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 257,
@@ -2053,7 +2053,7 @@
 "pos": "WR",
 "team": "CIN",
 "bye": "6",
-"tier": null
+"tier": 8
 },
 {
 "rank": 258,
@@ -2061,7 +2061,7 @@
 "pos": "RB",
 "team": "BUF",
 "bye": "7",
-"tier": null
+"tier": 7
 },
 {
 "rank": 259,
@@ -2069,7 +2069,7 @@
 "pos": "RB",
 "team": "SEA",
 "bye": "11",
-"tier": 18
+"tier": 7
 },
 {
 "rank": 260,
@@ -2077,7 +2077,7 @@
 "pos": "RB",
 "team": "SEA",
 "bye": "11",
-"tier": null
+"tier": 7
 },
 {
 "rank": 261,
@@ -2085,7 +2085,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 262,
@@ -2093,7 +2093,7 @@
 "pos": "RB",
 "team": "IND",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 263,
@@ -2101,7 +2101,7 @@
 "pos": "WR",
 "team": "LV",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 264,
@@ -2109,7 +2109,7 @@
 "pos": "WR",
 "team": "MIA",
 "bye": "6",
-"tier": null
+"tier": 8
 },
 {
 "rank": 265,
@@ -2117,7 +2117,7 @@
 "pos": "RB",
 "team": "JAC",
 "bye": "7",
-"tier": null
+"tier": 7
 },
 {
 "rank": 266,
@@ -2125,7 +2125,7 @@
 "pos": "WR",
 "team": "TB",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 267,
@@ -2133,7 +2133,7 @@
 "pos": "RB",
 "team": "IND",
 "bye": "13",
-"tier": null
+"tier": 7
 },
 {
 "rank": 268,
@@ -2141,7 +2141,7 @@
 "pos": "TE",
 "team": "CHI",
 "bye": "10",
-"tier": null
+"tier": 4
 },
 {
 "rank": 269,
@@ -2149,7 +2149,7 @@
 "pos": "RB",
 "team": "MIA",
 "bye": "6",
-"tier": null
+"tier": 7
 },
 {
 "rank": 270,
@@ -2157,7 +2157,7 @@
 "pos": "TE",
 "team": "LV",
 "bye": "13",
-"tier": null
+"tier": 4
 },
 {
 "rank": 271,
@@ -2165,7 +2165,7 @@
 "pos": "TE",
 "team": "NYJ",
 "bye": "13",
-"tier": null
+"tier": 4
 },
 {
 "rank": 272,
@@ -2173,7 +2173,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 273,
@@ -2181,7 +2181,7 @@
 "pos": "TE",
 "team": "NE",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 274,
@@ -2189,7 +2189,7 @@
 "pos": "TE",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 4
 },
 {
 "rank": 275,
@@ -2197,7 +2197,7 @@
 "pos": "WR",
 "team": "UNS",
 "bye": "18",
-"tier": null
+"tier": 8
 },
 {
 "rank": 276,
@@ -2205,7 +2205,7 @@
 "pos": "TE",
 "team": "LAR",
 "bye": "11",
-"tier": null
+"tier": 4
 },
 {
 "rank": 277,
@@ -2213,7 +2213,7 @@
 "pos": "WR",
 "team": "NYG",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 278,
@@ -2221,7 +2221,7 @@
 "pos": "RB",
 "team": "SF",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 279,
@@ -2229,7 +2229,7 @@
 "pos": "TE",
 "team": "PIT",
 "bye": "9",
-"tier": null
+"tier": 4
 },
 {
 "rank": 280,
@@ -2237,7 +2237,7 @@
 "pos": "TE",
 "team": "BUF",
 "bye": "7",
-"tier": null
+"tier": 4
 },
 {
 "rank": 281,
@@ -2245,7 +2245,7 @@
 "pos": "WR",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 8
 },
 {
 "rank": 282,
@@ -2253,7 +2253,7 @@
 "pos": "RB",
 "team": "BAL",
 "bye": "13",
-"tier": null
+"tier": 7
 },
 {
 "rank": 283,
@@ -2261,7 +2261,7 @@
 "pos": "WR",
 "team": "NE",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 284,
@@ -2269,7 +2269,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 285,
@@ -2277,7 +2277,7 @@
 "pos": "WR",
 "team": "BUF",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 286,
@@ -2285,7 +2285,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 287,
@@ -2293,7 +2293,7 @@
 "pos": "WR",
 "team": "ATL",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 288,
@@ -2301,7 +2301,7 @@
 "pos": "WR",
 "team": "ARI",
 "bye": "14",
-"tier": null
+"tier": 8
 },
 {
 "rank": 289,
@@ -2309,7 +2309,7 @@
 "pos": "TE",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 4
 },
 {
 "rank": 290,
@@ -2317,7 +2317,7 @@
 "pos": "WR",
 "team": "LV",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 291,
@@ -2325,7 +2325,7 @@
 "pos": "WR",
 "team": "DEN",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 292,
@@ -2333,7 +2333,7 @@
 "pos": "RB",
 "team": "ARI",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 293,
@@ -2341,7 +2341,7 @@
 "pos": "WR",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 294,
@@ -2349,7 +2349,7 @@
 "pos": "RB",
 "team": "WAS",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 295,
@@ -2357,7 +2357,7 @@
 "pos": "WR",
 "team": "PHI",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 296,
@@ -2365,7 +2365,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 297,
@@ -2373,7 +2373,7 @@
 "pos": "WR",
 "team": "LAR",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 298,
@@ -2381,7 +2381,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 299,
@@ -2389,7 +2389,7 @@
 "pos": "TE",
 "team": "GB",
 "bye": "11",
-"tier": null
+"tier": 4
 },
 {
 "rank": 300,
@@ -2397,7 +2397,7 @@
 "pos": "TE",
 "team": "SF",
 "bye": "8",
-"tier": null
+"tier": 4
 },
 {
 "rank": 301,
@@ -2405,7 +2405,7 @@
 "pos": "TE",
 "team": "KC",
 "bye": "5",
-"tier": null
+"tier": 4
 },
 {
 "rank": 302,
@@ -2421,7 +2421,7 @@
 "pos": "TE",
 "team": "SEA",
 "bye": "11",
-"tier": null
+"tier": 4
 },
 {
 "rank": 304,
@@ -2429,7 +2429,7 @@
 "pos": "RB",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 7
 },
 {
 "rank": 305,
@@ -2437,7 +2437,7 @@
 "pos": "WR",
 "team": "BUF",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 306,
@@ -2445,7 +2445,7 @@
 "pos": "TE",
 "team": "WAS",
 "bye": "7",
-"tier": null
+"tier": 4
 },
 {
 "rank": 307,
@@ -2453,7 +2453,7 @@
 "pos": "WR",
 "team": "ATL",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 308,
@@ -2461,7 +2461,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 309,
@@ -2469,7 +2469,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 310,
@@ -2477,7 +2477,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 311,
@@ -2485,7 +2485,7 @@
 "pos": "WR",
 "team": "LAR",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 312,
@@ -2493,7 +2493,7 @@
 "pos": "WR",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 8
 },
 {
 "rank": 313,
@@ -2501,7 +2501,7 @@
 "pos": "WR",
 "team": "HOU",
 "bye": "8",
-"tier": null
+"tier": 8
 },
 {
 "rank": 314,
@@ -2509,7 +2509,7 @@
 "pos": "WR",
 "team": "CLE",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 315,
@@ -2517,7 +2517,7 @@
 "pos": "WR",
 "team": "CHI",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 316,
@@ -2525,7 +2525,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 317,
@@ -2533,7 +2533,7 @@
 "pos": "TE",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 4
 },
 {
 "rank": 318,
@@ -2549,7 +2549,7 @@
 "pos": "WR",
 "team": "LAC",
 "bye": "7",
-"tier": null
+"tier": 8
 },
 {
 "rank": 320,
@@ -2557,7 +2557,7 @@
 "pos": "WR",
 "team": "PIT",
 "bye": "9",
-"tier": null
+"tier": 8
 },
 {
 "rank": 321,
@@ -2565,7 +2565,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 322,
@@ -2573,7 +2573,7 @@
 "pos": "WR",
 "team": "LAR",
 "bye": "11",
-"tier": null
+"tier": 8
 },
 {
 "rank": 323,
@@ -2589,7 +2589,7 @@
 "pos": "TE",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 4
 },
 {
 "rank": 325,
@@ -2597,7 +2597,7 @@
 "pos": "RB",
 "team": "CAR",
 "bye": "5",
-"tier": null
+"tier": 7
 },
 {
 "rank": 326,
@@ -2605,7 +2605,7 @@
 "pos": "TE",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 4
 },
 {
 "rank": 327,
@@ -2613,7 +2613,7 @@
 "pos": "RB",
 "team": "CIN",
 "bye": "6",
-"tier": null
+"tier": 7
 },
 {
 "rank": 328,
@@ -2621,7 +2621,7 @@
 "pos": "RB",
 "team": "PHI",
 "bye": "10",
-"tier": null
+"tier": 7
 },
 {
 "rank": 329,
@@ -2629,7 +2629,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "13",
-"tier": null
+"tier": 8
 },
 {
 "rank": 330,
@@ -2637,7 +2637,7 @@
 "pos": "TE",
 "team": "JAC",
 "bye": "7",
-"tier": null
+"tier": 4
 },
 {
 "rank": 331,
@@ -2645,7 +2645,7 @@
 "pos": "WR",
 "team": "DET",
 "bye": "6",
-"tier": null
+"tier": 8
 },
 {
 "rank": 332,
@@ -2653,7 +2653,7 @@
 "pos": "TE",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 333,
@@ -2661,7 +2661,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 334,
@@ -2677,7 +2677,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 336,
@@ -2685,7 +2685,7 @@
 "pos": "RB",
 "team": "NO",
 "bye": "8",
-"tier": null
+"tier": 7
 },
 {
 "rank": 337,
@@ -2701,7 +2701,7 @@
 "pos": "WR",
 "team": "CHI",
 "bye": "10",
-"tier": null
+"tier": 8
 },
 {
 "rank": 339,
@@ -2709,7 +2709,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 340,
@@ -2717,7 +2717,7 @@
 "pos": "TE",
 "team": "LAR",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 341,
@@ -2725,7 +2725,7 @@
 "pos": "TE",
 "team": "DAL",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 342,
@@ -2733,7 +2733,7 @@
 "pos": "RB",
 "team": "PIT",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 343,
@@ -2741,7 +2741,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 344,
@@ -2749,7 +2749,7 @@
 "pos": "WR",
 "team": "GB",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 345,
@@ -2757,7 +2757,7 @@
 "pos": "WR",
 "team": "MIA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 346,
@@ -2765,7 +2765,7 @@
 "pos": "WR",
 "team": "DAL",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 347,
@@ -2773,7 +2773,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 348,
@@ -2781,7 +2781,7 @@
 "pos": "WR",
 "team": "IND",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 349,
@@ -2789,7 +2789,7 @@
 "pos": "RB",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 350,
@@ -2797,7 +2797,7 @@
 "pos": "WR",
 "team": "WAS",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 351,
@@ -2805,7 +2805,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 352,
@@ -2813,7 +2813,7 @@
 "pos": "WR",
 "team": "SF",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 353,
@@ -2829,7 +2829,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 355,
@@ -2837,7 +2837,7 @@
 "pos": "TE",
 "team": "IND",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 356,
@@ -2853,7 +2853,7 @@
 "pos": "TE",
 "team": "-",
 "bye": "",
-"tier": null
+"tier": 4
 },
 {
 "rank": 358,
@@ -2861,7 +2861,7 @@
 "pos": "WR",
 "team": "BAL",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 359,
@@ -2877,7 +2877,7 @@
 "pos": "RB",
 "team": "ARI",
 "bye": "",
-"tier": null
+"tier": 7
 },
 {
 "rank": 361,
@@ -2885,7 +2885,7 @@
 "pos": "WR",
 "team": "FA",
 "bye": "",
-"tier": null
+"tier": 8
 },
 {
 "rank": 362,
@@ -2893,6 +2893,6 @@
 "pos": "RB",
 "team": "CLE",
 "bye": "",
-"tier": null
+"tier": 7
 }
 ]

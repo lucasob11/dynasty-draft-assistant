@@ -1,0 +1,37 @@
+{
+  "_comment": "Hand-curated tiers from Draft_Companion_AI_Logic_Spec.md (2026-09-01), replacing the BDGE-sheet-derived tiers extract_redraft_rankings.py used before. Each position's last tier is a catch-all only where the spec says so ('and beyond' / 'and the rest of the position') — see catchAll below. QB has no catch-all: anyone not named stays untiered, matching the spec treating anything past QB tier 6 as off draft radar entirely.",
+  "catchAll": {"QB": false, "RB": true, "WR": true, "TE": true},
+  "QB": {
+    "1": ["Josh Allen", "Lamar Jackson"],
+    "2": ["Jayden Daniels", "Joe Burrow", "Jalen Hurts", "Drake Maye"],
+    "3": ["Trevor Lawrence", "Caleb Williams", "Justin Herbert", "Dak Prescott", "Brock Purdy", "Jaxson Dart"],
+    "4": ["Bo Nix", "Matthew Stafford", "Kyler Murray", "Patrick Mahomes", "Jared Goff", "Jordan Love"],
+    "5": ["Tyler Shough", "Baker Mayfield", "Malik Willis"],
+    "6": ["C.J. Stroud", "Sam Darnold", "Cameron Ward", "Daniel Jones", "Aaron Rodgers", "Bryce Young"]
+  },
+  "RB": {
+    "1": ["Jahmyr Gibbs", "Bijan Robinson", "Christian McCaffrey"],
+    "2": ["Jonathan Taylor", "James Cook", "Kenneth Walker III", "Chase Brown", "De'Von Achane", "Saquon Barkley", "Omarion Hampton"],
+    "3": ["Ashton Jeanty", "Derrick Henry", "Jeremiyah Love", "Breece Hall", "Kyren Williams", "Javonte Williams"],
+    "4": ["Travis Etienne", "D'Andre Swift", "Bucky Irving", "Cam Skattebo", "Quinshon Judkins", "Bhayshul Tuten"],
+    "5": ["David Montgomery", "Rhamondre Stevenson", "Jadarian Price", "TreVeyon Henderson", "Jaylen Warren", "MarShawn Lloyd"],
+    "6": ["Rico Dowdle", "Jonathon Brooks", "Tony Pollard", "J.K. Dobbins", "Jacory Croskey-Merritt", "Chuba Hubbard", "Jordan Mason", "Kenneth Gainwell"],
+    "7": ["RJ Harvey", "Blake Corum", "Kyle Monangai", "Rachaad White", "Aaron Jones", "Tyjae Spears", "Woody Marks"]
+  },
+  "WR": {
+    "1": ["Ja'Marr Chase", "Puka Nacua"],
+    "2": ["Jaxon Smith-Njigba", "Amon-Ra St. Brown", "CeeDee Lamb", "Justin Jefferson"],
+    "3": ["Drake London", "A.J. Brown", "Nico Collins", "George Pickens", "Chris Olave", "Malik Nabers"],
+    "4": ["Rashee Rice", "DeVonta Smith", "Zay Flowers", "Garrett Wilson", "Tee Higgins", "Jaylen Waddle", "Ladd McConkey", "Emeka Egbuka", "Tetairoa McMillan"],
+    "5": ["Luther Burden III", "Davante Adams", "Christian Watson", "Jameson Williams", "Terry McLaurin", "Rome Odunze", "D.J. Moore"],
+    "6": ["Parker Washington", "Mike Evans", "Carnell Tate", "Marvin Harrison Jr."],
+    "7": ["D.K. Metcalf", "Brian Thomas Jr.", "Michael Pittman", "Quentin Johnston", "Chris Godwin", "Alec Pierce", "Michael Wilson", "Courtland Sutton", "Wan'Dale Robinson"],
+    "8": ["Jayden Reed", "Josh Downs", "Jordan Addison", "Makai Lemon", "Stefon Diggs", "Jakobi Meyers"]
+  },
+  "TE": {
+    "1": ["Brock Bowers", "Trey McBride"],
+    "2": ["Colston Loveland", "Tyler Warren"],
+    "3": ["Tucker Kraft", "Harold Fannin Jr.", "Sam LaPorta"],
+    "4": ["Kyle Pitts", "George Kittle", "Travis Kelce", "Dalton Kincaid", "Dallas Goedert", "Isaiah Likely"]
+  }
+}
