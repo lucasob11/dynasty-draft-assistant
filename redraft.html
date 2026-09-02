@@ -268,11 +268,15 @@ const QB_CAP_LAST_ROUNDS = 3;        // the 4th QB only shows up in the draft's 
 const ROUND_FLOORS = {RB: 4, TE: 9}; // "must have 1+ by round N" guardrails — QB/WR don't need one: QB's hard cap plus its own need-multiplier is enough, and WR is the deepest position on the board
 const FLOOR_EMERGENCY_ADD = 5000;    // added straight to score once a floor is missed — must win outright, not just nudge
 const DEFAULT_TOTAL_ROUNDS = 15;     // fallback when Sleeper doesn't report settings.rounds
-const CLIFF_TIGHT_MULT = 1.5;        // <=1 player left in this exact tier
-const CLIFF_LOW_MULT = 1.25;         // <=2 players left in this exact tier
-const DEPTH_THIN_MULT = 1.3;         // <=2 players left at this position in the next few rounds
-const DEPTH_LOW_MULT = 1.1;          // <=5 players left at this position in the next few rounds
-const DEPTH_WINDOW_ROUNDS = 3;
+// Small on purpose — this is a tie-breaking nudge between comparably-valued
+// players, not something that should be able to vault a deep-tier player
+// (e.g. TE2 at overall rank ~60) above a much higher-value player elsewhere
+// just because its own tier happens to be tiny. 1.25x/1.5x let exactly that
+// happen in testing (a rank-59 TE outscoring the rank-2 RB) since the boost
+// is a flat percentage of raw value, and small early tiers sit right next
+// to much bigger value gaps at other positions.
+const CLIFF_TIGHT_MULT = 1.12;       // <=1 player left in this exact tier
+const CLIFF_LOW_MULT = 1.05;         // <=2 players left in this exact tier
 const HANDCUFF_POINTS = {S: 40, A: 28, B: 16, C: 8, D: 0}; // added straight to score, when you own the starter
 const HANDCUFF_LATE_ROUND = 8;       // from this round on, a cheap handcuff's bump is amplified
 const HANDCUFF_LATE_MULT = 1.8;
@@ -632,25 +636,20 @@ function tierRemainingCount(player, avail){
   return avail.reduce((n, p) => n + (p.pos === player.pos && p.tier === player.tier ? 1 : 0), 0);
 }
 
-// How many players remain at this position within a rough "next few rounds"
-// window — a league-wide depth proxy, not a per-player survival estimate.
-// (A per-player "will THIS guy still be there" version of this degenerated
-// for whoever's currently the best-available at a position, since their own
-// rank-ahead is always ~0 by construction — see the removed "availability"
-// feature, 2026-08-26.) Deep here means it's safe to wait; thin means take
-// it now even if raw rank says there's time — this is what lets TE (almost
-// always thin past the top names) or a shallow WR tier outrank a "luxury"
-// pick's raw ADP.
-function positionDepthWindow(pos, avail){
-  const teams = draftMeta?.settings?.teams || 12;
-  const windowSize = teams * DEPTH_WINDOW_ROUNDS;
-  let count = 0;
-  for(let i = 0; i < avail.length && i < windowSize; i++){
-    if(avail[i].pos === pos) count++;
-  }
-  return count;
-}
-
+// NOTE: this used to also multiply in a "how many players remain at this
+// position within the next few rounds" depth-window signal, counting a
+// position's share of the top (teams * rounds) players BY OVERALL RANK.
+// Removed 2026-09-01 — it was structurally biased against TE (and, less
+// severely, QB/WR): the best available TE is routinely ranked ~25-35
+// overall, so almost no TEs ever show up that early in an overall-rank
+// window no matter how deep the position actually is, which made TE look
+// "about to run dry" from the first pick of the draft and stacked an extra
+// 1.3x on top of the tier-cliff multiplier below — see the Brock Bowers
+// #1-overall bug this fixed. The remaining tier-cliff signal isn't subject
+// to that bias: it's driven by each position's own curated tier sizes
+// (e.g. TE tier 1 being exactly 2 players is real editorial signal, not an
+// artifact of cross-position rank density), so it's kept as the only
+// scarcity multiplier here.
 function cliffMultiplier(player, avail, reasons){
   let mult = 1.0;
   const tierLeft = tierRemainingCount(player, avail);
@@ -658,9 +657,6 @@ function cliffMultiplier(player, avail, reasons){
     if(tierLeft <= 1){ mult *= CLIFF_TIGHT_MULT; reasons.push(`Tier ${player.tier} is down to the last one`); }
     else if(tierLeft <= 2){ mult *= CLIFF_LOW_MULT; reasons.push(`Tier ${player.tier} is thinning out`); }
   }
-  const depthLeft = positionDepthWindow(player.pos, avail);
-  if(depthLeft <= 2){ mult *= DEPTH_THIN_MULT; reasons.push(`Almost no ${player.pos} depth left the next few rounds`); }
-  else if(depthLeft <= 5){ mult *= DEPTH_LOW_MULT; }
   return mult;
 }
 
